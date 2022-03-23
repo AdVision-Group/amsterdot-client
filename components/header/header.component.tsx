@@ -21,6 +21,7 @@ const Header = () => {
 						height={100}
 						alt={"amsterdot logo"}
 						objectFit="contain"
+						layout="responsive"
 					/>
 				</figure>
 				<ToggleButton onClick={() => toggleMobileNav()} isOpen={showMobileNav}>
@@ -62,6 +63,12 @@ const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	figure {
+		margin-top: 1rem;
+		position: relative;
+		width: 8rem;
+	}
 `
 
 const ToggleButton = styled.button<{ isOpen: boolean }>`

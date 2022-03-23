@@ -5,7 +5,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
 import Image from "next/image"
-import { Parallax } from "react-scroll-parallax"
+import Button from "../button/button.component"
 
 const HeroSection = () => {
 	const partners = [
@@ -46,168 +46,73 @@ const HeroSection = () => {
 			alt: "astar logo",
 		},
 	]
-	const { scrollYProgress } = useViewportScroll()
-
-	const transformOpacity = useTransform(
-		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[1, 0, 0, 0]
-	)
-
-	const transformYAM = useTransform(
-		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[0, -400, 0, -1000]
-	)
-	const transformYST = useTransform(
-		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[0, 700, 0, -1000]
-	)
-	const transformYER = useTransform(
-		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[0, -600, 0, -1000]
-	)
-
-	console.log(transformOpacity)
 
 	return (
 		<SectionContainer>
-			<Container
-				style={{
-					opacity: transformOpacity,
-				}}
-			>
-				{/* <Parallax
-				translateX={["-300px", "300px"]}
-				// translateY={["0px", "100px"]}
-			> */}
-				<WatermarkLetters
-					style={{
-						x: transformYAM,
-
-						opacity: transformOpacity,
-					}}
-					className="am"
-				>
-					AM
-				</WatermarkLetters>
-				{/* </Parallax> */}
-				{/* <Parallax */}
-				{/* translateX={["0px", "300px"]} */}
-				{/* // translateY={["0px", "100px"]} */}
-				{/* > */}
-				<WatermarkLetters
-					style={{
-						x: transformYST,
-
-						opacity: transformOpacity,
-					}}
-					className="st"
-				>
-					ST
-				</WatermarkLetters>
-				{/* </Parallax> */}
-				{/* <Parallax */}
-				{/* // translateX={["0px", "400px"]} */}
-				{/* translateY={["0px", "-200px"]} */}
-				{/* > */}
-				<WatermarkLetters
-					style={{
-						x: transformYER,
-
-						opacity: transformOpacity,
-					}}
-					className="er"
-				>
-					ER
-				</WatermarkLetters>
-				{/* </Parallax> */}
-				<Content>
-					<GridContainer>
-						<SpinnerContainer
-							animate={{
-								rotate: [0, 0, 270, 270, 0],
-							}}
-							transition={{
-								repeat: Infinity,
-								duration: 20,
-							}}
-						>
-							<Image
-								src={"/assets/spinner.png"}
-								placeholder="blur"
-								alt={"spinner "}
-								width={80}
-								height={80}
-								objectFit="contain"
-							/>
-						</SpinnerContainer>
-						<ContentContainer>
-							<h1>
-								<span>CONF</span>
-								<span>HACK</span>
-							</h1>
-							<ButtonsContainer>
-								<button>BUY TICKETS</button>
-								<button>APPLY TO SPEAK</button>
-							</ButtonsContainer>
-						</ContentContainer>
-						<ImageContainer>
-							<figure>
-								<Image
-									src={"/assets/animation-ilu.gif"}
-									width={250}
-									height={250}
-									alt={"rose ilu"}
-									layout="fixed"
-									objectFit="cover"
-								/>
-							</figure>
-							<figure>
-								<Image
-									src={"/assets/rose-ilu.png"}
-									width={120}
-									height={400}
-									alt={"rose ilu"}
-									layout="fixed"
-									objectFit="contain"
-								/>
-							</figure>
-						</ImageContainer>
-						<DateContainer>
-							<DaysContainer>
-								<p>20</p>
-								<p>23</p>
-							</DaysContainer>
-							<DateCircle />
-							<MonthContainer>
-								<p>APRIL</p>
-								<p>2022</p>
-							</MonthContainer>
-						</DateContainer>
-						<Parallax
-							translateX={["-200px", "0px"]}
-							translateY={["0px", "-100px"]}
-						>
-							<PlaceP>IN AMSTERDAM / NETHRELANDS</PlaceP>
-						</Parallax>
-					</GridContainer>
-				</Content>
-				<Partners>
-					<PartnersFlexContainer>
-						<figure>
-							<Image
-								width={300}
-								height={100}
-								src={"/assets/partners/logaaa.png"}
-								alt={"partners logos"}
-								objectFit="contain"
-							/>
-						</figure>
-					</PartnersFlexContainer>
-				</Partners>
+			<Container>
+				<ContentContainer>
+					<AnimationContainer
+						animate={{
+							rotate: [0, 0, 270, 270, 0],
+						}}
+						transition={{
+							repeat: Infinity,
+							duration: 20,
+						}}
+					>
+						<Image
+							src={"/assets/spinner.png"}
+							alt={"spinner "}
+							width={80}
+							height={80}
+							objectFit="contain"
+						/>
+					</AnimationContainer>
+					<HeadContainer>
+						<h1>
+							<span>CONF</span>
+							<span>HACK</span>
+						</h1>
+					</HeadContainer>
+					<DateContainer>
+						<p>
+							<span>20</span>
+							<span />
+						</p>
+						<p>
+							<span />
+							<span>23</span>
+						</p>
+						<p>APRIL</p>
+						<p>2022</p>
+					</DateContainer>
+					<ImageContainer>
+						<Image
+							src={"/assets/tulipan-liquid.png"}
+							alt="tulipan ilu"
+							width={150}
+							height={200}
+							objectFit="contain"
+						/>
+					</ImageContainer>
+					<ButtonsContainer>
+						<Button>BUY TICKETS</Button>
+						<Button outline>APPLY TO SPEAK</Button>
+					</ButtonsContainer>
+					<PlaceContainer>
+						<p>IN AMSTERDAM / NETHERLANDS</p>
+					</PlaceContainer>
+				</ContentContainer>
+				<PartnersContainer>
+					<Image
+						src={"/assets/partners/logaaa.png"}
+						alt="partners logo"
+						width={100}
+						height={50}
+						objectFit="contain"
+						layout="responsive"
+					/>
+				</PartnersContainer>
 			</Container>
 		</SectionContainer>
 	)
@@ -215,179 +120,133 @@ const HeroSection = () => {
 
 export default HeroSection
 
-const WatermarkLetters = styled(motion.h2)`
+const AnimationContainer = styled(motion.figure)`
 	position: absolute;
-	font-size: 45rem;
-	font-weight: 300;
-	z-index: -2;
-
-	&.am {
-		bottom: 10rem;
-		left: -15rem;
-	}
-	&.st {
-		bottom: -25rem;
-		left: 60rem;
-	}
-	&.er {
-		bottom: -30rem;
-		left: -10rem;
-	}
+	z-index: -1;
+	right: -1rem;
+	top: -3rem;
 `
 
 const SectionContainer = styled.section`
 	flex: none;
 	width: 100vw;
 	height: 100vh;
+	/* overflow: hidden; */
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow-x: hidden;
-	overflow-y: hidden;
 
-	color: #fff;
-
-	background-color: ${({ theme }) => theme.background.primary};
+	color: ${({ theme }) => theme.fonts.primary};
 `
 
-const SpinnerContainer = styled(motion.figure)`
-	position: absolute;
-	top: -4rem;
-	right: -4rem;
-	z-index: -1;
-`
-
-const Container = styled(motion.article)`
-	position: relative;
-	max-width: 80rem;
+const Container = styled.div`
 	width: 100%;
-	z-index: 10;
-	/* min-height: 60rem; */
-	/* border: 1px solid green; */
-`
-const Content = styled.div`
-	background-color: ${({ theme }) => theme.color.primary};
-
-	h1 {
-		font-size: 8.8rem;
-		font-weight: 400;
-		line-height: 1;
-
-		span {
-			display: block;
-		}
-	}
-`
-
-const ButtonsContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-	z-index: 2;
-
-	button {
-		display: block;
-		background-color: #000;
-		color: #fff;
-		padding: 1rem 1.5rem;
-		border: none;
-		font-size: 1.8rem;
-
-		&:nth-of-type(2) {
-			margin-right: -10rem;
-		}
-	}
-`
-
-const GridContainer = styled.div`
-	position: relative;
-
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	padding: 1.5rem;
-`
-
-const PlaceP = styled.p`
-	position: absolute;
-	bottom: -5rem;
-	right: -15rem;
-	font-size: 2.5rem;
-	width: 40rem;
+	margin: 25rem 1.5rem 0;
+	max-width: 100rem;
+	/* margin: 0 auto; */
 `
 
 const ContentContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-`
-
-const DateContainer = styled.div`
-	max-width: 20rem;
-	width: 100%;
-	/* justify-self: start; */
-	margin-left: auto;
-	/* align-self: flex-end; */
-`
-
-const DateCircle = styled.div`
-	width: 100%;
-	border: 1px solid #fff;
-	border-radius: 50%;
-	height: 1.5rem;
-`
-
-const DaysContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
-	font-size: 3rem;
-`
-const MonthContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
-	font-size: 3rem;
-`
-
-const Partners = styled.div`
-	position: absolute;
-	right: 0;
-`
-
-const ImageContainer = styled.div`
 	position: relative;
-	margin-left: auto;
+	background-color: ${({ theme }) => theme.background.container};
+	padding: 1.5rem;
 
-	figure:nth-of-type(1) {
-		position: absolute;
-		right: 50%;
-		left: 10%;
-		transform: translate(-160%, 30%);
-		/* border-radius: 50%; */
-		/* overflow: hidden; */
-		/*top: 20rem; */
-		/* width: 30rem; */
-		/* height: 30rem; */
-		/* border: 10px solid blue; */
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 1rem;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"h d"
+		"i i"
+		"b b"
+		"p p";
+`
+const HeadContainer = styled.div`
+	grid-area: h;
 
-		img {
-			position: absolute;
-			border-radius: 50%;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
+	h1 {
+		span {
+			display: block;
+			font-size: 4rem;
 		}
 	}
 `
 
-const PartnersFlexContainer = styled.div`
+const ImageContainer = styled.figure`
+	position: relative;
+	grid-area: i;
+	justify-self: center;
+	/* border: 1px solid green; */
+	margin-left: -2rem;
+`
+
+const DateContainer = styled.div`
+	grid-area: d;
+	width: 100%;
+	max-width: 10rem;
+	/* border: 1px solid green; */
+	justify-self: end;
+	font-size: 3rem;
+	line-height: 1.1;
+	text-align: center;
+
+	p:nth-of-type(1) {
+		/* border: 1px solid green; */
+		display: flex;
+		align-items: center;
+
+		span {
+			display: block;
+
+			&:nth-of-type(2) {
+				width: 100%;
+				height: 0.3rem;
+				background-color: ${({ theme }) => theme.fonts.primary};
+				margin-left: 1.5rem;
+			}
+		}
+	}
+
+	p:nth-of-type(2) {
+		/* border: 1px solid green; */
+		display: flex;
+		align-items: center;
+
+		span {
+			display: block;
+
+			&:nth-of-type(1) {
+				width: 100%;
+				height: 0.3rem;
+				background-color: ${({ theme }) => theme.fonts.primary};
+				margin-right: 1.5rem;
+			}
+		}
+	}
+	p:nth-of-type(4) {
+		/* border: 1px solid green; */
+		font-size: 3.4rem;
+	}
+`
+const ButtonsContainer = styled.div`
+	grid-area: b;
 	display: flex;
 	flex-wrap: wrap;
-	align-self: flex-end;
+	flex-gap: 1.5rem;
+	align-items: center;
+	justify-content: space-between;
+`
+
+const PlaceContainer = styled.div`
+	grid-area: p;
+	align-self: end;
+	justify-self: end;
+	text-align: right;
+`
+
+const PartnersContainer = styled.figure`
+	position: relative;
 	max-width: 30rem;
-	/* border-top: 3px solid #fff; */
-	margin-top: 1rem;
-	figure {
-		/* border: 1px solid blue; */
-	}
+	margin-left: auto;
 `

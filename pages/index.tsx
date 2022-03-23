@@ -55,6 +55,36 @@ const Home: NextPage = () => {
 		}
 	}, [width, sectionRef, set])
 
+	// const { scrollYProgress } = useViewportScroll()
+
+	// const transformOpacity = useTransform(
+	// 	scrollYProgress,
+	// 	[0, 0.28, 0.72, 1],
+	// 	[1, 0, 0, 0]
+	// )
+
+	const transformWatermarkOpacity = useTransform(
+		scrollYProgress,
+		[0, 0.28, 0.72, 1],
+		[1, 0, 0, 0]
+	)
+
+	const transformYAM = useTransform(
+		scrollYProgress,
+		[0, 0.28, 0.72, 1],
+		[0, 1400, 0, -1000]
+	)
+	const transformYST = useTransform(
+		scrollYProgress,
+		[0, 0.28, 0.72, 1],
+		[0, -700, 0, -1000]
+	)
+	const transformYER = useTransform(
+		scrollYProgress,
+		[0, 0.28, 0.72, 1],
+		[0, 600, 0, -1000]
+	)
+
 	return (
 		<React.Fragment>
 			<Head>
@@ -63,6 +93,39 @@ const Home: NextPage = () => {
 			</Head>
 
 			<Header />
+
+			<WatermarkContainer>
+				<WatermarkLetters
+					style={{
+						x: transformYAM,
+
+						opacity: transformWatermarkOpacity,
+					}}
+					className="am"
+				>
+					AM
+				</WatermarkLetters>
+				<WatermarkLetters
+					style={{
+						x: transformYST,
+
+						opacity: transformWatermarkOpacity,
+					}}
+					className="st"
+				>
+					ST
+				</WatermarkLetters>
+				<WatermarkLetters
+					style={{
+						x: transformYER,
+
+						opacity: transformWatermarkOpacity,
+					}}
+					className="er"
+				>
+					ER
+				</WatermarkLetters>
+			</WatermarkContainer>
 
 			<HeroSection />
 			<Container id="events">
@@ -94,6 +157,81 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+const WatermarkContainer = styled.div`
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	/* bottom: 0; */
+	width: 100%;
+	height: calc(100% + 30rem);
+	overflow-x: hidden;
+	max-width: 200rem;
+	margin: 0 auto;
+
+	/* border: 1px solid green; */
+`
+
+const WatermarkLetters = styled(motion.h2)`
+	position: absolute;
+	font-size: 15rem;
+	font-weight: 300;
+	z-index: -2;
+	color: ${({ theme }) => theme.fonts.primary};
+
+	&.am {
+		/* border: 1px solid green; */
+		top: 10rem;
+		left: -5rem;
+	}
+	&.st {
+		top: 25rem;
+		right: 0rem;
+	}
+	&.er {
+		top: 40rem;
+		left: 0rem;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		/* grid-template-columns: 1fr 35rem; */
+		/* background-color: red; */
+		font-size: 30rem;
+
+		&.am {
+			/* border: 1px solid green; */
+			top: 10rem;
+			left: -5rem;
+		}
+		&.st {
+			top: 25rem;
+			right: 0rem;
+		}
+		&.er {
+			top: 40rem;
+			left: 0rem;
+		}
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* grid-template-columns: 1fr 35rem; */
+			/* background-color: red; */
+			font-size: 40rem;
+
+			&.am {
+				top: 5rem;
+				left: 5rem;
+			}
+			&.st {
+				top: 25rem;
+				right: 0rem;
+			}
+			&.er {
+				top: 40rem;
+				left: 20rem;
+			}
+		}
+	}
+`
 
 const Container = styled.div`
 	scroll-padding-top: 8rem;
