@@ -217,7 +217,7 @@ const ContentContainer = styled.article`
 const Content = styled.div`
 	position: relative;
 	z-index: 2;
-	background-color: ${({ theme }) => theme.background.secondary};
+	background-color: ${({ theme }) => theme.background.container};
 	margin: -7rem 3rem -3rem;
 	padding: 10rem 3rem 3rem;
 	color: ${({ theme }) => theme.fonts.primary};
