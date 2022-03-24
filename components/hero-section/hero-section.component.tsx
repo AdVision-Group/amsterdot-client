@@ -64,9 +64,9 @@ const HeroSection = () => {
 	return (
 		<SectionContainer>
 			<Container
-				style={{
-					y: transformX,
-				}}
+			// style={{
+			// 	y: transformX,
+			// }}
 			>
 				<ContentContainer>
 					<AnimationContainer
@@ -230,7 +230,7 @@ const HeadContainer = styled.div`
 		font-weight: 700;
 		span {
 			display: block;
-			font-size: 4rem;
+			font-size: 4.5rem;
 		}
 	}
 
@@ -298,7 +298,7 @@ const DateContainer = styled.div`
 	max-width: 10rem;
 	/* border: 1px solid green; */
 	justify-self: end;
-	font-size: 3rem;
+	font-size: 2.2rem;
 	line-height: 1.1;
 	text-align: center;
 
@@ -342,7 +342,7 @@ const DateContainer = styled.div`
 	}
 	p:nth-of-type(4) {
 		/* border: 1px solid green; */
-		/* font-size: 3.4rem; */
+		font-size: 2.5rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -376,6 +376,10 @@ const ButtonsContainer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
+
+	button {
+		font-size: 1.5rem;
+	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		/* flex-gap: 1rem; */
@@ -441,8 +445,10 @@ const PlaceContainer = styled.div`
 const PartnersContainer = styled.figure`
 	position: relative;
 	max-width: 30rem;
-	margin-left: auto;
+	width: 100%;
+	margin: 0 auto;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		margin: 0 0 0 auto;
 		max-width: 50rem;
 	}
 `

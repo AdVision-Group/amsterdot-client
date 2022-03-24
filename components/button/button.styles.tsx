@@ -14,7 +14,7 @@ export const ButtonContainer = styled(motion.button)<IButtonProps>`
 	min-width: 5rem;
 	width: ${({ width }) => (width ? width : "unset")};
 	padding: 1.2rem 2rem 0.8rem;
-	font-size: 1.6rem;
+	/* font-size: 1.6rem; */
 	font-family: inherit;
 	font-weight: bolder;
 	border-radius: ${({ rounded }) => (rounded ? "999rem" : ".1rem")};

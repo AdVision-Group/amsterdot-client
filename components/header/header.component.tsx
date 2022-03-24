@@ -47,7 +47,7 @@ const Header = () => {
 export default Header
 
 const HeaderContainer = styled.header`
-	position: fixed;
+	/* position: fixed; */
 	z-index: 9999;
 	left: 0;
 	top: 0;

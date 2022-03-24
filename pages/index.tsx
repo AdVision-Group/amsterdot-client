@@ -179,21 +179,21 @@ const Home: NextPage = () => {
 				</ArrowContainer> */}
 
 				<WatermarkLetters
-					style={{
-						x: transformYAM,
+					// style={{
+					// 	x: transformYAM,
 
-						opacity: transformWatermarkOpacity,
-					}}
+					// 	opacity: transformWatermarkOpacity,
+					// }}
 					className="am"
 				>
 					AM
 				</WatermarkLetters>
 				<WatermarkLetters
-					style={{
-						x: transformYST,
+					// style={{
+					// 	x: transformYST,
 
-						opacity: transformWatermarkOpacity,
-					}}
+					// 	opacity: transformWatermarkOpacity,
+					// }}
 					className="st"
 				>
 					<Image
@@ -206,11 +206,11 @@ const Home: NextPage = () => {
 					/>
 				</WatermarkLetters>
 				<WatermarkLetters
-					style={{
-						x: transformYER,
+					// style={{
+					// 	x: transformYER,
 
-						opacity: transformWatermarkOpacity,
-					}}
+					// 	opacity: transformWatermarkOpacity,
+					// }}
 					className="er"
 				>
 					ER
@@ -282,6 +282,7 @@ const Circle2 = styled(motion.figure)`
 `
 
 const Circle3 = styled(motion.figure)`
+	display: none;
 	position: absolute;
 	z-index: -3;
 
@@ -291,6 +292,7 @@ const Circle3 = styled(motion.figure)`
 	left: 3rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		display: block;
 		width: 12rem;
 		heigth: 12rem;
 	}
