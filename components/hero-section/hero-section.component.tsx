@@ -447,8 +447,10 @@ const PartnersContainer = styled.figure`
 	max-width: 30rem;
 	width: 100%;
 	margin: 0 auto;
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin: 0 0 0 auto;
-		max-width: 50rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			max-width: 50rem;
+		}
 	}
 `
