@@ -227,7 +227,7 @@ const HeadContainer = styled.div`
 	h1 {
 		font-family: "Avenir Next";
 		line-height: 1.2;
-		font-weight: 700;
+		font-weight: 400;
 		span {
 			display: block;
 			font-size: 4.5rem;
@@ -304,7 +304,7 @@ const DateContainer = styled.div`
 
 	p {
 		font-family: "Avenir Next";
-		font-weight: 900;
+		font-weight: 400;
 	}
 
 	p:nth-of-type(1) {
