@@ -13,7 +13,7 @@ export const ButtonContainer = styled(motion.button)<IButtonProps>`
 	color: ${({ theme }) => theme.fonts.primary};
 	min-width: 5rem;
 	width: ${({ width }) => (width ? width : "unset")};
-	padding: 0.8rem 2rem;
+	padding: 1.2rem 2rem 0.8rem;
 	font-size: 1.6rem;
 	font-family: inherit;
 	font-weight: bolder;

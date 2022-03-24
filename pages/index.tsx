@@ -157,7 +157,7 @@ const Home: NextPage = () => {
 						objectFit="contain"
 					/>
 				</Circle3> */}
-				<ArrowContainer
+				{/* <ArrowContainer
 					animate={{
 						y: [0, -5, 10, 20, 0],
 						// scale: [1.2, 1, 0.9, 0.97, 1.2],
@@ -176,7 +176,7 @@ const Home: NextPage = () => {
 						height={100}
 						objectFit="contain"
 					/>
-				</ArrowContainer>
+				</ArrowContainer> */}
 
 				<WatermarkLetters
 					style={{
@@ -196,7 +196,14 @@ const Home: NextPage = () => {
 					}}
 					className="st"
 				>
-					ST
+					<Image
+						src={"/assets/st.svg"}
+						alt="st letters"
+						width={200}
+						height={200}
+						layout="responsive"
+						objectFit="contain"
+					/>
 				</WatermarkLetters>
 				<WatermarkLetters
 					style={{
@@ -211,7 +218,7 @@ const Home: NextPage = () => {
 			</WatermarkContainer>
 
 			<HeroSection />
-			<Container id="events">
+			{/* <Container id="events">
 				<FlexContainer
 					ref={containerRef}
 					style={{
@@ -234,7 +241,7 @@ const Home: NextPage = () => {
 
 			<FooterContainer id="footer">
 				<h1>footer section</h1>
-			</FooterContainer>
+			</FooterContainer> */}
 		</React.Fragment>
 	)
 }
@@ -306,10 +313,12 @@ const WatermarkContainer = styled.div`
 	right: 0;
 	/* bottom: 0; */
 	width: 100%;
-	height: calc(100% + 30rem);
+	height: calc(100% + 10rem);
+	/* height: calc(100% + 30rem); */
 	overflow-x: hidden;
 	max-width: 200rem;
 	margin: 0 auto;
+	font-family: "Avenir Next";
 
 	/* border: 1px solid green; */
 `
@@ -317,58 +326,62 @@ const WatermarkContainer = styled.div`
 const WatermarkLetters = styled(motion.h2)`
 	position: absolute;
 	font-size: 15rem;
-	font-weight: 300;
 	z-index: -2;
 	color: ${({ theme }) => theme.fonts.primary};
+
+	font-weight: 400;
 
 	&.am {
 		/* border: 1px solid green; */
 		top: 10rem;
-		left: -5rem;
+		left: 0rem;
 	}
 	&.st {
+		width: 20rem;
 		top: 25rem;
 		right: 0rem;
 	}
 	&.er {
 		top: 40rem;
-		left: 0rem;
+		left: 5srem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		/* grid-template-columns: 1fr 35rem; */
 		/* background-color: red; */
-		font-size: 30rem;
+		font-size: 25rem;
 
 		&.am {
 			/* border: 1px solid green; */
 			top: 10rem;
-			left: -5rem;
+			left: -30rem;
 		}
 		&.st {
+			width: 35rem;
+
 			top: 25rem;
-			right: 0rem;
+			right: -15rem;
 		}
 		&.er {
 			top: 40rem;
-			left: 0rem;
+			left: 10rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* grid-template-columns: 1fr 35rem; */
 			/* background-color: red; */
-			font-size: 40rem;
+			/* font-size: 30rem; */
 
 			&.am {
-				top: 5rem;
-				left: 5rem;
+				top: 8rem;
+				left: -2rem;
 			}
 			&.st {
-				top: 25rem;
+				top: 17rem;
 				right: 0rem;
 			}
 			&.er {
 				top: 40rem;
-				left: 20rem;
+				left: 35rem;
 			}
 		}
 	}
