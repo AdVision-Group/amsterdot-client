@@ -129,12 +129,12 @@ const Home: NextPage = () => {
 					}}
 				>
 					<Image
-						src={"/assets/primary-circle.svg"}
+						src={"/assets/animation-ilu.gif"}
 						alt="red circle"
 						layout="responsive"
 						width={100}
 						height={100}
-						objectFit="contain"
+						objectFit="cover"
 					/>
 				</Circle2>
 				<Circle3
@@ -149,12 +149,12 @@ const Home: NextPage = () => {
 					}}
 				>
 					<Image
-						src={"/assets/primary-circle.svg"}
+						src={"/assets/animation-ilu.gif"}
 						alt="red circle"
 						layout="responsive"
 						width={100}
 						height={100}
-						objectFit="contain"
+						objectFit="cover"
 					/>
 				</Circle3>
 				{/* <ArrowContainer
@@ -270,6 +270,8 @@ const Circle2 = styled(motion.figure)`
 	heigth: 6rem;
 	top: 5rem;
 	right: 6rem;
+	border-radius: 50%;
+	overflow: hidden;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 12rem;
@@ -290,6 +292,9 @@ const Circle3 = styled(motion.figure)`
 	heigth: 6rem;
 	bottom: 3rem;
 	left: 3rem;
+
+	border-radius: 50%;
+	overflow: hidden;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		display: block;
