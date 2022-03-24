@@ -231,7 +231,7 @@ const HeadContainer = styled.div`
 	h1 {
 		font-family: "Avenir Next";
 		line-height: 1.2;
-		font-weight: 400;
+		font-weight: 500;
 		span {
 			display: block;
 			font-size: 4.5rem;
@@ -308,7 +308,7 @@ const DateContainer = styled.div`
 
 	p {
 		font-family: "Avenir Next";
-		font-weight: 400;
+		font-weight: 700;
 	}
 
 	p:nth-of-type(1) {
@@ -380,7 +380,7 @@ const ButtonsContainer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	margin: 2rem 0;
+	/* margin: 2rem 0; */
 
 	button {
 		font-size: 1.5rem;
