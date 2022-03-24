@@ -5,7 +5,9 @@ import { IButtonProps } from "./button.component"
 
 export const ButtonContainer = styled(motion.button)<IButtonProps>`
 	cursor: pointer;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: ${({ theme, outline }) =>
 		outline ? "transparent" : theme.color.primary};
 	color: ${({ theme }) => theme.fonts.primary};

@@ -8,6 +8,8 @@ import Image from "next/image"
 import Button from "../button/button.component"
 
 const HeroSection = () => {
+	const { scrollYProgress } = useViewportScroll()
+
 	const partners = [
 		{
 			src: "/assets/partners/logo-polkadot.png",
@@ -47,9 +49,25 @@ const HeroSection = () => {
 		},
 	]
 
+	const transformWatermarkOpacity = useTransform(
+		scrollYProgress,
+		[0, 0.28, 0.72, 1],
+		[1, 0, 0, 0]
+	)
+
+	const transformX = useTransform(
+		scrollYProgress,
+		[0, 0.28, 0.72, 1],
+		[0, -500, 0, -1000]
+	)
+
 	return (
 		<SectionContainer>
-			<Container>
+			<Container
+				style={{
+					y: transformX,
+				}}
+			>
 				<ContentContainer>
 					<AnimationContainer
 						animate={{
@@ -93,6 +111,7 @@ const HeroSection = () => {
 							width={150}
 							height={200}
 							objectFit="contain"
+							layout="responsive"
 						/>
 					</ImageContainer>
 					<ButtonsContainer>
@@ -125,6 +144,10 @@ const AnimationContainer = styled(motion.figure)`
 	z-index: -1;
 	right: -1rem;
 	top: -3rem;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		right: -4.5rem;
+		top: -4rem;
+	}
 `
 
 const SectionContainer = styled.section`
@@ -140,11 +163,14 @@ const SectionContainer = styled.section`
 	color: ${({ theme }) => theme.fonts.primary};
 `
 
-const Container = styled.div`
+const Container = styled(motion.div)`
 	width: 100%;
 	margin: 25rem 1.5rem 0;
-	max-width: 100rem;
-	/* margin: 0 auto; */
+	max-width: 80rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		margin: 20rem 1.5rem 0;
+	}
 `
 
 const ContentContainer = styled.div`
@@ -153,14 +179,27 @@ const ContentContainer = styled.div`
 	padding: 1.5rem;
 
 	display: grid;
-	grid-template-columns: 1fr auto;
 	gap: 1rem;
+	grid-template-columns: 1fr auto;
 	grid-template-rows: auto auto auto;
 	grid-template-areas:
 		"h d"
 		"i i"
 		"b b"
 		"p p";
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		grid-template-columns: 1fr auto auto;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			"h i d"
+			"b b p";
+		min-height: 40rem;
+		padding: 2rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			padding: 3rem;
+		}
+	}
 `
 const HeadContainer = styled.div`
 	grid-area: h;
@@ -171,6 +210,15 @@ const HeadContainer = styled.div`
 			font-size: 4rem;
 		}
 	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		h1 {
+			span {
+				font-size: 6rem;
+				line-height: 1.2;
+			}
+		}
+	}
 `
 
 const ImageContainer = styled.figure`
@@ -179,6 +227,10 @@ const ImageContainer = styled.figure`
 	justify-self: center;
 	/* border: 1px solid green; */
 	margin-left: -2rem;
+	width: 10rem;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		width: 25rem;
+	}
 `
 
 const DateContainer = styled.div`
@@ -228,14 +280,42 @@ const DateContainer = styled.div`
 		/* border: 1px solid green; */
 		font-size: 3.4rem;
 	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		p:nth-of-type(3) {
+			/* border: 1px solid green; */
+			font-size: 4rem;
+		}
+		p:nth-of-type(4) {
+			/* border: 1px solid green; */
+			font-size: 4.5rem;
+		}
+	}
 `
 const ButtonsContainer = styled.div`
 	grid-area: b;
 	display: flex;
 	flex-wrap: wrap;
 	flex-gap: 1.5rem;
+	align-self: end;
 	align-items: center;
 	justify-content: space-between;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		/* flex-gap: 1rem; */
+		/* align-items: end; */
+		justify-content: flex-start;
+		flex-wrap: unset;
+
+		button {
+			font-size: 2rem;
+			/* margin-bottom: 1rem; */
+		}
+		button:nth-of-type(1) {
+			/* font-size: 2rem; */
+			margin-right: 1rem;
+		}
+	}
 `
 
 const PlaceContainer = styled.div`
@@ -243,6 +323,11 @@ const PlaceContainer = styled.div`
 	align-self: end;
 	justify-self: end;
 	text-align: right;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		margin-right: -12rem;
+		font-size: 2rem;
+	}
 `
 
 const PartnersContainer = styled.figure`

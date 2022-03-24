@@ -49,6 +49,10 @@ font-style: normal;
     /* overflow: hidden;  */
   }
 
+  button {
+    font-family: "Avenir", 'Acumin', sans-serif;
+  }
+
   a {
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);

@@ -8,6 +8,7 @@ import styled from "styled-components"
 // Components
 import Head from "next/head"
 import Link from "next/link"
+import Image from "next/image"
 import Header from "../components/header/header.component"
 import EventOverview from "../components/event-overview/event-overview.component"
 import HeroSection from "../components/hero-section/hero-section.component"
@@ -95,6 +96,88 @@ const Home: NextPage = () => {
 			<Header />
 
 			<WatermarkContainer>
+				<Circle1
+					className="first"
+					animate={{
+						scale: [0.95, 1.2, 1, 1.5, 0.95],
+					}}
+					transition={{
+						repeat: Infinity,
+						ease: "easeInOut",
+						duration: 10,
+					}}
+				>
+					<Image
+						src={"/assets/primary-circle.svg"}
+						alt="red circle"
+						layout="responsive"
+						width={100}
+						height={100}
+						objectFit="contain"
+					/>
+				</Circle1>
+				<Circle2
+					className="first"
+					animate={{
+						x: [0, 20, 10, -5, 0],
+						scale: [1.2, 0.97, 0.9, 1, 1.2],
+					}}
+					transition={{
+						repeat: Infinity,
+						ease: "easeInOut",
+						duration: 10,
+					}}
+				>
+					<Image
+						src={"/assets/primary-circle.svg"}
+						alt="red circle"
+						layout="responsive"
+						width={100}
+						height={100}
+						objectFit="contain"
+					/>
+				</Circle2>
+				<Circle3
+					animate={{
+						y: [0, -5, 10, 20, 0],
+						scale: [1.2, 1, 0.9, 0.97, 1.2],
+					}}
+					transition={{
+						repeat: Infinity,
+						ease: "easeInOut",
+						duration: 10,
+					}}
+				>
+					<Image
+						src={"/assets/primary-circle.svg"}
+						alt="red circle"
+						layout="responsive"
+						width={100}
+						height={100}
+						objectFit="contain"
+					/>
+				</Circle3>
+				<ArrowContainer
+					animate={{
+						y: [0, -5, 10, 20, 0],
+						// scale: [1.2, 1, 0.9, 0.97, 1.2],
+					}}
+					transition={{
+						repeat: Infinity,
+						ease: "easeInOut",
+						duration: 10,
+					}}
+				>
+					<Image
+						src={"/assets/arrow-container.svg"}
+						alt="red circle"
+						layout="responsive"
+						width={100}
+						height={100}
+						objectFit="contain"
+					/>
+				</ArrowContainer>
+
 				<WatermarkLetters
 					style={{
 						x: transformYAM,
@@ -157,6 +240,64 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+const Circle1 = styled(motion.figure)`
+	position: absolute;
+	z-index: -3;
+
+	width: 5rem;
+	heigth: 5rem;
+	left: 50%;
+	top: 10%;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		width: 10rem;
+		heigth: 10rem;
+	}
+`
+const Circle2 = styled(motion.figure)`
+	position: absolute;
+	z-index: -3;
+
+	width: 6rem;
+	heigth: 6rem;
+	bottom: 50%;
+	right: 10%;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		width: 12rem;
+		heigth: 12rem;
+	}
+`
+
+const Circle3 = styled(motion.figure)`
+	position: absolute;
+	z-index: -3;
+
+	width: 6rem;
+	heigth: 6rem;
+	bottom: 30%;
+	left: 30%;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		width: 12rem;
+		heigth: 12rem;
+	}
+`
+const ArrowContainer = styled(motion.figure)`
+	position: absolute;
+	z-index: -3;
+
+	width: 6rem;
+	heigth: 6rem;
+	bottom: 33%;
+	left: 3rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		width: 8rem;
+		heigth: 8rem;
+	}
+`
 
 const WatermarkContainer = styled.div`
 	position: absolute;
