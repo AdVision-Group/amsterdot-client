@@ -115,7 +115,7 @@ const Home: NextPage = () => {
 						height={100}
 						objectFit="contain"
 					/>
-				</Circle1>
+				</Circle1> */}
 				<Circle2
 					className="first"
 					animate={{
@@ -156,7 +156,7 @@ const Home: NextPage = () => {
 						height={100}
 						objectFit="contain"
 					/>
-				</Circle3> */}
+				</Circle3>
 				{/* <ArrowContainer
 					animate={{
 						y: [0, -5, 10, 20, 0],
@@ -268,8 +268,8 @@ const Circle2 = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	bottom: 50%;
-	right: 10%;
+	top: -5rem;
+	right: -5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 12rem;
@@ -283,8 +283,8 @@ const Circle3 = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	bottom: 30%;
-	left: 30%;
+	bottom: 3rem;
+	left: 3rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 12rem;
@@ -352,7 +352,7 @@ const WatermarkLetters = styled(motion.h2)`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		/* grid-template-columns: 1fr 35rem; */
 		/* background-color: red; */
-		font-size: 25rem;
+		font-size: 30rem;
 
 		&.am {
 			/* border: 1px solid green; */
@@ -360,7 +360,7 @@ const WatermarkLetters = styled(motion.h2)`
 			left: -30rem;
 		}
 		&.st {
-			width: 35rem;
+			width: 40rem;
 
 			top: 25rem;
 			right: -15rem;
@@ -376,14 +376,14 @@ const WatermarkLetters = styled(motion.h2)`
 
 			&.am {
 				top: 8rem;
-				left: -2rem;
+				left: -11rem;
 			}
 			&.st {
 				top: 17rem;
-				right: 0rem;
+				right: -5rem;
 			}
 			&.er {
-				top: 40rem;
+				top: 35rem;
 				left: 35rem;
 			}
 		}

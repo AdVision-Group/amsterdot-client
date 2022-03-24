@@ -13,18 +13,16 @@ font-style: normal; */
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url('../fonts/AvenirNextLTPro-Regular.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/AvenirNext-Regular-08.otf'); /* IE9 Compat Modes */
 }
 @font-face {
   font-family: 'Avenir Next Bold';
   src: url('../fonts/AvenirNextLTPro-Bold.otf'); /* IE9 Compat Modes */
 }
 @font-face {
-  font-family: 'Avenir Next Reg';
-  src: url('../fonts/Avenir-Next.ttc'); /* IE9 Compat Modes */
+  font-family: 'Acumin Variable Concept';
+  src: url('../fonts/AcuminVariableConcept-v2.otf'); /* IE9 Compat Modes */
 }
-@font-face {
-  font-family: "Acumin Variable Concept"; src: url("//db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.eot"); src: url("//db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.woff") format("woff"), url("//db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/066ce24dae3730ed6c648b09efaea93a.svg#Acumin Variable Concept") format("svg"); }
 
   *, *:before, *:after {
     margin: 0;

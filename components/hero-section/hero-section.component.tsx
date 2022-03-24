@@ -107,7 +107,7 @@ const HeroSection = () => {
 					<ImageContainer>
 						<figure>
 							<Image
-								src={"/assets/tulipan-liquid.png"}
+								src={"/assets/talisman-logo.svg"}
 								placeholder="blur"
 								blurDataURL="data:image/webp;base64,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"
 								alt="tulipan ilu"
@@ -155,8 +155,8 @@ const AnimationContainer = styled(motion.figure)`
 	right: -1rem;
 	top: -3rem;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		right: -4.3rem;
-		top: -4.1rem;
+		right: -4rem;
+		top: -4rem;
 	}
 `
 
@@ -177,10 +177,10 @@ const Container = styled(motion.div)`
 	width: 100%;
 	/* margin: 25rem 1.5rem 0; */
 	margin: 12rem 1.5rem 0;
-	max-width: 80rem;
+	max-width: 90rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		margin: 8rem 1.5rem 0;
+		margin: 11rem 1.5rem 0;
 	}
 `
 
@@ -203,9 +203,9 @@ const ContentContainer = styled.div`
 		grid-template-columns: auto 1fr 10rem;
 		grid-template-rows: auto auto;
 		grid-template-areas:
-			"h i i d"
-			"b b p p";
-		min-height: 40rem;
+			"h h i d d"
+			"b b i p p";
+		min-height: 45rem;
 		padding: 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			padding: 3rem;
@@ -228,8 +228,8 @@ const HeadContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		h1 {
 			span {
-				font-size: 7rem;
-				line-height: 1.2;
+				font-size: 10rem;
+				line-height: 1.1;
 			}
 		}
 	}
@@ -253,11 +253,13 @@ const ImageContainer = styled.figure`
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		align-items: end;
+		justify-self: end;
 		figure {
 			position: relative;
 			width: 25rem;
 			height: 30rem;
 			margin-bottom: 4rem;
+			margin-right: -5rem;
 			/* border: 1px solid green; */
 		}
 		/* width: 25rem; */
@@ -314,17 +316,17 @@ const DateContainer = styled.div`
 	}
 	p:nth-of-type(4) {
 		/* border: 1px solid green; */
-		font-size: 3.4rem;
+		/* font-size: 3.4rem; */
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		p:nth-of-type(3) {
 			/* border: 1px solid green; */
-			font-size: 3.4rem;
+			/* font-size: 3.4rem; */
 		}
 		p:nth-of-type(4) {
 			/* border: 1px solid green; */
-			font-size: 3.9rem;
+			font-size: 3.3rem;
 		}
 	}
 `
@@ -343,6 +345,7 @@ const ButtonsContainer = styled.div`
 		/* align-items: end; */
 		justify-content: flex-start;
 		flex-wrap: unset;
+		gap: 2rem;
 
 		button {
 			font-family: "Avenir Next";
@@ -364,10 +367,9 @@ const PlaceContainer = styled.div`
 	justify-self: end;
 	text-align: right;
 
-	font-family: "Acumin Variable Concept";
-	font-weight: 300;
-
 	p {
+		font-family: "Acumin Variable Concept";
+		font-weight: lighter;
 		line-height: 1;
 		margin-bottom: -0.3rem;
 	}
