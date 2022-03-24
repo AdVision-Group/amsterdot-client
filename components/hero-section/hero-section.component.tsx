@@ -168,9 +168,12 @@ const SectionContainer = styled.section`
 
 	display: flex;
 	justify-content: center;
-	/* align-items: center; */
 
 	color: ${({ theme }) => theme.fonts.primary};
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+		align-items: center;
+	}
 `
 
 const Container = styled(motion.div)`
