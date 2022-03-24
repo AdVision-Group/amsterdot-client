@@ -313,14 +313,17 @@ const WatermarkContainer = styled.div`
 	right: 0;
 	/* bottom: 0; */
 	width: 100%;
+	/* min-height: 100vh; */
 	height: calc(100% + 10rem);
-	/* height: calc(100% + 30rem); */
-	overflow-x: hidden;
+	overflow: hidden;
 	max-width: 200rem;
 	margin: 0 auto;
 	font-family: "Avenir Next";
 
 	/* border: 1px solid green; */
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		height: 100%;
+	}
 `
 
 const WatermarkLetters = styled(motion.h2)`

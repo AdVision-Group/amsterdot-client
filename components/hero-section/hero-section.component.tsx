@@ -79,7 +79,7 @@ const HeroSection = () => {
 						}}
 					>
 						<Image
-							src={"/assets/spinner.svg"}
+							src={"/assets/partners/spinner-v2.svg"}
 							alt={"spinner "}
 							width={80}
 							height={80}
@@ -128,7 +128,7 @@ const HeroSection = () => {
 				</ContentContainer>
 				<PartnersContainer>
 					<Image
-						src={"/assets/partners/logaaa.png"}
+						src={"/assets/partners/logaaa-v2.svg"}
 						placeholder="blur"
 						blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
 						alt="partners logo"
@@ -147,12 +147,16 @@ export default HeroSection
 
 const AnimationContainer = styled(motion.figure)`
 	position: absolute;
+	display: flex;
+	justify-conter: center;
+	align-items: center;
+
 	z-index: -1;
 	right: -1rem;
 	top: -3rem;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		right: -4.5rem;
-		top: -4rem;
+		right: -4.3rem;
+		top: -4.1rem;
 	}
 `
 
@@ -240,6 +244,13 @@ const ImageContainer = styled.figure`
 	width: 100%;
 	justify-content: center;
 	margin-left: -2rem;
+	figure {
+		position: relative;
+		width: 25rem;
+		height: 30rem;
+		margin-bottom: 4rem;
+		/* border: 1px solid green; */
+	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		align-items: end;
 		figure {
