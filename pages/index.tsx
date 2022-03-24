@@ -129,12 +129,12 @@ const Home: NextPage = () => {
 					}}
 				>
 					<Image
-						src={"/assets/animation-ilu.gif"}
+						src={"/assets/primary-circle.svg"}
 						alt="red circle"
 						layout="responsive"
 						width={100}
 						height={100}
-						objectFit="cover"
+						objectFit="contain"
 					/>
 				</Circle2>
 				<Circle3
@@ -149,12 +149,12 @@ const Home: NextPage = () => {
 					}}
 				>
 					<Image
-						src={"/assets/animation-ilu.gif"}
+						src={"/assets/primary-circle.svg"}
 						alt="red circle"
 						layout="responsive"
 						width={100}
 						height={100}
-						objectFit="cover"
+						objectFit="contain"
 					/>
 				</Circle3>
 				{/* <ArrowContainer

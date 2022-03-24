@@ -119,8 +119,12 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<Button>BUY TICKETS</Button>
-						<Button outline={true}>APPLY TO SPEAK</Button>
+						<a href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437">
+							<Button>BUY TICKETS</Button>
+						</a>
+						<Button outline={true} disabled={true}>
+							APPLY TO SPEAK
+						</Button>
 					</ButtonsContainer>
 					<PlaceContainer>
 						<p>IN AMSTERDAM / NETHERLANDS</p>
@@ -376,6 +380,7 @@ const ButtonsContainer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
+	margin: 2rem 0;
 
 	button {
 		font-size: 1.5rem;
