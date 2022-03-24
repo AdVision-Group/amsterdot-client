@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
-const withFonts = require("next-fonts")
-const nextConfig = withFonts({
+const nextConfig = {
 	reactStrictMode: true,
 	compiler: {
 		// ssr and displayName are configured by default
@@ -9,6 +8,6 @@ const nextConfig = withFonts({
 	images: {
 		domains: ["res.cloudinary.com"],
 	},
-})
+}
 
 module.exports = nextConfig
