@@ -24,7 +24,7 @@ const Header = () => {
 						layout="responsive"
 					/>
 				</figure>
-				<ToggleButton onClick={() => toggleMobileNav()} isOpen={showMobileNav}>
+				{/* <ToggleButton onClick={() => toggleMobileNav()} isOpen={showMobileNav}>
 					<div />
 					<div />
 					<div />
@@ -38,7 +38,7 @@ const Header = () => {
 					>
 						menu
 					</span>
-				</ToggleButton>
+				</ToggleButton> */}
 			</Container>
 		</HeaderContainer>
 	)
