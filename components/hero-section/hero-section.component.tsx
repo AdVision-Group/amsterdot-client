@@ -162,7 +162,7 @@ const AnimationContainer = styled(motion.figure)`
 
 const SectionContainer = styled.section`
 	flex: none;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	/* overflow: hidden; */
 
@@ -171,7 +171,7 @@ const SectionContainer = styled.section`
 
 	color: ${({ theme }) => theme.fonts.primary};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 		align-items: center;
 	}
 `
@@ -184,6 +184,9 @@ const Container = styled(motion.div)`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin: 11rem 1.5rem 0;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			max-width: 130rem;
+		}
 	}
 `
 
@@ -212,6 +215,9 @@ const ContentContainer = styled.div`
 		padding: 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			padding: 3rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				min-height: 65rem;
+			}
 		}
 	}
 `
@@ -233,6 +239,14 @@ const HeadContainer = styled.div`
 			span {
 				font-size: 10rem;
 				line-height: 1.1;
+			}
+		}
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			h1 {
+				span {
+					font-size: 15rem;
+				}
 			}
 		}
 	}
@@ -266,6 +280,15 @@ const ImageContainer = styled.figure`
 			/* border: 1px solid green; */
 		}
 		/* width: 25rem; */
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			figure {
+				width: 46rem;
+				height: 60rem;
+				margin-bottom: 4rem;
+				margin-right: -10rem;
+				/* border: 1px solid green; */
+			}
+		}
 	}
 `
 
@@ -331,6 +354,17 @@ const DateContainer = styled.div`
 			/* border: 1px solid green; */
 			font-size: 3.3rem;
 		}
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* width: 100%; */
+			max-width: 15rem;
+			p {
+				font-size: 4.4rem;
+			}
+			p:nth-of-type(4) {
+				font-size: 5.2rem;
+			}
+		}
 	}
 `
 const ButtonsContainer = styled.div`
@@ -361,11 +395,18 @@ const ButtonsContainer = styled.div`
 			/* font-size: 2rem; */
 			/* margin-right: 1rem; */
 		}
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			button {
+				font-size: 3rem;
+				padding: 1.8rem 4rem 1.5rem;
+			}
+		}
 	}
 `
 
 const PlaceContainer = styled.div`
-	grid-area: p;
+	/* grid-area: p; */
 	align-self: end;
 	justify-self: end;
 	text-align: right;
@@ -377,9 +418,23 @@ const PlaceContainer = styled.div`
 		margin-bottom: -0.3rem;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		/* margin-right: -12rem; */
-		font-size: 1.8rem;
+	position: absolute;
+	transform: rotate(-90deg);
+	right: -10rem;
+	bottom: 25rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		position: relative;
+		transform: rotate(0deg);
+		right: unset;
+		bottom: unset;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* margin-right: -12rem; */
+			font-size: 1.8rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				font-size: 2.5rem;
+			}
+		}
 	}
 `
 
@@ -387,4 +442,7 @@ const PartnersContainer = styled.figure`
 	position: relative;
 	max-width: 30rem;
 	margin-left: auto;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		max-width: 50rem;
+	}
 `

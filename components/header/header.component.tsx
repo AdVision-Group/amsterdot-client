@@ -69,6 +69,12 @@ const Container = styled.div`
 		position: relative;
 		width: 8rem;
 	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+		figure {
+			width: 12rem;
+		}
+	}
 `
 
 const ToggleButton = styled.button<{ isOpen: boolean }>`
