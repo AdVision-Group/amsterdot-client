@@ -11,17 +11,32 @@ src: url('../fonts/AcuminVariableConcept.otf');
 font-style: normal; */
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Avenir Next';
   src: url('../fonts/AvenirNext-Regular-08.otf'); /* IE9 Compat Modes */
-}
+} */
 @font-face {
   font-family: 'Avenir Next Bold';
   src: url('../fonts/AvenirNextLTPro-Bold.otf'); /* IE9 Compat Modes */
 }
-@font-face {
+/* @font-face {
   font-family: 'Acumin Variable Concept';
   src: url('../fonts/AcuminVariableConcept-v2.otf'); /* IE9 Compat Modes */
+} */
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/AvenirNext-Regular-08.otf') format('embedded-opentype'), 
+   url('../fonts/AvenirNext-Regular-08.otf') format('woff'), 
+   url('../fonts/AvenirNext-Regular-08.otf')  format('truetype'),
+   url('../fonts/AvenirNext-Regular-08.otf') format('svg');
+}
+@font-face {
+  font-family: 'Acumin Variable Concept';
+  src: url('../fonts/AcuminVariableConcept-v2.otf') format('embedded-opentype'), 
+   url('../fonts/AcuminVariableConcept-v2.otf') format('woff'), 
+   url('../fonts/AcuminVariableConcept-v2.otf')  format('truetype'),
+   url('../fonts/AcuminVariableConcept-v2.otf') format('svg');
 }
 
   *, *:before, *:after {
