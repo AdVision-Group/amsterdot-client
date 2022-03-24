@@ -372,7 +372,7 @@ const WatermarkLetters = styled(motion.h2)`
 			right: -15rem;
 		}
 		&.er {
-			top: 40rem;
+			top: 38rem;
 			left: 10rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -389,7 +389,7 @@ const WatermarkLetters = styled(motion.h2)`
 				right: -5rem;
 			}
 			&.er {
-				bottom: 35rem;
+				bottom: 30rem;
 				left: 35rem;
 			}
 

@@ -348,7 +348,7 @@ const DateContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		p:nth-of-type(3) {
 			/* border: 1px solid green; */
-			/* font-size: 3.4rem; */
+			font-size: 2.8rem;
 		}
 		p:nth-of-type(4) {
 			/* border: 1px solid green; */
