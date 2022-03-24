@@ -96,7 +96,7 @@ const Home: NextPage = () => {
 			<Header />
 
 			<WatermarkContainer>
-				<Circle1
+				{/* <Circle1
 					className="first"
 					animate={{
 						scale: [0.95, 1.2, 1, 1.5, 0.95],
@@ -156,7 +156,7 @@ const Home: NextPage = () => {
 						height={100}
 						objectFit="contain"
 					/>
-				</Circle3>
+				</Circle3> */}
 				<ArrowContainer
 					animate={{
 						y: [0, -5, 10, 20, 0],
