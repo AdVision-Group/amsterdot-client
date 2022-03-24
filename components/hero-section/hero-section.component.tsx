@@ -380,7 +380,7 @@ const ButtonsContainer = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	margin: 2rem 0;
+	/* margin: 2rem 0; */
 
 	button {
 		font-size: 1.5rem;
