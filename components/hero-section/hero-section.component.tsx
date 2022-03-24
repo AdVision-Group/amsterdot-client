@@ -153,7 +153,7 @@ const AnimationContainer = styled(motion.figure)`
 
 	z-index: -1;
 	right: -1rem;
-	top: -3rem;
+	top: -4rem;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		right: -4rem;
 		top: -4rem;
@@ -179,7 +179,7 @@ const SectionContainer = styled.section`
 const Container = styled(motion.div)`
 	width: 100%;
 	/* margin: 25rem 1.5rem 0; */
-	margin: 12rem 1.5rem 0;
+	margin: 9rem 1.5rem 0;
 	max-width: 90rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {

@@ -268,8 +268,8 @@ const Circle2 = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	top: -5rem;
-	right: -5rem;
+	top: 5rem;
+	right: 6rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 12rem;
@@ -343,7 +343,7 @@ const WatermarkLetters = styled(motion.h2)`
 	&.am {
 		/* border: 1px solid green; */
 		top: 10rem;
-		left: 0rem;
+		left: -6rem;
 	}
 	&.st {
 		width: 20rem;
