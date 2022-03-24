@@ -303,7 +303,7 @@ const DateContainer = styled.div`
 	text-align: center;
 
 	p {
-		font-family: "Avenir Next Bold";
+		font-family: "Avenir Next";
 		font-weight: 900;
 	}
 
@@ -417,7 +417,7 @@ const PlaceContainer = styled.div`
 
 	p {
 		font-family: "Acumin Variable Concept";
-		font-weight: lighter;
+		font-weight: 300;
 		line-height: 1;
 		margin-bottom: -0.3rem;
 	}

@@ -33,25 +33,25 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<link rel="icon" href="/favicon.ico" />
+					<link rel="icon" href="/favicon-v2/favicon.ico" />
 					<link
 						rel="apple-touch-icon"
 						sizes="180x180"
-						href="/favicon/apple-touch-icon.png"
+						href="/favicon-v2/apple-touch-icon.png"
 					/>
 					<link
 						rel="icon"
 						type="image/png"
 						sizes="32x32"
-						href="/favicon/favicon-32x32.png"
+						href="/favicon-v2/favicon-32x32.png"
 					/>
 					<link
 						rel="icon"
 						type="image/png"
 						sizes="16x16"
-						href="/favicon/favicon-16x16.png"
+						href="/favicon-v2/favicon-16x16.png"
 					/>
-					<link rel="manifest" href="/favicon/site.webmanifest" />
+					<link rel="manifest" href="/favicon-v2/site.webmanifest" />
 					<meta name="msapplication-TileColor" content="#da532c" />
 					<meta name="theme-color" content="#ffffff"></meta>
 				</Head>
