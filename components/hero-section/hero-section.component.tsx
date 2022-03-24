@@ -237,7 +237,7 @@ const HeadContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		h1 {
 			span {
-				font-size: 10rem;
+				font-size: 8rem;
 				line-height: 1.1;
 			}
 		}
