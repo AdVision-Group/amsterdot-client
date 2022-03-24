@@ -35,7 +35,7 @@ export const ButtonContainer = styled(motion.button)<IButtonProps>`
 		/* opacity: 0.4; */
 		color: ${({ theme }) => theme.color.primary};
 		background-color: ${({ theme }) => theme.background.container};
-		/* &:after {
+		&:after {
 			position: absolute;
 			content: "coming soon";
 			background-color: ${({ theme }) => theme.background.primary};
@@ -43,6 +43,6 @@ export const ButtonContainer = styled(motion.button)<IButtonProps>`
 			padding: 0.4rem 1rem;
 			border-radius: 0.3rem;
 			bottom: -2rem;
-		} */
+		}
 	}
 `
