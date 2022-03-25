@@ -54,6 +54,7 @@ export default class MyDocument extends Document {
 					<link rel="manifest" href="/favicon-v2/site.webmanifest" />
 					<meta name="msapplication-TileColor" content="#da532c" />
 					<meta name="theme-color" content="#ffffff"></meta>
+					{/* <link href="/fonts/Avenir-Next.ttc" rel="stylesheet" /> */}
 				</Head>
 				<body>
 					<Main />

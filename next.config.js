@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const withFonts = require("next-fonts")
 const nextConfig = {
 	reactStrictMode: true,
 	compiler: {
@@ -8,6 +9,9 @@ const nextConfig = {
 	images: {
 		domains: ["res.cloudinary.com"],
 	},
+	webpack(config, options) {
+		return config
+	},
 }
 
-module.exports = nextConfig
+module.exports = withFonts(nextConfig)
