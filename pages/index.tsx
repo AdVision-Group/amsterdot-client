@@ -48,7 +48,7 @@ const Home: NextPage = () => {
 	const physics = { damping: 5, mass: 0.17, stiffness: 55 }
 	const spring = useSpring(transform, physics)
 
-	// scrollYProgress.onChange((e) => console.log(e))
+	scrollYProgress.onChange((e) => console.log(e))
 
 	useEffect(() => {
 		if (sectionRef.current) {
@@ -73,18 +73,18 @@ const Home: NextPage = () => {
 
 	const transformYAM = useTransform(
 		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[0, 1400, 0, -1000]
+		[0, 1, 1, 1],
+		[0, 1000, 1400, -1000]
 	)
 	const transformYST = useTransform(
 		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[0, -700, 0, -1000]
+		[0, 1, 1, 1],
+		[0, -700, -700, -1000]
 	)
 	const transformYER = useTransform(
 		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[0, 600, 0, -1000]
+		[0, 1, 1, 1],
+		[0, 600, 600, 1000]
 	)
 
 	return (
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
 					}}
 				>
 					<Image
-						src={"/assets/animation-ilu.gif"}
+						src={"/assets/primary-circle.svg"}
 						alt="red circle"
 						layout="responsive"
 						width={100}
@@ -150,7 +150,7 @@ const Home: NextPage = () => {
 					}}
 				>
 					<Image
-						src={"/assets/animation-ilu.gif"}
+						src={"/assets/primary-circle.svg"}
 						alt="red circle"
 						layout="responsive"
 						width={100}
@@ -180,21 +180,38 @@ const Home: NextPage = () => {
 				</ArrowContainer> */}
 
 				<WatermarkLetters
-					// style={{
-					// 	x: transformYAM,
+					style={{
+						x: transformYAM,
 
-					// 	opacity: transformWatermarkOpacity,
-					// }}
+						opacity: transformWatermarkOpacity,
+					}}
 					className="am"
 				>
 					AM
 				</WatermarkLetters>
 				<WatermarkLetters
-					// style={{
-					// 	x: transformYST,
+					style={{
+						x: transformYST,
 
-					// 	opacity: transformWatermarkOpacity,
-					// }}
+						opacity: transformWatermarkOpacity,
+					}}
+					className="st-horizontal"
+				>
+					<Image
+						src={"/assets/st-horizontal.svg"}
+						alt="st letters"
+						width={200}
+						height={400}
+						layout="responsive"
+						objectFit="contain"
+					/>
+				</WatermarkLetters>
+				<WatermarkLetters
+					style={{
+						x: transformYST,
+
+						opacity: transformWatermarkOpacity,
+					}}
 					className="st"
 				>
 					<Image
@@ -207,14 +224,25 @@ const Home: NextPage = () => {
 					/>
 				</WatermarkLetters>
 				<WatermarkLetters
-					// style={{
-					// 	x: transformYER,
+					style={{
+						x: transformYER,
 
-					// 	opacity: transformWatermarkOpacity,
-					// }}
+						opacity: transformWatermarkOpacity,
+					}}
 					className="er"
 				>
 					ER
+				</WatermarkLetters>
+				<WatermarkLetters
+					style={{
+						x: transformYER,
+
+						opacity: transformWatermarkOpacity,
+					}}
+					className="er-horizontal"
+				>
+					<span>E</span>
+					<span>R</span>
 				</WatermarkLetters>
 			</WatermarkContainer>
 
@@ -335,12 +363,13 @@ const WatermarkContainer = styled.div`
 
 	/* border: 1px solid green; */
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		height: 100%;
+		/* height: 100%; */
 	}
 `
 
 const WatermarkLetters = styled(motion.h2)`
 	position: absolute;
+	overflow: hidden;
 	font-size: 15rem;
 	z-index: -2;
 	color: ${({ theme }) => theme.fonts.primary};
@@ -353,13 +382,36 @@ const WatermarkLetters = styled(motion.h2)`
 		left: -6rem;
 	}
 	&.st {
+		display: none;
 		width: 20rem;
 		top: 25rem;
 		right: 0rem;
 	}
+	&.st-horizontal {
+		width: 13rem;
+		top: 30rem;
+		right: -5rem;
+	}
 	&.er {
+		display: none;
+		/* width: 5rem; */
+		/* height: 40rem; */
+		/* overflow-wrap: break-word; */
 		top: 40rem;
-		left: 5srem;
+		left: 5rem;
+	}
+
+	&.er-horizontal {
+		/* width: 5rem; */
+		/* height: 40rem; */
+		/* border: 1px solid green; */
+		line-height: 1;
+		/* overflow-wrap: break-word; */
+		top: 40rem;
+		left: -5rem;
+		span {
+			display: block;
+		}
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -373,14 +425,24 @@ const WatermarkLetters = styled(motion.h2)`
 			left: -30rem;
 		}
 		&.st {
+			display: block;
 			width: 45rem;
 
 			top: 25rem;
 			right: -15rem;
 		}
+		&.st-horizontal {
+			display: none;
+		}
 		&.er {
-			top: 38rem;
+			display: block;
+			/* top: 38rem; */
+			bottom: -10rem;
+
 			left: 10rem;
+		}
+		&.er-horizontal {
+			display: none;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* grid-template-columns: 1fr 35rem; */
@@ -388,7 +450,7 @@ const WatermarkLetters = styled(motion.h2)`
 			/* font-size: 30rem; */
 
 			&.am {
-				top: 8rem;
+				top: 4rem;
 				left: -11rem;
 			}
 			&.st {
@@ -396,8 +458,9 @@ const WatermarkLetters = styled(motion.h2)`
 				right: -10rem;
 			}
 			&.er {
-				bottom: 30rem;
-				left: 35rem;
+				display: block;
+				bottom: 0rem;
+				left: 20rem;
 			}
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {

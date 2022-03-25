@@ -102,7 +102,7 @@ const AboutSection = () => {
 						<Button outline={true}>HACK PROGRAMME</Button>
 					</div>
 				</ContentContainer>
-				<AnimationContainer
+				{/* <AnimationContainer
 					className="first"
 					animate={{
 						x: [0, 20, 10, -5, 0],
@@ -122,7 +122,7 @@ const AboutSection = () => {
 						height={100}
 						objectFit="cover"
 					/>
-				</AnimationContainer>
+				</AnimationContainer> */}
 			</Container>
 		</SectionContainer>
 	)

@@ -168,7 +168,6 @@ const SectionContainer = styled.section`
 	flex: none;
 	width: 100%;
 	height: 100vh;
-	/* overflow: hidden; */
 
 	display: flex;
 	justify-content: center;
@@ -183,7 +182,7 @@ const SectionContainer = styled.section`
 const Container = styled(motion.div)`
 	width: 100%;
 	/* margin: 25rem 1.5rem 0; */
-	margin: 9rem 1.5rem 0;
+	margin: 9rem 3rem 0;
 	max-width: 90rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -267,8 +266,8 @@ const ImageContainer = styled.figure`
 	margin-left: -2rem;
 	figure {
 		position: relative;
-		width: 25rem;
-		height: 30rem;
+		width: 15rem;
+		height: 20rem;
 		margin-bottom: 4rem;
 		/* border: 1px solid green; */
 	}
@@ -383,7 +382,9 @@ const ButtonsContainer = styled.div`
 	/* margin: 2rem 0; */
 
 	button {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
+		font-weight: 400;
+		padding: 1rem 1rem 0.8rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -395,7 +396,6 @@ const ButtonsContainer = styled.div`
 
 		button {
 			font-family: "Avenir Next";
-			font-weight: 400;
 			font-size: 2rem;
 			line-height: 1;
 			/* margin-bottom: 1rem; */
@@ -430,7 +430,7 @@ const PlaceContainer = styled.div`
 	position: absolute;
 	transform: rotate(-90deg);
 	right: -10rem;
-	bottom: 25rem;
+	bottom: 19.5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: relative;
