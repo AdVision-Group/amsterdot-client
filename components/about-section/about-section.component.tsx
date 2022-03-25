@@ -213,7 +213,7 @@ const AboutSection = () => {
 							// }}
 						>
 							<Image
-								src={"/assets/animation-ilu.gif"}
+								src={"/assets/anim-v2.gif"}
 								alt="red circle"
 								layout="responsive"
 								width={100}
@@ -495,9 +495,9 @@ const AnimationContainer = styled(motion.figure)`
 		/* bottom: 13rem; */
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			width: 15rem;
-			right: -3rem;
-			bottom: -3rem;
+			width: 24rem;
+			right: -6rem;
+			bottom: -6rem;
 			/* heigth: 20rem; */
 		}
 	}
