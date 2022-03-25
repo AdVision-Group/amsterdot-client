@@ -239,13 +239,13 @@ const WatermarkContainer = styled.div`
 	width: 100%;
 	/* min-height: 100vh; */
 	height: calc(100% + 10rem);x
-	overflow-x: hidden;
 	max-width: 200rem;
 	margin: 0 auto;
 	font-family: "Avenir Next";
-
+	
 	/* border: 1px solid green; */
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		overflow: hidden;
 		/* height: 100%; */
 	}
 `
@@ -352,6 +352,7 @@ const SectionContainer = styled.section`
 		margin-top: 17rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-top: 12rem;
+			/* overflow-x: hidden; */
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				align-items: center;
