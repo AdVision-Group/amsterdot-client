@@ -190,13 +190,17 @@ const SectionContainer = styled.section`
 const Container = styled(motion.div)`
 	width: 100%;
 	/* margin: 25rem 1.5rem 0; */
-	margin: 9rem 3rem 0;
+	margin: 6rem 3rem 0;
 	max-width: 90rem;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		margin: 11rem 1.5rem 0;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-			max-width: 130rem;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		margin: 13rem 3rem 0;
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			margin: 11rem 1.5rem 0;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				max-width: 130rem;
+			}
 		}
 	}
 `
@@ -274,8 +278,8 @@ const ImageContainer = styled.figure`
 	margin-left: -2rem;
 	figure {
 		position: relative;
-		width: 15rem;
-		height: 20rem;
+		width: 17rem;
+		height: 23rem;
 		margin-bottom: 4rem;
 		/* border: 1px solid green; */
 	}
@@ -390,12 +394,13 @@ const ButtonsContainer = styled.div`
 	/* margin: 2rem 0; */
 
 	button {
+		font-family: "Avenir Next";
 		font-size: 1.2rem;
 		font-weight: 400;
 		padding: 1rem 1rem 0.8rem;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* flex-gap: 1rem; */
 		/* align-items: end; */
 		justify-content: flex-start;
@@ -403,7 +408,6 @@ const ButtonsContainer = styled.div`
 		gap: 2rem;
 
 		button {
-			font-family: "Avenir Next";
 			font-size: 2rem;
 			line-height: 1;
 			/* margin-bottom: 1rem; */
@@ -415,6 +419,7 @@ const ButtonsContainer = styled.div`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			button {
+				/* font-size: 3rem; */
 				padding: 1.2rem 2rem 0.8rem;
 			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
@@ -437,13 +442,14 @@ const PlaceContainer = styled.div`
 		font-family: "Acumin Variable Concept";
 		font-weight: 300;
 		line-height: 1;
+		font-size: 1.5rem;
 		margin-bottom: -0.3rem;
 	}
 
 	position: absolute;
 	transform: rotate(-90deg);
 	right: -10rem;
-	bottom: 19.5rem;
+	bottom: 21rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: relative;

@@ -338,12 +338,17 @@ const ArrowContainer = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	bottom: 33%;
+	bottom: 4rem;
 	left: 3rem;
+	display: none;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		display: block;
 		width: 8rem;
 		heigth: 8rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			bottom: 13rem;
+		}
 	}
 `
 
@@ -378,7 +383,7 @@ const WatermarkLetters = styled(motion.h2)`
 
 	&.am {
 		/* border: 1px solid green; */
-		top: 10rem;
+		top: 8rem;
 		left: -6rem;
 	}
 	&.st {
