@@ -90,7 +90,7 @@ const Home: NextPage = () => {
 	return (
 		<React.Fragment>
 			<Head>
-				<title>Amsterdot</title>
+				<title>amsterDOT Hack Conf</title>
 				<meta name="description" content="Amsterdot" />
 			</Head>
 
