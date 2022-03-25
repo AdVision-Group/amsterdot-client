@@ -12,14 +12,19 @@ const AboutSection = () => {
 
 	const transformWatermarkOpacity = useTransform(
 		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[1, 0, 0, 0]
+		[0, 0.95, 1, 1],
+		[1, 1, 0, 0]
 	)
 
-	const transformX = useTransform(
+	const transformYDO = useTransform(
 		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[0, -500, 0, -1000]
+		[0, 0.95, 1, 1],
+		[-1000, 0, 100, 100]
+	)
+	const transformYT = useTransform(
+		scrollYProgress,
+		[0, 0.95, 1, 1],
+		[1000, 0, -100, -100]
 	)
 
 	const partners = [
@@ -62,76 +67,200 @@ const AboutSection = () => {
 	]
 
 	return (
-		<SectionContainer>
-			<Container
-			// style={{
-			// 	y: transformX,
-			// }}
-			>
-				<LabelContainer>
-					<p>INFO</p>
-				</LabelContainer>
-				<ContentContainer>
-					<h2>WHAT IS amsterDOT?</h2>
-					<p>
-						4 days of conf & hack sessions organized by some of the leading
-						projects of the Polkadot and Kusama ecosystems.
-					</p>
-					<PartnersContainer>
-						{partners.map((i, idx) => (
-							<figure key={idx}>
-								<Image
-									src={i.image.src}
-									blurDataURL={i.image.blurDataURL}
-									placeholder="blur"
-									width={i.image.width}
-									height={i.image.height}
-									alt={i.image.alt}
-									objectFit="contain"
-								/>
-							</figure>
-						))}
-					</PartnersContainer>
-					<p>
-						Offering an inclusive space to meet, greet, talk and exchange
-						thoughts, and perhaps kick off the next interesting collaboration.
-						Targeting the wider crypto community.
-					</p>
-					<ButtonsContainer>
-						<Button>CONF PROGRAMME</Button>
-						<Button outline={true}>HACK PROGRAMME</Button>
-					</ButtonsContainer>
-				</ContentContainer>
-				<AnimationContainer
+		<React.Fragment>
+			<SectionContainer>
+				<WatermarkContainer>
+					{/* <Circle1
 					className="first"
-					// animate={{
-					// 	x: [0, 20, 10, -5, 0],
-					// 	scale: [1.2, 0.97, 0.9, 1, 1.2],
-					// }}
-					// transition={{
-					// 	repeat: Infinity,
-					// 	ease: "easeInOut",
-					// 	duration: 10,
-					// }}
+					animate={{
+						scale: [0.95, 1.2, 1, 1.5, 0.95],
+					}}
+					transition={{
+						repeat: Infinity,
+						ease: "easeInOut",
+						duration: 10,
+					}}
 				>
 					<Image
-						src={"/assets/animation-ilu.gif"}
+						src={"/assets/primary-circle.svg"}
 						alt="red circle"
 						layout="responsive"
 						width={100}
-						height={300}
-						objectFit="cover"
+						height={100}
+						objectFit="contain"
 					/>
-				</AnimationContainer>
-			</Container>
-		</SectionContainer>
+				</Circle1> */}
+
+					{/* <ArrowContainer
+					animate={{
+						y: [0, -5, 10, 20, 0],
+						// scale: [1.2, 1, 0.9, 0.97, 1.2],
+					}}
+					transition={{
+						repeat: Infinity,
+						ease: "easeInOut",
+						duration: 10,
+					}}
+				>
+					<Image
+						src={"/assets/arrow-container.svg"}
+						alt="red circle"
+						layout="responsive"
+						width={100}
+						height={100}
+						objectFit="contain"
+					/>
+				</ArrowContainer> */}
+
+					<WatermarkLetters
+						style={{
+							x: transformYDO,
+
+							opacity: transformWatermarkOpacity,
+						}}
+						className="do"
+					>
+						DO
+					</WatermarkLetters>
+
+					<WatermarkLetters
+						style={{
+							x: transformYT,
+
+							opacity: transformWatermarkOpacity,
+						}}
+						className="t"
+					>
+						T
+					</WatermarkLetters>
+				</WatermarkContainer>
+				<Container
+				// style={{
+				// 	y: transformX,
+				// }}
+				>
+					<LabelContainer>
+						<p>INFO</p>
+					</LabelContainer>
+					<ContentContainer>
+						<h2>WHAT IS amsterDOT?</h2>
+						<p>
+							4 days of conf & hack sessions organized by some of the leading
+							projects of the Polkadot and Kusama ecosystems.
+						</p>
+						<PartnersContainer>
+							{partners.map((i, idx) => (
+								<figure key={idx}>
+									<Image
+										src={i.image.src}
+										blurDataURL={i.image.blurDataURL}
+										placeholder="blur"
+										width={i.image.width}
+										height={i.image.height}
+										alt={i.image.alt}
+										objectFit="contain"
+										layout="responsive"
+									/>
+								</figure>
+							))}
+						</PartnersContainer>
+						<p>
+							Offering an inclusive space to meet, greet, talk and exchange
+							thoughts, and perhaps kick off the next interesting collaboration.
+							Targeting the wider crypto community.
+						</p>
+						<ButtonsContainer>
+							<Button>CONF PROGRAMME</Button>
+							<Button outline={true}>HACK PROGRAMME</Button>
+						</ButtonsContainer>
+						<AnimationContainer
+							className="first"
+							// animate={{
+							// 	x: [0, 20, 10, -5, 0],
+							// 	scale: [1.2, 0.97, 0.9, 1, 1.2],
+							// }}
+							// transition={{
+							// 	repeat: Infinity,
+							// 	ease: "easeInOut",
+							// 	duration: 10,
+							// }}
+						>
+							<Image
+								src={"/assets/animation-ilu.gif"}
+								alt="red circle"
+								layout="responsive"
+								width={100}
+								height={200}
+								objectFit="cover"
+							/>
+						</AnimationContainer>
+					</ContentContainer>
+				</Container>
+			</SectionContainer>
+		</React.Fragment>
 	)
 }
 
 export default AboutSection
 
+const WatermarkContainer = styled.div`
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	/* bottom: 0; */
+	width: 100%;
+	/* min-height: 100vh; */
+	height: calc(100% + 10rem);
+	overflow: hidden;
+	max-width: 200rem;
+	margin: 0 auto;
+	font-family: "Avenir Next";
+
+	/* border: 1px solid green; */
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		/* height: 100%; */
+	}
+`
+
+const WatermarkLetters = styled(motion.h2)`
+	position: absolute;
+	overflow: hidden;
+	font-size: 15rem;
+	z-index: -2;
+	color: ${({ theme }) => theme.fonts.primary};
+
+	font-weight: 400;
+
+	&.do {
+		/* border: 1px solid green; */
+		top: 5rem;
+		left: 0rem;
+	}
+	&.t {
+		/* display: none; */
+		top: 20rem;
+		right: 0rem;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		font-size: 30rem;
+
+		&.t {
+			/* display: none; */
+			top: 25rem;
+			right: 0rem;
+		}
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				font-size: 50rem;
+			}
+		}
+	}
+`
+
 const SectionContainer = styled.section`
-	/* position: relative; */
+	position: relative;
 	flex: none;
 	width: 100%;
 	height: 100vh;
@@ -175,6 +304,10 @@ const LabelContainer = styled.div`
 	color: ${({ theme }) => theme.fonts.secondary};
 	font-weight: 500;
 	font-size: 2.5rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin-left: 3rem;
+	}
 `
 
 const ContentContainer = styled.div`
@@ -202,6 +335,15 @@ const ContentContainer = styled.div`
 			margin-bottom: 2rem;
 			max-width: 75rem;
 		}
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+			padding: 4rem 3rem 3rem;
+
+			h2 {
+				font-size: 4rem;
+				margin-top: 1rem;
+				margin-bottom: 2rem;
+			}
+		}
 	}
 `
 
@@ -210,34 +352,51 @@ const PartnersContainer = styled.div`
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	margin: 2rem 0 2rem;
+	/* width: 100%; */
 	gap: 1.5rem;
 
 	figure {
 		position: relative;
 		border: 3px solid ${({ theme }) => theme.color.primary};
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		width: 8rem;
+		height: 8rem;
 		padding: 1.5rem;
 		border-radius: 50%;
+
+		img {
+		}
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		justify-content: flex-start;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			figure {
+				width: 12rem;
+				height: 12rem;
+				padding: 2.5rem;
+			}
+		}
 	}
 `
 
 const AnimationContainer = styled(motion.figure)`
 	position: absolute;
 	z-index: -1;
-	padding: 1.5rem;
+	/* padding: 1.5rem; */
 	width: 10rem;
 	heigth: 50rem;
-	right: -3rem;
-	bottom: 6rem;
+	right: -1.5rem;
+	bottom: -1.5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		bottom: 13rem;
+		/* bottom: 13rem; */
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			width: 15rem;
+			right: -3rem;
+			bottom: -3rem;
+			/* heigth: 20rem; */
+		}
 	}
 `
 

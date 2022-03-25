@@ -48,7 +48,7 @@ const Home: NextPage = () => {
 	const physics = { damping: 5, mass: 0.17, stiffness: 55 }
 	const spring = useSpring(transform, physics)
 
-	scrollYProgress.onChange((e) => console.log(e))
+	// scrollYProgress.onChange((e) => console.log(e))
 
 	useEffect(() => {
 		if (sectionRef.current) {
