@@ -79,12 +79,12 @@ const Home: NextPage = () => {
 	const transformYST = useTransform(
 		scrollYProgress,
 		[0, 1, 1, 1],
-		[0, -700, -700, -1000]
+		[0, -400, -700, -1000]
 	)
 	const transformYER = useTransform(
 		scrollYProgress,
 		[0, 1, 1, 1],
-		[0, -300, -600, 1000]
+		[0, -200, -600, 1000]
 	)
 
 	return (
@@ -328,7 +328,7 @@ const ArrowContainer = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	bottom: 1rem;
+	bottom: 5rem;
 	left: 3rem;
 	/* display: none; */
 
@@ -356,6 +356,7 @@ const WatermarkContainer = styled.div`
 	max-width: 200rem;
 	margin: 0 auto;
 	font-family: "Avenir Next";
+	z-index: -1;
 
 	/* border: 1px solid green; */
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {

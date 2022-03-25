@@ -18,13 +18,13 @@ const AboutSection = () => {
 
 	const transformYDO = useTransform(
 		scrollYProgress,
-		[0, 0.95, 1, 1],
-		[-1000, 0, 100, 100]
+		[0.3, 1, 1, 1],
+		[-200, 15, 15, 15]
 	)
 	const transformYT = useTransform(
 		scrollYProgress,
-		[0, 0.95, 1, 1],
-		[1000, 0, -100, -100]
+		[0.3, 1, 0.95, 1],
+		[300, 0, 0, 0]
 	)
 
 	const partners = [
@@ -120,7 +120,7 @@ const AboutSection = () => {
 						}}
 						className="do"
 					>
-						DO
+						DO<span>T</span>
 					</WatermarkLetters>
 					<WatermarkLetters
 						style={{
@@ -238,8 +238,8 @@ const WatermarkContainer = styled.div`
 	/* bottom: 0; */
 	width: 100%;
 	/* min-height: 100vh; */
-	height: calc(100% + 10rem);
-	overflow: hidden;
+	height: calc(100% + 10rem);x
+	overflow-x: hidden;
 	max-width: 200rem;
 	margin: 0 auto;
 	font-family: "Avenir Next";
@@ -261,14 +261,13 @@ const WatermarkLetters = styled(motion.h2)`
 
 	&.do {
 		/* border: 1px solid green; */
-		display: none;
-		top: 5rem;
+		/* display: none; */
+		top: -10rem;
 		left: 0rem;
 	}
 
 	&.do-horizontal {
-		display: block;
-		/* border: 1px solid green; */
+		display: none;
 		top: 5rem;
 		left: 0rem;
 		line-height: 1;
@@ -279,7 +278,7 @@ const WatermarkLetters = styled(motion.h2)`
 	}
 
 	&.t {
-		/* display: none; */
+		display: none;
 		top: 20rem;
 		right: 0rem;
 	}
@@ -288,14 +287,16 @@ const WatermarkLetters = styled(motion.h2)`
 		font-size: 30rem;
 		&.do {
 			/* border: 1px solid green; */
-			display: block;
+			/* display: block; */
 			top: 5rem;
 			left: 0rem;
+
+			span {
+				/* display: none; */
+			}
 		}
 
 		&.do-horizontal {
-			display: none;
-			/* border: 1px solid green; */
 			top: 5rem;
 			left: 0rem;
 			line-height: 1;
@@ -306,11 +307,26 @@ const WatermarkLetters = styled(motion.h2)`
 		}
 
 		&.t {
-			/* display: none; */
 			top: 25rem;
 			right: 0rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			&.do {
+				/* border: 1px solid green; */
+				/* display: block; */
+				top: 5rem;
+				left: 0rem;
+
+				span {
+					display: none;
+				}
+			}
+
+			&.t {
+				display: block;
+				top: 25rem;
+				right: 0rem;
+			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				font-size: 50rem;
 			}
