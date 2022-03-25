@@ -122,6 +122,17 @@ const AboutSection = () => {
 					>
 						DO
 					</WatermarkLetters>
+					<WatermarkLetters
+						style={{
+							x: transformYDO,
+
+							opacity: transformWatermarkOpacity,
+						}}
+						className="do-horizontal"
+					>
+						<span>D</span>
+						<span>O</span>
+					</WatermarkLetters>
 
 					<WatermarkLetters
 						style={{
@@ -169,6 +180,22 @@ const AboutSection = () => {
 							thoughts, and perhaps kick off the next interesting collaboration.
 							Targeting the wider crypto community.
 						</p>
+						<ButtonsContainer>
+							<a
+								href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								<Button>BUY TICKETS</Button>
+							</a>
+							<a
+								href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								<Button outline={true}>APPLY TO SPEAK</Button>
+							</a>
+						</ButtonsContainer>
 						{/* <ButtonsContainer>
 							<Button>CONF PROGRAMME</Button>
 							<Button outline={true}>HACK PROGRAMME</Button>
@@ -234,9 +261,23 @@ const WatermarkLetters = styled(motion.h2)`
 
 	&.do {
 		/* border: 1px solid green; */
+		display: none;
 		top: 5rem;
 		left: 0rem;
 	}
+
+	&.do-horizontal {
+		display: block;
+		/* border: 1px solid green; */
+		top: 5rem;
+		left: 0rem;
+		line-height: 1;
+
+		span {
+			display: block;
+		}
+	}
+
 	&.t {
 		/* display: none; */
 		top: 20rem;
@@ -245,6 +286,24 @@ const WatermarkLetters = styled(motion.h2)`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		font-size: 30rem;
+		&.do {
+			/* border: 1px solid green; */
+			display: block;
+			top: 5rem;
+			left: 0rem;
+		}
+
+		&.do-horizontal {
+			display: none;
+			/* border: 1px solid green; */
+			top: 5rem;
+			left: 0rem;
+			line-height: 1;
+
+			span {
+				display: block;
+			}
+		}
 
 		&.t {
 			/* display: none; */
@@ -263,7 +322,7 @@ const SectionContainer = styled.section`
 	position: relative;
 	flex: none;
 	width: 100%;
-	height: 100vh;
+	/* height: 100vh; */
 	/* overflow: hidden; */
 	margin-top: 15rem;
 
