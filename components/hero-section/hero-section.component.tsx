@@ -413,10 +413,15 @@ const ButtonsContainer = styled.div`
 			/* margin-right: 1rem; */
 		}
 
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			button {
-				font-size: 3rem;
-				padding: 1.8rem 4rem 1.5rem;
+				padding: 1.2rem 2rem 0.8rem;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				button {
+					font-size: 3rem;
+					padding: 1.8rem 4rem 1.5rem;
+				}
 			}
 		}
 	}

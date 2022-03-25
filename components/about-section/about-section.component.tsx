@@ -13,7 +13,7 @@ const AboutSection = () => {
 	const transformWatermarkOpacity = useTransform(
 		scrollYProgress,
 		[0, 0.95, 1, 1],
-		[1, 1, 0, 0]
+		[1, 1, 1, 1]
 	)
 
 	const transformYDO = useTransform(
@@ -307,6 +307,9 @@ const LabelContainer = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-left: 3rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: 3.5rem;
+		}
 	}
 `
 
@@ -335,13 +338,31 @@ const ContentContainer = styled.div`
 			margin-bottom: 2rem;
 			max-width: 75rem;
 		}
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			padding: 4rem 3rem 3rem;
 
 			h2 {
 				font-size: 4rem;
 				margin-top: 1rem;
 				margin-bottom: 2rem;
+			}
+
+			p {
+				margin-bottom: 2rem;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				padding: 4rem 4rem 4rem;
+
+				h2 {
+					font-size: 6rem;
+					margin-top: 1rem;
+					margin-bottom: 2.5rem;
+				}
+
+				p {
+					margin-bottom: 2rem;
+				}
 			}
 		}
 	}

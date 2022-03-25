@@ -74,7 +74,7 @@ const Home: NextPage = () => {
 	const transformYAM = useTransform(
 		scrollYProgress,
 		[0, 1, 1, 1],
-		[0, 1000, 1400, -1000]
+		[0, 150, 150, -1000]
 	)
 	const transformYST = useTransform(
 		scrollYProgress,
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
 	const transformYER = useTransform(
 		scrollYProgress,
 		[0, 1, 1, 1],
-		[0, 600, 600, 1000]
+		[0, -300, -600, 1000]
 	)
 
 	return (
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
 						objectFit="cover"
 					/>
 				</Circle2>
-				<Circle3
+				{/* <Circle3
 					animate={{
 						y: [0, -5, 10, 20, 0],
 						scale: [1.2, 1, 0.9, 0.97, 1.2],
@@ -157,8 +157,8 @@ const Home: NextPage = () => {
 						height={100}
 						objectFit="cover"
 					/>
-				</Circle3>
-				{/* <ArrowContainer
+				</Circle3> */}
+				<ArrowContainer
 					animate={{
 						y: [0, -5, 10, 20, 0],
 						// scale: [1.2, 1, 0.9, 0.97, 1.2],
@@ -177,13 +177,13 @@ const Home: NextPage = () => {
 						height={100}
 						objectFit="contain"
 					/>
-				</ArrowContainer> */}
+				</ArrowContainer>
 
 				<WatermarkLetters
 					style={{
 						x: transformYAM,
 
-						opacity: transformWatermarkOpacity,
+						// opacity: transformWatermarkOpacity,
 					}}
 					className="am"
 				>
@@ -193,7 +193,7 @@ const Home: NextPage = () => {
 					style={{
 						x: transformYST,
 
-						opacity: transformWatermarkOpacity,
+						// opacity: transformWatermarkOpacity,
 					}}
 					className="st-horizontal"
 				>
@@ -210,7 +210,7 @@ const Home: NextPage = () => {
 					style={{
 						x: transformYST,
 
-						opacity: transformWatermarkOpacity,
+						// opacity: transformWatermarkOpacity,
 					}}
 					className="st"
 				>
@@ -227,7 +227,7 @@ const Home: NextPage = () => {
 					style={{
 						x: transformYER,
 
-						opacity: transformWatermarkOpacity,
+						// opacity: transformWatermarkOpacity,
 					}}
 					className="er"
 				>
@@ -237,7 +237,7 @@ const Home: NextPage = () => {
 					style={{
 						x: transformYER,
 
-						opacity: transformWatermarkOpacity,
+						// opacity: transformWatermarkOpacity,
 					}}
 					className="er-horizontal"
 				>
@@ -450,7 +450,7 @@ const WatermarkLetters = styled(motion.h2)`
 			/* font-size: 30rem; */
 
 			&.am {
-				top: 4rem;
+				top: 7rem;
 				left: -11rem;
 			}
 			&.st {
@@ -460,7 +460,7 @@ const WatermarkLetters = styled(motion.h2)`
 			&.er {
 				display: block;
 				bottom: 0rem;
-				left: 20rem;
+				left: 30rem;
 			}
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
