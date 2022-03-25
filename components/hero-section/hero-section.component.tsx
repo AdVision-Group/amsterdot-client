@@ -420,6 +420,7 @@ const ButtonsContainer = styled.div`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			button {
+				font-weight: 400;
 				/* font-size: 3rem; */
 				padding: 1.2rem 2rem 0.8rem;
 			}
@@ -457,9 +458,16 @@ const PlaceContainer = styled.div`
 		transform: rotate(0deg);
 		right: unset;
 		bottom: unset;
+
+		p {
+			font-size: 1.6rem;
+		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			p {
+				font-size: 1.8rem;
+			}
 			/* margin-right: -12rem; */
-			font-size: 1.8rem;
+
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				font-size: 2.5rem;
 			}

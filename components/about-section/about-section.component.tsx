@@ -565,6 +565,7 @@ const ButtonsContainer = styled.div`
 			button {
 				/* font-size: 3rem; */
 				padding: 1.2rem 2rem 0.8rem;
+				font-weight: 400;
 			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				button {
