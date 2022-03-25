@@ -12,6 +12,7 @@ import Image from "next/image"
 import Header from "../components/header/header.component"
 import EventOverview from "../components/event-overview/event-overview.component"
 import HeroSection from "../components/hero-section/hero-section.component"
+import AboutSection from "../components/about-section/about-section.component"
 
 // Hooks
 import {
@@ -218,6 +219,7 @@ const Home: NextPage = () => {
 			</WatermarkContainer>
 
 			<HeroSection />
+			<AboutSection />
 			{/* <Container id="events">
 				<FlexContainer
 					ref={containerRef}
