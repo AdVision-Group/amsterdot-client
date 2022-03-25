@@ -79,12 +79,12 @@ const Home: NextPage = () => {
 	const transformYST = useTransform(
 		scrollYProgress,
 		[0, 1, 1, 1],
-		[0, -400, -400, -400]
+		[0, -100, -100, -100]
 	)
 	const transformYER = useTransform(
 		scrollYProgress,
 		[0, 1, 1, 1],
-		[0, -200, -200, -200]
+		[0, -50, -50, -50]
 	)
 
 	return (
