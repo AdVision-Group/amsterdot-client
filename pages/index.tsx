@@ -158,17 +158,7 @@ const Home: NextPage = () => {
 						objectFit="cover"
 					/>
 				</Circle3> */}
-				<ArrowContainer
-					animate={{
-						y: [0, -5, 10, 20, 0],
-						// scale: [1.2, 1, 0.9, 0.97, 1.2],
-					}}
-					transition={{
-						repeat: Infinity,
-						ease: "easeInOut",
-						duration: 10,
-					}}
-				>
+				<ArrowContainer>
 					<Image
 						src={"/assets/arrow-container.svg"}
 						alt="red circle"
@@ -198,7 +188,7 @@ const Home: NextPage = () => {
 					className="st-horizontal"
 				>
 					<Image
-						src={"/assets/st-horizontal.svg"}
+						src={"/assets/st-h.svg"}
 						alt="st letters"
 						width={200}
 						height={400}
@@ -338,7 +328,7 @@ const ArrowContainer = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	bottom: 3rem;
+	bottom: 1rem;
 	left: 3rem;
 	/* display: none; */
 
@@ -361,7 +351,7 @@ const WatermarkContainer = styled.div`
 	/* bottom: 0; */
 	width: 100%;
 	/* min-height: 100vh; */
-	height: calc(100% + 18rem);
+	height: calc(100% + 20rem);
 	overflow: hidden;
 	max-width: 200rem;
 	margin: 0 auto;

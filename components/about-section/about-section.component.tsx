@@ -324,7 +324,7 @@ const SectionContainer = styled.section`
 	width: 100%;
 	/* height: 100vh; */
 	/* overflow: hidden; */
-	margin-top: 15rem;
+	margin-top: 12rem;
 
 	display: flex;
 	justify-content: center;
