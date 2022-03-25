@@ -122,9 +122,9 @@ const HeroSection = () => {
 						<a href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437">
 							<Button>BUY TICKETS</Button>
 						</a>
-						<Button outline={true} disabled={true}>
-							APPLY TO SPEAK
-						</Button>
+						<a href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY">
+							<Button outline={true}>APPLY TO SPEAK</Button>
+						</a>
 					</ButtonsContainer>
 					<PlaceContainer>
 						<p>IN AMSTERDAM / NETHERLANDS</p>
