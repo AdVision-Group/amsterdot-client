@@ -405,7 +405,7 @@ const WatermarkLetters = styled(motion.h2)`
 		line-height: 1;
 		/* overflow-wrap: break-word; */
 		top: 40rem;
-		left: -5rem;
+		left: -2rem;
 		span {
 			display: block;
 		}
