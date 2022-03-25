@@ -332,8 +332,15 @@ const SectionContainer = styled.section`
 	color: ${({ theme }) => theme.fonts.primary};
 	/* border: 1px solid yellow; */
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-		align-items: center;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin-top: 17rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			margin-top: 12rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				align-items: center;
+			}
+		}
 	}
 `
 
@@ -346,7 +353,7 @@ const Container = styled(motion.div)`
 	max-width: 90rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		/* margin: 11rem 1.5rem 0; */
+		margin: 0rem 1.5rem 0;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			max-width: 130rem;
 		}
@@ -463,8 +470,7 @@ const AnimationContainer = styled(motion.figure)`
 	position: absolute;
 	z-index: -1;
 	/* padding: 1.5rem; */
-	width: 10rem;
-	heigth: 50rem;
+	width: 18rem;
 	right: -1.5rem;
 	bottom: -1.5rem;
 
@@ -480,25 +486,76 @@ const AnimationContainer = styled(motion.figure)`
 	}
 `
 
+// const ButtonsContainer = styled.div`
+// 	display: flex;
+// 	flex-direction: column;
+// 	gap: 1rem;
+// 	width: 100%;
+// 	/* margin: 2rem 0; */
+
+// 	button {
+// 		/* font-size: 1.2rem; */
+// 		width: 100%;
+// 		font-weight: 600;
+// 		/* padding: 1rem 1rem 0.8rem; */
+// 	}
+// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+// 		flex-direction: row;
+
+// 		button {
+// 			width: fit-content;
+// 			font-size: 1.8rem;
+// 		}
+// 	}
+// `
+
 const ButtonsContainer = styled.div`
+	grid-area: b;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	gap: 1rem;
+	align-self: end;
+	align-items: center;
+	justify-content: space-between;
 	width: 100%;
+	margin-top: 2rem;
 	/* margin: 2rem 0; */
 
 	button {
-		/* font-size: 1.2rem; */
-		width: 100%;
+		font-family: "Avenir Next";
+		font-size: 1.4rem;
 		font-weight: 600;
-		/* padding: 1rem 1rem 0.8rem; */
+		padding: 1rem 1rem 0.8rem;
 	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		flex-direction: row;
+		/* flex-gap: 1rem; */
+		/* align-items: end; */
+		justify-content: flex-start;
+		flex-wrap: unset;
+		gap: 2rem;
 
 		button {
-			width: fit-content;
-			font-size: 1.8rem;
+			font-size: 2rem;
+			line-height: 1;
+			/* margin-bottom: 1rem; */
+		}
+		button:nth-of-type(1) {
+			/* font-size: 2rem; */
+			/* margin-right: 1rem; */
+		}
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			button {
+				/* font-size: 3rem; */
+				padding: 1.2rem 2rem 0.8rem;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				button {
+					font-size: 3rem;
+					padding: 1.8rem 4rem 1.5rem;
+				}
+			}
 		}
 	}
 `

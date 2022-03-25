@@ -382,6 +382,7 @@ const DateContainer = styled.div`
 		}
 	}
 `
+
 const ButtonsContainer = styled.div`
 	grid-area: b;
 	display: flex;
