@@ -338,16 +338,17 @@ const ArrowContainer = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	bottom: 4rem;
+	bottom: 3rem;
 	left: 3rem;
-	display: none;
+	/* display: none; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		display: block;
 		width: 8rem;
 		heigth: 8rem;
+		bottom: 6rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			bottom: 13rem;
+			bottom: 20rem;
 		}
 	}
 `
@@ -360,7 +361,7 @@ const WatermarkContainer = styled.div`
 	/* bottom: 0; */
 	width: 100%;
 	/* min-height: 100vh; */
-	height: calc(100% + 10rem);
+	height: calc(100% + 18rem);
 	overflow: hidden;
 	max-width: 200rem;
 	margin: 0 auto;
