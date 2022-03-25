@@ -169,10 +169,10 @@ const AboutSection = () => {
 							thoughts, and perhaps kick off the next interesting collaboration.
 							Targeting the wider crypto community.
 						</p>
-						<ButtonsContainer>
+						{/* <ButtonsContainer>
 							<Button>CONF PROGRAMME</Button>
 							<Button outline={true}>HACK PROGRAMME</Button>
-						</ButtonsContainer>
+						</ButtonsContainer> */}
 						<AnimationContainer
 							className="first"
 							// animate={{
@@ -287,7 +287,7 @@ const Container = styled(motion.div)`
 	max-width: 90rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		margin: 11rem 1.5rem 0;
+		/* margin: 11rem 1.5rem 0; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			max-width: 130rem;
 		}
@@ -431,7 +431,7 @@ const ButtonsContainer = styled.div`
 	button {
 		/* font-size: 1.2rem; */
 		width: 100%;
-		font-weight: 400;
+		font-weight: 600;
 		/* padding: 1rem 1rem 0.8rem; */
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {

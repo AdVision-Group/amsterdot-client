@@ -395,8 +395,8 @@ const ButtonsContainer = styled.div`
 
 	button {
 		font-family: "Avenir Next";
-		font-size: 1.2rem;
-		font-weight: 400;
+		font-size: 1.4rem;
+		font-weight: 600;
 		padding: 1rem 1rem 0.8rem;
 	}
 
