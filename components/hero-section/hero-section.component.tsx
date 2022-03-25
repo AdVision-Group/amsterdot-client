@@ -122,12 +122,14 @@ const HeroSection = () => {
 						<a
 							href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
 							rel="noopener noreferrer"
+							target="_blank"
 						>
 							<Button>BUY TICKETS</Button>
 						</a>
 						<a
 							href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
 							rel="noopener noreferrer"
+							target="_blank"
 						>
 							<Button outline={true}>APPLY TO SPEAK</Button>
 						</a>
