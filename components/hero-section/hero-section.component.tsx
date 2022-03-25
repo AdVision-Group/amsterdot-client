@@ -119,10 +119,16 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<a href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437">
+						<a
+							href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
+							rel="noopener noreferrer"
+						>
 							<Button>BUY TICKETS</Button>
 						</a>
-						<a href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY">
+						<a
+							href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
+							rel="noopener noreferrer"
+						>
 							<Button outline={true}>APPLY TO SPEAK</Button>
 						</a>
 					</ButtonsContainer>
