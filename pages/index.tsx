@@ -238,6 +238,14 @@ const Home: NextPage = () => {
 
 			<HeroSection />
 			<AboutSection />
+
+			{/* <EventSection>
+				<Container>
+					<h3>CON</h3>
+					<h3>FERE</h3>
+					<h3>NCE</h3>
+				</Container>
+			</EventSection> */}
 			{/* <Container id="events">
 				<FlexContainer
 					ref={containerRef}
@@ -482,13 +490,23 @@ const WatermarkLetters = styled(motion.h2)`
 	}
 `
 
+const EventSection = styled.section`
+	border: 1px solid green;
+	color: ${({ theme }) => theme.fonts.primary};
+`
+
 const Container = styled.div`
-	scroll-padding-top: 8rem;
-	position: relative;
+	/* scroll-padding-top: 8rem; */
+	/* position: relative; */
 	/* background-color: ${({ theme }) => theme.background.primary}; */
-	overflow: hidden;
-	width: 100vw;
-	height: 300vh;
+	/* overflow: hidden; */
+	/* width: 100vw; */
+	/* height: 300vh; */
+
+	h3 {
+		font-size: 4rem;
+		font-weight: 500;
+	}
 `
 
 const FlexContainer = styled(motion.div)`
