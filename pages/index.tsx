@@ -74,17 +74,17 @@ const Home: NextPage = () => {
 	const transformYAM = useTransform(
 		scrollYProgress,
 		[0, 1, 1, 1],
-		[0, 150, 150, -1000]
+		[0, 150, 150, 150]
 	)
 	const transformYST = useTransform(
 		scrollYProgress,
 		[0, 1, 1, 1],
-		[0, -400, -700, -1000]
+		[0, -400, -400, -400]
 	)
 	const transformYER = useTransform(
 		scrollYProgress,
 		[0, 1, 1, 1],
-		[0, -200, -600, 1000]
+		[0, -200, -200, -200]
 	)
 
 	return (
@@ -338,7 +338,7 @@ const ArrowContainer = styled(motion.figure)`
 		heigth: 8rem;
 		bottom: 6rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			bottom: 20rem;
+			bottom: 25rem;
 		}
 	}
 `
