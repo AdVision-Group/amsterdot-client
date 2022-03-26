@@ -61,6 +61,16 @@ const EventSection = () => {
 						<span>WESTERUNIE Klönneplein 4-6, 1014 DD</span>
 					</p>
 				</PlaceContainer>
+				<ArrowContainer>
+					<Image
+						src={"/assets/arrow-left.svg"}
+						alt="red circle"
+						layout="responsive"
+						width={100}
+						height={100}
+						objectFit="contain"
+					/>
+				</ArrowContainer>
 			</Container>
 		</EventSectionContainer>
 	)
@@ -68,10 +78,45 @@ const EventSection = () => {
 
 export default EventSection
 
+const ArrowContainer = styled(motion.figure)`
+	grid-area: a;
+	position: relative;
+	z-index: -3;
+	justify-self: end;
+	margin: 2rem 0;
+
+	width: 6rem;
+	heigth: 6rem;
+	/* bottom: 5rem; */
+	/* left: 3rem; */
+	/* display: none; */
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		/* display: block; */
+		width: 8rem;
+		heigth: 8rem;
+		/* bottom: 6rem; */
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* bottom: 25rem; */
+		}
+	}
+`
+
 const EventSectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 	color: ${({ theme }) => theme.fonts.primary};
 	padding: 5rem 1.5rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+ 		margin-top: 10rem;
+		width: 100vw;
+		/* height: 100vh; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+
+	}
 `
 
 const Container = styled.div`
@@ -83,14 +128,33 @@ const Container = styled.div`
 	/* height: 100vh; */
 
 	display: grid;
-	grid-template-columns: auto auto;
+	/* grid-template-columns: 17rem auto; */
+	grid-template-columns: minmax(15rem, 25rem) auto;
 	/* grid-template-rows: auto auto auto; */
 	grid-template-areas:
 		"x x"
 		"i c"
 		"i f"
 		"i n"
-		"p p";
+		"p p"
+		"a a";
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		width: 100%;
+		max-width: 90rem;
+
+		grid-template-columns: minmax(15rem, 37rem) auto auto;
+		grid-template-rows: auto auto auto 1fr auto;
+		grid-template-areas:
+			"c x x"
+			"i f f"
+			"i n n"
+			"i n n"
+			"p p a"
+			"p p a";
+
+		/* place-items: center; */
+	}
 `
 
 const XContainer = styled.figure`
@@ -101,6 +165,12 @@ const XContainer = styled.figure`
 	/* border: 1px solid green; */
 	justify-self: end;
 	margin-bottom: 2rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		justify-self: start;
+		align-self: center;
+		margin-bottom: unset;
+	}
 `
 
 const Title = styled.h3`
@@ -120,6 +190,22 @@ const Title = styled.h3`
 	&.nce {
 		grid-area: n;
 		z-index: 1;
+	}
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		font-size: 10rem;
+
+		&.con {
+			align-self: center;
+			margin-left: 0rem;
+		}
+		&.fere {
+		}
+		&.nce {
+			z-index: 1;
+		}
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: 15rem;
+		}
 	}
 `
 
@@ -150,6 +236,27 @@ const IluContainer = styled.div`
 			bottom: 0;
 		}
 	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		width: 28rem;
+
+		figure {
+			width: 26rem;
+			/* height: 25rem; */
+			&:nth-of-type(1) {
+				position: absolute;
+				/* margin: 0 0 0rem 3rem; */
+				z-index: 1;
+				top: -12.5rem;
+				right: -8rem;
+			}
+			&:nth-of-type(2) {
+				width: 20rem;
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
 `
 
 const PlaceContainer = styled.div`
@@ -161,5 +268,10 @@ const PlaceContainer = styled.div`
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin-top: 10rem;
+		align-self: end;
 	}
 `
