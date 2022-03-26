@@ -16,79 +16,51 @@ interface IProps {
 			blurDataURL: string
 			width: number
 			height: number
-			objectFit: string
 		}
 		day: string
 		title: string
-		description: string
-		cta: string
-		partners: {
-			image: {
-				src: string
-				alt: string
-				blurDataURL: string
-				width: number
-				height: number
-				objectFit: string
-			}
-			name: string
-		}[]
-		date: string
-		place: string
+
+		date: {
+			day: number
+			month: string
+		}
 	}
 }
 
 const EventOverview: React.FC<IProps> = ({ item }) => {
 	return (
 		<ContentContainer>
-			<Illustration>
-				<Image
-					src={item.ilustration.src}
-					blurDataURL={item.ilustration.blurDataURL}
-					placeholder="blur"
-					width={item.ilustration.width}
-					height={item.ilustration.height}
-					alt={item.ilustration.alt}
-					objectFit="contain"
-				/>
-			</Illustration>
-			<DayContainer>
-				<p>{item.day}</p>
-				<p>DAY</p>
-			</DayContainer>
 			<Content>
+				<Illustration>
+					<Image
+						src={item.ilustration.src}
+						blurDataURL={item.ilustration.blurDataURL}
+						placeholder="blur"
+						width={item.ilustration.width}
+						height={item.ilustration.height}
+						alt={item.ilustration.alt}
+						objectFit="contain"
+						layout="responsive"
+					/>
+				</Illustration>
+				<LabelContainer>
+					<p>{item.day}</p>
+					<p>DAY</p>
+				</LabelContainer>
+				<DateContainer>
+					<p>
+						<span>20</span>
+						<span />
+					</p>
+					<p>
+						<span />
+						<span>APRIL</span>
+					</p>
+				</DateContainer>
 				<h2>{item.title}</h2>
-				<Desc>{item.description}</Desc>
-				<PartnersContainer>
-					{item.partners.map((i, idx) => (
-						<Partner key={idx}>
-							<figure>
-								<Image
-									src={i.image.src}
-									blurDataURL={i.image.blurDataURL}
-									placeholder="blur"
-									width={i.image.width}
-									height={i.image.height}
-									alt={i.image.alt}
-									objectFit="contain"
-								/>
-							</figure>
-							<p>{i.name}</p>
-						</Partner>
-					))}
-				</PartnersContainer>
-			</Content>
-			<BottomContainer>
-				<p>{item.date}</p>
-				<Link href={item.cta} passHref>
-					<motion.button
-						whileHover={{
-							scale: 1.05,
-						}}
-						whileTap={{
-							scale: 0.97,
-						}}
-					>
+
+				<BottomContainer>
+					<motion.button>
 						<figure>
 							<Image
 								src={"/assets/right_arrow.svg"}
@@ -101,14 +73,72 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 							/>
 						</figure>
 					</motion.button>
-				</Link>
-			</BottomContainer>
-			<Place>{item.place}</Place>
+				</BottomContainer>
+			</Content>
 		</ContentContainer>
 	)
 }
 
 export default EventOverview
+
+const DateContainer = styled.div`
+	grid-area: d;
+	/* width: 100%; */
+	max-width: 10rem;
+	/* border: 1px solid green; */
+	justify-self: end;
+	font-size: 2.2rem;
+	line-height: 1.1;
+	text-align: center;
+
+	p {
+		font-family: "Avenir Next";
+		font-weight: 700;
+	}
+
+	p:nth-of-type(1) {
+		/* border: 1px solid green; */
+		display: flex;
+		align-items: center;
+
+		span {
+			display: block;
+
+			&:nth-of-type(2) {
+				width: 100%;
+				height: 0.3rem;
+				background-color: ${({ theme }) => theme.fonts.primary};
+				margin-left: 1.5rem;
+			}
+		}
+	}
+
+	p:nth-of-type(2) {
+		/* border: 1px solid green; */
+		display: flex;
+		align-items: center;
+
+		span {
+			display: block;
+
+			&:nth-of-type(1) {
+				width: 100%;
+				height: 0.3rem;
+				background-color: ${({ theme }) => theme.fonts.primary};
+				margin-right: 1.5rem;
+			}
+		}
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* max-width: 15rem;
+			p {
+				font-size: 4.4rem;
+			} */
+		}
+	}
+`
 
 const BottomContainer = styled.div`
 	color: #fff;
@@ -130,171 +160,55 @@ const BottomContainer = styled.div`
 		padding: 1.5rem;
 		margin-left: 13rem;
 	}
-
-	@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-		right: -0.5rem;
-		bottom: 2.5rem;
-
-		p {
-			position: absolute;
-			bottom: 0;
-			font-size: 1.6rem;
-		}
-
-		button {
-			background-color: ${({ theme }) => theme.color.primary};
-			border-radius: 50%;
-			margin-left: 7rem;
-
-			figure {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 3rem;
-				height: 3rem;
-			}
-		}
-	}
 `
 
 const Illustration = styled.figure`
 	position: absolute;
-	right: -3rem;
+	right: 0rem;
 	top: 0rem;
 	z-index: 1;
-	/* border: 1px solid green; */
-
-	@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-		width: 15rem;
-		right: 0rem;
-	}
+	width: 15rem;
 `
 
-const DayContainer = styled.div`
+const LabelContainer = styled.div`
 	position: relative;
-	z-index: 3;
-	display: inline-block;
+	z-index: 1;
 	background-color: ${({ theme }) => theme.color.primary};
-	color: #000;
-	padding: 1rem;
-	margin-left: 4.5rem;
+	padding: 0.8rem 1rem 0.5rem;
+	display: inline-block;
+	margin-left: 1.5rem;
+	color: ${({ theme }) => theme.fonts.secondary};
+	font-weight: 500;
+	font-size: 2.5rem;
 
-	p {
-		text-align: center;
-		&:nth-of-type(1) {
-			font-size: 8rem;
-			line-height: 0.8;
-			font-weight: 700;
-		}
-		&:nth-of-type(2) {
-			font-size: 4.3rem;
-			line-height: 1;
-			font-weight: 600;
-		}
-	}
-
-	@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-		margin-left: 4rem;
-		p {
-			&:nth-of-type(1) {
-				font-size: 4rem;
-				line-height: 0.8;
-			}
-			&:nth-of-type(2) {
-				font-size: 2rem;
-				line-height: 1;
-			}
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin-left: 3rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: 3.5rem;
 		}
 	}
 `
 
 const ContentContainer = styled.article`
-	position: relative;
+	/* display: flex;
+	position: fixed; */
 	max-width: 80rem;
 	width: 100%;
+	z-index: 1;
 `
 
 const Content = styled.div`
 	position: relative;
-	z-index: 2;
 	background-color: ${({ theme }) => theme.background.container};
-	margin: -7rem 3rem -3rem;
-	padding: 10rem 3rem 3rem;
+	padding: 4rem 1.5rem 1.5rem;
+	margin-top: -3rem;
 	color: ${({ theme }) => theme.fonts.primary};
 
 	h2 {
-		font-size: 6rem;
-		font-weight: 300;
-		line-height: 1;
-		margin-bottom: 2rem;
-	}
-
-	@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-		margin: -3rem 3rem -5rem;
-		padding: 5rem 1rem 1rem;
-
-		h2 {
-			font-size: 3rem;
-			margin-bottom: 1rem;
-		}
-		/* @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-			grid-template-columns: repeat(1, 1fr);
-		} */
-	}
-`
-
-const Desc = styled.p`
-	font-size: 1.8rem;
-	margin-bottom: 3rem;
-	max-width: 59rem;
-
-	@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-		font-size: 1.6rem;
-		margin-bottom: 1rem;
-	}
-`
-
-const PartnersContainer = styled.div`
-	display: flex;
-	gap: 3rem;
-	flex-wrap: wrap;
-	@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-		gap: 1rem;
-	}
-`
-
-const Partner = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	figure {
-		padding: 2rem;
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border: 3px solid ${({ theme }) => theme.color.primary};
-		margin-bottom: 1rem;
-	}
-
-	@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-		figure {
-			width: 5rem;
-			height: 5rem;
-			padding: 0.5rem;
-			margin-bottom: 0.5rem;
-		}
-	}
-`
-
-const Place = styled.p`
-	position: relative;
-	z-index: 3;
-	margin: 4rem 0 0 3rem;
-	font-weight: 300;
-	color: #fff;
-
-	@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-		margin: 8rem 0 0 3rem;
+		font-family: "Avenir Next";
+		line-height: 1.5;
+		font-weight: 500;
+		font-size: 2.8rem;
+		margin-bottom: 0.5rem;
 	}
 `

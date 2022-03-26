@@ -241,14 +241,14 @@ const Home: NextPage = () => {
 			<AboutSection />
 
 			<EventSection />
-			{/* <Container id="events">
+			<Container id="events">
 				<FlexContainer
 					ref={containerRef}
-					style={{
-						x: spring,
-						y: transformY,
-						opacity: transformOpacity,
-					}}
+					// style={{
+					// 	x: spring,
+					// 	y: transformY,
+					// 	opacity: transformOpacity,
+					// }}
 				>
 					{events.map((event, idx) => (
 						<SectionContainer
@@ -262,7 +262,7 @@ const Home: NextPage = () => {
 				</FlexContainer>
 			</Container>
 
-			<FooterContainer id="footer">
+			{/* <FooterContainer id="footer">
 				<h1>footer section</h1>
 			</FooterContainer> */}
 		</React.Fragment>
@@ -486,85 +486,23 @@ const WatermarkLetters = styled(motion.h2)`
 `
 
 const Container = styled.div`
-	/* scroll-padding-top: 8rem; */
-	/* position: relative; */
-	/* background-color: ${({ theme }) => theme.background.primary}; */
-	/* overflow: hidden; */
-	/* width: 100vw; */
-	/* height: 300vh; */
-
-	h3 {
-		font-size: 4rem;
-		font-weight: 500;
-	}
-
-	p {
-		text-transform: uppercase;
-	}
-`
-
-const IluContainer = styled.div`
+	scroll-padding-top: 8rem;
 	position: relative;
-	/* border: 1px solid green; */
-	/* margin: 6rem 0rem 0rem; */
-	width: 18rem;
-	height: 26rem;
-
-	figure {
-		width: 15rem;
-		height: 25rem;
-		&:nth-of-type(1) {
-			position: absolute;
-			/* margin: 0 0 0rem 3rem; */
-			z-index: 1;
-			top: -5rem;
-			right: 0;
-		}
-		&:nth-of-type(2) {
-			width: 12rem;
-			position: absolute;
-			bottom: 0;
-		}
-	}
+	/* background-color: ${({ theme }) => theme.background.primary}; */
+	overflow: hidden;
+	width: 100vw;
+	/* height: 300vh; */
+	padding: 3rem 1.5rem;
 `
 
 const FlexContainer = styled(motion.div)`
-	display: flex;
-	position: fixed;
+	/* display: flex;
+	position: fixed; */
 	top: 0;
 	left: 0;
 	z-index: 1;
 `
 
-const HeroContainer = styled.section`
-	position: relative;
-	z-index: 99;
-	flex: none;
-	width: 100vw;
-	height: 100vh;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	color: #fff;
-
-	background-color: ${({ theme }) => theme.background.primary};
-`
-
-const FooterContainer = styled.section`
-	position: relative;
-	z-index: 99;
-	width: 100vw;
-	height: 100vh;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	color: #fff;
-	background-color: ${({ theme }) => theme.background.primary};
-`
 const SectionContainer = styled.section`
 	width: 100vw;
 	height: 100vh;
