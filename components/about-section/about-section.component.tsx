@@ -340,7 +340,7 @@ const SectionContainer = styled.section`
 	width: 100%;
 	/* height: 100vh; */
 	/* overflow: hidden; */
-	margin-top: 12rem;
+	margin: 15rem 0 10rem;
 
 	display: flex;
 	justify-content: center;
@@ -349,10 +349,9 @@ const SectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin-top: 17rem;
+		margin: 20rem 0 10rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin-top: 12rem;
-			/* overflow-x: hidden; */
+			margin: 12rem 0 10rem;
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				align-items: center;

@@ -331,17 +331,21 @@ const ArrowContainer = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	bottom: 5rem;
-	left: 3rem;
+	bottom: 0rem;
+	right: 3rem;
 	/* display: none; */
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		display: block;
-		width: 8rem;
-		heigth: 8rem;
-		bottom: 6rem;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			bottom: 25rem;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		right: unset;
+		left: 3rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: block;
+			width: 8rem;
+			heigth: 8rem;
+			bottom: 6rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				bottom: 25rem;
+			}
 		}
 	}
 `

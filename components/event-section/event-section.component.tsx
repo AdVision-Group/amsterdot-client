@@ -98,8 +98,6 @@ const ArrowContainer = styled(motion.figure)`
 		/* bottom: 6rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			/* bottom: 25rem; */
-			margin-left: 4rem;
-			align-self: end;
 		}
 	}
 `
@@ -285,8 +283,8 @@ const IluContainer = styled.div`
 					right: -3rem;
 				}
 				&:nth-of-type(2) {
+					right: -3rem;
 					width: 22rem;
-					left: 8rem;
 					bottom: 0;
 				}
 			}
@@ -308,8 +306,5 @@ const PlaceContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-top: 10rem;
 		align-self: end;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin-left: 1rem;
-		}
 	}
 `
