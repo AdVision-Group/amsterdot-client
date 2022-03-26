@@ -458,11 +458,14 @@ const PlaceContainer = styled.div`
 		transform: rotate(0deg);
 		right: unset;
 		bottom: unset;
+		margin-right: -1rem;
 
 		p {
 			font-size: 1.6rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* justify-self: end; */
+
 			p {
 				font-size: 1.8rem;
 			}

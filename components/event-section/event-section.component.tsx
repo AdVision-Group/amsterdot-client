@@ -61,7 +61,17 @@ const EventSection = () => {
 						<span>WESTERUNIE Klönneplein 4-6, 1014 DD</span>
 					</p>
 				</PlaceContainer>
-				<ArrowContainer>
+				<ArrowContainer
+					animate={{
+						x: [0, -10, -5, -15, 0],
+						// scale: [1.2, 1, 0.9, 0.97, 1.2],
+					}}
+					transition={{
+						repeat: Infinity,
+						ease: "easeInOut",
+						duration: 10,
+					}}
+				>
 					<Image
 						src={"/assets/arrow-left.svg"}
 						alt="red circle"
@@ -191,7 +201,7 @@ const XContainer = styled.figure`
 
 const Title = styled.h3`
 	position: relative;
-	font-size: 6rem;
+	font-size: 7rem;
 	font-weight: 500;
 	line-height: 1;
 	z-index: 3;
@@ -283,7 +293,7 @@ const IluContainer = styled.div`
 					right: -3rem;
 				}
 				&:nth-of-type(2) {
-					right: -3rem;
+					right: 12rem;
 					width: 22rem;
 					bottom: 0;
 				}

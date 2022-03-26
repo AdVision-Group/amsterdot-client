@@ -159,7 +159,17 @@ const Home: NextPage = () => {
 						objectFit="cover"
 					/>
 				</Circle3> */}
-				<ArrowContainer>
+				<ArrowContainer
+					animate={{
+						y: [0, -5, -10, -7, 0],
+						// scale: [1.2, 1, 0.9, 0.97, 1.2],
+					}}
+					transition={{
+						repeat: Infinity,
+						ease: "easeInOut",
+						duration: 10,
+					}}
+				>
 					<Image
 						src={"/assets/arrow-container.svg"}
 						alt="red circle"
@@ -490,13 +500,11 @@ const WatermarkLetters = styled(motion.h2)`
 `
 
 const Container = styled.div`
-	scroll-padding-top: 8rem;
+	/* scroll-padding-top: 8rem; */
 	position: relative;
-	/* background-color: ${({ theme }) => theme.background.primary}; */
 	overflow: hidden;
 	width: 100vw;
 	/* height: 300vh; */
-	padding: 3rem 1.5rem;
 `
 
 const FlexContainer = styled(motion.div)`
@@ -505,6 +513,7 @@ const FlexContainer = styled(motion.div)`
 	top: 0;
 	left: 0;
 	z-index: 1;
+	/* padding: 3rem 1.5rem; */
 `
 
 const SectionContainer = styled.section`
@@ -515,4 +524,5 @@ const SectionContainer = styled.section`
 	justify-content: center;
 	align-items: center;
 	/* background-color: ${({ theme }) => theme.background.primary}; */
+	padding: 1.5rem 3rem 1.5rem 1.5rem;
 `

@@ -30,6 +30,10 @@ interface IProps {
 const EventOverview: React.FC<IProps> = ({ item }) => {
 	return (
 		<ContentContainer>
+			<LabelContainer>
+				<p>{item.day}</p>
+				<p>DAY</p>
+			</LabelContainer>
 			<Content>
 				<Illustration>
 					<Image
@@ -43,10 +47,6 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 						layout="responsive"
 					/>
 				</Illustration>
-				<LabelContainer>
-					<p>{item.day}</p>
-					<p>DAY</p>
-				</LabelContainer>
 				<DateContainer>
 					<p>
 						<span>20</span>
@@ -70,6 +70,7 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 								height={50}
 								alt="right arrow"
 								objectFit="contain"
+								layout="responsive"
 							/>
 						</figure>
 					</motion.button>
@@ -90,6 +91,7 @@ const DateContainer = styled.div`
 	font-size: 2.2rem;
 	line-height: 1.1;
 	text-align: center;
+	margin-left: auto;
 
 	p {
 		font-family: "Avenir Next";
@@ -144,8 +146,8 @@ const BottomContainer = styled.div`
 	color: #fff;
 	position: absolute;
 	z-index: 3;
-	right: -1rem;
-	bottom: -0.8rem;
+	right: -1.5rem;
+	bottom: -1.5rem;
 
 	p {
 		font-size: 3rem;
@@ -153,10 +155,11 @@ const BottomContainer = styled.div`
 
 	button {
 		cursor: pointer;
-
+		position: relative;
 		border: none;
 		background-color: ${({ theme }) => theme.color.primary};
 		border-radius: 50%;
+		width: 6rem;
 		padding: 1.5rem;
 		margin-left: 13rem;
 	}
@@ -164,9 +167,9 @@ const BottomContainer = styled.div`
 
 const Illustration = styled.figure`
 	position: absolute;
-	right: 0rem;
-	top: 0rem;
-	z-index: 1;
+	right: -1.5rem;
+	top: -1.5rem;
+	z-index: -1;
 	width: 15rem;
 `
 
@@ -180,11 +183,16 @@ const LabelContainer = styled.div`
 	color: ${({ theme }) => theme.fonts.secondary};
 	font-weight: 500;
 	font-size: 2.5rem;
+	text-align: center;
+
+	p:nth-of-type(1) {
+		font-size: 2rem;
+	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin-left: 3rem;
+		/* margin-left: 3rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			font-size: 3.5rem;
+			/* font-size: 3.5rem; */
 		}
 	}
 `
@@ -199,9 +207,10 @@ const ContentContainer = styled.article`
 
 const Content = styled.div`
 	position: relative;
+	/* z-index: 2; */
 	background-color: ${({ theme }) => theme.background.container};
-	padding: 4rem 1.5rem 1.5rem;
-	margin-top: -3rem;
+	padding: 1.5rem;
+	margin-top: -7.5rem;
 	color: ${({ theme }) => theme.fonts.primary};
 
 	h2 {
@@ -209,6 +218,6 @@ const Content = styled.div`
 		line-height: 1.5;
 		font-weight: 500;
 		font-size: 2.8rem;
-		margin-bottom: 0.5rem;
+		margin: 2rem 0 1rem;
 	}
 `
