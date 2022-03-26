@@ -13,6 +13,7 @@ import Header from "../components/header/header.component"
 import EventOverview from "../components/event-overview/event-overview.component"
 import HeroSection from "../components/hero-section/hero-section.component"
 import AboutSection from "../components/about-section/about-section.component"
+import EventSection from "../components/event-section/event-section.component"
 
 // Hooks
 import {
@@ -239,13 +240,7 @@ const Home: NextPage = () => {
 			<HeroSection />
 			<AboutSection />
 
-			{/* <EventSection>
-				<Container>
-					<h3>CON</h3>
-					<h3>FERE</h3>
-					<h3>NCE</h3>
-				</Container>
-			</EventSection> */}
+			<EventSection />
 			{/* <Container id="events">
 				<FlexContainer
 					ref={containerRef}
@@ -490,11 +485,6 @@ const WatermarkLetters = styled(motion.h2)`
 	}
 `
 
-const EventSection = styled.section`
-	border: 1px solid green;
-	color: ${({ theme }) => theme.fonts.primary};
-`
-
 const Container = styled.div`
 	/* scroll-padding-top: 8rem; */
 	/* position: relative; */
@@ -506,6 +496,35 @@ const Container = styled.div`
 	h3 {
 		font-size: 4rem;
 		font-weight: 500;
+	}
+
+	p {
+		text-transform: uppercase;
+	}
+`
+
+const IluContainer = styled.div`
+	position: relative;
+	/* border: 1px solid green; */
+	/* margin: 6rem 0rem 0rem; */
+	width: 18rem;
+	height: 26rem;
+
+	figure {
+		width: 15rem;
+		height: 25rem;
+		&:nth-of-type(1) {
+			position: absolute;
+			/* margin: 0 0 0rem 3rem; */
+			z-index: 1;
+			top: -5rem;
+			right: 0;
+		}
+		&:nth-of-type(2) {
+			width: 12rem;
+			position: absolute;
+			bottom: 0;
+		}
 	}
 `
 
