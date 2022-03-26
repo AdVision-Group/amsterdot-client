@@ -108,14 +108,14 @@ const EventSectionContainer = styled.section`
 	padding: 5rem 1.5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
- 		margin-top: 10rem;
+		margin-top: 10rem;
 		width: 100vw;
 		/* height: 100vh; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-
+		}
 	}
 `
 
@@ -154,6 +154,18 @@ const Container = styled.div`
 			"p p a";
 
 		/* place-items: center; */
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			grid-template-columns: minmax(15rem, 52rem) auto auto;
+			width: unset;
+			max-width: unset;
+			grid-template-areas:
+				"c x x"
+				"i f f"
+				"i n a"
+				"p n a";
+			/* "p p a"
+				"p p a"; */
+		}
 	}
 `
 
@@ -170,6 +182,10 @@ const XContainer = styled.figure`
 		justify-self: start;
 		align-self: center;
 		margin-bottom: unset;
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			width: 18rem;
+		}
 	}
 `
 
@@ -205,6 +221,9 @@ const Title = styled.h3`
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			font-size: 15rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				font-size: 22rem;
+			}
 		}
 	}
 `
@@ -225,7 +244,6 @@ const IluContainer = styled.div`
 		height: 25rem;
 		&:nth-of-type(1) {
 			position: absolute;
-			/* margin: 0 0 0rem 3rem; */
 			z-index: 1;
 			top: -5.5rem;
 			right: -5rem;
@@ -244,16 +262,31 @@ const IluContainer = styled.div`
 			width: 26rem;
 			/* height: 25rem; */
 			&:nth-of-type(1) {
-				position: absolute;
-				/* margin: 0 0 0rem 3rem; */
-				z-index: 1;
 				top: -12.5rem;
 				right: -8rem;
 			}
 			&:nth-of-type(2) {
 				width: 20rem;
-				position: absolute;
 				bottom: 0;
+			}
+		}
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			width: 48rem;
+			margin-top: -8rem;
+
+			figure {
+				width: 30rem;
+
+				&:nth-of-type(1) {
+					top: -12.5rem;
+					right: -3rem;
+				}
+				&:nth-of-type(2) {
+					width: 22rem;
+					left: 8rem;
+					bottom: 0;
+				}
 			}
 		}
 	}
@@ -273,5 +306,8 @@ const PlaceContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-top: 10rem;
 		align-self: end;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			margin-left: 1rem;
+		}
 	}
 `
