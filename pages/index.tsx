@@ -35,11 +35,11 @@ const Home: NextPage = () => {
 	const [num, { set }] = useNumber(0)
 
 	const { scrollYProgress } = useViewportScroll()
-	const transform = useTransform(scrollYProgress, [0.5, 1], [0, -num])
+	const transform = useTransform(scrollYProgress, [0.5, 0.75], [0, -num])
 	const transformY = useTransform(
 		scrollYProgress,
-		[0.3, 0.5, 1, 1],
-		[700, 0, 0, 0]
+		[0.3, 0.5, 0.75, 1],
+		[800, 0, 0, -800]
 	)
 	const transformOpacity = useTransform(
 		scrollYProgress,
@@ -271,6 +271,7 @@ const Home: NextPage = () => {
 					))}
 				</FlexContainer>
 			</Container>
+			<EventSection />
 
 			{/* <FooterContainer id="footer">
 				<h1>footer section</h1>

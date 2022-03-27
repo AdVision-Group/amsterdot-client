@@ -347,7 +347,7 @@ const Content = styled.div`
 		font-family: "Avenir Next";
 		line-height: 1.5;
 		font-weight: 500;
-		font-size: 2.8rem;
+		font-size: 3rem;
 		margin: 2rem 0 0;
 	}
 `
