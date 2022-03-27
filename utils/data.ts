@@ -36,7 +36,7 @@ export const events = [
 				title: "YTONG BLOM",
 				subTitle: "speaker",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris. Nulla pulvinar nulla vel dui malesuada dictum. Sed euismod, metus in luctus tincidunt, ipsum.",
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
 			},
 			{
 				icon: {
@@ -58,7 +58,7 @@ export const events = [
 				title: "Snacks & Refreshments",
 				subTitle: "",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris. Nulla pulvinar nulla vel dui malesuada dictum. Sed euismod, metus in luctus tincidunt, ipsum.",
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
 			},
 		],
 	},
@@ -99,7 +99,7 @@ export const events = [
 				title: "YTONG BLOM",
 				subTitle: "speaker",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris. Nulla pulvinar nulla vel dui malesuada dictum. Sed euismod, metus in luctus tincidunt, ipsum.",
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
 			},
 		],
 	},

@@ -348,7 +348,7 @@ const Content = styled.div`
 		line-height: 1.5;
 		font-weight: 500;
 		font-size: 2.8rem;
-		margin: 2rem 0 1rem;
+		margin: 2rem 0 0;
 	}
 `
 
@@ -377,12 +377,12 @@ const TimelineContainer = styled.div`
 
 const TimelineHead = styled.div`
 	display: grid;
-	grid-template-columns: 10rem 1fr;
-	gap: 1rem;
+	grid-template-columns: 6rem 1fr;
+	gap: 2rem;
 	margin-bottom: 1.5rem;
 
 	h4 {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		color: ${({ theme }) => theme.color.primary};
 	}
 `
@@ -394,7 +394,7 @@ const TimelineSlider = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	margin: 2rem 0;
+	margin: 1rem 0;
 	/* border: 1px solid green; */
 
 	&:before {
@@ -421,7 +421,7 @@ const TimelineSlider = styled.div`
 		justify-content: center;
 		padding: 1.5rem;
 		color: ${({ theme }) => theme.fonts.primary};
-		font-size: 2rem;
+		font-size: 1.6rem;
 		border-radius: 50%;
 	}
 `
@@ -429,7 +429,7 @@ const TimelineSlider = styled.div`
 const IconContainer = styled.figure`
 	background-color: ${({ theme }) => theme.color.primary};
 	position: relative;
-	width: 8rem;
+	width: 6rem;
 	padding: 1.5rem;
 	border-radius: 50%;
 
