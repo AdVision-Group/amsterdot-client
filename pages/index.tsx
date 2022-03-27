@@ -35,21 +35,21 @@ const Home: NextPage = () => {
 	const [num, { set }] = useNumber(0)
 
 	const { scrollYProgress } = useViewportScroll()
-	const transform = useTransform(scrollYProgress, [0.28, 0.72], [0, -num])
+	const transform = useTransform(scrollYProgress, [0.5, 1], [0, -num])
 	const transformY = useTransform(
 		scrollYProgress,
-		[0, 0.28, 0.72, 1],
+		[0.4, 0.5, 0.99, 1],
 		[1000, 0, 0, -1000]
 	)
 	const transformOpacity = useTransform(
 		scrollYProgress,
-		[0.1, 0.28, 0.72, 0.9],
+		[0.4, 0.5, 0.99, 1],
 		[0, 1, 1, 0]
 	)
 	const physics = { damping: 5, mass: 0.17, stiffness: 55 }
 	const spring = useSpring(transform, physics)
 
-	// scrollYProgress.onChange((e) => console.log(e))
+	scrollYProgress.onChange((e) => console.log(e))
 
 	useEffect(() => {
 		if (sectionRef.current) {
@@ -250,16 +250,16 @@ const Home: NextPage = () => {
 			<HeroSection />
 			<AboutSection />
 
-			<EventSection />
 			<Container id="events">
 				<FlexContainer
 					ref={containerRef}
-					// style={{
-					// 	x: spring,
-					// 	y: transformY,
-					// 	opacity: transformOpacity,
-					// }}
+					style={{
+						x: spring,
+						y: transformY,
+						opacity: transformOpacity,
+					}}
 				>
+					<EventSection />
 					{events.map((event, idx) => (
 						<SectionContainer
 							id={event.id}
@@ -504,12 +504,12 @@ const Container = styled.div`
 	position: relative;
 	overflow: hidden;
 	width: 100vw;
-	/* height: 300vh; */
+	height: 300vh;
 `
 
 const FlexContainer = styled(motion.div)`
-	/* display: flex;
-	position: fixed; */
+	display: flex;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 1;

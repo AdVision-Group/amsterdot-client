@@ -115,11 +115,11 @@ const ArrowContainer = styled(motion.figure)`
 const EventSectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 	color: ${({ theme }) => theme.fonts.primary};
-	padding: 5rem 1.5rem;
+	padding: 0rem 1.5rem;
+	width: 100vw;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin-top: 10rem;
-		width: 100vw;
+		/* margin-top: 10rem; */
 		/* height: 100vh; */
 		display: flex;
 		justify-content: center;

@@ -9,8 +9,14 @@ import Link from "next/link"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Controller } from "swiper"
 
+// Hooks
+import { useNumber } from "react-use"
+
 // Types
 import ISwiper from "swiper/swiper"
+
+// Icons
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"
 
 import "swiper/css"
 
@@ -53,7 +59,34 @@ interface IProps {
 }
 
 const EventOverview: React.FC<IProps> = ({ item }) => {
+	const [activeIdx, { set, inc, dec }] = useNumber(0)
 	const [controlledSwiper, setControlledSwiper] = useState<ISwiper>()
+
+	// console.log(controlledSwiper?.activeIndex)
+	// controlledSwiper?.onAny((swiper) => {
+	// 	console.log(swiper)
+	// })
+	controlledSwiper?.on("activeIndexChange", (swiper) => {
+		// console.log(swiper.activeIndex)
+		set(swiper.activeIndex)
+	})
+
+	const handleClickNext = () => {
+		if (!controlledSwiper?.slides) return
+		controlledSwiper?.slideNext()
+		// inc()
+	}
+	const handleClickButton = (idx: number) => {
+		controlledSwiper?.slideTo(idx)
+		set(idx)
+	}
+	const handleClickPrev = () => {
+		if (activeIdx === 0) return
+		controlledSwiper?.slidePrev()
+		// dec()
+	}
+
+	// console.log(activeIdx)
 
 	return (
 		<ContentContainer>
@@ -85,6 +118,34 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 					</p>
 				</DateContainer>
 				<h2>{item.title}</h2>
+
+				<Swiper
+					modules={[Controller]}
+					controller={{ control: controlledSwiper }}
+				>
+					<TimelineSlider>
+						<button onClick={handleClickPrev}>
+							<AiOutlineLeft />
+						</button>
+						<div>
+							<IconContainer>
+								<Image
+									src={item.items[activeIdx].icon.img.src}
+									// blurDataURL={item.items[activeIdx].icon.img.blurDataURL}
+									// placeholder="blur"
+									width={20}
+									height={20}
+									alt={item.items[activeIdx].icon.img.alt}
+									objectFit="contain"
+									layout="responsive"
+								/>
+							</IconContainer>
+						</div>
+						<button onClick={handleClickNext}>
+							<AiOutlineRight />
+						</button>
+					</TimelineSlider>
+				</Swiper>
 
 				<Swiper
 					className="main-swipe"
@@ -327,3 +388,66 @@ const TimelineHead = styled.div`
 `
 
 const TimelineBody = styled.div``
+
+const TimelineSlider = styled.div`
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 2rem 0;
+	/* border: 1px solid green; */
+
+	&:before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 0.5rem;
+		background: linear-gradient(
+			90deg,
+			#161616 0%,
+			#272727 10%,
+			#272727 90%,
+			#161616 100%
+		);
+		z-index: -1;
+	}
+
+	button {
+		cursor: pointer;
+		background-color: ${({ theme }) => theme.background.secondary};
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1.5rem;
+		color: ${({ theme }) => theme.fonts.primary};
+		font-size: 2rem;
+		border-radius: 50%;
+	}
+`
+
+const IconContainer = styled.figure`
+	background-color: ${({ theme }) => theme.color.primary};
+	position: relative;
+	width: 8rem;
+	padding: 1.5rem;
+	border-radius: 50%;
+
+	&:before {
+		position: absolute;
+		content: "";
+		width: 200%;
+		height: 0.5rem;
+		background: linear-gradient(
+			90deg,
+			#272727 0%,
+			#ff008c 15%,
+			#ff008c 85%,
+			#272727 100%
+		);
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+`
