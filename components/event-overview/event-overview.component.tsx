@@ -299,6 +299,12 @@ const Illustration = styled.figure`
 	top: -1.5rem;
 	z-index: -1;
 	width: 20rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			width: 40rem;
+		}
+	}
 `
 
 const LabelContainer = styled.div`
@@ -320,8 +326,8 @@ const LabelContainer = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		/* margin-left: 3rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin-left: 3rem;
 			/* font-size: 3.5rem; */
 		}
 	}
@@ -349,6 +355,16 @@ const Content = styled.div`
 		font-weight: 500;
 		font-size: 3rem;
 		margin: 2rem 0 0;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			padding: 3rem;
+
+			h2 {
+				font-size: 5rem;
+			}
+		}
 	}
 `
 

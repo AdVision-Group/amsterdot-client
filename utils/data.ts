@@ -82,7 +82,7 @@ export const events = [
 			{
 				icon: {
 					img: {
-						src: "/assets/person.png",
+						src: "/assets/event-icons/mic.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -123,7 +123,7 @@ export const events = [
 			{
 				icon: {
 					img: {
-						src: "/assets/person.png",
+						src: "/assets/event-icons/mic.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -164,7 +164,7 @@ export const events = [
 			{
 				icon: {
 					img: {
-						src: "/assets/person.png",
+						src: "/assets/event-icons/mic.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",

@@ -14,6 +14,7 @@ import EventOverview from "../components/event-overview/event-overview.component
 import HeroSection from "../components/hero-section/hero-section.component"
 import AboutSection from "../components/about-section/about-section.component"
 import EventSection from "../components/event-section/event-section.component"
+import HackathonSection from "../components/hackathon-section/hackathon-section.component"
 
 // Hooks
 import {
@@ -29,48 +30,37 @@ import { events } from "../utils/data"
 
 const Home: NextPage = () => {
 	const { width } = useWindowSize()
+	const physics = { damping: 5, mass: 0.17, stiffness: 55 }
+
+	// CONFERENCE refs
 	const containerRef = useRef<HTMLDivElement>(null)
 	const sectionRef = useRef<HTMLDivElement>(null)
 
 	const [num, { set }] = useNumber(0)
 
+	// Scroll position
 	const { scrollYProgress } = useViewportScroll()
-	const transform = useTransform(scrollYProgress, [0.5, 0.75], [0, -num])
+
+	// CONFERENCE horizontal scroll
+	const transform = useTransform(scrollYProgress, [0.5, 0.8], [0, -num])
+	const spring = useSpring(transform, physics)
+
+	// CONFERENCE scroll to view
 	const transformY = useTransform(
 		scrollYProgress,
-		[0.3, 0.5, 0.75, 1],
+		[0.25, 0.5, 0.8, 1],
 		[800, 0, 0, -800]
 	)
-	const transformOpacity = useTransform(
-		scrollYProgress,
-		[0.4, 0.5, 1, 1],
-		[1, 1, 1, 1]
-	)
-	const physics = { damping: 5, mass: 0.17, stiffness: 55 }
-	const spring = useSpring(transform, physics)
 
 	scrollYProgress.onChange((e) => console.log(e))
 
+	// Set horizontal container width on change
 	useEffect(() => {
 		if (sectionRef.current) {
 			const finalNum = sectionRef.current.scrollWidth
 			set(finalNum * (events.length - 1))
 		}
 	}, [width, sectionRef, set])
-
-	// const { scrollYProgress } = useViewportScroll()
-
-	// const transformOpacity = useTransform(
-	// 	scrollYProgress,
-	// 	[0, 0.28, 0.72, 1],
-	// 	[1, 0, 0, 0]
-	// )
-
-	const transformWatermarkOpacity = useTransform(
-		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[1, 0, 0, 0]
-	)
 
 	const transformYAM = useTransform(
 		scrollYProgress,
@@ -256,7 +246,7 @@ const Home: NextPage = () => {
 					style={{
 						x: spring,
 						y: transformY,
-						opacity: transformOpacity,
+						// opacity: transformOpacity,
 					}}
 				>
 					<EventSection />
@@ -271,7 +261,28 @@ const Home: NextPage = () => {
 					))}
 				</FlexContainer>
 			</Container>
-			<EventSection />
+			<HackathonSection />
+			{/* <Container id="events">
+				<FlexContainer
+					ref={containerRef}
+					// style={{
+					// 	x: spring2,
+					// 	y: transformY2,
+					// 	// opacity: transformOpacity2,
+					// }}
+				>
+					<EventSection />
+					{events.map((event, idx) => (
+						<SectionContainer
+							id={event.id}
+							key={idx}
+							ref={idx === 0 ? sectionRef : null}
+						>
+							<EventOverview item={event} />
+						</SectionContainer>
+					))}
+				</FlexContainer>
+			</Container> */}
 
 			{/* <FooterContainer id="footer">
 				<h1>footer section</h1>
@@ -282,20 +293,20 @@ const Home: NextPage = () => {
 
 export default Home
 
-const Circle1 = styled(motion.figure)`
-	position: absolute;
-	z-index: -3;
+// const Circle1 = styled(motion.figure)`
+// 	position: absolute;
+// 	z-index: -3;
 
-	width: 5rem;
-	heigth: 5rem;
-	left: 50%;
-	top: 10%;
+// 	width: 5rem;
+// 	heigth: 5rem;
+// 	left: 50%;
+// 	top: 10%;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		width: 10rem;
-		heigth: 10rem;
-	}
-`
+// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+// 		width: 10rem;
+// 		heigth: 10rem;
+// 	}
+// `
 const Circle2 = styled(motion.figure)`
 	position: absolute;
 	z-index: -3;
@@ -317,25 +328,25 @@ const Circle2 = styled(motion.figure)`
 	}
 `
 
-const Circle3 = styled(motion.figure)`
-	display: none;
-	position: absolute;
-	z-index: -3;
+// const Circle3 = styled(motion.figure)`
+// 	display: none;
+// 	position: absolute;
+// 	z-index: -3;
 
-	width: 6rem;
-	heigth: 6rem;
-	bottom: 3rem;
-	left: 3rem;
+// 	width: 6rem;
+// 	heigth: 6rem;
+// 	bottom: 3rem;
+// 	left: 3rem;
 
-	border-radius: 50%;
-	overflow: hidden;
+// 	border-radius: 50%;
+// 	overflow: hidden;
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		display: block;
-		width: 12rem;
-		heigth: 12rem;
-	}
-`
+// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+// 		display: block;
+// 		width: 12rem;
+// 		heigth: 12rem;
+// 	}
+// `
 const ArrowContainer = styled(motion.figure)`
 	position: absolute;
 	z-index: -3;
