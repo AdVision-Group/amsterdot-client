@@ -1,11 +1,18 @@
 // Utils
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 
 // Components
 import Image from "next/image"
 import Link from "next/link"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Controller } from "swiper"
+
+// Types
+import ISwiper from "swiper/swiper"
+
+import "swiper/css"
 
 interface IProps {
 	item: {
@@ -19,15 +26,35 @@ interface IProps {
 		}
 		day: string
 		title: string
-
 		date: {
 			day: number
 			month: string
 		}
+		items: {
+			icon: {
+				img: {
+					src: string
+					alt: string
+					blurDataURL: string
+				}
+				time: string
+			}
+			img: {
+				src: string
+				alt: string
+				blurDataURL: string
+			}
+			time: string[]
+			title: string
+			subTitle: string
+			description: string
+		}[]
 	}
 }
 
 const EventOverview: React.FC<IProps> = ({ item }) => {
+	const [controlledSwiper, setControlledSwiper] = useState<ISwiper>()
+
 	return (
 		<ContentContainer>
 			<LabelContainer>
@@ -49,49 +76,55 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 				</Illustration>
 				<DateContainer>
 					<p>
-						<span>20</span>
+						<span>{item.date.day}</span>
 						<span />
 					</p>
 					<p>
 						<span />
-						<span>APRIL</span>
+						<span>{item.date.month}</span>
 					</p>
 				</DateContainer>
 				<h2>{item.title}</h2>
 
-				<TimeRange>
-					14:00 <span /> 16:00
-				</TimeRange>
+				<Swiper
+					className="main-swipe"
+					modules={[Controller]}
+					onSwiper={setControlledSwiper}
+					spaceBetween={70}
+					slidesPerView={1}
+				>
+					{item.items.map((i, idx) => (
+						<SwiperSlide key={idx}>
+							<TimeRange>
+								{i.time[0]} <span /> {i.time[1]}
+							</TimeRange>
 
-				<TimelineContainer>
-					<TimelineHead>
-						<figure>
-							<Image
-								src={"/assets/person.png"}
-								// blurDataURL="data:image/webp;base64,UklGRkIDAABXRUJQVlA4WAoAAAAgAAAAMgEAvQAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCAEAQAA0BQAnQEqMwG+AD7tdq9VqacjoyAp6TAdiWlu3fVzjwQCg4kDWkX4+vyuRflWKZN+yhh2/RE0oZIN3wkyyPxu0qz0UrkI0h6njjQYSLkoa/RQCdfRI+tT9ImfA3bBkvnDm69fk98zoQXsHuII99JKLpfODJEDI66qIGC5d6RRmfBxqiGBaIQn6M2C4NJtKGWo80QhP0ZlXGv5YnA115HzGg1ea6NdYM+DJecGS84MEAD+8RjQQcDOWeREROKW4BpHcu+C81IXmTln9WybDDtjSxZ0eh63jQidD7w1tuvUuop479rquAPRGCz11IN/lI97nSabJfl/p8IYcH7JflEAAAAAAAA="
-								// placeholder="blur"
-								width={50}
-								height={50}
-								alt="right arrow"
-								objectFit="contain"
-								layout="responsive"
-							/>
-						</figure>
-						<div>
-							<h4>YTONG BLOM</h4>
-							<p>speaker</p>
-						</div>
-					</TimelineHead>
-					<TimelineBody>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-							et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi.
-							Morbi at urna non tortor consectetur ullamcorper non ultricies
-							mauris. Nulla pulvinar nulla vel dui malesuada dictum. Sed
-							euismod, metus in luctus tincidunt, ipsum.
-						</p>
-					</TimelineBody>
-				</TimelineContainer>
+							<TimelineContainer>
+								<TimelineHead>
+									<figure>
+										<Image
+											src={i.img.src}
+											blurDataURL={i.img.blurDataURL}
+											placeholder="blur"
+											width={50}
+											height={50}
+											alt={i.img.alt}
+											objectFit="contain"
+											layout="responsive"
+										/>
+									</figure>
+									<div>
+										<h4>{i.title}</h4>
+										<p>{i.subTitle}</p>
+									</div>
+								</TimelineHead>
+								<TimelineBody>
+									<p>{i.description}</p>
+								</TimelineBody>
+							</TimelineContainer>
+						</SwiperSlide>
+					))}
+				</Swiper>
 
 				<BottomContainer>
 					<motion.button>
@@ -204,7 +237,7 @@ const Illustration = styled.figure`
 	right: -1.5rem;
 	top: -1.5rem;
 	z-index: -1;
-	width: 15rem;
+	width: 20rem;
 `
 
 const LabelContainer = styled.div`
@@ -236,7 +269,7 @@ const LabelContainer = styled.div`
 const ContentContainer = styled.article`
 	/* display: flex;
 	position: fixed; */
-	max-width: 80rem;
+	max-width: 90rem;
 	width: 100%;
 	z-index: 1;
 `
