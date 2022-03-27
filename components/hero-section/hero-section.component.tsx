@@ -131,7 +131,7 @@ const HeroSection = () => {
 							rel="noopener noreferrer"
 							target="_blank"
 						>
-							<Button outline={true}>APPLY TO SPEAK</Button>
+							<Button outline={"true"}>APPLY TO SPEAK</Button>
 						</a>
 					</ButtonsContainer>
 					<PlaceContainer>

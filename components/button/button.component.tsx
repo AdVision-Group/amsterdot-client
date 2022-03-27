@@ -11,7 +11,7 @@ export interface IButtonProps {
 	rounded?: boolean
 	onClick?: (e: any) => void
 	loading?: boolean
-	outline?: boolean
+	outline?: boolean | string
 }
 
 const Button: React.FC<IButtonProps> = ({

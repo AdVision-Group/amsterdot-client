@@ -47,7 +47,7 @@ const EventSection = () => {
 				</IluContainer>
 				<PlaceContainer>
 					<p>IN AMSTERDAM / NETHERLANDS</p>
-					<p>
+					<div>
 						<figure>
 							<Image
 								src="/assets/list-icon.svg"
@@ -59,7 +59,7 @@ const EventSection = () => {
 							/>
 						</figure>
 						<span>WESTERUNIE Klönneplein 4-6, 1014 DD</span>
-					</p>
+					</div>
 				</PlaceContainer>
 				<ArrowContainer
 					animate={{
@@ -305,7 +305,8 @@ const IluContainer = styled.div`
 const PlaceContainer = styled.div`
 	grid-area: p;
 
-	p {
+	p,
+	div {
 		font-family: "Acumin Variable Concept";
 		font-weight: 300;
 		text-transform: uppercase;

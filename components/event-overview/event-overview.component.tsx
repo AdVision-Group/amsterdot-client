@@ -59,6 +59,40 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 				</DateContainer>
 				<h2>{item.title}</h2>
 
+				<TimeRange>
+					14:00 <span /> 16:00
+				</TimeRange>
+
+				<TimelineContainer>
+					<TimelineHead>
+						<figure>
+							<Image
+								src={"/assets/person.png"}
+								// blurDataURL="data:image/webp;base64,UklGRkIDAABXRUJQVlA4WAoAAAAgAAAAMgEAvQAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCAEAQAA0BQAnQEqMwG+AD7tdq9VqacjoyAp6TAdiWlu3fVzjwQCg4kDWkX4+vyuRflWKZN+yhh2/RE0oZIN3wkyyPxu0qz0UrkI0h6njjQYSLkoa/RQCdfRI+tT9ImfA3bBkvnDm69fk98zoQXsHuII99JKLpfODJEDI66qIGC5d6RRmfBxqiGBaIQn6M2C4NJtKGWo80QhP0ZlXGv5YnA115HzGg1ea6NdYM+DJecGS84MEAD+8RjQQcDOWeREROKW4BpHcu+C81IXmTln9WybDDtjSxZ0eh63jQidD7w1tuvUuop479rquAPRGCz11IN/lI97nSabJfl/p8IYcH7JflEAAAAAAAA="
+								// placeholder="blur"
+								width={50}
+								height={50}
+								alt="right arrow"
+								objectFit="contain"
+								layout="responsive"
+							/>
+						</figure>
+						<div>
+							<h4>YTONG BLOM</h4>
+							<p>speaker</p>
+						</div>
+					</TimelineHead>
+					<TimelineBody>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+							et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi.
+							Morbi at urna non tortor consectetur ullamcorper non ultricies
+							mauris. Nulla pulvinar nulla vel dui malesuada dictum. Sed
+							euismod, metus in luctus tincidunt, ipsum.
+						</p>
+					</TimelineBody>
+				</TimelineContainer>
+
 				<BottomContainer>
 					<motion.button>
 						<figure>
@@ -177,16 +211,18 @@ const LabelContainer = styled.div`
 	position: relative;
 	z-index: 1;
 	background-color: ${({ theme }) => theme.color.primary};
-	padding: 0.8rem 1rem 0.5rem;
+	padding: 0.8rem 1rem 1rem;
 	display: inline-block;
 	margin-left: 1.5rem;
 	color: ${({ theme }) => theme.fonts.secondary};
 	font-weight: 500;
 	font-size: 2.5rem;
 	text-align: center;
+	line-height: 1;
 
 	p:nth-of-type(1) {
-		font-size: 2rem;
+		font-size: 4.5rem;
+		font-weight: 600;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -221,3 +257,40 @@ const Content = styled.div`
 		margin: 2rem 0 1rem;
 	}
 `
+
+const TimeRange = styled.p`
+	font-size: 2rem;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	span {
+		display: inline-block;
+		width: 4rem;
+		height: 3px;
+		background-color: #fff;
+		margin: 0 1rem;
+	}
+`
+
+const TimelineContainer = styled.div`
+	background-color: ${({ theme }) => theme.background.secondary};
+	padding: 1.5rem;
+`
+
+const TimelineHead = styled.div`
+	display: grid;
+	grid-template-columns: 10rem 1fr;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+
+	h4 {
+		font-size: 2rem;
+		color: ${({ theme }) => theme.color.primary};
+	}
+`
+
+const TimelineBody = styled.div``
