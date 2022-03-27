@@ -117,13 +117,13 @@ const EventSectionContainer = styled.section`
 	color: ${({ theme }) => theme.fonts.primary};
 	padding: 0rem 1.5rem;
 	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* margin-top: 10rem; */
 		/* height: 100vh; */
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		}
 	}

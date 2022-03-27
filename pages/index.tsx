@@ -38,13 +38,13 @@ const Home: NextPage = () => {
 	const transform = useTransform(scrollYProgress, [0.5, 1], [0, -num])
 	const transformY = useTransform(
 		scrollYProgress,
-		[0.4, 0.5, 0.99, 1],
-		[1000, 0, 0, -1000]
+		[0.3, 0.5, 1, 1],
+		[500, 0, 0, 0]
 	)
 	const transformOpacity = useTransform(
 		scrollYProgress,
-		[0.4, 0.5, 0.99, 1],
-		[0, 1, 1, 0]
+		[0.4, 0.5, 1, 1],
+		[0, 1, 1, 1]
 	)
 	const physics = { damping: 5, mass: 0.17, stiffness: 55 }
 	const spring = useSpring(transform, physics)
