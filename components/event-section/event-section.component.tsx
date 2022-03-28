@@ -9,12 +9,6 @@ import Image from "next/image"
 const EventSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformOpacity = useTransform(
-		scrollYProgress,
-		[0.07, 0.25, 1, 1],
-		[0, 1, 1, 1]
-	)
-
 	const transformCON = useTransform(
 		scrollYProgress,
 		[0.2, 0.3, 1, 1],
