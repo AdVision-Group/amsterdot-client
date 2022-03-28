@@ -47,15 +47,11 @@ const Home: NextPage = () => {
 	const spring = useSpring(transform, physics)
 
 	// CONFERENCE scroll to view
-	const transformY = useTransform(
-		scrollYProgress,
-		[0.07, 0.25, 0.55, 0.75],
-		[1100, 0, 0, -1100]
-	)
+	const transformY = useTransform(scrollYProgress, [0.55, 0.75], [0, -1100])
 
 	const transformOpacityCONF = useTransform(
 		scrollYProgress,
-		[0.2, 0.25, 1, 1],
+		[0.19, 0.25, 1, 1],
 		[0, 1, 1, 1]
 	)
 
@@ -277,7 +273,7 @@ const Home: NextPage = () => {
 					ref={containerRef}
 					style={{
 						x: spring,
-						// y: transformY,
+						y: transformY,
 						opacity: transformOpacityCONF,
 					}}
 					transition={{

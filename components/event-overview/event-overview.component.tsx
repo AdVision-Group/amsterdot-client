@@ -103,7 +103,7 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 						width={item.ilustration.width}
 						height={item.ilustration.height}
 						alt={item.ilustration.alt}
-						objectFit="contain"
+						objectFit="cover"
 						layout="responsive"
 					/>
 				</Illustration>
@@ -210,7 +210,17 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 				</Swiper>
 
 				<BottomContainer>
-					<motion.button>
+					<motion.button
+						animate={{
+							x: [0, -10, -5, -15, 0],
+							// scale: [1.2, 1, 0.9, 0.97, 1.2],
+						}}
+						transition={{
+							repeat: Infinity,
+							ease: "easeInOut",
+							duration: 10,
+						}}
+					>
 						<figure>
 							<Image
 								src={"/assets/right_arrow.svg"}
@@ -487,7 +497,7 @@ const TimelineBody = styled.div`
 		-webkit-line-clamp: 8; /* number of lines to show */
 		line-clamp: 8;
 		-webkit-box-orient: vertical;
-		filter: blur(1rem);
+		filter: blur(6px);
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-column: 2/3;
