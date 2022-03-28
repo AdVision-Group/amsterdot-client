@@ -216,7 +216,7 @@ const Container = styled.div`
 		content: "";
 		background-color: ${({ theme }) => theme.background.container};
 		position: absolute;
-		width: 80%;
+		width: 90%;
 		height: 80%;
 		left: 50%;
 		top: 50%;
