@@ -488,14 +488,21 @@ const IconContainer = styled.figure<{ isActive: boolean }>`
 			#272727 0%,
 			#ff008c 15%,
 			#ff008c 85%,
-			#272727 100%
-		)`
+			#272727 100%)`
 				: theme.background.secondary};
-		background: ;
+		z-index: ${({ theme, isActive }) => (isActive ? `-1` : -2)};
 		z-index: -1;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		width: 4rem;
+		padding: 1.2rem;
+		&:before {
+			/* top: 80%; */
+		}
 	}
 `
 
@@ -528,7 +535,7 @@ const TimelineOverview = styled.div`
 			content: "";
 			width: 100%;
 			height: 0.5rem;
-			top: 2.8rem;
+			top: 1.8rem;
 			background: linear-gradient(
 				90deg,
 				#161616 0%,
