@@ -335,6 +335,7 @@ const SectionContainer = styled.section`
 	position: relative;
 	flex: none;
 	width: 100%;
+	z-index: 99;
 	/* height: 100vh; */
 	/* overflow: hidden; */
 	margin: 15rem 0 10rem;
