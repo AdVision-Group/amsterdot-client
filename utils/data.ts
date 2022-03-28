@@ -1034,7 +1034,7 @@ export const hackatons = [
 			height: 200,
 		},
 		day: "02",
-		title: "CONFERENCE",
+		title: "HACKATHON",
 		date: {
 			day: 21,
 			month: "APRIL",
@@ -1097,7 +1097,7 @@ export const hackatons = [
 			height: 200,
 		},
 		day: "03",
-		title: "CONFERENCE",
+		title: "HACKATHON",
 		date: {
 			day: 22,
 			month: "APRIL",
@@ -1160,7 +1160,7 @@ export const hackatons = [
 			height: 200,
 		},
 		day: "04",
-		title: "CONFERENCE",
+		title: "HACKATHON",
 		date: {
 			day: 23,
 			month: "APRIL",
