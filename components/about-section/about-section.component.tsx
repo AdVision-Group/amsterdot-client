@@ -10,17 +10,7 @@ import Button from "../button/button.component"
 const AboutSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformWatermarkOpacity = useTransform(
-		scrollYProgress,
-		[0.07, 0.2],
-		[0, 1100]
-	)
-
-	const transformY = useTransform(
-		scrollYProgress,
-		[0.04, 0.15, 1, 1],
-		[-100, 0, 15, 15]
-	)
+	const transformOpacity = useTransform(scrollYProgress, [0.13, 0.2], [1, 0])
 
 	const transformYDO = useTransform(
 		scrollYProgress,
@@ -123,7 +113,7 @@ const AboutSection = () => {
 						style={{
 							x: transformYDO,
 
-							opacity: transformWatermarkOpacity,
+							// opacity: transformWatermarkOpacity,
 						}}
 						className="do"
 					>
@@ -133,7 +123,7 @@ const AboutSection = () => {
 						style={{
 							x: transformYDO,
 
-							opacity: transformWatermarkOpacity,
+							// opacity: transformWatermarkOpacity,
 						}}
 						className="do-horizontal"
 					>
@@ -145,7 +135,7 @@ const AboutSection = () => {
 						style={{
 							x: transformYT,
 
-							opacity: transformWatermarkOpacity,
+							// opacity: transformWatermarkOpacity,
 						}}
 						className="t"
 					>
@@ -154,7 +144,7 @@ const AboutSection = () => {
 				</WatermarkContainer>
 				<Container
 					style={{
-						y: transformY,
+						opacity: transformOpacity,
 					}}
 				>
 					<LabelContainer>

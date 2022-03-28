@@ -274,6 +274,9 @@ const Home: NextPage = () => {
 						y: transformY,
 						// opacity: transformOpacity,
 					}}
+					transition={{
+						ease: "linear",
+					}}
 				>
 					<EventSection />
 					{events.map((event, idx) => (
