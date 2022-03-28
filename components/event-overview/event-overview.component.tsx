@@ -197,7 +197,12 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 										/>
 									</figure>
 									<div>
-										<h4>{i.title}</h4>
+										<TimelineHeadFlex>
+											<h4>{i.title}</h4>
+											<p>
+												{i.time[0]} <span /> {i.time[1]}
+											</p>
+										</TimelineHeadFlex>
 										<p>{i.subTitle}</p>
 									</div>
 									<TimelineBody>
@@ -293,11 +298,13 @@ const DateContainer = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-			/* max-width: 15rem;
-			p {
-				font-size: 4.4rem;
-			} */
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				/* max-width: 15rem;
+				p {
+					font-size: 4.4rem;
+				} */
+			}
 		}
 	}
 `
@@ -335,6 +342,11 @@ const Illustration = styled.figure`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			width: 40rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				right: -4.5rem;
+				top: -4.5rem;
+			}
 		}
 	}
 `
@@ -420,6 +432,9 @@ const Content = styled.div`
 			h2 {
 				font-size: 5rem;
 			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				margin-top: -4rem;
+			}
 		}
 	}
 `
@@ -449,17 +464,37 @@ const TimeRange = styled.p`
 const TimelineContainer = styled.div`
 	background-color: ${({ theme }) => theme.background.secondary};
 	padding: 1.5rem;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		padding: 3rem;
+	}
 `
 
+const TimelineHeadFlex = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	p {
+		display: none:
+		
+	}
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) { 
+		display: block:
+
+
+	}
+`
 const TimelineHead = styled.div`
 	display: grid;
 	grid-template-columns: 6rem 1fr;
 	gap: 2rem;
+
 	/* margin-bottom: 1.5rem; */
 
 	h4 {
 		font-size: 1.8rem;
 		color: ${({ theme }) => theme.color.primary};
+		text-transform: uppercase;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -467,6 +502,19 @@ const TimelineHead = styled.div`
 		figure {
 			grid-row: 1/3;
 			align-self: center;
+		}
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			grid-template-columns: 18rem 1fr;
+			align-items: center;
+
+			h4 {
+				font-size: 3rem;
+			}
+
+			figure {
+				margin-right: 3rem;
+			}
 		}
 	}
 `
@@ -501,6 +549,10 @@ const TimelineBody = styled.div`
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-column: 2/3;
+
+		p {
+			min-height: unset;
+		}
 	}
 `
 
@@ -525,7 +577,7 @@ const IconContainer = styled.figure<{ isActive: boolean }>`
 			#ff008c 15%,
 			#ff008c 85%,
 			#272727 100%)`
-				: theme.background.secondary};
+				: "nset"};
 		z-index: ${({ theme, isActive }) => (isActive ? `-1` : -2)};
 		z-index: -1;
 		top: 50%;
@@ -535,7 +587,7 @@ const IconContainer = styled.figure<{ isActive: boolean }>`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 4rem;
-		padding: 1.2rem;
+		padding: 1rem;
 		&:before {
 			/* top: 80%; */
 		}
