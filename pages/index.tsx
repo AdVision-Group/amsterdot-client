@@ -15,6 +15,7 @@ import HeroSection from "../components/hero-section/hero-section.component"
 import AboutSection from "../components/about-section/about-section.component"
 import EventSection from "../components/event-section/event-section.component"
 import HackathonSection from "../components/hackathon-section/hackathon-section.component"
+import FooterSection from "../components/footer-section/footer-section.component"
 
 // Hooks
 import {
@@ -59,7 +60,7 @@ const Home: NextPage = () => {
 	const [numH, { set: setH }] = useNumber(0)
 
 	// HACKATHON horizontal scroll
-	const transformH = useTransform(scrollYProgress, [0.6, 1], [0, -num])
+	const transformH = useTransform(scrollYProgress, [0.6, 1], [0, -numH])
 	const springH = useSpring(transformH, physics)
 
 	// HACKATHON scroll to view
@@ -75,14 +76,14 @@ const Home: NextPage = () => {
 	useEffect(() => {
 		if (sectionRef.current) {
 			const finalNum = sectionRef.current.scrollWidth
-			set(finalNum * (events.length - 1))
+			set(finalNum * events.length)
 		}
 	}, [width, sectionRef, set])
 
 	useEffect(() => {
 		if (sectionRefH.current) {
 			const finalNum = sectionRefH.current.scrollWidth
-			setH(finalNum * hackatons.length)
+			setH(finalNum * (hackatons.length + 1))
 		}
 	}, [width, sectionRefH, setH])
 
@@ -106,7 +107,7 @@ const Home: NextPage = () => {
 		<React.Fragment>
 			<Head>
 				<title>amsterDOT Hack Conf</title>
-				<meta name="description" content="Amsterdot" />
+				<meta name="description" content="amsterDOT Hack Conf" />
 			</Head>
 
 			<Header />
@@ -304,6 +305,7 @@ const Home: NextPage = () => {
 							<EventOverview item={event} />
 						</SectionContainer>
 					))}
+					<FooterSection />
 				</FlexContainer>
 			</Container>
 

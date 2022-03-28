@@ -163,11 +163,11 @@ const WatermarkContainer = styled.div`
 	/* bottom: 0; */
 	width: 100%;
 	/* min-height: 100vh; */
-	height: calc(100% + 10rem);x
+	height: calc(100% + 10rem);
 	max-width: 200rem;
 	margin: 0 auto;
 	font-family: "Avenir Next";
-	
+
 	/* border: 1px solid green; */
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		/* overflow: hidden; */
