@@ -55,6 +55,12 @@ const Home: NextPage = () => {
 		[0, 1, 1, 1]
 	)
 
+	const transformOpacityHACK = useTransform(
+		scrollYProgress,
+		[0.55, 0.75, 1, 1],
+		[0, 1, 1, 1]
+	)
+
 	const springY = useSpring(transformY, physics)
 	// HACKATHON refs
 	const containerRefH = useRef<HTMLDivElement>(null)
@@ -298,7 +304,7 @@ const Home: NextPage = () => {
 					style={{
 						x: springH,
 						y: transformYH,
-						// opacity: transformOpacity2,
+						opacity: transformOpacityHACK,
 					}}
 				>
 					<HackathonSection />
