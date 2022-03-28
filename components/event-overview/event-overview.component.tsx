@@ -78,7 +78,7 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 	}
 	const handleClickButton = (idx: number) => {
 		controlledSwiper?.slideTo(idx)
-		set(idx)
+		// set(idx)
 	}
 	const handleClickPrev = () => {
 		if (activeIdx === 0) return
@@ -128,7 +128,7 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 							<AiOutlineLeft />
 						</button>
 						<div>
-							<IconContainer>
+							<IconContainer isActive={true}>
 								<Image
 									src={item.items[activeIdx].icon.img.src}
 									// blurDataURL={item.items[activeIdx].icon.img.blurDataURL}
@@ -145,6 +145,28 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 							<AiOutlineRight />
 						</button>
 					</TimelineSlider>
+					<TimelineOverview>
+						{item.items.map((i, idx) => (
+							<TimelineBlock isActive={idx === activeIdx} key={idx}>
+								<IconContainer
+									onClick={() => handleClickButton(idx)}
+									isActive={idx === activeIdx}
+								>
+									<Image
+										src={i.icon.img.src}
+										// blurDataURL={item.items[activeIdx].icon.img.blurDataURL}
+										// placeholder="blur"
+										width={20}
+										height={20}
+										alt={i.icon.img.alt}
+										objectFit="contain"
+										layout="responsive"
+									/>
+								</IconContainer>
+								<p>{i.icon.time}</p>
+							</TimelineBlock>
+						))}
+					</TimelineOverview>
 				</Swiper>
 
 				<Swiper
@@ -384,6 +406,10 @@ const TimeRange = styled.p`
 		background-color: #fff;
 		margin: 0 1rem;
 	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		display: none;
+	}
 `
 
 const TimelineContainer = styled.div`
@@ -404,6 +430,89 @@ const TimelineHead = styled.div`
 `
 
 const TimelineBody = styled.div``
+
+const IconContainer = styled.figure<{ isActive: boolean }>`
+	background-color: ${({ theme, isActive }) =>
+		isActive ? theme.color.primary : theme.background.secondary};
+	position: relative;
+	width: 6rem;
+	padding: 1.5rem;
+	border-radius: 50%;
+
+	&:before {
+		position: absolute;
+		content: "";
+		width: 200%;
+		height: 0.5rem;
+		background: ${({ theme, isActive }) =>
+			isActive
+				? `linear-gradient(
+			90deg,
+			#272727 0%,
+			#ff008c 15%,
+			#ff008c 85%,
+			#272727 100%
+		)`
+				: theme.background.secondary};
+		background: ;
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+`
+
+const TimelineBlock = styled.div<{ isActive: boolean }>`
+	p {
+		text-align: center;
+		margin-top: 0.5rem;
+		font-size: 1.4rem;
+		color: ${({ theme, isActive }) =>
+			isActive ? theme.color.primary : theme.fonts.primary};
+		font-weight: ${({ theme, isActive }) => (isActive ? "700" : "400")};
+	}
+`
+
+const TimelineOverview = styled.div`
+	display: none;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		display: block;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 1rem 0 2rem;
+		gap: 3rem;
+		/* border: 1px solid green; */
+
+		&:before {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 0.5rem;
+			top: 2.8rem;
+			background: linear-gradient(
+				90deg,
+				#161616 0%,
+				#272727 10%,
+				#272727 90%,
+				#161616 100%
+			);
+			z-index: -1;
+		}
+
+		p {
+			text-align: center;
+			margin-top: 0.5rem;
+			font-size: 1.4rem;
+		}
+
+		${IconContainer} {
+			cursor: pointer;
+		}
+	}
+`
 
 const TimelineSlider = styled.div`
 	position: relative;
@@ -440,30 +549,7 @@ const TimelineSlider = styled.div`
 		font-size: 1.6rem;
 		border-radius: 50%;
 	}
-`
-
-const IconContainer = styled.figure`
-	background-color: ${({ theme }) => theme.color.primary};
-	position: relative;
-	width: 6rem;
-	padding: 1.5rem;
-	border-radius: 50%;
-
-	&:before {
-		position: absolute;
-		content: "";
-		width: 200%;
-		height: 0.5rem;
-		background: linear-gradient(
-			90deg,
-			#272727 0%,
-			#ff008c 15%,
-			#ff008c 85%,
-			#272727 100%
-		);
-		z-index: -1;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		display: none;
 	}
 `
