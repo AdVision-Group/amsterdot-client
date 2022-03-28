@@ -319,7 +319,7 @@ const Illustration = styled.figure`
 	position: absolute;
 	right: -1.5rem;
 	top: -1.5rem;
-	z-index: -1;
+	z-index: -2;
 	width: 20rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -341,6 +341,7 @@ const LabelContainer = styled.div`
 	font-size: 2.5rem;
 	text-align: center;
 	line-height: 1;
+	filter: blur(1rem);
 
 	p:nth-of-type(1) {
 		font-size: 4.5rem;
@@ -361,6 +362,29 @@ const ContentContainer = styled.article`
 	max-width: 90rem;
 	width: 100%;
 	z-index: 1;
+	position: relative;
+	/* filter: blur(1rem); */
+
+	&:after {
+		content: "COMING SOON";
+		position: absolute;
+		color: ${({ theme }) => theme.fonts.primary};
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: 5rem;
+		font-weight: 900;
+
+		/* filter: blur(0rem); */
+	}
 `
 
 const Content = styled.div`
@@ -370,6 +394,7 @@ const Content = styled.div`
 	padding: 1.5rem;
 	margin-top: -7.5rem;
 	color: ${({ theme }) => theme.fonts.primary};
+	filter: blur(1rem);
 
 	h2 {
 		font-family: "Avenir Next";

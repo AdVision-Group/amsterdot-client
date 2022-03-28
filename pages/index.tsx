@@ -42,13 +42,13 @@ const Home: NextPage = () => {
 	const { scrollYProgress } = useViewportScroll()
 
 	// CONFERENCE horizontal scroll
-	const transform = useTransform(scrollYProgress, [0.5, 0.8], [0, -num])
+	const transform = useTransform(scrollYProgress, [0.35, 0.8], [0, -num])
 	const spring = useSpring(transform, physics)
 
 	// CONFERENCE scroll to view
 	const transformY = useTransform(
 		scrollYProgress,
-		[0.25, 0.5, 0.8, 1],
+		[0.17, 0.35, 0.8, 1],
 		[800, 0, 0, -800]
 	)
 
@@ -516,7 +516,7 @@ const Container = styled.div`
 	position: relative;
 	overflow: hidden;
 	width: 100vw;
-	height: 300vh;
+	height: 400vh;
 `
 
 const FlexContainer = styled(motion.div)`

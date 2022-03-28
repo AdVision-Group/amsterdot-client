@@ -181,12 +181,18 @@ const Circle1 = styled(motion.figure)`
 
 	width: 5rem;
 	heigth: 5rem;
-	right: 20%;
-	top: -10%;
+	left: 20%;
+	top: 5%;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 10rem;
 		heigth: 10rem;
+		right: 20%;
+		left: unset;
+		top: 0%;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			top: -5%;
+		}
 	}
 `
 
