@@ -463,6 +463,32 @@ const TimelineHead = styled.div`
 
 const TimelineBody = styled.div`
 	grid-column: 1/3;
+	position: relative;
+
+	&:after {
+		content: "COMING SOON";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	p {
+		min-height: 19.2rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 8; /* number of lines to show */
+		line-clamp: 8;
+		-webkit-box-orient: vertical;
+		filter: blur(1rem);
+	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-column: 2/3;
 	}

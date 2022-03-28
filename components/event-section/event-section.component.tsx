@@ -16,13 +16,13 @@ const EventSection = () => {
 	)
 	const transformFERE = useTransform(
 		scrollYProgress,
-		[0.3, 0.5, 1, 1],
-		[100, 0, -100, -100]
+		[0.2, 0.3, 1],
+		[100, 0, -100]
 	)
 	const transformNCE = useTransform(
 		scrollYProgress,
-		[0.3, 0.5, 1, 1],
-		[-50, 0, 50, 50]
+		[0.3, 0.5, 1],
+		[-50, 0, 50]
 	)
 
 	return (

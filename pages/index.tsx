@@ -55,7 +55,7 @@ const Home: NextPage = () => {
 
 	const transformOpacityCONF = useTransform(
 		scrollYProgress,
-		[0.07, 0.25, 1, 1],
+		[0.2, 0.25, 1, 1],
 		[0, 1, 1, 1]
 	)
 
@@ -277,7 +277,7 @@ const Home: NextPage = () => {
 					ref={containerRef}
 					style={{
 						x: spring,
-						y: transformY,
+						// y: transformY,
 						opacity: transformOpacityCONF,
 					}}
 					transition={{
