@@ -18,8 +18,8 @@ const AboutSection = () => {
 
 	const transformYDO = useTransform(
 		scrollYProgress,
-		[0.3, 1, 1, 1],
-		[-200, 15, 15, 15]
+		[0.04, 0.15, 1, 1],
+		[-100, 0, 15, 15]
 	)
 	const transformYT = useTransform(
 		scrollYProgress,

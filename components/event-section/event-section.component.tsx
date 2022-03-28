@@ -17,7 +17,7 @@ const EventSection = () => {
 
 	const transformCON = useTransform(
 		scrollYProgress,
-		[0.3, 0.5, 1, 1],
+		[0.2, 0.3, 1, 1],
 		[-100, 0, 100, 100]
 	)
 	const transformFERE = useTransform(
@@ -182,7 +182,7 @@ const Circle1 = styled(motion.figure)`
 	width: 5rem;
 	heigth: 5rem;
 	left: 20%;
-	top: 5%;
+	top: 10%;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 10rem;
