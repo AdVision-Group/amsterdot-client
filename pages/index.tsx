@@ -43,14 +43,14 @@ const Home: NextPage = () => {
 	const { scrollYProgress } = useViewportScroll()
 
 	// CONFERENCE horizontal scroll
-	const transform = useTransform(scrollYProgress, [0.35, 0.55], [0, -num])
+	const transform = useTransform(scrollYProgress, [0.25, 0.55], [0, -num])
 	const spring = useSpring(transform, physics)
 
 	// CONFERENCE scroll to view
 	const transformY = useTransform(
 		scrollYProgress,
-		[0.17, 0.35, 0.55, 0.6],
-		[800, 0, 0, -800]
+		[0.1, 0.25, 0.55, 0.75],
+		[1100, 0, 0, -1100]
 	)
 
 	// HACKATHON refs
@@ -60,14 +60,14 @@ const Home: NextPage = () => {
 	const [numH, { set: setH }] = useNumber(0)
 
 	// HACKATHON horizontal scroll
-	const transformH = useTransform(scrollYProgress, [0.6, 1], [0, -numH])
+	const transformH = useTransform(scrollYProgress, [0.7, 1], [0, -numH])
 	const springH = useSpring(transformH, physics)
 
 	// HACKATHON scroll to view
 	const transformYH = useTransform(
 		scrollYProgress,
-		[0.55, 0.6, 1, 1],
-		[800, 0, 0, 0]
+		[0.5, 0.7, 1, 1],
+		[1100, 0, 0, 0]
 	)
 
 	scrollYProgress.onChange((e) => console.log(e))
@@ -542,6 +542,10 @@ const Container = styled.div`
 	overflow: hidden;
 	width: 100vw;
 	height: 400vh;
+
+	&#hackatons {
+		/* background-color: red; */
+	}
 `
 
 const FlexContainer = styled(motion.div)`

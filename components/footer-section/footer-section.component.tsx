@@ -304,6 +304,8 @@ const ImageContainer = styled(motion.div)`
 	}
 
 	&.second {
+		margin-top: -4rem;
+
 		grid-area: i;
 		position: relative;
 		width: 20rem;
