@@ -7,8 +7,54 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 import Image from "next/image"
 
 const EventSection = () => {
+	const { scrollYProgress } = useViewportScroll()
+
+	// const transformWatermarkOpacity = useTransform(
+	// 	scrollYProgress,
+	// 	[0, 0.95, 1, 1],
+	// 	[1, 1, 1, 1]
+	// )
+
+	const transformCON = useTransform(
+		scrollYProgress,
+		[0.3, 0.5, 1, 1],
+		[-100, 0, 100, 100]
+	)
+	const transformFERE = useTransform(
+		scrollYProgress,
+		[0.3, 0.5, 1, 1],
+		[100, 0, -100, -100]
+	)
+	const transformNCE = useTransform(
+		scrollYProgress,
+		[0.3, 0.5, 1, 1],
+		[-50, 0, 50, 50]
+	)
+
 	return (
 		<EventSectionContainer>
+			<WatermarkContainer>
+				<Circle1
+					className="first"
+					animate={{
+						scale: [0.95, 1.2, 1, 1.5, 0.95],
+					}}
+					transition={{
+						repeat: Infinity,
+						ease: "easeInOut",
+						duration: 10,
+					}}
+				>
+					<Image
+						src={"/assets/primary-circle.svg"}
+						alt="red circle"
+						layout="responsive"
+						width={100}
+						height={100}
+						objectFit="contain"
+					/>
+				</Circle1>
+			</WatermarkContainer>
 			<Container>
 				<XContainer>
 					<Image
@@ -20,9 +66,30 @@ const EventSection = () => {
 						height={50}
 					/>
 				</XContainer>
-				<Title className="con">CON</Title>
-				<Title className="fere">FERE</Title>
-				<Title className="nce">NCE</Title>
+				<Title
+					style={{
+						x: transformCON,
+					}}
+					className="con"
+				>
+					CON
+				</Title>
+				<Title
+					style={{
+						x: transformFERE,
+					}}
+					className="fere"
+				>
+					FERE
+				</Title>
+				<Title
+					style={{
+						x: transformNCE,
+					}}
+					className="nce"
+				>
+					NCE
+				</Title>
 				<IluContainer>
 					<figure>
 						<Image
@@ -88,6 +155,41 @@ const EventSection = () => {
 
 export default EventSection
 
+const WatermarkContainer = styled.div`
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	/* bottom: 0; */
+	width: 100%;
+	/* min-height: 100vh; */
+	height: calc(100% + 10rem);x
+	max-width: 200rem;
+	margin: 0 auto;
+	font-family: "Avenir Next";
+	
+	/* border: 1px solid green; */
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		/* overflow: hidden; */
+		/* height: 100%; */
+	}
+`
+
+const Circle1 = styled(motion.figure)`
+	position: absolute;
+	z-index: -3;
+
+	width: 5rem;
+	heigth: 5rem;
+	right: 20%;
+	top: -10%;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		width: 10rem;
+		heigth: 10rem;
+	}
+`
+
 const ArrowContainer = styled(motion.figure)`
 	grid-area: a;
 	position: relative;
@@ -114,6 +216,7 @@ const ArrowContainer = styled(motion.figure)`
 
 const EventSectionContainer = styled.section`
 	/* border: 1px solid yellow; */
+	position: relative;
 	color: ${({ theme }) => theme.fonts.primary};
 	padding: 0rem 1.5rem;
 	width: 100vw;
@@ -199,7 +302,7 @@ const XContainer = styled.figure`
 	}
 `
 
-const Title = styled.h3`
+const Title = styled(motion.h3)`
 	position: relative;
 	font-size: 7rem;
 	font-weight: 500;
