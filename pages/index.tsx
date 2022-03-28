@@ -26,7 +26,7 @@ import {
 import { useNumber, useWindowSize } from "react-use"
 
 // Data
-import { events } from "../utils/data"
+import { events, hackatons } from "../utils/data"
 
 const Home: NextPage = () => {
 	const { width } = useWindowSize()
@@ -42,14 +42,31 @@ const Home: NextPage = () => {
 	const { scrollYProgress } = useViewportScroll()
 
 	// CONFERENCE horizontal scroll
-	const transform = useTransform(scrollYProgress, [0.35, 0.8], [0, -num])
+	const transform = useTransform(scrollYProgress, [0.35, 0.55], [0, -num])
 	const spring = useSpring(transform, physics)
 
 	// CONFERENCE scroll to view
 	const transformY = useTransform(
 		scrollYProgress,
-		[0.17, 0.35, 0.8, 1],
+		[0.17, 0.35, 0.55, 0.6],
 		[800, 0, 0, -800]
+	)
+
+	// HACKATHON refs
+	const containerRefH = useRef<HTMLDivElement>(null)
+	const sectionRefH = useRef<HTMLDivElement>(null)
+
+	const [numH, { set: setH }] = useNumber(0)
+
+	// HACKATHON horizontal scroll
+	const transformH = useTransform(scrollYProgress, [0.6, 1], [0, -num])
+	const springH = useSpring(transformH, physics)
+
+	// HACKATHON scroll to view
+	const transformYH = useTransform(
+		scrollYProgress,
+		[0.55, 0.6, 1, 1],
+		[800, 0, 0, 0]
 	)
 
 	scrollYProgress.onChange((e) => console.log(e))
@@ -61,6 +78,13 @@ const Home: NextPage = () => {
 			set(finalNum * (events.length - 1))
 		}
 	}, [width, sectionRef, set])
+
+	useEffect(() => {
+		if (sectionRefH.current) {
+			const finalNum = sectionRefH.current.scrollWidth
+			setH(finalNum * hackatons.length)
+		}
+	}, [width, sectionRefH, setH])
 
 	const transformYAM = useTransform(
 		scrollYProgress,
@@ -261,28 +285,27 @@ const Home: NextPage = () => {
 					))}
 				</FlexContainer>
 			</Container>
-			<HackathonSection />
-			{/* <Container id="events">
+			<Container id="hackatons">
 				<FlexContainer
-					ref={containerRef}
-					// style={{
-					// 	x: spring2,
-					// 	y: transformY2,
-					// 	// opacity: transformOpacity2,
-					// }}
+					ref={containerRefH}
+					style={{
+						x: springH,
+						y: transformYH,
+						// opacity: transformOpacity2,
+					}}
 				>
-					<EventSection />
-					{events.map((event, idx) => (
+					<HackathonSection />
+					{hackatons.map((event, idx) => (
 						<SectionContainer
 							id={event.id}
 							key={idx}
-							ref={idx === 0 ? sectionRef : null}
+							ref={idx === 0 ? sectionRefH : null}
 						>
 							<EventOverview item={event} />
 						</SectionContainer>
 					))}
 				</FlexContainer>
-			</Container> */}
+			</Container>
 
 			{/* <FooterContainer id="footer">
 				<h1>footer section</h1>
