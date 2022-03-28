@@ -53,6 +53,12 @@ const Home: NextPage = () => {
 		[1100, 0, 0, -1100]
 	)
 
+	const transformOpacityCONF = useTransform(
+		scrollYProgress,
+		[0.07, 0.25, 1, 1],
+		[0, 1, 1, 1]
+	)
+
 	const springY = useSpring(transformY, physics)
 	// HACKATHON refs
 	const containerRefH = useRef<HTMLDivElement>(null)
@@ -71,7 +77,7 @@ const Home: NextPage = () => {
 		[1100, 0, 0, 0]
 	)
 
-	scrollYProgress.onChange((e) => console.log(e))
+	// scrollYProgress.onChange((e) => console.log(e))
 
 	// Set horizontal container width on change
 	useEffect(() => {
@@ -272,7 +278,7 @@ const Home: NextPage = () => {
 					style={{
 						x: spring,
 						y: transformY,
-						// opacity: transformOpacity,
+						opacity: transformOpacityCONF,
 					}}
 					transition={{
 						ease: "linear",

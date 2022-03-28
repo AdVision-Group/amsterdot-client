@@ -9,11 +9,11 @@ import Image from "next/image"
 const EventSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	// const transformWatermarkOpacity = useTransform(
-	// 	scrollYProgress,
-	// 	[0, 0.95, 1, 1],
-	// 	[1, 1, 1, 1]
-	// )
+	const transformOpacity = useTransform(
+		scrollYProgress,
+		[0.07, 0.25, 1, 1],
+		[0, 1, 1, 1]
+	)
 
 	const transformCON = useTransform(
 		scrollYProgress,
