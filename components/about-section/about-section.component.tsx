@@ -143,9 +143,9 @@ const AboutSection = () => {
 					</WatermarkLetters>
 				</WatermarkContainer>
 				<Container
-					style={{
-						opacity: transformOpacity,
-					}}
+				// style={{
+				// 	opacity: transformOpacity,
+				// }}
 				>
 					<LabelContainer>
 						<p>INFO</p>
