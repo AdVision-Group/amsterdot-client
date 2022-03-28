@@ -79,7 +79,7 @@ const Home: NextPage = () => {
 		[1100, 0, 0, 0]
 	)
 
-	// scrollYProgress.onChange((e) => console.log(e))
+	scrollYProgress.onChange((e) => console.log(e))
 
 	// Set horizontal container width on change
 	useEffect(() => {
@@ -98,17 +98,17 @@ const Home: NextPage = () => {
 
 	const transformYAM = useTransform(
 		scrollYProgress,
-		[0, 1, 1, 1],
+		[0, 0.1, 1, 1],
 		[0, 150, 150, 150]
 	)
 	const transformYST = useTransform(
 		scrollYProgress,
-		[0, 1, 1, 1],
-		[0, -100, -100, -100]
+		[0, 0.1, 1, 1],
+		[20, -100, -100, -100]
 	)
 	const transformYER = useTransform(
 		scrollYProgress,
-		[0, 1, 1, 1],
+		[0, 0.1, 1, 1],
 		[0, -50, -50, -50]
 	)
 

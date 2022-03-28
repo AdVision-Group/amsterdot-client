@@ -7,6 +7,12 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 import Image from "next/image"
 
 const HackathonSection = () => {
+	const { scrollYProgress } = useViewportScroll()
+
+	const transformHACK = useTransform(scrollYProgress, [0.57, 0.74], [-100, 0])
+	const transformATH = useTransform(scrollYProgress, [0.57, 0.74], [100, 0])
+	const transformON = useTransform(scrollYProgress, [0.57, 0.74], [-50, 0])
+
 	return (
 		<EventSectionContainer>
 			<Container>
@@ -20,9 +26,30 @@ const HackathonSection = () => {
 						height={50}
 					/>
 				</XContainer>
-				<Title className="hack">HACK</Title>
-				<Title className="ath">ATH</Title>
-				<Title className="on">ON</Title>
+				<Title
+					style={{
+						x: transformHACK,
+					}}
+					className="hack"
+				>
+					HACK
+				</Title>
+				<Title
+					style={{
+						x: transformATH,
+					}}
+					className="ath"
+				>
+					ATH
+				</Title>
+				<Title
+					style={{
+						x: transformON,
+					}}
+					className="on"
+				>
+					ON
+				</Title>
 				<IluContainer>
 					<figure>
 						<Image
@@ -58,7 +85,7 @@ const HackathonSection = () => {
 								height={30}
 							/>
 						</figure>
-						<span>WESTERUNIE Klönneplein 4-6, 1014 DD</span>
+						<span>Westerliefde Klönneplein 4-6, 1014 DD</span>
 					</div>
 				</PlaceContainer>
 				<ArrowContainer
@@ -197,7 +224,7 @@ const XContainer = styled.figure`
 	}
 `
 
-const Title = styled.h3`
+const Title = styled(motion.h3)`
 	position: relative;
 	font-size: 7rem;
 	font-weight: 500;

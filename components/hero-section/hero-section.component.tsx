@@ -173,6 +173,8 @@ const AnimationContainer = styled(motion.figure)`
 `
 
 const SectionContainer = styled.section`
+	position: relative;
+	z-index: 99;
 	flex: none;
 	width: 100%;
 	height: 100vh;

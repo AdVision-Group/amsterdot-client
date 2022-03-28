@@ -14,14 +14,14 @@ const AboutSection = () => {
 
 	const transformYDO = useTransform(
 		scrollYProgress,
-		[0.04, 0.15, 1, 1],
+		[0.03, 0.15, 1, 1],
 		[-100, 0, 15, 15]
 	)
 
 	const transformYT = useTransform(
 		scrollYProgress,
-		[0.3, 1, 0.95, 1],
-		[300, 0, 0, 0]
+		[0.03, 0.15, 0.95, 1],
+		[130, 0, 0, 0]
 	)
 
 	const partners = [

@@ -431,9 +431,14 @@ const Content = styled.div`
 
 			h2 {
 				font-size: 5rem;
+				font-height: 1;
 			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-				margin-top: -4rem;
+				h2 {
+					font-size: 7rem;
+					margin: 0;
+				}
+				margin-top: -4.5rem;
 			}
 		}
 	}
@@ -485,6 +490,7 @@ const TimelineHeadFlex = styled.div`
 `
 const TimelineHead = styled.div`
 	display: grid;
+	align-items: center;
 	grid-template-columns: 6rem 1fr;
 	gap: 2rem;
 
