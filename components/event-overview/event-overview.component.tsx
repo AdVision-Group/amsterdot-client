@@ -200,10 +200,10 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 										<h4>{i.title}</h4>
 										<p>{i.subTitle}</p>
 									</div>
+									<TimelineBody>
+										<p>{i.description}</p>
+									</TimelineBody>
 								</TimelineHead>
-								<TimelineBody>
-									<p>{i.description}</p>
-								</TimelineBody>
 							</TimelineContainer>
 						</SwiperSlide>
 					))}
@@ -445,15 +445,28 @@ const TimelineHead = styled.div`
 	display: grid;
 	grid-template-columns: 6rem 1fr;
 	gap: 2rem;
-	margin-bottom: 1.5rem;
+	/* margin-bottom: 1.5rem; */
 
 	h4 {
 		font-size: 1.8rem;
 		color: ${({ theme }) => theme.color.primary};
 	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		grid-template-columns: 10rem 1fr;
+		figure {
+			grid-row: 1/3;
+			align-self: center;
+		}
+	}
 `
 
-const TimelineBody = styled.div``
+const TimelineBody = styled.div`
+	grid-column: 1/3;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		grid-column: 2/3;
+	}
+`
 
 const IconContainer = styled.figure<{ isActive: boolean }>`
 	background-color: ${({ theme, isActive }) =>
