@@ -17,18 +17,18 @@ const FooterSection = () => {
 
 	const transformSEE = useTransform(
 		scrollYProgress,
-		[0.3, 0.5, 1, 1],
-		[0, 0, 0, 0]
+		[0.92, 1, 1, 1],
+		[100, 0, 0, 0]
 	)
 	const transformYOU = useTransform(
 		scrollYProgress,
-		[0.3, 0.5, 1, 1],
-		[0, 0, 0, 0]
+		[0.92, 1, 1, 1],
+		[-50, 0, 0, 0]
 	)
 	const transformTHERE = useTransform(
 		scrollYProgress,
-		[0.3, 0.5, 1, 1],
-		[0, 0, 0, 0]
+		[0.92, 1, 1, 1],
+		[50, 0, 0, 0]
 	)
 
 	return (

@@ -79,7 +79,7 @@ const Home: NextPage = () => {
 		[1100, 0, 0, 0]
 	)
 
-	// scrollYProgress.onChange((e) => console.log(e))
+	scrollYProgress.onChange((e) => console.log(e))
 
 	// Set horizontal container width on change
 	useEffect(() => {
