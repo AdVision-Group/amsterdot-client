@@ -12,8 +12,14 @@ const AboutSection = () => {
 
 	const transformWatermarkOpacity = useTransform(
 		scrollYProgress,
-		[0, 0.95, 1, 1],
-		[1, 1, 1, 1]
+		[0.07, 0.2],
+		[0, 1100]
+	)
+
+	const transformY = useTransform(
+		scrollYProgress,
+		[0.04, 0.15, 1, 1],
+		[-100, 0, 15, 15]
 	)
 
 	const transformYDO = useTransform(
@@ -21,6 +27,7 @@ const AboutSection = () => {
 		[0.04, 0.15, 1, 1],
 		[-100, 0, 15, 15]
 	)
+
 	const transformYT = useTransform(
 		scrollYProgress,
 		[0.3, 1, 0.95, 1],
@@ -146,9 +153,9 @@ const AboutSection = () => {
 					</WatermarkLetters>
 				</WatermarkContainer>
 				<Container
-				// style={{
-				// 	y: transformX,
-				// }}
+					style={{
+						y: transformY,
+					}}
 				>
 					<LabelContainer>
 						<p>INFO</p>

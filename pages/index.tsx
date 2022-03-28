@@ -43,16 +43,17 @@ const Home: NextPage = () => {
 	const { scrollYProgress } = useViewportScroll()
 
 	// CONFERENCE horizontal scroll
-	const transform = useTransform(scrollYProgress, [0.2, 0.55], [0, -num])
+	const transform = useTransform(scrollYProgress, [0.25, 0.55], [0, -num])
 	const spring = useSpring(transform, physics)
 
 	// CONFERENCE scroll to view
 	const transformY = useTransform(
 		scrollYProgress,
-		[0.07, 0.2, 0.55, 0.75],
+		[0.07, 0.25, 0.55, 0.75],
 		[1100, 0, 0, -1100]
 	)
 
+	const springY = useSpring(transformY, physics)
 	// HACKATHON refs
 	const containerRefH = useRef<HTMLDivElement>(null)
 	const sectionRefH = useRef<HTMLDivElement>(null)
