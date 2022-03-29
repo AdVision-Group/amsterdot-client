@@ -11,18 +11,18 @@ src: url('../fonts/AcuminVariableConcept.otf');
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url('/fonts/Avenir-Next.ttc')  format('truetype');
+  src: url('../fonts/final/AvenirNext-Regular-08.otf');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url('/fonts/Avenir-Next.ttc')  format('truetype');
+  src: url('../fonts/final/AvenirNext-Medium-06.otf');
   font-weight: 700;
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url('/fonts/Avenir-Next.ttc')  format('truetype');
+  src: url('../fonts/final/AvenirNext-Bold-01.otf');
   font-weight: 900;
 }
 

@@ -523,9 +523,9 @@ const TimelineHead = styled.div`
 	/* margin-bottom: 1.5rem; */
 
 	h4 {
-		font-family: "Avenir next"
+		font-family: "Avenir next";
 		font-size: 1.8rem;
-		font-weight: 400;
+		font-weight: 900;
 		color: ${({ theme }) => theme.color.primary};
 		text-transform: uppercase;
 		line-height: 1;
@@ -706,7 +706,7 @@ const TimelineSlider = styled.div`
 	}
 
 	button {
-		cursor: pointer;
+		/* cursor: pointer; */
 		background-color: ${({ theme }) => theme.background.secondary};
 		border: none;
 		display: flex;
