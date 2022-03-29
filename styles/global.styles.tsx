@@ -9,22 +9,22 @@ src: url('../fonts/AcuminVariableConcept.otf');
 
 }
 
-/* @font-face {
+@font-face {
   font-family: 'Avenir Next';
-  src: url('../fonts/final/AvenirNext-Regular-08.otf');
-  font-weight: normal;
+  src: url('../fonts/final/AvenirNext-Regular-08.ttf');
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url('../fonts/final/AvenirNext-Medium-06.otf');
-  font-weight: medium;
+  src: url('../fonts/final/AvenirNext-Medium-06.ttf');
+  font-weight: 700;
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url('../fonts/final/AvenirNext-Bold-01.otf');
-  font-weight: bold;
-} */
+  src: url('..//fonts/final/AvenirNext-Bold-01.ttf');
+  font-weight: 900;
+}
 
 @font-face {
   font-family: 'Acumin Variable Concept';
