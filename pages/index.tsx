@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags */
 // Types
 import type { NextPage } from "next"
 
@@ -116,6 +117,8 @@ const Home: NextPage = () => {
 		<React.Fragment>
 			<Head>
 				<title>amsterDOT Hack Conf</title>
+				<link href="/fonts/final/fonts.css" rel="stylesheet" />
+
 				<meta name="description" content="amsterDOT Hack Conf" />
 			</Head>
 

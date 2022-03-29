@@ -9,23 +9,6 @@ src: url('/fonts/AcuminVariableConcept.otf');
 }
 
 @font-face {
-  font-family: 'Avenir Next';
-  src: url('/fonts/final/AvenirNext-Regular-08.ttf');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Avenir Next';
-  src: url('/fonts/final/AvenirNext-Medium-06.ttf');
-  font-weight: 700;
-
-@font-face {
-  font-family: 'Avenir Next';
-  src: url('/fonts/final/AvenirNext-Bold-01.ttf');
-  font-weight: 900;
-}
-
-@font-face {
   font-family: 'Acumin Variable Concept';
   src: url('/fonts/AcuminVariableConcept-v2.otf') format('embedded-opentype'), 
    url('/fonts/AcuminVariableConcept-v2.otf') format('woff'), 
