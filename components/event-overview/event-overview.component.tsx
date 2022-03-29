@@ -649,6 +649,8 @@ const TimelineOverview = styled.div`
 		margin: 1rem 0 2rem;
 		gap: 3rem;
 		/* border: 1px solid green; */
+		padding-bottom: 2rem;
+		overflow-x: auto;
 
 		&:before {
 			position: absolute;
