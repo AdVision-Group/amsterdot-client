@@ -55,12 +55,6 @@ const Home: NextPage = () => {
 		[0, 1, 1, 1]
 	)
 
-	const transformOpacityHACK = useTransform(
-		scrollYProgress,
-		[0.55, 0.75, 1, 1],
-		[0, 1, 1, 1]
-	)
-
 	const springY = useSpring(transformY, physics)
 	// HACKATHON refs
 	const containerRefH = useRef<HTMLDivElement>(null)
@@ -77,6 +71,12 @@ const Home: NextPage = () => {
 		scrollYProgress,
 		[0.5, 0.7, 1, 1],
 		[1100, 0, 0, 0]
+	)
+
+	const transformOpacityHACK = useTransform(
+		scrollYProgress,
+		[0.65, 0.8, 1, 1],
+		[0, 1, 1, 1]
 	)
 
 	scrollYProgress.onChange((e) => console.log(e))
@@ -303,7 +303,7 @@ const Home: NextPage = () => {
 					ref={containerRefH}
 					style={{
 						x: springH,
-						y: transformYH,
+						// y: transformYH,
 						opacity: transformOpacityHACK,
 					}}
 				>
