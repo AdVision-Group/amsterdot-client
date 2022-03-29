@@ -1,12 +1,17 @@
 // Utils
 import React from "react"
 import styled, { css } from "styled-components"
+import { motion } from "framer-motion"
 
 // Components
 import Image from "next/image"
+import Link from "next/link"
 
 // Hooks
 import { useToggle } from "react-use"
+
+// Icons
+import { FaTwitter, FaDiscord } from "react-icons/fa"
 
 const Header = () => {
 	const [showMobileNav, toggleMobileNav] = useToggle(false)
@@ -14,16 +19,54 @@ const Header = () => {
 	return (
 		<HeaderContainer>
 			<Container>
-				<figure>
-					<Image
-						src={"/assets/logo-amsterdot.png"}
-						width={100}
-						height={100}
-						alt={"amsterdot logo"}
-						objectFit="contain"
-						layout="responsive"
-					/>
-				</figure>
+				<Link href={"/"} passHref>
+					<a>
+						<figure className="logo">
+							<Image
+								src={"/assets/logo-amsterdot.png"}
+								width={100}
+								height={100}
+								alt={"amsterdot logo"}
+								objectFit="contain"
+								layout="responsive"
+							/>
+						</figure>
+					</a>
+				</Link>
+				<Socials>
+					<a
+						href="https://twitter.com/amsterdot_conf"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<motion.figure
+							whileHover={{
+								scale: 1.05,
+							}}
+							whileTap={{
+								scale: 0.97,
+							}}
+						>
+							<FaTwitter />
+						</motion.figure>
+					</a>
+					<a
+						href="https://discord.gg/Vg2ex2Y93f"
+						rel="noopener noreferrer"
+						target="_blank"
+					>
+						<motion.figure
+							whileHover={{
+								scale: 1.05,
+							}}
+							whileTap={{
+								scale: 0.97,
+							}}
+						>
+							<FaDiscord />
+						</motion.figure>
+					</a>
+				</Socials>
 				{/* <ToggleButton onClick={() => toggleMobileNav()} isOpen={showMobileNav}>
 					<div />
 					<div />
@@ -46,6 +89,35 @@ const Header = () => {
 
 export default Header
 
+const Socials = styled.div`
+	display: flex;
+	/* align-items: center; */
+	gap: 0.1rem;
+
+	a {
+		background-color: ${({ theme }) => theme.background.primary};
+		padding: 1rem;
+		border-radius: 50%;
+	}
+
+	figure {
+		color: #fff;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: ${({ theme }) => theme.background.primary};
+		border: 3px solid ${({ theme }) => theme.color.primary};
+		border-radius: 50%;
+		padding: 1.2rem;
+		font-size: 2.4rem;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		gap: 1rem;
+	}
+`
+
 const HeaderContainer = styled.header`
 	/* position: fixed; */
 	z-index: 9999;
@@ -67,7 +139,7 @@ const Container = styled.div`
 	justify-content: space-between;
 	align-items: center;
 
-	figure {
+	.logo {
 		margin-top: 1rem;
 		position: relative;
 		width: 8rem;

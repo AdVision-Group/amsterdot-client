@@ -142,7 +142,7 @@ const Home: NextPage = () => {
 						objectFit="contain"
 					/>
 				</Circle1> */}
-				<Circle2
+				{/* <Circle2
 					className="first"
 					animate={{
 						x: [0, 20, 10, -5, 0],
@@ -162,7 +162,7 @@ const Home: NextPage = () => {
 						height={100}
 						objectFit="cover"
 					/>
-				</Circle2>
+				</Circle2> */}
 				{/* <Circle3
 					animate={{
 						y: [0, -5, 10, 20, 0],

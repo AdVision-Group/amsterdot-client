@@ -977,6 +977,7 @@ export const events = [
 					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
 			},
 		],
+		hasArrowDown: true,
 	},
 ]
 
