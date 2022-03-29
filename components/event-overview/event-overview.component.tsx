@@ -217,15 +217,15 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 
 				<BottomContainer>
 					<motion.button
-						animate={{
-							x: [0, -10, -5, -15, 0],
-							// scale: [1.2, 1, 0.9, 0.97, 1.2],
-						}}
-						transition={{
-							repeat: Infinity,
-							ease: "easeInOut",
-							duration: 10,
-						}}
+					// animate={{
+					// 	// x: [0, -10, -5, -15, 0],
+					// 	// scale: [1.2, 1, 0.9, 0.97, 1.2],
+					// }}
+					// transition={{
+					// 	repeat: Infinity,
+					// 	ease: "easeInOut",
+					// 	duration: 10,
+					// }}
 					>
 						{item.hasArrowDown ? (
 							<figure>
@@ -434,7 +434,7 @@ const Content = styled.div`
 	h2 {
 		font-family: "Avenir Next";
 		line-height: 1.5;
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 3rem;
 		margin: 2rem 0 0;
 	}
@@ -523,7 +523,9 @@ const TimelineHead = styled.div`
 	/* margin-bottom: 1.5rem; */
 
 	h4 {
+		font-family: "Avenir next"
 		font-size: 1.8rem;
+		font-weight: 400;
 		color: ${({ theme }) => theme.color.primary};
 		text-transform: uppercase;
 		line-height: 1;

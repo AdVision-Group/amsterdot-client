@@ -7,30 +7,25 @@ export const GlobalStyle = createGlobalStyle`
 font-family: 'Acumin';
 src: url('../fonts/AcuminVariableConcept.otf');
 
-/* font-weight: 400, 700;
-font-style: normal; */
 }
-
-/* @font-face {
-  font-family: 'Avenir Next';
-  src: url('../fonts/AvenirNext-Regular-08.otf'); /* IE9 Compat Modes */
-} */
-@font-face {
-  font-family: 'Avenir Next Bold';
-  src: url('../fonts/AvenirNextLTPro-Bold.otf'); /* IE9 Compat Modes */
-}
-/* @font-face {
-  font-family: 'Acumin Variable Concept';
-  src: url('../fonts/AcuminVariableConcept-v2.otf'); /* IE9 Compat Modes */
-} */
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url('../fonts/AvenirNext-Regular-08.otf') format('embedded-opentype'), 
-   url('../fonts/AvenirNext-Regular-08.otf') format('woff'), 
-   url('../fonts/AvenirNext-Regular-08.otf')  format('truetype'),
-   url('../fonts/AvenirNext-Regular-08.otf') format('svg');
+  src: url('/fonts/Avenir-Next.ttc')  format('truetype');
+  font-weight: 400;
 }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/Avenir-Next.ttc')  format('truetype');
+  font-weight: 700;
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/fonts/Avenir-Next.ttc')  format('truetype');
+  font-weight: 900;
+}
+
 @font-face {
   font-family: 'Acumin Variable Concept';
   src: url('../fonts/AcuminVariableConcept-v2.otf') format('embedded-opentype'), 

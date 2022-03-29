@@ -184,15 +184,15 @@ const Home: NextPage = () => {
 					/>
 				</Circle3> */}
 				<ArrowContainer
-					animate={{
-						y: [0, -5, -10, -7, 0],
-						// scale: [1.2, 1, 0.9, 0.97, 1.2],
-					}}
-					transition={{
-						repeat: Infinity,
-						ease: "easeInOut",
-						duration: 10,
-					}}
+				// animate={{
+				// 	y: [0, -5, -10, -7, 0],
+				// 	// scale: [1.2, 1, 0.9, 0.97, 1.2],
+				// }}
+				// transition={{
+				// 	repeat: Infinity,
+				// 	ease: "easeInOut",
+				// 	duration: 10,
+				// }}
 				>
 					<Image
 						src={"/assets/arrow-container.svg"}
@@ -304,7 +304,7 @@ const Home: NextPage = () => {
 					style={{
 						x: springH,
 						y: transformYH,
-						opacity: transformOpacityHACK,
+						// opacity: transformOpacityHACK,
 					}}
 				>
 					<HackathonSection />
