@@ -7,7 +7,7 @@ import styled from "styled-components"
 
 // Components
 import Head from "next/head"
-import Link from "next/link"
+// import Link from "next/link"
 import Image from "next/image"
 import Header from "../components/header/header.component"
 import EventOverview from "../components/event-overview/event-overview.component"
