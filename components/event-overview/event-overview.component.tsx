@@ -201,7 +201,7 @@ const EventOverview: React.FC<IProps> = ({ item }) => {
 										<TimelineHeadFlex>
 											<h4>{i.title}</h4>
 											<p>
-												{i.time[0]} - {i.time[1]}
+												{i.time[0]} <span /> {i.time[1]}
 											</p>
 										</TimelineHeadFlex>
 										<p>{i.subTitle}</p>
@@ -495,10 +495,22 @@ const TimelineHeadFlex = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		display: grid;
-		grid-template-columns: auto 10rem;
+		grid-template-columns: auto 12rem;
+		gap: 1rem;
 
 		p {
-			display: inline-block;
+			align-self: start;
+			display: flex;
+			align-items: center;
+			font-weight: 700;
+			/* display: inline-block; */
+			span {
+				display: inline-block;
+				width: 1rem;
+				height: 3px;
+				background-color: #fff;
+				margin: 0 0.5rem;
+			}
 		}
 	}
 `

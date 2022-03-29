@@ -75,7 +75,7 @@ const Home: NextPage = () => {
 
 	const transformOpacityHACK = useTransform(
 		scrollYProgress,
-		[0.65, 0.8, 1, 1],
+		[0.65, 0.7, 1, 1],
 		[0, 1, 1, 1]
 	)
 

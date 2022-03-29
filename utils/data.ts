@@ -1143,7 +1143,7 @@ export const hackatons = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["15:00", "18:00"],
-				title: "Workshop #2: Build a frontend for a Substrate pallet",
+				title: "Workshop #2: Build a FE for a Substrate pallet",
 				subTitle: "",
 				description:
 					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
