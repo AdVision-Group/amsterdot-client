@@ -215,15 +215,19 @@ const Home: NextPage = () => {
 			<AboutSection />
 			<EventSection />
 
-			{events.map((event, idx) => (
-				<Accordion key={idx} item={event} />
-			))}
+			<SectionContainer>
+				{events.map((event, idx) => (
+					<Accordion key={idx} item={event} />
+				))}
+			</SectionContainer>
 
 			<HackathonSection />
 
-			{hackatons.map((event, idx) => (
-				<Accordion key={idx} item={event} />
-			))}
+			<SectionContainer>
+				{hackatons.map((event, idx) => (
+					<Accordion key={idx} item={event} />
+				))}
+			</SectionContainer>
 			<FooterSection />
 		</React.Fragment>
 	)
@@ -449,34 +453,6 @@ const WatermarkLetters = styled(motion.h2)`
 	}
 `
 
-const Container = styled.div`
-	/* scroll-padding-top: 8rem; */
-	position: relative;
-	overflow: hidden;
-	width: 100vw;
-	height: 400vh;
-
-	&#hackatons {
-		/* background-color: red; */
-	}
-`
-
-const FlexContainer = styled(motion.div)`
-	display: flex;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	/* padding: 3rem 1.5rem; */
-`
-
 const SectionContainer = styled.section`
-	width: 100vw;
-	height: 100vh;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* background-color: ${({ theme }) => theme.background.primary}; */
-	padding: 1.5rem 3rem 1.5rem 1.5rem;
+	padding: 10rem 0;
 `

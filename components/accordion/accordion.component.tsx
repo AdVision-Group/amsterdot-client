@@ -3,6 +3,9 @@ import React from "react"
 import styled from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
 
+// Components
+import SubAccordion from "../sub-accordion/sub-accordion.component"
+
 // Hooks
 import { useToggle } from "react-use"
 
@@ -53,8 +56,6 @@ const Accordion: React.FC<IProps> = ({ item }) => {
 
 	return (
 		<AccordionContainer>
-			<Border />
-
 			<AccordionHeading onClick={toggleContent}>
 				<LabelContainer>
 					<p>{item.day}</p>
@@ -77,7 +78,7 @@ const Accordion: React.FC<IProps> = ({ item }) => {
 					{showContent ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
 				</ArrowContainer>
 			</AccordionHeading>
-			<AnimatePresence exitBeforeEnter>
+			<AnimatePresence initial={false}>
 				{showContent && (
 					<ContentContainer
 						id={item.id}
@@ -86,16 +87,17 @@ const Accordion: React.FC<IProps> = ({ item }) => {
 						animate={showContent ? "open" : "collapsed"}
 						exit={"collapsed"}
 						variants={{
-							open: { display: "block", opacity: 1, height: "auto" },
+							open: { opacity: 1, height: "auto" },
 							collapsed: {
 								opacity: 0,
 								height: 0,
-								transitionEnd: { opacity: 0 },
 							},
 						}}
-						transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+						transition={{ duration: 1, ease: [0.04, 0.62, 0.23, 0.98] }}
 					>
-						{item.items[0].description}
+						{item.items.map((i, idx) => (
+							<SubAccordion item={i} id={idx} key={idx} />
+						))}
 					</ContentContainer>
 				)}
 			</AnimatePresence>
@@ -198,24 +200,29 @@ const DateContainer = styled.div`
 	}
 `
 
-const Border = styled.div`
-	/* width: 100%; */
-	height: 1px;
-	margin: 1.5rem 0;
-`
-
 const AccordionContainer = styled.div`
 	max-width: 130rem;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 3rem;
 	padding: 1.5rem;
+`
+
+const ArrowContainer = styled.span`
+	grid-area: a;
+	display: block;
+	color: ${({ theme }) => theme.color.primary};
+	font-size: 5rem;
+	align-self: center;
+	justify-self: end;
+	margin-bottom: -1.5rem;
+	padding-top: 1rem;
 `
 
 const AccordionHeading = styled(motion.div)`
 	cursor: pointer;
 	/* width: 100%; */
 	padding: 1rem;
-	margin-bottom: 1rem;
+	/* margin-bottom: 1rem; */
 	border: none;
 	color: ${({ theme }) => theme.fonts.primary};
 	background-color: ${({ theme }) => theme.background.container};
@@ -246,22 +253,12 @@ const TitleContainer = styled.div`
 
 `
 
-const ArrowContainer = styled.span`
-	grid-area: a;
-	display: block;
-	color: ${({ theme }) => theme.color.primary};
-	font-size: 5rem;
-	align-self: center;
-	justify-self: end;
-	margin-bottom: -1.5rem;
-	padding-top: 1rem;
-`
-
 const ContentContainer = styled(motion.div)`
-	padding: 0 1.5rem;
+	padding-top: 1.5rem;
 	color: ${({ theme }) => theme.fonts.primary};
-
-	margin-bottom: 2rem;
+	/* border: 1px solid red; */
+	/* margin-bottom: 2rem; */
+	overflow: hidden;
 
 	p {
 		text-align: start;
