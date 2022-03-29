@@ -16,6 +16,7 @@ import AboutSection from "../components/about-section/about-section.component"
 import EventSection from "../components/event-section/event-section.component"
 import HackathonSection from "../components/hackathon-section/hackathon-section.component"
 import FooterSection from "../components/footer-section/footer-section.component"
+import Accordion from "../components/accordion/accordion.component"
 
 // Hooks
 import {
@@ -122,67 +123,6 @@ const Home: NextPage = () => {
 			<Header />
 
 			<WatermarkContainer>
-				{/* <Circle1
-					className="first"
-					animate={{
-						scale: [0.95, 1.2, 1, 1.5, 0.95],
-					}}
-					transition={{
-						repeat: Infinity,
-						ease: "easeInOut",
-						duration: 10,
-					}}
-				>
-					<Image
-						src={"/assets/primary-circle.svg"}
-						alt="red circle"
-						layout="responsive"
-						width={100}
-						height={100}
-						objectFit="contain"
-					/>
-				</Circle1> */}
-				{/* <Circle2
-					className="first"
-					animate={{
-						x: [0, 20, 10, -5, 0],
-						scale: [1.2, 0.97, 0.9, 1, 1.2],
-					}}
-					transition={{
-						repeat: Infinity,
-						ease: "easeInOut",
-						duration: 10,
-					}}
-				>
-					<Image
-						src={"/assets/primary-circle.svg"}
-						alt="red circle"
-						layout="responsive"
-						width={100}
-						height={100}
-						objectFit="cover"
-					/>
-				</Circle2> */}
-				{/* <Circle3
-					animate={{
-						y: [0, -5, 10, 20, 0],
-						scale: [1.2, 1, 0.9, 0.97, 1.2],
-					}}
-					transition={{
-						repeat: Infinity,
-						ease: "easeInOut",
-						duration: 10,
-					}}
-				>
-					<Image
-						src={"/assets/primary-circle.svg"}
-						alt="red circle"
-						layout="responsive"
-						width={100}
-						height={100}
-						objectFit="cover"
-					/>
-				</Circle3> */}
 				<ArrowContainer
 				// animate={{
 				// 	y: [0, -5, -10, -7, 0],
@@ -273,57 +213,18 @@ const Home: NextPage = () => {
 
 			<HeroSection />
 			<AboutSection />
+			<EventSection />
 
-			<Container id="events">
-				<FlexContainer
-					ref={containerRef}
-					style={{
-						x: spring,
-						y: transformY,
-						opacity: transformOpacityCONF,
-					}}
-					transition={{
-						ease: "linear",
-					}}
-				>
-					<EventSection />
-					{events.map((event, idx) => (
-						<SectionContainer
-							id={event.id}
-							key={idx}
-							ref={idx === 0 ? sectionRef : null}
-						>
-							<EventOverview item={event} />
-						</SectionContainer>
-					))}
-				</FlexContainer>
-			</Container>
-			<Container id="hackatons">
-				<FlexContainer
-					ref={containerRefH}
-					style={{
-						x: springH,
-						y: transformYH,
-						// opacity: transformOpacityHACK,
-					}}
-				>
-					<HackathonSection />
-					{hackatons.map((event, idx) => (
-						<SectionContainer
-							id={event.id}
-							key={idx}
-							ref={idx === 0 ? sectionRefH : null}
-						>
-							<EventOverview item={event} />
-						</SectionContainer>
-					))}
-					<FooterSection />
-				</FlexContainer>
-			</Container>
+			{events.map((event, idx) => (
+				<Accordion key={idx} item={event} />
+			))}
 
-			{/* <FooterContainer id="footer">
-				<h1>footer section</h1>
-			</FooterContainer> */}
+			<HackathonSection />
+
+			{hackatons.map((event, idx) => (
+				<Accordion key={idx} item={event} />
+			))}
+			<FooterSection />
 		</React.Fragment>
 	)
 }

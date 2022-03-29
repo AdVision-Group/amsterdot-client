@@ -1,0 +1,274 @@
+// Utils
+import React from "react"
+import styled from "styled-components"
+import { motion, AnimatePresence } from "framer-motion"
+
+// Hooks
+import { useToggle } from "react-use"
+
+// Icons
+import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri"
+
+interface IProps {
+	item: {
+		id: string
+		ilustration: {
+			src: string
+			alt: string
+			blurDataURL: string
+			width: number
+			height: number
+		}
+		day: string
+		title: string
+		date: {
+			day: number
+			month: string
+		}
+		items: {
+			icon: {
+				img: {
+					src: string
+					alt: string
+					blurDataURL: string
+				}
+				time: string
+			}
+			img: {
+				src: string
+				alt: string
+				blurDataURL: string
+			}
+			time: string[]
+			title: string
+			subTitle: string
+			description: string
+		}[]
+		hasArrowDown?: boolean
+	}
+}
+
+const Accordion: React.FC<IProps> = ({ item }) => {
+	const [showContent, toggleContent] = useToggle(false)
+
+	return (
+		<AccordionContainer>
+			<Border />
+
+			<AccordionHeading onClick={toggleContent}>
+				<LabelContainer>
+					<p>{item.day}</p>
+					<p>DAY</p>
+				</LabelContainer>
+				<TitleContainer>
+					<p>{item.title}</p>
+				</TitleContainer>
+				<DateContainer>
+					<p>
+						<span>{item.date.day}</span>
+						<span />
+					</p>
+					<p>
+						<span />
+						<span>{item.date.month}</span>
+					</p>
+				</DateContainer>
+				<ArrowContainer>
+					{showContent ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
+				</ArrowContainer>
+			</AccordionHeading>
+			<AnimatePresence exitBeforeEnter>
+				{showContent && (
+					<ContentContainer
+						id={item.id}
+						key={item.id}
+						initial="collapsed"
+						animate={showContent ? "open" : "collapsed"}
+						exit={"collapsed"}
+						variants={{
+							open: { display: "block", opacity: 1, height: "auto" },
+							collapsed: {
+								opacity: 0,
+								height: 0,
+								transitionEnd: { opacity: 0 },
+							},
+						}}
+						transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+					>
+						{item.items[0].description}
+					</ContentContainer>
+				)}
+			</AnimatePresence>
+		</AccordionContainer>
+	)
+}
+
+export default Accordion
+
+const LabelContainer = styled.div`
+	grid-area: l;
+	position: relative;
+	z-index: 1;
+	background-color: ${({ theme }) => theme.color.primary};
+	/* display: inline-block; */
+	color: ${({ theme }) => theme.fonts.secondary};
+	font-weight: 400;
+	font-size: 2.5rem;
+	text-align: center;
+	line-height: 1;
+	justify-self: start;
+	padding: 0.5rem 1rem;
+	margin-top: -4rem;
+	/* filter: blur(1rem); */
+
+	p:nth-of-type(1) {
+		font-size: 4.5rem;
+		font-weight: 700;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			margin-bottom: 4rem;
+			/* margin-left: 3rem; */
+			/* font-size: 3.5rem; */
+		}
+	}
+`
+
+const DateContainer = styled.div`
+	grid-area: d;
+	width: 100%;
+	max-width: 10rem;
+	/* border: 1px solid green; */
+	font-size: 2.2rem;
+	line-height: 1.1;
+	text-align: center;
+	justify-self: end;
+
+	p {
+		font-family: "Avenir Next";
+		font-weight: 700;
+	}
+
+	p:nth-of-type(1) {
+		/* border: 1px solid green; */
+		display: flex;
+		align-items: center;
+
+		span {
+			display: block;
+
+			&:nth-of-type(2) {
+				width: 100%;
+				height: 0.3rem;
+				background-color: ${({ theme }) => theme.fonts.primary};
+				margin-left: 1.5rem;
+			}
+		}
+	}
+
+	p:nth-of-type(2) {
+		/* border: 1px solid green; */
+		display: flex;
+		align-items: center;
+
+		span {
+			display: block;
+
+			&:nth-of-type(1) {
+				width: 100%;
+				height: 0.3rem;
+				background-color: ${({ theme }) => theme.fonts.primary};
+				margin-right: 1.5rem;
+			}
+		}
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		align-self: center;
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				/* max-width: 15rem;
+				p {
+					font-size: 4.4rem;
+				} */
+			}
+		}
+	}
+`
+
+const Border = styled.div`
+	/* width: 100%; */
+	height: 1px;
+	margin: 1.5rem 0;
+`
+
+const AccordionContainer = styled.div`
+	max-width: 130rem;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1.5rem;
+`
+
+const AccordionHeading = styled(motion.div)`
+	cursor: pointer;
+	/* width: 100%; */
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border: none;
+	color: ${({ theme }) => theme.fonts.primary};
+	background-color: ${({ theme }) => theme.background.container};
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		"l d"
+		"t a";
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		grid-template-columns: auto 1fr 1fr auto;
+		grid-template-rows: auto;
+		gap: 2rem;
+		grid-template-areas: "l t d a";
+	}
+`
+
+const TitleContainer = styled.div`
+	grid-area: t;
+	justify-self: start;
+	align-self: center;
+	font-size: 2.5rem;
+	line-height: 1;
+
+    @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		align-self: center;
+
+`
+
+const ArrowContainer = styled.span`
+	grid-area: a;
+	display: block;
+	color: ${({ theme }) => theme.color.primary};
+	font-size: 5rem;
+	align-self: center;
+	justify-self: end;
+	margin-bottom: -1.5rem;
+	padding-top: 1rem;
+`
+
+const ContentContainer = styled(motion.div)`
+	padding: 0 1.5rem;
+	color: ${({ theme }) => theme.fonts.primary};
+
+	margin-bottom: 2rem;
+
+	p {
+		text-align: start;
+	}
+
+	.table-container {
+		width: 100%;
+		overflow-x: auto;
+	}
+`

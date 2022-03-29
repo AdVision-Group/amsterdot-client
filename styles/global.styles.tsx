@@ -27,15 +27,14 @@ src: url('/fonts/AcuminVariableConcept.otf');
     src: url('/fonts/final/AvenirNext-Bold-01.ttf');
     font-weight: 900;
     font-style: bold;
-}
-
-@font-face {
-  font-family: 'Acumin Variable Concept';
-  src: url('/fonts/AcuminVariableConcept-v2.otf') format('embedded-opentype'), 
-   url('/fonts/AcuminVariableConcept-v2.otf') format('woff'), 
-   url('/fonts/AcuminVariableConcept-v2.otf')  format('truetype'),
-   url('/fonts/AcuminVariableConcept-v2.otf') format('svg');
-}
+  }
+  
+  @font-face {
+    font-family: 'Acumin Variable Concept';
+    src: url('/fonts/AcuminVariableConcept-v2.otf');
+    font-weight: 400;
+    font-style: "ExtraCondensed Light";
+  }
 
   *, *:before, *:after {
     margin: 0;
@@ -61,7 +60,6 @@ src: url('/fonts/AcuminVariableConcept.otf');
     width: 100%;
     /* width: 100%;
     height: 100vh; */
-    /* overflow: hidden;  */
   }
 
   button {

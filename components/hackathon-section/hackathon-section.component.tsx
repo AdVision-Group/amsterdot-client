@@ -148,6 +148,7 @@ const EventSectionContainer = styled.section`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow-x: hidden;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* margin-top: 10rem; */
