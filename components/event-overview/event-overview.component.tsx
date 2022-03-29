@@ -397,7 +397,7 @@ const ContentContainer = styled.article`
 	position: fixed; */
 	max-width: 90rem;
 	width: 100%;
-	z-index: 1;
+	z-index: 8;
 	position: relative;
 	/* filter: blur(1rem); */
 
@@ -650,7 +650,7 @@ const TimelineOverview = styled.div`
 		gap: 3rem;
 		/* border: 1px solid green; */
 		padding-bottom: 2rem;
-		overflow-x: auto;
+		/* overflow-x: auto; */
 
 		&:before {
 			position: absolute;

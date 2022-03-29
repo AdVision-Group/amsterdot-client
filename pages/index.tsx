@@ -303,7 +303,7 @@ const Home: NextPage = () => {
 					ref={containerRefH}
 					style={{
 						x: springH,
-						// y: transformYH,
+						y: transformYH,
 						opacity: transformOpacityHACK,
 					}}
 				>
