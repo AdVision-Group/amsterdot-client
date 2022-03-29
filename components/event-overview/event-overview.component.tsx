@@ -525,7 +525,7 @@ const TimelineHead = styled.div`
 	h4 {
 		font-family: "Avenir next";
 		font-size: 1.8rem;
-		font-weight: 900;
+		font-weight: 700;
 		color: ${({ theme }) => theme.color.primary};
 		text-transform: uppercase;
 		line-height: 1;
