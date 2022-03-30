@@ -167,18 +167,23 @@ const Header: React.FC<IProps> = ({
 							<Ul>
 								<li>
 									<Link href={"/#about"}>
-										<a>WHAT IS CONFERENCE</a>
+										<a onClick={toggleMobileNav}>WHAT IS amsterDOT</a>
 									</Link>
 								</li>
 								<li>
 									<Link href={"/#day-1"}>
-										<a>CONFERENCE PROGRAM</a>
+										<a onClick={toggleMobileNav}>CONFERENCE PROGRAM</a>
 									</Link>
 									<NestedUl>
 										{events.map((e, idx) => (
 											<li key={idx}>
 												{/* <Link href={`/#${e.id}`} passHref> */}
-												<a onClick={() => openEventDayProgram(true, idx, e.id)}>
+												<a
+													onClick={() => {
+														openEventDayProgram(true, idx, e.id)
+														toggleMobileNav()
+													}}
+												>
 													#{idx + 1} DAY
 												</a>
 												{/* </Link> */}
@@ -188,7 +193,7 @@ const Header: React.FC<IProps> = ({
 								</li>
 								<li>
 									<Link href={"/#hack-2"}>
-										<a>HACKATON PROGRAM</a>
+										<a onClick={toggleMobileNav}>HACKATON PROGRAM</a>
 									</Link>
 									<NestedUl>
 										{hackatons.map((e, idx) => (
@@ -196,9 +201,10 @@ const Header: React.FC<IProps> = ({
 												{/* <Link href={`/#${e.id}`} passHref> */}
 
 												<a
-													onClick={() =>
+													onClick={() => {
 														openHackathonDayProgram(true, idx, e.id)
-													}
+														toggleMobileNav()
+													}}
 												>
 													#{idx + 2} DAY
 												</a>

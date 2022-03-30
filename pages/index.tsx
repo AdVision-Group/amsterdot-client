@@ -132,7 +132,7 @@ const Home: NextPage = () => {
 		[0, -50, -50, -50]
 	)
 
-	console.log(event)
+	// console.log(event)
 
 	const openEventDayProgram = (
 		showContent: boolean,

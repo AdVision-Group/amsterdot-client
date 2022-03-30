@@ -8,6 +8,7 @@ export const light = {
 		primary: "#000",
 		container: "#161616",
 		secondary: "#272727",
+		activeContainer: "#2B2B2B",
 		footerBackground: "rgb(20, 20, 20)",
 		lightGray: "rgb(235, 235, 235)",
 	},

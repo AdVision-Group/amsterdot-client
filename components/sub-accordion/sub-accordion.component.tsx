@@ -3,6 +3,9 @@ import React from "react"
 import styled from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
 
+// Components
+import Image from "next/image"
+
 // Hooks
 import { useToggle, useWindowSize } from "react-use"
 
@@ -12,6 +15,15 @@ import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri"
 interface IProps {
 	id: string | number
 	item: {
+		user?: {
+			img: {
+				src: string
+				alt: string
+				blurDataURL: string
+			}
+			title: string
+			subTitle: string
+		}
 		icon: {
 			img: {
 				src: string
@@ -39,7 +51,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 	// console.log(width)
 
 	return (
-		<AccordionContainer>
+		<AccordionContainer isactive={showContent}>
 			<AccordionHeading onClick={toggleContent}>
 				<TimeRange>
 					{item.time[0]} <span /> {item.time[1]}
@@ -47,6 +59,23 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 				<TitleContainer>
 					<p>{item.title}</p>
 				</TitleContainer>
+				<Border />
+				{item.user && (
+					<UserContainer>
+						<figure>
+							<Image
+								src={item.user.img.src}
+								width={100}
+								height={100}
+								alt={item.user.img.alt}
+								objectFit="contain"
+								layout="responsive"
+							/>
+						</figure>
+						<h4>{item.user.subTitle}</h4>
+						<h3>{item.user.title}</h3>
+					</UserContainer>
+				)}
 				<ArrowContainer showContent={showContent}>
 					{showContent ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
 				</ArrowContainer>
@@ -86,6 +115,40 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 
 export default SubAccordion
 
+const UserContainer = styled.div`
+	grid-area: u;
+
+	display: grid;
+	grid-template-columns: auto 1fr;
+
+	figure {
+		grid-row: 1/3;
+		position: relative;
+		width: 8rem;
+		margin-right: 1.5rem;
+	}
+
+	h4 {
+		align-self: end;
+		font-weight: 400;
+		font-size: 1.4rem;
+	}
+
+	h3 {
+		font-size: 2.5rem;
+		font-weight: 900;
+		color: ${({ theme }) => theme.color.primary};
+	}
+`
+
+const Border = styled.div`
+	grid-area: b;
+	height: 0.2rem;
+	width: 100%;
+	background-color: ${({ theme }) => theme.fonts.primary};
+	margin: 1rem 0 2rem;
+`
+
 const TimeRange = styled.p`
 	grid-area: r;
 
@@ -109,13 +172,6 @@ const TimeRange = styled.p`
 	}
 `
 
-const AccordionContainer = styled.div`
-	max-width: 120rem;
-	width: 100%;
-	margin: 0 auto;
-	padding: 1.5rem 0;
-`
-
 const AccordionHeading = styled(motion.div)`
 	cursor: pointer;
 	/* width: 100%; */
@@ -125,21 +181,59 @@ const AccordionHeading = styled(motion.div)`
 	color: ${({ theme }) => theme.fonts.primary};
 	background-color: ${({ theme }) => theme.background.container};
 	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
+	/* grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto; */
 	grid-template-areas:
 		"r r"
-		"t a";
+		"t t"
+		"b b"
+		"u a";
 
-	gap: 3rem;
+	gap: 1rem;
 	/* gap: 4rem; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-template-columns: auto 1fr auto;
 		grid-template-rows: auto;
-		gap: 5rem;
-		grid-template-areas: "r t a";
+		gap: 1.8rem;
+		grid-template-areas: "r t u a";
 		padding: 1rem 3.5rem;
+
+		${Border} {
+			display: none;
+		}
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			gap: 5rem;
+		}
+	}
+`
+
+const ContentContainer = styled(motion.div)`
+	padding: 0 1.5rem;
+	color: ${({ theme }) => theme.fonts.primary};
+	background-color: ${({ theme }) => theme.background.container};
+	overflow: hidden;
+	line-height: 1.7;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		padding: 0 3.5rem;
+	}
+`
+
+const AccordionContainer = styled.div<{ isactive: boolean }>`
+	max-width: 120rem;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1.5rem 0;
+
+	${AccordionHeading} {
+		background-color: ${({ theme, isactive }) =>
+			isactive ? theme.background.activeContainer : theme.background.container};
+	}
+
+	${ContentContainer} {
+		background-color: ${({ theme, isactive }) =>
+			isactive ? theme.background.activeContainer : theme.background.container};
 	}
 `
 
@@ -147,9 +241,10 @@ const TitleContainer = styled.div`
 	grid-area: t;
 	justify-self: start;
 	align-self: center;
+	text-transform: uppercase;
 	font-size: 2.5rem;
 	line-height: 1;
-	font-weight: 700;
+	font-weight: 900;
 	color: ${({ theme }) => theme.color.primary};
 
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -167,23 +262,4 @@ const ArrowContainer = styled.span<{ showContent: boolean }>`
 	justify-self: end;
 	margin-bottom: -1.5rem;
 	padding-top: 1rem;
-`
-
-const ContentContainer = styled(motion.div)`
-	padding: 0 1.5rem;
-	color: ${({ theme }) => theme.fonts.primary};
-	background-color: ${({ theme }) => theme.background.container};
-	overflow: hidden;
-	line-height: 1.7;
-
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		padding: 0 3.5rem;
-	}
-`
-
-const Border = styled.div`
-	height: 0.2rem;
-	width: 100%;
-	background-color: ${({ theme }) => theme.fonts.primary};
-	margin: 1rem 0 2rem;
 `

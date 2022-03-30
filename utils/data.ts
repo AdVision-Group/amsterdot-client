@@ -17,6 +17,16 @@ export const events = [
 		},
 		items: [
 			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
 				icon: {
 					img: {
 						src: "/assets/event-icons/registration-final.svg",

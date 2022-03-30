@@ -29,6 +29,15 @@ interface IProps {
 			month: string
 		}
 		items: {
+			user?: {
+				img: {
+					src: string
+					alt: string
+					blurDataURL: string
+				}
+				title: string
+				subTitle: string
+			}
 			icon: {
 				img: {
 					src: string
@@ -73,7 +82,7 @@ const Accordion: React.FC<IProps> = ({
 	dayID,
 }) => {
 	return (
-		<AccordionContainer id={dayID}>
+		<AccordionContainer id={dayID} isactive={showContent}>
 			<AccordionHeading
 				onClick={() =>
 					dayID.includes("hack")
@@ -228,29 +237,6 @@ const DateContainer = styled.div`
 	}
 `
 
-const AccordionContainer = styled.div`
-	scroll-margin-top: 12rem;
-	scroll-padding-top: 12rem;
-	position: relative;
-
-	max-width: 130rem;
-	width: 100%;
-	margin: 0 auto 1rem;
-	padding: 3rem 1.5rem;
-`
-
-const ArrowContainer = styled.span<{ showContent: boolean }>`
-	grid-area: a;
-	display: block;
-	color: ${({ theme, showContent }) =>
-		showContent ? theme.color.primary : theme.fonts.primary};
-	font-size: 5rem;
-	align-self: center;
-	justify-self: end;
-	margin-bottom: -1.5rem;
-	padding-top: 1rem;
-`
-
 const AccordionHeading = styled(motion.div)`
 	cursor: pointer;
 	/* width: 100%; */
@@ -258,7 +244,7 @@ const AccordionHeading = styled(motion.div)`
 	/* margin-bottom: 1rem; */
 	border: none;
 	color: ${({ theme }) => theme.fonts.primary};
-	background-color: ${({ theme }) => theme.background.container};
+	/* background-color: ${({ theme }) => theme.background.container}; */
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto;
@@ -273,6 +259,34 @@ const AccordionHeading = styled(motion.div)`
 		grid-template-areas: "l t d a";
 		padding: 1rem 3rem;
 	}
+`
+
+const AccordionContainer = styled.div<{ isactive: boolean }>`
+	scroll-margin-top: 12rem;
+	scroll-padding-top: 12rem;
+	position: relative;
+
+	max-width: 130rem;
+	width: 100%;
+	margin: 0 auto 1rem;
+	padding: 3rem 1.5rem;
+
+	${AccordionHeading} {
+		background-color: ${({ theme, isactive }) =>
+			isactive ? theme.background.activeContainer : theme.background.container};
+	}
+`
+
+const ArrowContainer = styled.span<{ showContent: boolean }>`
+	grid-area: a;
+	display: block;
+	color: ${({ theme, showContent }) =>
+		showContent ? theme.color.primary : theme.fonts.primary};
+	font-size: 5rem;
+	align-self: center;
+	justify-self: end;
+	margin-bottom: -1.5rem;
+	padding-top: 1rem;
 `
 
 const TitleContainer = styled.div`
@@ -296,6 +310,7 @@ const TitleContainer = styled.div`
 const ContentContainer = styled(motion.div)`
 	padding-top: 1.5rem;
 	color: ${({ theme }) => theme.fonts.primary};
+
 	/* border: 1px solid red; */
 	/* margin-bottom: 2rem; */
 	overflow: hidden;
