@@ -187,6 +187,7 @@ const TimeRange = styled.p`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		/* display: none; */
+		align-self: center;
 	}
 `
 
@@ -214,7 +215,7 @@ const AccordionHeading = styled(motion.div)`
 		grid-template-columns: auto 1fr auto;
 		grid-template-rows: auto;
 		gap: 1.8rem;
-		grid-template-areas: "r t u a";
+		grid-template-areas: "r t u a s";
 		padding: 1rem 3.5rem;
 
 		${Border} {
@@ -280,6 +281,10 @@ const ArrowContainer = styled.span<{ showContent: boolean }>`
 	justify-self: end;
 	margin-bottom: -1.5rem;
 	padding-top: 1rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		grid-column: 5/6;
+	}
 `
 
 const ArrowContainer2 = styled.span<{ showContent: boolean }>`
