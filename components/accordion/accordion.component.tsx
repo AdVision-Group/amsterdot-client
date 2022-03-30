@@ -103,7 +103,7 @@ const Accordion: React.FC<IProps> = ({
 								height: 0,
 							},
 						}}
-						transition={{ duration: 1, ease: [0.04, 0.2, 0.23, 0.98] }}
+						transition={{ duration: 1, ease: "linear" }}
 					>
 						{item.items.map((i, idx) => (
 							<SubAccordion item={i} id={idx} key={idx} />
@@ -129,18 +129,22 @@ const LabelContainer = styled.div`
 	text-align: center;
 	line-height: 1;
 	justify-self: start;
-	padding: 0.5rem 1rem;
+	padding: 1rem;
 	margin-top: -4rem;
 	/* filter: blur(1rem); */
 
+	p {
+		font-weight: 900;
+	}
+
 	p:nth-of-type(1) {
 		font-size: 4.5rem;
-		font-weight: 700;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			margin-bottom: 4rem;
+			margin-top: -3rem;
+			margin-bottom: 2rem;
 			/* margin-left: 3rem; */
 			/* font-size: 3.5rem; */
 		}
@@ -159,7 +163,7 @@ const DateContainer = styled.div`
 
 	p {
 		font-family: "Avenir Next";
-		font-weight: 700;
+		font-weight: 900;
 	}
 
 	p:nth-of-type(1) {
@@ -217,7 +221,7 @@ const AccordionContainer = styled.div`
 
 	max-width: 130rem;
 	width: 100%;
-	margin: 0 auto 3rem;
+	margin: 0 auto 1rem;
 	padding: 3rem 1.5rem;
 `
 
@@ -251,8 +255,9 @@ const AccordionHeading = styled(motion.div)`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-template-columns: auto 1fr 1fr auto;
 		grid-template-rows: auto;
-		gap: 2rem;
+		gap: 3rem;
 		grid-template-areas: "l t d a";
+		padding: 1rem 3rem;
 	}
 `
 
@@ -260,12 +265,18 @@ const TitleContainer = styled.div`
 	grid-area: t;
 	justify-self: start;
 	align-self: center;
-	font-size: 2.5rem;
 	line-height: 1;
+	font-size: 2.5rem;
 
-    @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		align-self: center;
-
+		p {
+			font-size: 5rem;
+		}
+		/* maring-left: 2rem; */
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		}
+	}
 `
 
 const ContentContainer = styled(motion.div)`

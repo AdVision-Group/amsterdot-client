@@ -48,7 +48,6 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 					{showContent ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
 				</ArrowContainer>
 			</AccordionHeading>
-			{/* <Border /> */}
 
 			<AnimatePresence exitBeforeEnter>
 				{showContent && (
@@ -59,7 +58,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 						animate={showContent ? "open" : "collapsed"}
 						exit={"collapsed"}
 						variants={{
-							open: { display: "block", opacity: 1, height: "15rem" },
+							open: { display: "block", opacity: 1, height: "12rem" },
 							collapsed: {
 								opacity: 1,
 								height: 0,
@@ -68,6 +67,8 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 						}}
 						transition={{ duration: 0.8, ease: [0.04, 0.2, 0.23, 0.98] }}
 					>
+						<Border />
+
 						<div>{item.description}</div>
 					</ContentContainer>
 				)}
@@ -82,7 +83,7 @@ const TimeRange = styled.p`
 	grid-area: r;
 
 	font-size: 2rem;
-	font-weight: 700;
+	font-weight: 900;
 	text-align: center;
 	display: flex;
 	align-items: center;
@@ -172,8 +173,8 @@ const ContentContainer = styled(motion.div)`
 `
 
 const Border = styled.div`
-	height: 0.3rem;
+	height: 0.2rem;
 	width: 100%;
 	background-color: ${({ theme }) => theme.fonts.primary};
-	margin: 1rem 0 1rem;
+	margin: 1rem 0 2rem;
 `
