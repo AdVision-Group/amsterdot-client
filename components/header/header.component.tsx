@@ -16,7 +16,11 @@ import { FaTwitter, FaDiscord } from "react-icons/fa"
 // Data
 import { events, hackatons } from "../../utils/data"
 
-const Header = () => {
+interface IProps {
+	toggleContent: (showContent: boolean, idx: number, dayID: string) => void
+}
+
+const Header: React.FC<IProps> = ({ toggleContent }) => {
 	const [showMobileNav, toggleMobileNav] = useToggle(false)
 
 	return (
@@ -142,9 +146,11 @@ const Header = () => {
 								<ul>
 									{events.map((e, idx) => (
 										<li key={idx}>
-											<Link href={`/#${e.id}`} passHref>
-												<a>0{idx + 1} day</a>
-											</Link>
+											{/* <Link href={`/#${e.id}`} passHref> */}
+											<a onClick={() => toggleContent(true, idx, e.id)}>
+												0{idx + 1} day
+											</a>
+											{/* </Link> */}
 										</li>
 									))}
 								</ul>

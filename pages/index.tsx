@@ -188,7 +188,7 @@ const Home: NextPage = () => {
 				<meta name="description" content="amsterDOT Hack Conf" />
 			</Head>
 
-			<Header />
+			<Header toggleContent={openEventDayProgram} />
 
 			<WatermarkContainer>
 				<WatermarkLetters
