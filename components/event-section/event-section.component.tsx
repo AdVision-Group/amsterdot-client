@@ -28,7 +28,7 @@ const EventSection = () => {
 	return (
 		<EventSectionContainer>
 			<WatermarkContainer>
-				<Circle1
+				{/* <Circle1
 					className="first"
 					animate={{
 						scale: [0.95, 1.2, 1, 1.5, 0.95],
@@ -47,7 +47,7 @@ const EventSection = () => {
 						height={100}
 						objectFit="contain"
 					/>
-				</Circle1>
+				</Circle1> */}
 			</WatermarkContainer>
 			<Container>
 				<XContainer>
@@ -124,7 +124,7 @@ const EventSection = () => {
 				</PlaceContainer>
 				<ArrowContainer
 					animate={{
-						x: [0, -10, -5, -15, 0],
+						y: [0, -10, -5, -15, 0],
 						// scale: [1.2, 1, 0.9, 0.97, 1.2],
 					}}
 					transition={{
@@ -134,7 +134,7 @@ const EventSection = () => {
 					}}
 				>
 					<Image
-						src={"/assets/arrow-left.svg"}
+						src={"/assets/arrow-down-final.svg"}
 						alt="red circle"
 						layout="responsive"
 						width={100}

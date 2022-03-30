@@ -80,7 +80,7 @@ const Home: NextPage = () => {
 		[0, 1, 1, 1]
 	)
 
-	// scrollYProgress.onChange((e) => console.log(e))
+	scrollYProgress.onChange((e) => console.log(e))
 
 	// Set horizontal container width on change
 	useEffect(() => {
@@ -99,17 +99,17 @@ const Home: NextPage = () => {
 
 	const transformYAM = useTransform(
 		scrollYProgress,
-		[0, 0.1, 1, 1],
+		[0, 0.145, 1, 1],
 		[0, 150, 150, 150]
 	)
 	const transformYST = useTransform(
 		scrollYProgress,
-		[0, 0.1, 1, 1],
+		[0, 0.145, 1, 1],
 		[20, -100, -100, -100]
 	)
 	const transformYER = useTransform(
 		scrollYProgress,
-		[0, 0.1, 1, 1],
+		[0, 0.145, 1, 1],
 		[0, -50, -50, -50]
 	)
 
@@ -295,7 +295,7 @@ const ArrowContainer = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	bottom: 0rem;
+	bottom: 22rem;
 	right: 3rem;
 	/* display: none; */
 
