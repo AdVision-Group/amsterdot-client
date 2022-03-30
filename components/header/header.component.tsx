@@ -161,7 +161,7 @@ const Header: React.FC<IProps> = ({
 								duration: 0.8,
 							}}
 						>
-							<ToggleMobileButton
+							{/* <ToggleMobileButton
 								onClick={() => toggleMobileNav()}
 								isOpen={showMobileNav}
 							>
@@ -178,7 +178,7 @@ const Header: React.FC<IProps> = ({
 								>
 									menu
 								</span>
-							</ToggleMobileButton>
+							</ToggleMobileButton> */}
 
 							<Ul>
 								<li>
@@ -332,6 +332,7 @@ const MobileMenuContainer = styled(motion.div)`
 	border-left: 1px solid ${({ theme }) => theme.fonts.primary};
 	color: ${({ theme }) => theme.fonts.primary};
 	/* opacity: 0.6; */
+	padding-top: 13rem;
 
 	ul {
 		padding: 1.5rem;
@@ -342,7 +343,7 @@ const MobileMenuContainer = styled(motion.div)`
 
 		li {
 			font-weight: 900;
-			margin-bottom: 1.5rem;
+			margin-bottom: 0.5rem;
 
 			a {
 				cursor: pointer;
@@ -389,7 +390,7 @@ const Ul = styled.ul`
 	}
 `
 const NestedUl = styled.ul`
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 
 	li {
 		font-weight: 400 !important;
@@ -427,7 +428,7 @@ const Socials = styled.div`
 
 const HeaderContainer = styled.header<{ isOnTop: boolean }>`
 	position: fixed;
-	z-index: 9999;
+	z-index: 999999;
 	left: 0;
 	top: 0;
 	width: 100%;
