@@ -56,7 +56,7 @@ const Header: React.FC<IProps> = ({
 
 	return (
 		<React.Fragment>
-			<HeaderContainer showMobileNav={showMobileNav} isOnTop={isOnTop}>
+			<HeaderContainer isOnTop={isOnTop}>
 				<Container>
 					<Link href={"/"} passHref>
 						<a>
@@ -425,7 +425,6 @@ const Socials = styled.div`
 
 const HeaderContainer = styled.header<{
 	isOnTop: boolean
-	showMobileNav: boolean
 }>`
 	position: fixed;
 	z-index: 999999;
@@ -436,8 +435,8 @@ const HeaderContainer = styled.header<{
 	padding: 1.5rem;
 	transition: background-color 0.3s ease-in-out;
 
-	background-color: ${({ theme, isOnTop, showMobileNav }) =>
-		isOnTop || showMobileNav ? "transparent" : theme.background.primary};
+	background-color: ${({ theme, isOnTop }) =>
+		isOnTop ? "transparent" : theme.background.primary};
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: fixed;
 	}

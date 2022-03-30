@@ -375,7 +375,7 @@ const DateContainer = styled.div`
 
 	p {
 		font-family: "Avenir Next";
-		font-weight: 700;
+		font-weight: 900;
 	}
 
 	p:nth-of-type(1) {

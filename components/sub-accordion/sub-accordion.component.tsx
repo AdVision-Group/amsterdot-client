@@ -59,7 +59,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 				<TitleContainer>
 					<p>{item.title}</p>
 				</TitleContainer>
-				{item.user && <Border />}
+				{item.user && <Border showBorder={true} />}
 				{item.user && (
 					<UserContainer>
 						<figure>
@@ -110,8 +110,8 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 						}}
 						transition={{ duration: 0.8, ease: [0.04, 0.2, 0.23, 0.98] }}
 					>
-						{/* <Border /> */}
-						{!item.user && <Border />}
+						<Border showBorder={!!item.user} />
+						{!item.user && <Border showBorder={true} />}
 
 						<div>{item.description}</div>
 					</ContentContainer>
@@ -158,7 +158,8 @@ const UserContainer = styled.div`
 	}
 `
 
-const Border = styled.div`
+const Border = styled.div<{ showBorder?: boolean }>`
+	display: ${({ theme, showBorder }) => (showBorder ? "block" : "none")};
 	grid-area: b;
 	height: 0.2rem;
 	width: 100%;
@@ -186,7 +187,7 @@ const TimeRange = styled.p`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		/* display: none; */
+		display: block;
 		align-self: center;
 	}
 `
