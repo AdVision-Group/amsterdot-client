@@ -59,7 +59,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 				<TitleContainer>
 					<p>{item.title}</p>
 				</TitleContainer>
-				<Border />
+				{item.user && <Border />}
 				{item.user && (
 					<UserContainer>
 						<figure>
@@ -111,6 +111,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 						transition={{ duration: 0.8, ease: [0.04, 0.2, 0.23, 0.98] }}
 					>
 						{/* <Border /> */}
+						{!item.user && <Border />}
 
 						<div>{item.description}</div>
 					</ContentContainer>
