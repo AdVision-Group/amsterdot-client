@@ -1025,7 +1025,7 @@ export const hackatons = [
 	// 	],
 	// },
 	{
-		id: "day-2",
+		id: "hack-2",
 		ilustration: {
 			src: "/assets/footer/anim-final.gif",
 			alt: "ilustration",
@@ -1088,7 +1088,7 @@ export const hackatons = [
 		],
 	},
 	{
-		id: "day-3",
+		id: "hack-3",
 		ilustration: {
 			src: "/assets/footer/anim-final.gif",
 			alt: "ilustration",
@@ -1151,7 +1151,7 @@ export const hackatons = [
 		],
 	},
 	{
-		id: "day-4",
+		id: "hack-4",
 		ilustration: {
 			src: "/assets/footer/anim-final.gif",
 			alt: "ilustration",

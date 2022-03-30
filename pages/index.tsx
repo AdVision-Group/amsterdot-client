@@ -134,6 +134,53 @@ const Home: NextPage = () => {
 
 	console.log(event)
 
+	const openEventDayProgram = (
+		showContent: boolean,
+		i: number,
+		dayID: string
+	) => {
+		setAll({
+			...event,
+			events: event.events.map((e, id) => {
+				if (i === id) {
+					return {
+						id: id,
+						showContent: showContent,
+					}
+				} else {
+					return {
+						id: id,
+						showContent: e.showContent,
+					}
+				}
+			}),
+		})
+		push(`/#${dayID}`)
+	}
+	const openHackathonDayProgram = (
+		showContent: boolean,
+		i: number,
+		dayID: string
+	) => {
+		setAll({
+			...event,
+			events: event.events.map((e, id) => {
+				if (i === id) {
+					return {
+						id: id,
+						showContent: showContent,
+					}
+				} else {
+					return {
+						id: id,
+						showContent: e.showContent,
+					}
+				}
+			}),
+		})
+		push(`/#${dayID}`)
+	}
+
 	return (
 		<React.Fragment>
 			<Head>
@@ -215,68 +262,33 @@ const Home: NextPage = () => {
 			<AboutSection />
 			<EventSection />
 
-			{/* <SectionContainer> */}
-			{events.map((e, idx) => (
-				<Accordion
-					showContent={event.events[idx].showContent}
-					toggleContent={(showContent, i, dayID) => {
-						setAll({
-							...event,
-							events: event.events.map((e, id) => {
-								if (i === id) {
-									return {
-										id: idx,
-										showContent: showContent,
-									}
-								} else {
-									return {
-										id: idx,
-										showContent: e.showContent,
-									}
-								}
-							}),
-						})
-						push(`/#${dayID}`)
-					}}
-					key={idx}
-					idx={idx}
-					item={e}
-					dayID={e.id}
-				/>
-			))}
-			{/* </SectionContainer> */}
+			<SectionContainer>
+				{events.map((e, idx) => (
+					<Accordion
+						showContent={event.events[idx].showContent}
+						toggleContent={openEventDayProgram}
+						key={idx}
+						idx={idx}
+						item={e}
+						dayID={e.id}
+					/>
+				))}
+			</SectionContainer>
 
 			<HackathonSection />
 
-			{/* <SectionContainer> */}
-			{hackatons.map((h, idx) => (
-				<Accordion
-					showContent={hackaton.hackatons[idx].showContent}
-					toggleContent={(showContent, i, dayID) => {
-						setAllHackathon({
-							...hackaton,
-							hackatons: hackatons.map((e, id) => {
-								if (i === id) {
-									return {
-										id: idx,
-										showContent: showContent,
-									}
-								}
-								return {
-									id: idx,
-									showContent: false,
-								}
-							}),
-						})
-						push(`/#${dayID}`)
-					}}
-					key={idx}
-					idx={idx}
-					item={h}
-					dayID={h.id}
-				/>
-			))}
-			{/* </SectionContainer> */}
+			<SectionContainer>
+				{hackatons.map((h, idx) => (
+					<Accordion
+						showContent={hackaton.hackatons[idx].showContent}
+						toggleContent={openHackathonDayProgram}
+						key={idx}
+						idx={idx}
+						item={h}
+						dayID={h.id}
+					/>
+				))}
+			</SectionContainer>
 			<FooterSection />
 		</React.Fragment>
 	)
