@@ -52,9 +52,11 @@ const Header: React.FC<IProps> = ({
 		}
 	})
 
+	// console.log(showMobileNav)
+
 	return (
 		<React.Fragment>
-			<HeaderContainer isOnTop={isOnTop}>
+			<HeaderContainer showMobileNav={showMobileNav} isOnTop={isOnTop}>
 				<Container>
 					<Link href={"/"} passHref>
 						<a>
@@ -181,7 +183,7 @@ const Header: React.FC<IProps> = ({
 							</ToggleMobileButton> */}
 
 							<Ul>
-								<li>
+								<li className="first">
 									<Link href={"/#about"}>
 										<a onClick={toggleMobileNav}>WHAT IS amsterDOT</a>
 									</Link>
@@ -327,35 +329,12 @@ const MobileMenuContainer = styled(motion.div)`
 	top: 0;
 	z-index: 9999;
 	bottom: 0;
-	width: 28rem;
+	width: 25rem;
 	background-color: ${({ theme }) => theme.background.primary};
 	border-left: 1px solid ${({ theme }) => theme.fonts.primary};
 	color: ${({ theme }) => theme.fonts.primary};
 	/* opacity: 0.6; */
 	padding-top: 13rem;
-
-	ul {
-		padding: 1.5rem;
-		display: flex;
-		flex-direction: column;
-		list-style: none;
-		/* align-items: center; */
-
-		li {
-			font-weight: 900;
-			margin-bottom: 0.5rem;
-
-			a {
-				cursor: pointer;
-				color: ${({ theme }) => theme.fonts.primary};
-				transition: color 0.2s ease-in-out;
-
-				&:hover {
-					color: ${({ theme }) => theme.color.primary};
-				}
-			}
-		}
-	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 55rem;
@@ -376,7 +355,11 @@ const Ul = styled.ul`
 
 	li {
 		font-weight: 900;
-		margin-bottom: 2rem;
+		margin-bottom: 0;
+
+		&.first {
+			margin-bottom: 2rem;
+		}
 
 		a {
 			cursor: pointer;
@@ -388,12 +371,26 @@ const Ul = styled.ul`
 			}
 		}
 	}
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		ul {
+			padding: 0 3rem;
+		}
+	}
 `
 const NestedUl = styled.ul`
-	margin-top: 0.5rem;
+	margin-top: 0rem;
+	list-style: none;
+	padding: 0.5rem 1.5rem;
 
 	li {
 		font-weight: 400 !important;
+
+		&:nth-of-type(4) {
+			margin-bottom: 1rem;
+		}
+	}
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		margin-top: 0.5rem;
 	}
 `
 
@@ -426,7 +423,10 @@ const Socials = styled.div`
 	}
 `
 
-const HeaderContainer = styled.header<{ isOnTop: boolean }>`
+const HeaderContainer = styled.header<{
+	isOnTop: boolean
+	showMobileNav: boolean
+}>`
 	position: fixed;
 	z-index: 999999;
 	left: 0;
@@ -436,8 +436,8 @@ const HeaderContainer = styled.header<{ isOnTop: boolean }>`
 	padding: 1.5rem;
 	transition: background-color 0.3s ease-in-out;
 
-	background-color: ${({ theme, isOnTop }) =>
-		isOnTop ? "transparent" : theme.background.primary};
+	background-color: ${({ theme, isOnTop, showMobileNav }) =>
+		isOnTop || showMobileNav ? "transparent" : theme.background.primary};
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: fixed;
 	}
@@ -532,10 +532,10 @@ const ToggleButton = styled.button<{ isOpen: boolean }>`
 	}
 
 	&:hover {
-		border: 3px solid ${({ theme }) => theme.color.primary};
+		border: 3px solid ${({ theme }) => theme.fonts.primary};
 
 		div {
-			background-color: ${({ theme }) => theme.color.primary};
+			background-color: ${({ theme }) => theme.fonts.primary};
 		}
 	}
 	/* } */
