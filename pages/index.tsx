@@ -10,7 +10,7 @@ import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
 import Header from "../components/header/header.component"
-import EventOverview from "../components/event-overview/event-overview.component"
+// import EventOverview from "../components/event-overview/event-overview.component"
 import HeroSection from "../components/hero-section/hero-section.component"
 import AboutSection from "../components/about-section/about-section.component"
 import EventSection from "../components/event-section/event-section.component"
@@ -19,83 +19,102 @@ import FooterSection from "../components/footer-section/footer-section.component
 import Accordion from "../components/accordion/accordion.component"
 
 // Hooks
+import { useRouter } from "next/router"
 import {
 	motion,
 	useViewportScroll,
 	useTransform,
-	useSpring,
+	// useSpring,
 } from "framer-motion"
-import { useNumber, useWindowSize } from "react-use"
+import {
+	useNumber,
+	useMap,
+	//  useWindowSize
+} from "react-use"
 
 // Data
 import { events, hackatons } from "../utils/data"
 
 const Home: NextPage = () => {
-	const { width } = useWindowSize()
-	const physics = { damping: 5, mass: 0.17, stiffness: 55 }
+	const { push } = useRouter()
+	// const { width } = useWindowSize()
+	// const physics = { damping: 5, mass: 0.17, stiffness: 55 }
 
 	// CONFERENCE refs
-	const containerRef = useRef<HTMLDivElement>(null)
-	const sectionRef = useRef<HTMLDivElement>(null)
+	// const containerRef = useRef<HTMLDivElement>(null)
+	// const sectionRef = useRef<HTMLDivElement>(null)
 
-	const [num, { set }] = useNumber(0)
+	// const [num, { set }] = useNumber(0)
 
 	// Scroll position
 	const { scrollYProgress } = useViewportScroll()
 
+	const [event, { setAll }] = useMap({
+		events: events.map((i, idx) => ({
+			id: idx,
+			showContent: false,
+		})),
+	})
+	const [hackaton, { setAll: setAllHackathon }] = useMap({
+		hackatons: hackatons.map((i, idx) => ({
+			id: idx,
+			showContent: false,
+		})),
+	})
+
 	// CONFERENCE horizontal scroll
-	const transform = useTransform(scrollYProgress, [0.25, 0.55], [0, -num])
-	const spring = useSpring(transform, physics)
+	// const transform = useTransform(scrollYProgress, [0.25, 0.55], [0, -num])
+	// const spring = useSpring(transform, physics)
 
 	// CONFERENCE scroll to view
-	const transformY = useTransform(scrollYProgress, [0.55, 0.75], [0, -1100])
+	// const transformY = useTransform(scrollYProgress, [0.55, 0.75], [0, -1100])
 
-	const transformOpacityCONF = useTransform(
-		scrollYProgress,
-		[0.19, 0.25, 1, 1],
-		[0, 1, 1, 1]
-	)
+	// const transformOpacityCONF = useTransform(
+	// 	scrollYProgress,
+	// 	[0.19, 0.25, 1, 1],
+	// 	[0, 1, 1, 1]
+	// )
 
-	const springY = useSpring(transformY, physics)
+	// const springY = useSpring(transformY, physics)
 	// HACKATHON refs
-	const containerRefH = useRef<HTMLDivElement>(null)
-	const sectionRefH = useRef<HTMLDivElement>(null)
+	// const containerRefH = useRef<HTMLDivElement>(null)
+	// const sectionRefH = useRef<HTMLDivElement>(null)
 
 	const [numH, { set: setH }] = useNumber(0)
 
 	// HACKATHON horizontal scroll
-	const transformH = useTransform(scrollYProgress, [0.7, 1], [0, -numH])
-	const springH = useSpring(transformH, physics)
+	// const transformH = useTransform(scrollYProgress, [0.7, 1], [0, -numH])
+	// const springH = useSpring(transformH, physics)
 
 	// HACKATHON scroll to view
-	const transformYH = useTransform(
-		scrollYProgress,
-		[0.5, 0.7, 1, 1],
-		[1100, 0, 0, 0]
-	)
+	// const transformYH = useTransform(
+	// 	scrollYProgress,
+	// 	[0.5, 0.7, 1, 1],
+	// 	[1100, 0, 0, 0]
+	// )
 
-	const transformOpacityHACK = useTransform(
-		scrollYProgress,
-		[0.65, 0.7, 1, 1],
-		[0, 1, 1, 1]
-	)
+	// const transformOpacityHACK = useTransform(
+	// 	scrollYProgress,
+	// 	[0.65, 0.7, 1, 1],
+	// 	[0, 1, 1, 1]
+	// )
 
-	scrollYProgress.onChange((e) => console.log(e))
+	// scrollYProgress.onChange(e) => console.log(e))
 
 	// Set horizontal container width on change
-	useEffect(() => {
-		if (sectionRef.current) {
-			const finalNum = sectionRef.current.scrollWidth
-			set(finalNum * events.length)
-		}
-	}, [width, sectionRef, set])
+	// useEffect(() => {
+	// 	if (sectionRef.current) {
+	// 		const finalNum = sectionRef.current.scrollWidth
+	// 		set(finalNum * events.length)
+	// 	}
+	// }, [width, sectionRef, set])
 
-	useEffect(() => {
-		if (sectionRefH.current) {
-			const finalNum = sectionRefH.current.scrollWidth
-			setH(finalNum * (hackatons.length + 1))
-		}
-	}, [width, sectionRefH, setH])
+	// useEffect(() => {
+	// 	if (sectionRefH.current) {
+	// 		const finalNum = sectionRefH.current.scrollWidth
+	// 		setH(finalNum * (hackatons.length + 1))
+	// 	}
+	// }, [width, sectionRefH, setH])
 
 	const transformYAM = useTransform(
 		scrollYProgress,
@@ -112,6 +131,8 @@ const Home: NextPage = () => {
 		[0, 0.145, 1, 1],
 		[0, -50, -50, -50]
 	)
+
+	console.log(event)
 
 	return (
 		<React.Fragment>
@@ -194,19 +215,68 @@ const Home: NextPage = () => {
 			<AboutSection />
 			<EventSection />
 
-			<SectionContainer>
-				{events.map((event, idx) => (
-					<Accordion key={idx} item={event} />
-				))}
-			</SectionContainer>
+			{/* <SectionContainer> */}
+			{events.map((e, idx) => (
+				<Accordion
+					showContent={event.events[idx].showContent}
+					toggleContent={(showContent, i, dayID) => {
+						setAll({
+							...event,
+							events: event.events.map((e, id) => {
+								if (i === id) {
+									return {
+										id: idx,
+										showContent: showContent,
+									}
+								} else {
+									return {
+										id: idx,
+										showContent: e.showContent,
+									}
+								}
+							}),
+						})
+						push(`/#${dayID}`)
+					}}
+					key={idx}
+					idx={idx}
+					item={e}
+					dayID={e.id}
+				/>
+			))}
+			{/* </SectionContainer> */}
 
 			<HackathonSection />
 
-			<SectionContainer>
-				{hackatons.map((event, idx) => (
-					<Accordion key={idx} item={event} />
-				))}
-			</SectionContainer>
+			{/* <SectionContainer> */}
+			{hackatons.map((h, idx) => (
+				<Accordion
+					showContent={hackaton.hackatons[idx].showContent}
+					toggleContent={(showContent, i, dayID) => {
+						setAllHackathon({
+							...hackaton,
+							hackatons: hackatons.map((e, id) => {
+								if (i === id) {
+									return {
+										id: idx,
+										showContent: showContent,
+									}
+								}
+								return {
+									id: idx,
+									showContent: false,
+								}
+							}),
+						})
+						push(`/#${dayID}`)
+					}}
+					key={idx}
+					idx={idx}
+					item={h}
+					dayID={h.id}
+				/>
+			))}
+			{/* </SectionContainer> */}
 			<FooterSection />
 		</React.Fragment>
 	)

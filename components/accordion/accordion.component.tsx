@@ -49,14 +49,24 @@ interface IProps {
 		}[]
 		hasArrowDown?: boolean
 	}
+	showContent: boolean
+	toggleContent: (showContent: boolean, idx: number, dayID: string) => void
+	idx: number
+	dayID: string
 }
 
-const Accordion: React.FC<IProps> = ({ item }) => {
-	const [showContent, toggleContent] = useToggle(false)
+const Accordion: React.FC<IProps> = ({
+	item,
+	showContent,
+	toggleContent,
+	idx,
+	dayID,
+}) => {
+	// const [showContent, toggleContent] = useToggle(false)
 
 	return (
-		<AccordionContainer>
-			<AccordionHeading onClick={toggleContent}>
+		<AccordionContainer id={dayID}>
+			<AccordionHeading onClick={() => toggleContent(!showContent, idx, dayID)}>
 				<LabelContainer>
 					<p>{item.day}</p>
 					<p>DAY</p>
@@ -201,10 +211,14 @@ const DateContainer = styled.div`
 `
 
 const AccordionContainer = styled.div`
+	scroll-margin-top: 12rem;
+	scroll-padding-top: 12rem;
+	position: relative;
+
 	max-width: 130rem;
 	width: 100%;
 	margin: 0 auto 3rem;
-	padding: 1.5rem;
+	padding: 3rem 1.5rem;
 `
 
 const ArrowContainer = styled.span`
