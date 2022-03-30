@@ -253,7 +253,7 @@ const Container = styled(motion.div)`
 		margin: 13rem 3rem 0;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin: 11rem 1.5rem 0;
+			margin: 2rem 1.5rem 0;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				max-width: 130rem;
 			}

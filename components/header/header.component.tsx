@@ -1,5 +1,5 @@
 // Utils
-import React from "react"
+import React, { useEffect } from "react"
 import styled, { css } from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -35,10 +35,26 @@ const Header: React.FC<IProps> = ({
 	openHackathonDayProgram,
 }) => {
 	const [showMobileNav, toggleMobileNav] = useToggle(false)
+	const [isOnTop, toggleIsOnTop] = useToggle(true)
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			// Client-side-only code
+			window.onscroll = () => {
+				let currentScrollPos = window.pageYOffset
+				if (currentScrollPos > 80) {
+					toggleIsOnTop(false)
+				} else {
+					if (currentScrollPos <= 0) return
+					toggleIsOnTop(true)
+				}
+			}
+		}
+	})
 
 	return (
 		<React.Fragment>
-			<HeaderContainer>
+			<HeaderContainer isOnTop={isOnTop}>
 				<Container>
 					<Link href={"/"} passHref>
 						<a>
@@ -409,7 +425,7 @@ const Socials = styled.div`
 	}
 `
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled.header<{ isOnTop: boolean }>`
 	position: fixed;
 	z-index: 9999;
 	left: 0;
@@ -417,7 +433,10 @@ const HeaderContainer = styled.header`
 	width: 100%;
 	/* background-color: #000; */
 	padding: 1.5rem;
-	background-color: ${({ theme }) => theme.background.primary};
+	transition: background-color 0.3s ease-in-out;
+
+	background-color: ${({ theme, isOnTop }) =>
+		isOnTop ? "transparent" : theme.background.primary};
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: fixed;
 	}
