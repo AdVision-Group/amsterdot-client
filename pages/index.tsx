@@ -162,9 +162,9 @@ const Home: NextPage = () => {
 		i: number,
 		dayID: string
 	) => {
-		setAll({
+		setAllHackathon({
 			...event,
-			events: event.events.map((e, id) => {
+			hackatons: hackaton.hackatons.map((e, id) => {
 				if (i === id) {
 					return {
 						id: id,
@@ -269,7 +269,8 @@ const Home: NextPage = () => {
 				{events.map((e, idx) => (
 					<Accordion
 						showContent={event.events[idx].showContent}
-						toggleContent={openEventDayProgram}
+						openEventDayProgram={openEventDayProgram}
+						openHackathonDayProgram={openHackathonDayProgram}
 						key={idx}
 						idx={idx}
 						item={e}
@@ -284,7 +285,8 @@ const Home: NextPage = () => {
 				{hackatons.map((h, idx) => (
 					<Accordion
 						showContent={hackaton.hackatons[idx].showContent}
-						toggleContent={openHackathonDayProgram}
+						openEventDayProgram={openEventDayProgram}
+						openHackathonDayProgram={openHackathonDayProgram}
 						key={idx}
 						idx={idx}
 						item={h}

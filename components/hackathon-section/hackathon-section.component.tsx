@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
+import Link from "next/link"
 import Image from "next/image"
 
 const HackathonSection = () => {
@@ -88,26 +89,30 @@ const HackathonSection = () => {
 						<span>Westerliefde Klönneplein 4-6, 1014 DD</span>
 					</div>
 				</PlaceContainer>
-				<ArrowContainer
-					animate={{
-						x: [0, -10, -5, -15, 0],
-						// scale: [1.2, 1, 0.9, 0.97, 1.2],
-					}}
-					transition={{
-						repeat: Infinity,
-						ease: "easeInOut",
-						duration: 10,
-					}}
-				>
-					<Image
-						src={"/assets/arrow-left.svg"}
-						alt="red circle"
-						layout="responsive"
-						width={100}
-						height={100}
-						objectFit="contain"
-					/>
-				</ArrowContainer>
+				<Link href={"/#hack-2"} passHref>
+					<a>
+						<ArrowContainer
+						// animate={{
+						// 	x: [0, -10, -5, -15, 0],
+						// 	// scale: [1.2, 1, 0.9, 0.97, 1.2],
+						// }}
+						// transition={{
+						// 	repeat: Infinity,
+						// 	ease: "easeInOut",
+						// 	duration: 10,
+						// }}
+						>
+							<Image
+								src={"/assets/arrow-down-final.svg"}
+								alt="red circle"
+								layout="responsive"
+								width={100}
+								height={100}
+								objectFit="contain"
+							/>
+						</ArrowContainer>
+					</a>
+				</Link>
 			</Container>
 		</EventSectionContainer>
 	)
@@ -148,7 +153,7 @@ const EventSectionContainer = styled.section`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow-x: hidden;
+	overflow: hidden;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* margin-top: 10rem; */

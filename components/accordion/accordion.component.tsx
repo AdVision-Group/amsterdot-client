@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import SubAccordion from "../sub-accordion/sub-accordion.component"
 
 // Hooks
-import { useToggle } from "react-use"
+// import { useToggle } from "react-use"
 
 // Icons
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri"
@@ -50,7 +50,16 @@ interface IProps {
 		hasArrowDown?: boolean
 	}
 	showContent: boolean
-	toggleContent: (showContent: boolean, idx: number, dayID: string) => void
+	openEventDayProgram: (
+		showContent: boolean,
+		idx: number,
+		dayID: string
+	) => void
+	openHackathonDayProgram: (
+		showContent: boolean,
+		idx: number,
+		dayID: string
+	) => void
 	idx: number
 	dayID: string
 }
@@ -58,15 +67,20 @@ interface IProps {
 const Accordion: React.FC<IProps> = ({
 	item,
 	showContent,
-	toggleContent,
+	openEventDayProgram,
+	openHackathonDayProgram,
 	idx,
 	dayID,
 }) => {
-	// const [showContent, toggleContent] = useToggle(false)
-
 	return (
 		<AccordionContainer id={dayID}>
-			<AccordionHeading onClick={() => toggleContent(!showContent, idx, dayID)}>
+			<AccordionHeading
+				onClick={() =>
+					dayID.includes("hack")
+						? openHackathonDayProgram(!showContent, idx, dayID)
+						: openEventDayProgram(!showContent, idx, dayID)
+				}
+			>
 				<LabelContainer>
 					<p>{item.day}</p>
 					<p>DAY</p>

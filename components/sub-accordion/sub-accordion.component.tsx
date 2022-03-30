@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
 
 // Hooks
-import { useToggle } from "react-use"
+import { useToggle, useWindowSize } from "react-use"
 
 // Icons
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri"
@@ -34,6 +34,9 @@ interface IProps {
 
 const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 	const [showContent, toggleContent] = useToggle(false)
+	const { width } = useWindowSize()
+
+	// console.log(width)
 
 	return (
 		<AccordionContainer>
@@ -58,7 +61,11 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 						animate={showContent ? "open" : "collapsed"}
 						exit={"collapsed"}
 						variants={{
-							open: { display: "block", opacity: 1, height: "12rem" },
+							open: {
+								display: "block",
+								opacity: 1,
+								height: width <= 858 ? "20rem" : "12rem",
+							},
 							collapsed: {
 								opacity: 1,
 								height: 0,
@@ -124,6 +131,7 @@ const AccordionHeading = styled(motion.div)`
 		"r r"
 		"t a";
 
+	gap: 3rem;
 	/* gap: 4rem; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -166,6 +174,7 @@ const ContentContainer = styled(motion.div)`
 	color: ${({ theme }) => theme.fonts.primary};
 	background-color: ${({ theme }) => theme.background.container};
 	overflow: hidden;
+	line-height: 1.7;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		padding: 0 3.5rem;
