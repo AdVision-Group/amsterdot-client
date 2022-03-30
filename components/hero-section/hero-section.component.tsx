@@ -5,6 +5,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
 import Image from "next/image"
+import Link from "next/link"
 import Button from "../button/button.component"
 
 const HeroSection = () => {
@@ -63,6 +64,30 @@ const HeroSection = () => {
 
 	return (
 		<SectionContainer>
+			<Link href={"/#about"} passHref>
+				<a>
+					<ArrowContainer
+					// animate={{
+					// 	y: [0, -5, -10, -7, 0],
+					// 	// scale: [1.2, 1, 0.9, 0.97, 1.2],
+					// }}
+					// transition={{
+					// 	repeat: Infinity,
+					// 	ease: "easeInOut",
+					// 	duration: 10,
+					// }}
+					>
+						<Image
+							src={"/assets/arrow-container.svg"}
+							alt="red circle"
+							layout="responsive"
+							width={100}
+							height={100}
+							objectFit="contain"
+						/>
+					</ArrowContainer>
+				</a>
+			</Link>
 			<Container
 			// style={{
 			// 	y: transformX,
@@ -156,6 +181,34 @@ const HeroSection = () => {
 }
 
 export default HeroSection
+
+const ArrowContainer = styled(motion.figure)`
+	position: absolute;
+	z-index: 111;
+
+	width: 6rem;
+	heigth: 6rem;
+	bottom: -6rem;
+	right: 3rem;
+	/* display: none; */
+
+	@media all and (max-height: 650px) {
+		display: none;
+	}
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		right: unset;
+		left: 3rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: block;
+			width: 8rem;
+			heigth: 8rem;
+			bottom: 0rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				bottom: 13rem;
+			}
+		}
+	}
+`
 
 const AnimationContainer = styled(motion.figure)`
 	position: absolute;

@@ -65,7 +65,7 @@ const AboutSection = () => {
 
 	return (
 		<React.Fragment>
-			<SectionContainer>
+			<SectionContainer id="about">
 				<WatermarkContainer>
 					{/* <Circle1
 					className="first"
@@ -332,6 +332,7 @@ const WatermarkLetters = styled(motion.h2)`
 `
 
 const SectionContainer = styled.section`
+	scroll-margin-top: 12rem;
 	position: relative;
 	flex: none;
 	width: 100%;

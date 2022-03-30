@@ -7,7 +7,7 @@ import styled from "styled-components"
 
 // Components
 import Head from "next/head"
-// import Link from "next/link"
+import Link from "next/link"
 import Image from "next/image"
 import Header from "../components/header/header.component"
 import EventOverview from "../components/event-overview/event-overview.component"
@@ -123,27 +123,6 @@ const Home: NextPage = () => {
 			<Header />
 
 			<WatermarkContainer>
-				<ArrowContainer
-				// animate={{
-				// 	y: [0, -5, -10, -7, 0],
-				// 	// scale: [1.2, 1, 0.9, 0.97, 1.2],
-				// }}
-				// transition={{
-				// 	repeat: Infinity,
-				// 	ease: "easeInOut",
-				// 	duration: 10,
-				// }}
-				>
-					<Image
-						src={"/assets/arrow-container.svg"}
-						alt="red circle"
-						layout="responsive"
-						width={100}
-						height={100}
-						objectFit="contain"
-					/>
-				</ArrowContainer>
-
 				<WatermarkLetters
 					style={{
 						x: transformYAM,
@@ -291,7 +270,7 @@ const Circle2 = styled(motion.figure)`
 // `
 const ArrowContainer = styled(motion.figure)`
 	position: absolute;
-	z-index: -3;
+	z-index: 111;
 
 	width: 6rem;
 	heigth: 6rem;
@@ -330,7 +309,7 @@ const WatermarkContainer = styled.div`
 	max-width: 200rem;
 	margin: 0 auto;
 	font-family: "Avenir Next";
-	z-index: -1;
+	z-index: 1;
 
 	/* border: 1px solid green; */
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
