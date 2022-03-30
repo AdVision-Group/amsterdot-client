@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
+import Link from "next/link"
 import Image from "next/image"
 
 const EventSection = () => {
@@ -122,26 +123,27 @@ const EventSection = () => {
 						<span>WESTERUNIE Klönneplein 4-6, 1014 DD</span>
 					</div>
 				</PlaceContainer>
-				<ArrowContainer
-					animate={{
-						y: [0, -10, -5, -15, 0],
-						// scale: [1.2, 1, 0.9, 0.97, 1.2],
-					}}
-					transition={{
-						repeat: Infinity,
-						ease: "easeInOut",
-						duration: 10,
-					}}
-				>
-					<Image
-						src={"/assets/arrow-down-final.svg"}
-						alt="red circle"
-						layout="responsive"
-						width={100}
-						height={100}
-						objectFit="contain"
-					/>
-				</ArrowContainer>
+				<Link href={"/#day-1"} passHref>
+					<a>
+						<ArrowContainer
+							animate={
+								{
+									// y: [0, -10, -5, -15, 0],
+									// scale: [1.2, 1, 0.9, 0.97, 1.2],
+								}
+							}
+						>
+							<Image
+								src={"/assets/arrow-down-final.svg"}
+								alt="red circle"
+								layout="responsive"
+								width={100}
+								height={100}
+								objectFit="contain"
+							/>
+						</ArrowContainer>
+					</a>
+				</Link>
 			</Container>
 		</EventSectionContainer>
 	)
@@ -191,9 +193,10 @@ const Circle1 = styled(motion.figure)`
 `
 
 const ArrowContainer = styled(motion.figure)`
+	cursor: pointer;
 	grid-area: a;
 	position: relative;
-	z-index: -3;
+	z-index: 1;
 	justify-self: end;
 	margin: 2rem 0;
 
@@ -209,6 +212,8 @@ const ArrowContainer = styled(motion.figure)`
 		heigth: 8rem;
 		/* bottom: 6rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			align-self: end;
+			margin-left: 6rem;
 			/* bottom: 25rem; */
 		}
 	}
@@ -299,6 +304,7 @@ const XContainer = styled.figure`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			width: 18rem;
+			margin-left: 10rem;
 		}
 	}
 `
