@@ -110,101 +110,122 @@ const Header: React.FC<IProps> = ({
 			</HeaderContainer>
 			<AnimatePresence>
 				{showMobileNav && (
-					<MobileMenuContainer
-						initial={{
-							// opacity: 0,
-							x: 1000,
-						}}
-						animate={{
-							// opacity: 1,
-							x: 0,
-						}}
-						exit={{
-							// opacity: 0,
-							x: 1000,
-						}}
-						transition={{
-							duration: 0.8,
-						}}
-					>
-						<ToggleMobileButton
-							onClick={() => toggleMobileNav()}
-							isOpen={showMobileNav}
+					<React.Fragment>
+						<Overlay
+							initial={{
+								opacity: 0,
+								// x: 1000,
+							}}
+							animate={{
+								opacity: 1,
+								// x: 0,
+							}}
+							exit={{
+								opacity: 0,
+								// x: 1000,
+							}}
+							transition={{
+								duration: 0.8,
+							}}
+						/>
+						<MobileMenuContainer
+							initial={{
+								// opacity: 0,
+								x: 1000,
+							}}
+							animate={{
+								// opacity: 1,
+								x: 0,
+							}}
+							exit={{
+								// opacity: 0,
+								x: 1000,
+							}}
+							transition={{
+								duration: 0.8,
+							}}
 						>
-							<div />
-							<div />
-							<div />
-							<span
-								style={{
-									position: "absolute",
-									visibility: "hidden",
-									opacity: 0,
-									display: "none",
-								}}
+							<ToggleMobileButton
+								onClick={() => toggleMobileNav()}
+								isOpen={showMobileNav}
 							>
-								menu
-							</span>
-						</ToggleMobileButton>
+								<div />
+								<div />
+								<div />
+								<span
+									style={{
+										position: "absolute",
+										visibility: "hidden",
+										opacity: 0,
+										display: "none",
+									}}
+								>
+									menu
+								</span>
+							</ToggleMobileButton>
 
-						<Ul>
-							<li>
-								<Link href={"/#about"}>
-									<a>WHAT IS CONFERENCE</a>
-								</Link>
-							</li>
-							<li>
-								<Link href={"/#day-1"}>
-									<a>CONFERENCE PROGRAM</a>
-								</Link>
-								<NestedUl>
-									{events.map((e, idx) => (
-										<li key={idx}>
-											{/* <Link href={`/#${e.id}`} passHref> */}
-											<a onClick={() => openEventDayProgram(true, idx, e.id)}>
-												#{idx + 1} DAY
-											</a>
-											{/* </Link> */}
-										</li>
-									))}
-								</NestedUl>
-							</li>
-							<li>
-								<Link href={"/#hack-2"}>
-									<a>HACKATON PROGRAM</a>
-								</Link>
-								<NestedUl>
-									{hackatons.map((e, idx) => (
-										<li key={idx}>
-											{/* <Link href={`/#${e.id}`} passHref> */}
+							<Ul>
+								<li>
+									<Link href={"/#about"}>
+										<a>WHAT IS CONFERENCE</a>
+									</Link>
+								</li>
+								<li>
+									<Link href={"/#day-1"}>
+										<a>CONFERENCE PROGRAM</a>
+									</Link>
+									<NestedUl>
+										{events.map((e, idx) => (
+											<li key={idx}>
+												{/* <Link href={`/#${e.id}`} passHref> */}
+												<a onClick={() => openEventDayProgram(true, idx, e.id)}>
+													#{idx + 1} DAY
+												</a>
+												{/* </Link> */}
+											</li>
+										))}
+									</NestedUl>
+								</li>
+								<li>
+									<Link href={"/#hack-2"}>
+										<a>HACKATON PROGRAM</a>
+									</Link>
+									<NestedUl>
+										{hackatons.map((e, idx) => (
+											<li key={idx}>
+												{/* <Link href={`/#${e.id}`} passHref> */}
 
-											<a
-												onClick={() => openHackathonDayProgram(true, idx, e.id)}
-											>
-												#{idx + 2} DAY
-											</a>
-											{/* </Link> */}
-										</li>
-									))}
-								</NestedUl>
-							</li>
-						</Ul>
-						<ButtonsContainer>
-							<a
-								href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
-								rel="noopener noreferrer"
-								target="_blank"
-							>
-								<Button>CONF PROGRAM</Button>
-							</a>
-							<a
-								href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
-								rel="noopener noreferrer"
-								target="_blank"
-							>
-								<Button outline={"true"}>HACK PROGRAM</Button>
-							</a>
-						</ButtonsContainer>
-					</MobileMenuContainer>
+												<a
+													onClick={() =>
+														openHackathonDayProgram(true, idx, e.id)
+													}
+												>
+													#{idx + 2} DAY
+												</a>
+												{/* </Link> */}
+											</li>
+										))}
+									</NestedUl>
+								</li>
+							</Ul>
+							<ButtonsContainer>
+								<a
+									href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
+									rel="noopener noreferrer"
+									target="_blank"
+								>
+									<Button>BUY TICKETS</Button>
+								</a>
+								<a
+									href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
+									rel="noopener noreferrer"
+									target="_blank"
+								>
+									<Button outline={"true"}>APPLY TO SPEAK</Button>
+								</a>
+							</ButtonsContainer>
+						</MobileMenuContainer>
+					</React.Fragment>
 				)}
 			</AnimatePresence>
 		</React.Fragment>
@@ -266,6 +287,18 @@ const ButtonsContainer = styled.div`
 	}
 `
 
+const Overlay = styled(motion.div)`
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 999;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+`
+
 const MobileMenuContainer = styled(motion.div)`
 	position: fixed;
 	right: 0;
@@ -276,6 +309,7 @@ const MobileMenuContainer = styled(motion.div)`
 	background-color: ${({ theme }) => theme.background.primary};
 	border-left: 1px solid ${({ theme }) => theme.fonts.primary};
 	color: ${({ theme }) => theme.fonts.primary};
+	/* opacity: 0.6; */
 
 	ul {
 		padding: 1.5rem;
@@ -286,7 +320,7 @@ const MobileMenuContainer = styled(motion.div)`
 
 		li {
 			font-weight: 900;
-			margin-bottom: 2rem;
+			margin-bottom: 1.5rem;
 
 			a {
 				cursor: pointer;

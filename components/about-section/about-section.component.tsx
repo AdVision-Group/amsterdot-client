@@ -5,6 +5,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
 import Image from "next/image"
+import Link from "next/link"
 import Button from "../button/button.component"
 
 const AboutSection = () => {
@@ -178,20 +179,16 @@ const AboutSection = () => {
 							Targeting the wider crypto community.
 						</p>
 						<ButtonsContainer>
-							<a
-								href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
-								rel="noopener noreferrer"
-								target="_blank"
-							>
-								<Button>CONF PROGRAM</Button>
-							</a>
-							<a
-								href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
-								rel="noopener noreferrer"
-								target="_blank"
-							>
-								<Button outline={"true"}>HACK PROGRAM</Button>
-							</a>
+							<Link href={"/#day-1"}>
+								<a>
+									<Button>CONF PROGRAM</Button>
+								</a>
+							</Link>
+							<Link href={"/#hack-2"}>
+								<a>
+									<Button outline={"true"}>HACK PROGRAM</Button>
+								</a>
+							</Link>
 						</ButtonsContainer>
 						{/* <ButtonsContainer>
 							<Button>CONF PROGRAMME</Button>

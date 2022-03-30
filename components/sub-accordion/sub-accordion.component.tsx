@@ -102,7 +102,7 @@ const TimeRange = styled.p`
 `
 
 const AccordionContainer = styled.div`
-	max-width: 115rem;
+	max-width: 120rem;
 	width: 100%;
 	margin: 0 auto;
 	padding: 1.5rem 0;
@@ -123,11 +123,14 @@ const AccordionHeading = styled(motion.div)`
 		"r r"
 		"t a";
 
+	/* gap: 4rem; */
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-template-columns: auto 1fr auto;
 		grid-template-rows: auto;
-		gap: 2rem;
+		gap: 5rem;
 		grid-template-areas: "r t a";
+		padding: 1rem 3.5rem;
 	}
 `
 
@@ -162,6 +165,10 @@ const ContentContainer = styled(motion.div)`
 	color: ${({ theme }) => theme.fonts.primary};
 	background-color: ${({ theme }) => theme.background.container};
 	overflow: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		padding: 0 3.5rem;
+	}
 `
 
 const Border = styled.div`
