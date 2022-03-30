@@ -177,7 +177,7 @@ const SectionContainer = styled.section`
 	z-index: 99;
 	flex: none;
 	width: 100%;
-	height: 100vh;
+	/* height: 100vh; */
 	margin: 10rem 0;
 
 	display: flex;

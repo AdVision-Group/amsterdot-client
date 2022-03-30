@@ -129,6 +129,7 @@ const HeaderContainer = styled.header`
 	width: 100%;
 	/* background-color: #000; */
 	padding: 1.5rem;
+	background-color: ${({ theme }) => theme.background.primary};
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: fixed;
 	}
