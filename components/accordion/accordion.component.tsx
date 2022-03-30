@@ -84,7 +84,7 @@ const Accordion: React.FC<IProps> = ({
 						<span>{item.date.month}</span>
 					</p>
 				</DateContainer>
-				<ArrowContainer>
+				<ArrowContainer showContent={showContent}>
 					{showContent ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
 				</ArrowContainer>
 			</AccordionHeading>
@@ -99,11 +99,11 @@ const Accordion: React.FC<IProps> = ({
 						variants={{
 							open: { opacity: 1, height: "auto" },
 							collapsed: {
-								opacity: 0,
+								opacity: 1,
 								height: 0,
 							},
 						}}
-						transition={{ duration: 1, ease: [0.04, 0.62, 0.23, 0.98] }}
+						transition={{ duration: 1, ease: [0.04, 0.2, 0.23, 0.98] }}
 					>
 						{item.items.map((i, idx) => (
 							<SubAccordion item={i} id={idx} key={idx} />
@@ -221,10 +221,11 @@ const AccordionContainer = styled.div`
 	padding: 3rem 1.5rem;
 `
 
-const ArrowContainer = styled.span`
+const ArrowContainer = styled.span<{ showContent: boolean }>`
 	grid-area: a;
 	display: block;
-	color: ${({ theme }) => theme.color.primary};
+	color: ${({ theme, showContent }) =>
+		showContent ? theme.color.primary : theme.fonts.primary};
 	font-size: 5rem;
 	align-self: center;
 	justify-self: end;

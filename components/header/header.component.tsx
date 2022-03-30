@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 // Components
 import Image from "next/image"
 import Link from "next/link"
+import Button from "../button/button.component"
 
 // Hooks
 import { useToggle } from "react-use"
@@ -17,10 +18,22 @@ import { FaTwitter, FaDiscord } from "react-icons/fa"
 import { events, hackatons } from "../../utils/data"
 
 interface IProps {
-	toggleContent: (showContent: boolean, idx: number, dayID: string) => void
+	openEventDayProgram: (
+		showContent: boolean,
+		idx: number,
+		dayID: string
+	) => void
+	openHackathonDayProgram: (
+		showContent: boolean,
+		idx: number,
+		dayID: string
+	) => void
 }
 
-const Header: React.FC<IProps> = ({ toggleContent }) => {
+const Header: React.FC<IProps> = ({
+	openEventDayProgram,
+	openHackathonDayProgram,
+}) => {
 	const [showMobileNav, toggleMobileNav] = useToggle(false)
 
 	return (
@@ -133,7 +146,7 @@ const Header: React.FC<IProps> = ({ toggleContent }) => {
 							</span>
 						</ToggleMobileButton>
 
-						<ul>
+						<Ul>
 							<li>
 								<Link href={"/#about"}>
 									<a>WHAT IS CONFERENCE</a>
@@ -141,35 +154,56 @@ const Header: React.FC<IProps> = ({ toggleContent }) => {
 							</li>
 							<li>
 								<Link href={"/#day-1"}>
-									<a>CONFERENCE PROGRAMME</a>
+									<a>CONFERENCE PROGRAM</a>
 								</Link>
-								<ul>
+								<NestedUl>
 									{events.map((e, idx) => (
 										<li key={idx}>
 											{/* <Link href={`/#${e.id}`} passHref> */}
-											<a onClick={() => toggleContent(true, idx, e.id)}>
-												0{idx + 1} day
+											<a onClick={() => openEventDayProgram(true, idx, e.id)}>
+												#{idx + 1} DAY
 											</a>
 											{/* </Link> */}
 										</li>
 									))}
-								</ul>
+								</NestedUl>
 							</li>
 							<li>
 								<Link href={"/#hack-2"}>
-									<a>HACKATON PROGRAMME</a>
+									<a>HACKATON PROGRAM</a>
 								</Link>
-								<ul>
+								<NestedUl>
 									{hackatons.map((e, idx) => (
 										<li key={idx}>
-											<Link href={`/#${e.id}`} passHref>
-												<a>0{idx + 2} day</a>
-											</Link>
+											{/* <Link href={`/#${e.id}`} passHref> */}
+
+											<a
+												onClick={() => openHackathonDayProgram(true, idx, e.id)}
+											>
+												#{idx + 2} DAY
+											</a>
+											{/* </Link> */}
 										</li>
 									))}
-								</ul>
+								</NestedUl>
 							</li>
-						</ul>
+						</Ul>
+						<ButtonsContainer>
+							<a
+								href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								<Button>CONF PROGRAM</Button>
+							</a>
+							<a
+								href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								<Button outline={"true"}>HACK PROGRAM</Button>
+							</a>
+						</ButtonsContainer>
 					</MobileMenuContainer>
 				)}
 			</AnimatePresence>
@@ -178,6 +212,59 @@ const Header: React.FC<IProps> = ({ toggleContent }) => {
 }
 
 export default Header
+
+const ButtonsContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 2rem;
+	padding-left: 1.5rem;
+	/* margin: 2rem 0; */
+
+	button {
+		font-family: "Avenir Next";
+		font-size: 1.5rem;
+		font-weight: 700;
+		padding: 1rem 1rem 0.8rem;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		/* flex-gap: 1rem; */
+		/* align-items: end; */
+		justify-content: flex-start;
+		flex-wrap: unset;
+		gap: 2rem;
+
+		button {
+			font-size: 2rem;
+			line-height: 1;
+			/* margin-bottom: 1rem; */
+		}
+		button:nth-of-type(1) {
+			/* font-size: 2rem; */
+			/* margin-right: 1rem; */
+		}
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			padding-left: 3rem;
+
+			button {
+				/* font-size: 3rem; */
+				padding: 1.2rem 2rem 0.8rem;
+				font-weight: 400;
+			}
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				button {
+					font-size: 3rem;
+					padding: 1.8rem 4rem 1.5rem;
+				}
+			}
+		}
+	}
+`
 
 const MobileMenuContainer = styled(motion.div)`
 	position: fixed;
@@ -191,17 +278,18 @@ const MobileMenuContainer = styled(motion.div)`
 	color: ${({ theme }) => theme.fonts.primary};
 
 	ul {
+		padding: 1.5rem;
 		display: flex;
 		flex-direction: column;
 		list-style: none;
 		/* align-items: center; */
-		padding: 1.5rem;
 
 		li {
 			font-weight: 900;
 			margin-bottom: 2rem;
 
 			a {
+				cursor: pointer;
 				color: ${({ theme }) => theme.fonts.primary};
 				transition: color 0.2s ease-in-out;
 
@@ -219,6 +307,36 @@ const MobileMenuContainer = styled(motion.div)`
 		ul {
 			padding: 0 3rem;
 		}
+	}
+`
+
+const Ul = styled.ul`
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	/* align-items: center; */
+	padding: 1.5rem;
+
+	li {
+		font-weight: 900;
+		margin-bottom: 2rem;
+
+		a {
+			cursor: pointer;
+			color: ${({ theme }) => theme.fonts.primary};
+			transition: color 0.2s ease-in-out;
+
+			&:hover {
+				color: ${({ theme }) => theme.color.primary};
+			}
+		}
+	}
+`
+const NestedUl = styled.ul`
+	margin-top: 1rem;
+
+	li {
+		font-weight: 400 !important;
 	}
 `
 

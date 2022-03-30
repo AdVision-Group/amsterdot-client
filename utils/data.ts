@@ -9,7 +9,7 @@ export const events = [
 			width: 350,
 			height: 200,
 		},
-		day: "01",
+		day: "#1",
 		title: "CONFERENCE",
 		date: {
 			day: 20,
@@ -292,7 +292,7 @@ export const events = [
 			width: 350,
 			height: 200,
 		},
-		day: "02",
+		day: "#2",
 		title: "CONFERENCE",
 		date: {
 			day: 21,
@@ -509,7 +509,7 @@ export const events = [
 			width: 350,
 			height: 200,
 		},
-		day: "03",
+		day: "#3",
 		title: "CONFERENCE",
 		date: {
 			day: 22,
@@ -726,7 +726,7 @@ export const events = [
 			width: 350,
 			height: 200,
 		},
-		day: "04",
+		day: "#4",
 		title: "CONFERENCE",
 		date: {
 			day: 23,
@@ -1034,7 +1034,7 @@ export const hackatons = [
 			width: 350,
 			height: 200,
 		},
-		day: "02",
+		day: "#2",
 		title: "HACKATHON",
 		date: {
 			day: 21,
@@ -1097,7 +1097,7 @@ export const hackatons = [
 			width: 350,
 			height: 200,
 		},
-		day: "03",
+		day: "#3",
 		title: "HACKATHON",
 		date: {
 			day: 22,
@@ -1160,7 +1160,7 @@ export const hackatons = [
 			width: 350,
 			height: 200,
 		},
-		day: "04",
+		day: "#4",
 		title: "HACKATHON",
 		date: {
 			day: 23,

@@ -44,7 +44,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 				<TitleContainer>
 					<p>{item.title}</p>
 				</TitleContainer>
-				<ArrowContainer>
+				<ArrowContainer showContent={showContent}>
 					{showContent ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
 				</ArrowContainer>
 			</AccordionHeading>
@@ -61,12 +61,12 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 						variants={{
 							open: { display: "block", opacity: 1, height: "15rem" },
 							collapsed: {
-								opacity: 0,
+								opacity: 1,
 								height: 0,
-								transitionEnd: { opacity: 0 },
+								transitionEnd: { opacity: 1 },
 							},
 						}}
-						transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+						transition={{ duration: 0.8, ease: [0.04, 0.2, 0.23, 0.98] }}
 					>
 						<div>{item.description}</div>
 					</ContentContainer>
@@ -102,7 +102,7 @@ const TimeRange = styled.p`
 `
 
 const AccordionContainer = styled.div`
-	max-width: 130rem;
+	max-width: 115rem;
 	width: 100%;
 	margin: 0 auto;
 	padding: 1.5rem 0;
@@ -145,10 +145,11 @@ const TitleContainer = styled.div`
 
 `
 
-const ArrowContainer = styled.span`
+const ArrowContainer = styled.span<{ showContent: boolean }>`
 	grid-area: a;
 	display: block;
-	color: ${({ theme }) => theme.fonts.primary};
+	color: ${({ theme, showContent }) =>
+		showContent ? theme.color.primary : theme.fonts.primary};
 	font-size: 5rem;
 	align-self: center;
 	justify-self: end;
@@ -160,6 +161,7 @@ const ContentContainer = styled(motion.div)`
 	padding: 0 1.5rem;
 	color: ${({ theme }) => theme.fonts.primary};
 	background-color: ${({ theme }) => theme.background.container};
+	overflow: hidden;
 `
 
 const Border = styled.div`
