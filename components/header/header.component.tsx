@@ -23,7 +23,7 @@ const Header = () => {
 					<a>
 						<figure className="logo">
 							<Image
-								src={"/assets/logo-amsterdot.png"}
+								src={"/assets/Logo-bg.svg"}
 								width={100}
 								height={100}
 								alt={"amsterdot logo"}
@@ -66,22 +66,25 @@ const Header = () => {
 							<FaDiscord />
 						</motion.figure>
 					</a>
-				</Socials>
-				{/* <ToggleButton onClick={() => toggleMobileNav()} isOpen={showMobileNav}>
-					<div />
-					<div />
-					<div />
-					<span
-						style={{
-							position: "absolute",
-							visibility: "hidden",
-							opacity: 0,
-							display: "none",
-						}}
+					<ToggleButton
+						onClick={() => toggleMobileNav()}
+						isOpen={showMobileNav}
 					>
-						menu
-					</span>
-				</ToggleButton> */}
+						<div />
+						<div />
+						<div />
+						<span
+							style={{
+								position: "absolute",
+								visibility: "hidden",
+								opacity: 0,
+								display: "none",
+							}}
+						>
+							menu
+						</span>
+					</ToggleButton>
+				</Socials>
 			</Container>
 		</HeaderContainer>
 	)
@@ -91,12 +94,12 @@ export default Header
 
 const Socials = styled.div`
 	display: flex;
-	/* align-items: center; */
-	gap: 0.1rem;
+	align-items: center;
+	gap: 1rem;
 
 	a {
-		background-color: ${({ theme }) => theme.background.primary};
-		padding: 1rem;
+		/* background-color: ${({ theme }) => theme.background.primary}; */
+		/* padding: 1rem; */
 		border-radius: 50%;
 	}
 
@@ -109,7 +112,7 @@ const Socials = styled.div`
 		background-color: ${({ theme }) => theme.background.primary};
 		border: 3px solid ${({ theme }) => theme.color.primary};
 		border-radius: 50%;
-		padding: 1.2rem;
+		padding: 1.5rem;
 		font-size: 2.4rem;
 	}
 
@@ -119,7 +122,7 @@ const Socials = styled.div`
 `
 
 const HeaderContainer = styled.header`
-	/* position: fixed; */
+	position: fixed;
 	z-index: 9999;
 	left: 0;
 	top: 0;
@@ -163,28 +166,32 @@ const ToggleButton = styled.button<{ isOpen: boolean }>`
 		outline: none;
 	} */
 	/* @media all and (max-width: 1220px) { */
+	background-color: ${({ theme }) => theme.background.primary};
+
 	transition: all 0.5s ease-out;
-	display: block;
-	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-color: transparent; */
 	border: none;
-	width: 7rem;
-	height: 7rem;
-	border: 1px solid #fff;
+	width: 6rem;
+	height: 6rem;
+	border: 3px solid #fff;
 	border-radius: 50%;
 
 	position: relative;
 	div {
 		position: absolute;
-		width: 3.5rem;
-		height: 2.5px;
+		width: 2.5rem;
+		height: 0.2rem;
 		background-color: ${({ theme }) => theme.fonts.primary};
 		transition: all 0.3s ease-in-out;
 		${(props) =>
 			props.isOpen
 				? css`
 						&:nth-child(1) {
-							top: 3.2rem;
-							left: 1.8rem;
+							top: 2.7rem;
+							left: 1.4rem;
 							transform: rotate(45deg);
 						}
 						&:nth-child(2) {
@@ -192,25 +199,25 @@ const ToggleButton = styled.button<{ isOpen: boolean }>`
 							left: 1.6rem;
 						}
 						&:nth-child(3) {
-							bottom: 3.3rem;
-							left: 1.7rem;
+							bottom: 2.5rem;
+							left: 1.4rem;
 							transform: rotate(-45deg);
 						}
 				  `
 				: css`
 						&:nth-child(1) {
 							top: 2rem;
-							left: 1.6rem;
+							left: 1.4rem;
 						}
 						&:nth-child(2) {
 							top: 50%;
-							left: 1.6rem;
+							left: 1.4rem;
 
 							transform: translateY(-50%);
 						}
 						&:nth-child(3) {
 							bottom: 2rem;
-							left: 1.6rem;
+							left: 1.4rem;
 						}
 				  `}
 	}

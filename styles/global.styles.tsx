@@ -33,7 +33,7 @@ src: url('/fonts/AcuminVariableConcept.otf');
     font-family: 'Acumin Variable Concept';
     src: url('/fonts/AcuminVariableConcept-v2.otf');
     font-weight: 400;
-    font-style: "ExtraCondensed Light";
+    font-style: normal;
   }
 
   *, *:before, *:after {

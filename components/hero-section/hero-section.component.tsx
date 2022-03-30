@@ -178,6 +178,7 @@ const SectionContainer = styled.section`
 	flex: none;
 	width: 100%;
 	height: 100vh;
+	margin: 10rem 0;
 
 	display: flex;
 	justify-content: center;
@@ -399,7 +400,7 @@ const ButtonsContainer = styled.div`
 	button {
 		font-family: "Avenir Next";
 		font-size: 1.4rem;
-		font-weight: 600;
+		font-weight: 700;
 		padding: 1rem 1rem 0.8rem;
 	}
 

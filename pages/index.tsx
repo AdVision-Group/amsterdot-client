@@ -299,6 +299,9 @@ const ArrowContainer = styled(motion.figure)`
 	right: 3rem;
 	/* display: none; */
 
+	@media all and (max-height: 650px) {
+		display: none;
+	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		right: unset;
 		left: 3rem;
