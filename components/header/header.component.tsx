@@ -72,6 +72,24 @@ const Header: React.FC<IProps> = ({
 							</figure>
 						</a>
 					</Link>
+					{!isOnTop && (
+						<ButtonsContainer justifyContent="flex-end">
+							<a
+								href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								<Button>BUY TICKETS</Button>
+							</a>
+							<a
+								href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								<Button outline={"true"}>APPLY TO SPEAK</Button>
+							</a>
+						</ButtonsContainer>
+					)}
 					<Socials>
 						<a
 							href="https://twitter.com/amsterdot_conf"
@@ -232,7 +250,7 @@ const Header: React.FC<IProps> = ({
 									</NestedUl>
 								</li>
 							</Ul>
-							<ButtonsContainer>
+							<ButtonsContainer justifyContent="flex-start">
 								<a
 									href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
 									rel="noopener noreferrer"
@@ -258,16 +276,18 @@ const Header: React.FC<IProps> = ({
 
 export default Header
 
-const ButtonsContainer = styled.div`
+const ButtonsContainer = styled.div<{ justifyContent: string }>`
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	margin-top: 2rem;
-	padding-left: 1.5rem;
+	/* margin-top: 2rem; */
+	padding: 1.5rem;
 	/* margin: 2rem 0; */
+	display: ${({ justifyContent }) =>
+		justifyContent === "flex-end" ? "none" : "flex"};
 
 	button {
 		font-family: "Avenir Next";
@@ -279,7 +299,7 @@ const ButtonsContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* flex-gap: 1rem; */
 		/* align-items: end; */
-		justify-content: flex-start;
+		justify-content: ${({ justifyContent }) => justifyContent};
 		flex-wrap: unset;
 		gap: 2rem;
 
@@ -294,6 +314,8 @@ const ButtonsContainer = styled.div`
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: ${({ justifyContent }) =>
+				justifyContent === "flex-end" ? "flex" : "flex"};
 			padding-left: 3rem;
 
 			button {
@@ -423,9 +445,7 @@ const Socials = styled.div`
 	}
 `
 
-const HeaderContainer = styled.header<{
-	isOnTop: boolean
-}>`
+const HeaderContainer = styled.header<{ isOnTop: boolean }>`
 	position: fixed;
 	z-index: 999999;
 	left: 0;
