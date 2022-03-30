@@ -76,9 +76,16 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 						<h3>{item.user.title}</h3>
 					</UserContainer>
 				)}
-				<ArrowContainer showContent={showContent}>
-					{showContent ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
-				</ArrowContainer>
+				{item.user && (
+					<ArrowContainer showContent={showContent}>
+						{showContent ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
+					</ArrowContainer>
+				)}
+				{!item.user && (
+					<ArrowContainer2 showContent={showContent}>
+						{showContent ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
+					</ArrowContainer2>
+				)}
 			</AccordionHeading>
 
 			<AnimatePresence exitBeforeEnter>
@@ -103,7 +110,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 						}}
 						transition={{ duration: 0.8, ease: [0.04, 0.2, 0.23, 0.98] }}
 					>
-						<Border />
+						{/* <Border /> */}
 
 						<div>{item.description}</div>
 					</ContentContainer>
@@ -120,6 +127,7 @@ const UserContainer = styled.div`
 
 	display: grid;
 	grid-template-columns: auto 1fr;
+	margin-bottom: 1rem;
 
 	figure {
 		grid-row: 1/3;
@@ -139,6 +147,14 @@ const UserContainer = styled.div`
 		font-weight: 900;
 		color: ${({ theme }) => theme.color.primary};
 	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		margin-bottom: 0;
+
+		figure {
+			width: 6rem;
+		}
+	}
 `
 
 const Border = styled.div`
@@ -156,6 +172,7 @@ const TimeRange = styled.p`
 	font-weight: 900;
 	text-align: center;
 	display: flex;
+	align-self: end;
 	align-items: center;
 	justify-content: start;
 
@@ -185,11 +202,11 @@ const AccordionHeading = styled(motion.div)`
 	grid-template-rows: auto auto auto; */
 	grid-template-areas:
 		"r r"
-		"t t"
+		"t s"
 		"b b"
 		"u a";
 
-	gap: 1rem;
+	/* gap: 1rem; */
 	/* gap: 4rem; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -254,6 +271,18 @@ const TitleContainer = styled.div`
 
 const ArrowContainer = styled.span<{ showContent: boolean }>`
 	grid-area: a;
+	display: block;
+	color: ${({ theme, showContent }) =>
+		showContent ? theme.color.primary : theme.fonts.primary};
+	font-size: 5rem;
+	align-self: center;
+	justify-self: end;
+	margin-bottom: -1.5rem;
+	padding-top: 1rem;
+`
+
+const ArrowContainer2 = styled.span<{ showContent: boolean }>`
+	grid-area: s;
 	display: block;
 	color: ${({ theme, showContent }) =>
 		showContent ? theme.color.primary : theme.fonts.primary};
