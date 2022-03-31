@@ -36,7 +36,7 @@ const Header: React.FC<IProps> = ({
 }) => {
 	const [showMobileNav, toggleMobileNav] = useToggle(false)
 	const [isOnTop, toggleIsOnTop] = useToggle(true)
-	const [showCTAs, toggleShowCTAs] = useToggle(false)
+	const [showCTAs, toggleShowCTAs] = useToggle(true)
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
