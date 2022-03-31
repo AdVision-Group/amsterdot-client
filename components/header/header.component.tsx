@@ -301,7 +301,7 @@ const Header: React.FC<IProps> = ({
 
 export default Header
 
-const ButtonsContainer = styled(motion.div)<{ justifyContent: string }>`
+const ButtonsContainer = styled(motion.div)`
 	grid-area: b;
 	display: flex;
 	flex-wrap: wrap;
