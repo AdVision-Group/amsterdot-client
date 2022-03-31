@@ -182,15 +182,16 @@ const TimeRange = styled.p`
 	justify-content: start;
 
 	span {
-		display: inline-block;
+		display: inline-flex;
 		width: 4rem;
 		height: 3px;
 		background-color: #fff;
 		margin: 0 1rem;
+		align-items: center;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		display: block;
+		display: flex;
 		align-self: center;
 	}
 `
