@@ -128,7 +128,8 @@ const UserContainer = styled.div`
 
 	display: grid;
 	grid-template-columns: auto 1fr;
-	margin-bottom: 1rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 
 	figure {
 		grid-row: 1/3;
@@ -150,10 +151,12 @@ const UserContainer = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		margin-top: 0;
 		margin-bottom: 0;
 
 		figure {
 			width: 6rem;
+			margin: auto 1.5rem;
 		}
 	}
 `
