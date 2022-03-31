@@ -58,20 +58,22 @@ const Header: React.FC<IProps> = ({
 		<React.Fragment>
 			<HeaderContainer isOnTop={isOnTop}>
 				<Container>
-					<Link href={"/"} passHref>
-						<a>
-							<figure className="logo">
-								<Image
-									src={"/assets/Logo-bg.svg"}
-									width={100}
-									height={100}
-									alt={"amsterdot logo"}
-									objectFit="contain"
-									layout="responsive"
-								/>
-							</figure>
-						</a>
-					</Link>
+					<LogoContainer>
+						<Link href={"/"} passHref>
+							<a>
+								<figure className="logo">
+									<Image
+										src={"/assets/Logo-bg.svg"}
+										width={100}
+										height={100}
+										alt={"amsterdot logo"}
+										objectFit="contain"
+										layout="responsive"
+									/>
+								</figure>
+							</a>
+						</Link>
+					</LogoContainer>
 					{!isOnTop && (
 						<ButtonsContainer justifyContent="flex-end">
 							<a
@@ -277,6 +279,7 @@ const Header: React.FC<IProps> = ({
 export default Header
 
 const ButtonsContainer = styled.div<{ justifyContent: string }>`
+	grid-area: b;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
@@ -287,13 +290,14 @@ const ButtonsContainer = styled.div<{ justifyContent: string }>`
 	padding: 1.5rem;
 	/* margin: 2rem 0; */
 	display: ${({ justifyContent }) =>
-		justifyContent === "flex-end" ? "none" : "flex"};
+		justifyContent === "flex-end" ? "flex" : "flex"};
 
 	button {
 		font-family: "Avenir Next";
 		font-size: 1.5rem;
 		font-weight: 700;
 		padding: 1rem 1rem 0.8rem;
+		transition: all 0.3s ease-in-out;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -331,6 +335,10 @@ const ButtonsContainer = styled.div<{ justifyContent: string }>`
 			}
 		}
 	}
+`
+
+const LogoContainer = styled(motion.div)`
+	grid-area: l;
 `
 
 const Overlay = styled(motion.div)`
@@ -417,8 +425,10 @@ const NestedUl = styled.ul`
 `
 
 const Socials = styled.div`
+	grid-area: s;
 	display: flex;
 	align-items: center;
+	justify-self: end;
 	gap: 1rem;
 
 	a {
@@ -466,9 +476,12 @@ const Container = styled.div`
 	max-width: 130rem;
 	width: 100%;
 	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	display: grid;
+	/* justify-content: space-between;
+	align-items: center; */
+	grid-template-areas:
+		"l s"
+		"b b";
 
 	.logo {
 		margin-top: 1rem;
@@ -476,9 +489,13 @@ const Container = styled.div`
 		width: 8rem;
 	}
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-		figure {
-			/* width: 12rem; */
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		grid-template-areas: "l b s";
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			figure {
+				/* width: 12rem; */
+			}
 		}
 	}
 `
