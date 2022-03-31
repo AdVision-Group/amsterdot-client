@@ -185,30 +185,30 @@ const Home: NextPage = () => {
 		<React.Fragment>
 			<Head>
 				{/* <!-- Primary Meta Tags --> */}
-				<title>AmsterDOT ConfHack</title>
-				<meta name="title" content="AmsterDOT ConfHack" />
+				<title>amsterDOT Conf Hack</title>
+				<meta name="title" content="amsterDOT Conf Hack" />
 				<meta
 					name="description"
-					content="4 days of conf & hack sessions organized by some of the leading projects of the polkadot and kusama ecosystems."
+					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family."
 				/>
 
 				{/* <!-- Open Graph / Facebook --> */}
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://amsterdot.io/" />
-				<meta property="og:title" content="AmsterDOT ConfHack" />
+				<meta property="og:title" content="amsterDOT Conf Hack" />
 				<meta
 					property="og:description"
-					content="4 days of conf & hack sessions organized by some of the leading projects of the polkadot and kusama ecosystems."
+					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family."
 				/>
 				<meta property="og:image" content="/assets/meta.jpeg" />
 
 				{/* <!-- Twitter --> */}
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content="https://amsterdot.io/" />
-				<meta property="twitter:title" content="AmsterDOT ConfHack" />
+				<meta property="twitter:title" content="amsterDOT ConfHack" />
 				<meta
 					property="twitter:description"
-					content="4 days of conf & hack sessions organized by some of the leading projects of the polkadot and kusama ecosystems."
+					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family."
 				/>
 				<meta property="twitter:image" content="/assets/meta.jpeg" />
 			</Head>
