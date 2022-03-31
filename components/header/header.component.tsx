@@ -36,6 +36,7 @@ const Header: React.FC<IProps> = ({
 }) => {
 	const [showMobileNav, toggleMobileNav] = useToggle(false)
 	const [isOnTop, toggleIsOnTop] = useToggle(true)
+	const [showCTAs, toggleShowCTAs] = useToggle(false)
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
@@ -47,6 +48,12 @@ const Header: React.FC<IProps> = ({
 				} else {
 					if (currentScrollPos <= 0) return
 					toggleIsOnTop(true)
+				}
+				if (currentScrollPos > 450) {
+					toggleShowCTAs(false)
+				} else {
+					if (currentScrollPos <= 0) return
+					toggleShowCTAs(true)
 				}
 			}
 		}
@@ -74,24 +81,40 @@ const Header: React.FC<IProps> = ({
 							</a>
 						</Link>
 					</LogoContainer>
-					{!isOnTop && (
-						<ButtonsContainer justifyContent="flex-end">
-							<a
-								href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
-								rel="noopener noreferrer"
-								target="_blank"
+					<AnimatePresence>
+						{!showCTAs && (
+							<ButtonsContainer
+								initial={{
+									opacity: 0,
+									scale: 0.97,
+								}}
+								animate={{
+									opacity: 1,
+									scale: 1,
+								}}
+								exit={{
+									opacity: 0,
+									scale: 0.97,
+								}}
+								// justifyContent="center"
 							>
-								<Button>BUY TICKETS</Button>
-							</a>
-							<a
-								href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
-								rel="noopener noreferrer"
-								target="_blank"
-							>
-								<Button outline={"true"}>APPLY TO SPEAK</Button>
-							</a>
-						</ButtonsContainer>
-					)}
+								<a
+									href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
+									rel="noopener noreferrer"
+									target="_blank"
+								>
+									<Button>BUY TICKETS</Button>
+								</a>
+								<a
+									href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
+									rel="noopener noreferrer"
+									target="_blank"
+								>
+									<Button outline={"true"}>APPLY TO SPEAK</Button>
+								</a>
+							</ButtonsContainer>
+						)}
+					</AnimatePresence>
 					<Socials>
 						<a
 							href="https://twitter.com/amsterdot_conf"
@@ -252,7 +275,7 @@ const Header: React.FC<IProps> = ({
 									</NestedUl>
 								</li>
 							</Ul>
-							<ButtonsContainer justifyContent="flex-start">
+							{/* <ButtonsContainer justifyContent="flex-start">
 								<a
 									href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
 									rel="noopener noreferrer"
@@ -267,7 +290,7 @@ const Header: React.FC<IProps> = ({
 								>
 									<Button outline={"true"}>APPLY TO SPEAK</Button>
 								</a>
-							</ButtonsContainer>
+							</ButtonsContainer> */}
 						</MobileMenuContainer>
 					</React.Fragment>
 				)}
@@ -278,7 +301,7 @@ const Header: React.FC<IProps> = ({
 
 export default Header
 
-const ButtonsContainer = styled.div<{ justifyContent: string }>`
+const ButtonsContainer = styled(motion.div)<{ justifyContent: string }>`
 	grid-area: b;
 	display: flex;
 	flex-wrap: wrap;
@@ -288,11 +311,8 @@ const ButtonsContainer = styled.div<{ justifyContent: string }>`
 	width: 100%;
 	/* margin-top: 2rem; */
 	/* margin: 2rem 0; */
-	display: ${({ justifyContent }) =>
-		justifyContent === "flex-end" ? "flex" : "flex"};
-	padding: ${({ justifyContent }) =>
-		justifyContent === "flex-end" ? "1.5rem 0 0" : "1.5rem"};
-
+	display: flex;
+	padding: 1.5rem 0 0;
 	button {
 		font-family: "Avenir Next";
 		font-size: 1.5rem;
@@ -306,6 +326,7 @@ const ButtonsContainer = styled.div<{ justifyContent: string }>`
 		/* align-items: end; */
 		justify-content: ${({ justifyContent }) => justifyContent};
 		flex-wrap: unset;
+
 		gap: 2rem;
 
 		button {
@@ -322,6 +343,8 @@ const ButtonsContainer = styled.div<{ justifyContent: string }>`
 			display: ${({ justifyContent }) =>
 				justifyContent === "flex-end" ? "flex" : "flex"};
 			padding-left: 3rem;
+			justify-content: flex-end;
+			padding: 0;
 
 			button {
 				/* font-size: 3rem; */
@@ -365,7 +388,7 @@ const MobileMenuContainer = styled(motion.div)`
 	border-left: 1px solid ${({ theme }) => theme.fonts.primary};
 	color: ${({ theme }) => theme.fonts.primary};
 	/* opacity: 0.6; */
-	padding-top: 13rem;
+	padding-top: 18rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 55rem;
@@ -491,7 +514,9 @@ const Container = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		grid-template-columns: auto 1fr auto;
 		grid-template-areas: "l b s";
+		gap: 1.5rem;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			figure {
