@@ -329,7 +329,7 @@ const WatermarkLetters = styled(motion.h2)`
 `
 
 const SectionContainer = styled.section`
-	scroll-margin-top: 12rem;
+	scroll-margin-top: 20rem;
 	position: relative;
 	flex: none;
 	width: 100%;

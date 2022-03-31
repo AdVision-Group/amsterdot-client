@@ -262,8 +262,8 @@ const AccordionHeading = styled(motion.div)`
 `
 
 const AccordionContainer = styled.div<{ isactive: boolean }>`
-	scroll-margin-top: 12rem;
-	scroll-padding-top: 12rem;
+	scroll-margin-top: 20rem;
+	scroll-padding-top: 20rem;
 	position: relative;
 
 	max-width: 130rem;
