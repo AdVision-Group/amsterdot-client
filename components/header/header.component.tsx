@@ -478,7 +478,7 @@ const Container = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 		figure {
-			width: 12rem;
+			/* width: 12rem; */
 		}
 	}
 `
