@@ -301,7 +301,7 @@ const Header: React.FC<IProps> = ({
 
 export default Header
 
-const ButtonsContainer = styled(motion.div)`
+const ButtonsContainer = styled(motion.div)<{ justifyContent?: string }>`
 	grid-area: b;
 	display: flex;
 	flex-wrap: wrap;
@@ -324,7 +324,8 @@ const ButtonsContainer = styled(motion.div)`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* flex-gap: 1rem; */
 		/* align-items: end; */
-		justify-content: ${({ justifyContent }) => justifyContent};
+		justify-content: ${({ justifyContent }) =>
+			justifyContent || "space-between"};
 		flex-wrap: unset;
 
 		gap: 2rem;
