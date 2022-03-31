@@ -208,7 +208,7 @@ const Home: NextPage = () => {
 				{/* <!-- Twitter --> */}
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content="https://amsterdot.io/" />
-				<meta property="twitter:title" content="amsterDOT ConfHack" />
+				<meta property="twitter:title" content="amsterDOT Conf Hack" />
 				<meta
 					property="twitter:description"
 					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 4/20-23 in Amsterdam, the Netherlands."
