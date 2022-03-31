@@ -287,10 +287,11 @@ const ButtonsContainer = styled.div<{ justifyContent: string }>`
 	justify-content: space-between;
 	width: 100%;
 	/* margin-top: 2rem; */
-	padding: 1.5rem;
 	/* margin: 2rem 0; */
 	display: ${({ justifyContent }) =>
 		justifyContent === "flex-end" ? "flex" : "flex"};
+	padding: ${({ justifyContent }) =>
+		justifyContent === "flex-end" ? "1.5rem 0 0" : "1.5rem"};
 
 	button {
 		font-family: "Avenir Next";
