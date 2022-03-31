@@ -24,6 +24,59 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
+					time: "09:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["09:30", "10:45"],
+				title: "Registration & coffee",
+				subTitle: "",
+				description: "Collect your registration bracelets and swag, then head to the coffee corner.",
+			},
+			{
+				icon: {
+					img: {
+						src: "/assets/event-icons/welcome-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "10:45",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["10:45", "11:00"],
+				title: "Welcome by the organizers",
+				subTitle: "",
+				description:
+					"The moment has finally arrived, it's time to kick off amsterDOT 2022.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
 					time: "11:00",
 				},
 				img: {
@@ -32,16 +85,56 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["11:00", "12:00"],
-				title: "Registration, welcome & coffee",
+				time: ["11:00", "11:30"],
+				title: "Keynote #1",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/welcome-final.svg",
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "11:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["11:30", "12:00"],
+				title: "Keynote #2",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -54,107 +147,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["12:00", "12:15"],
-				title: "Welcome by the organizers",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
-				icon: {
-					img: {
-						src: "/assets/event-icons/user-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "12:15",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["12:15", "12:45"],
-				title: "Keynote #1",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
-				icon: {
-					img: {
-						src: "/assets/event-icons/user-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "12:45",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["12:45", "13:15"],
-				title: "Keynote #2",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
-				icon: {
-					img: {
-						src: "/assets/event-icons/user-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "13:15",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["13:15", "13:45"],
+				time: ["12:00", "12:30"],
 				title: "Keynote #3",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				icon: {
@@ -164,7 +160,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "13:45",
+					time: "12:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -172,11 +168,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["13:45", "15:30"],
-				title: "Snacks & Refreshments",
+				time: ["12:30", "14:00"],
+				title: "Lunch",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Grab some snaks to soothe the hunger.",
 			},
 			{
 				user: {
@@ -196,7 +191,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "15:30",
+					time: "14:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -204,11 +199,62 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:30", "16:00"],
+				time: ["14:00", "14:30"],
 				title: "Keynote #4",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "14:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["14:30", "15:00"],
+				title: "Keynote #5",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				icon: {
+					img: {
+						src: "/assets/event-icons/aperitiv-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "15:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["15:00", "16:00"],
+				title: "Coffee Break",
+				subTitle: "",
+				description: "Grab some refreshments.",
 			},
 			{
 				user: {
@@ -237,10 +283,9 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:00", "16:30"],
-				title: "Keynote #5",
+				title: "Keynote #6",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				user: {
@@ -269,25 +314,14 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:30", "17:00"],
-				title: "Keynote #6",
+				title: "Keynote #7",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/user-final.svg",
+						src: "/assets/event-icons/aperitiv-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -300,33 +334,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["17:00", "17:30"],
-				title: "Keynote #7",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				icon: {
-					img: {
-						src: "/assets/event-icons/aperitiv-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "17:30",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["17:30", "19:00"],
+				time: ["17:00", "19:00"],
 				title: "Crypto-Apéritif",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Offering space to meet, greet and network."
 			},
 			{
 				icon: {
@@ -347,8 +358,7 @@ export const events = [
 				time: ["19:00", "22:00"],
 				title: "Dinner & Crypto-Digestif",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Dinner is served! Once the bellies are full, grab a drink and engage in convos on your favourite crypto topics to the sounds of funk.",
 			},
 		],
 	},
@@ -382,7 +392,69 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "11:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["11:00", "11:30"],
+				title: "Talk #1",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "11:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["11:30", "12:00"],
+				title: "Talk #2",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -396,25 +468,14 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["12:00", "12:30"],
-				title: "Talk #1",
+				title: "Talk #3",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/aperitiv-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -427,11 +488,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["12:30", "13:00"],
-				title: "Talk #2",
+				time: ["12:30", "14:00"],
+				title: "Lunch",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Grab some snaks to soothe the hunger.",
 			},
 			{
 				user: {
@@ -446,12 +506,12 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "13:00",
+					time: "14:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -459,33 +519,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["13:00", "13:30"],
-				title: "Talk #3",
+				time: ["14:00", "14:30"],
+				title: "Talk #4",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				icon: {
-					img: {
-						src: "/assets/event-icons/snack-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "13:30",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["13:30", "15:00"],
-				title: "Snacks & Refreshments",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				user: {
@@ -500,7 +537,28 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "14:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["14:30", "15:00"],
+				title: "Talk #5",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				icon: {
+					img: {
+						src: "/assets/event-icons/aperitiv-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -513,11 +571,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:00", "15:30"],
-				title: "Talk #4",
+				time: ["15:00", "16:00"],
+				title: "Coffee Break",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Grab some refreshments.",
 			},
 			{
 				user: {
@@ -532,39 +589,7 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "15:30",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["15:30", "16:00"],
-				title: "Talk #5",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
-				icon: {
-					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -580,8 +605,7 @@ export const events = [
 				time: ["16:00", "16:30"],
 				title: "Talk #6",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				user: {
@@ -596,7 +620,7 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -612,8 +636,7 @@ export const events = [
 				time: ["16:30", "17:00"],
 				title: "Talk #7",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				icon: {
@@ -632,11 +655,10 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "19:00"],
-				title: "Space to meet with drinks",
+				title: "Drinks",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
+				description: "Offering space to meet, greet and network."
+			}
 		],
 	},
 	{
@@ -669,7 +691,69 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "11:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["11:00", "11:30"],
+				title: "Talk #1",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "11:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["11:30", "12:00"],
+				title: "Talk #2",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -683,25 +767,14 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["12:00", "12:30"],
-				title: "Talk #1",
+				title: "Talk #3",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/aperitiv-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -714,11 +787,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["12:30", "13:00"],
-				title: "Talk #2",
+				time: ["12:30", "14:00"],
+				title: "Lunch",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Grab some snaks to soothe the hunger.",
 			},
 			{
 				user: {
@@ -733,12 +805,12 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "13:00",
+					time: "14:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -746,33 +818,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["13:00", "13:30"],
-				title: "Talk #3",
+				time: ["14:00", "14:30"],
+				title: "Talk #4",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				icon: {
-					img: {
-						src: "/assets/event-icons/snack-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "13:30",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["13:30", "15:00"],
-				title: "Snacks & Refreshments",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				user: {
@@ -787,7 +836,28 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "14:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["14:30", "15:00"],
+				title: "Talk #5",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				icon: {
+					img: {
+						src: "/assets/event-icons/aperitiv-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -800,11 +870,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:00", "15:30"],
-				title: "Talk #4",
+				time: ["15:00", "16:00"],
+				title: "Coffee Break",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Grab some refreshments.",
 			},
 			{
 				user: {
@@ -819,39 +888,7 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "15:30",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["15:30", "16:00"],
-				title: "Talk #5",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
-				icon: {
-					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -867,8 +904,7 @@ export const events = [
 				time: ["16:00", "16:30"],
 				title: "Talk #6",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				user: {
@@ -883,7 +919,7 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -899,8 +935,7 @@ export const events = [
 				time: ["16:30", "17:00"],
 				title: "Talk #7",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				icon: {
@@ -919,11 +954,10 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "19:00"],
-				title: "Space to meet with drinks",
+				title: "Drinks",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
+				description: "Offering space to meet, greet and network."
+			}
 		],
 	},
 	{
@@ -956,7 +990,69 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "11:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["11:00", "11:30"],
+				title: "Talk #1",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "11:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["11:30", "12:00"],
+				title: "Talk #2",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "SPEAKER",
+					subTitle: "COMPANY",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -970,25 +1066,14 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["12:00", "12:30"],
-				title: "Talk #1",
+				title: "Talk #3",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/aperitiv-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1001,11 +1086,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["12:30", "13:00"],
-				title: "Talk #2",
+				time: ["12:30", "14:00"],
+				title: "Lunch",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Grab some snaks to soothe the hunger.",
 			},
 			{
 				user: {
@@ -1020,12 +1104,12 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "13:00",
+					time: "14:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1033,33 +1117,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["13:00", "13:30"],
-				title: "Talk #3",
+				time: ["14:00", "14:30"],
+				title: "Talk #4",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				icon: {
-					img: {
-						src: "/assets/event-icons/snack-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "13:30",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["13:30", "15:00"],
-				title: "Snacks & Refreshments",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				user: {
@@ -1074,7 +1135,28 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "14:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["14:30", "15:00"],
+				title: "Talk #5",
+				subTitle: "",
+				description: "TBA soon.",
+			},
+			{
+				icon: {
+					img: {
+						src: "/assets/event-icons/aperitiv-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1087,11 +1169,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:00", "15:30"],
-				title: "Talk #4",
+				time: ["15:00", "16:00"],
+				title: "Coffee Break",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Grab some refreshments.",
 			},
 			{
 				user: {
@@ -1106,39 +1187,7 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "15:30",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["15:30", "16:00"],
-				title: "Talk #5",
-				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
-			},
-			{
-				user: {
-					img: {
-						src: "/assets/person-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "SPEAKER",
-					subTitle: "COMPANY",
-				},
-				icon: {
-					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1154,8 +1203,7 @@ export const events = [
 				time: ["16:00", "16:30"],
 				title: "Talk #6",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				user: {
@@ -1170,7 +1218,7 @@ export const events = [
 				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/talk-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1186,8 +1234,7 @@ export const events = [
 				time: ["16:30", "17:00"],
 				title: "Talk #7",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				icon: {
@@ -1206,12 +1253,10 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "19:00"],
-				title: "Space to meet with drinks",
+				title: "Drinks",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Offering space to meet, greet and network."
 			},
-
 			{
 				icon: {
 					img: {
@@ -1231,13 +1276,12 @@ export const events = [
 				time: ["19:00", "21:00"],
 				title: "Dinner",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Dinner is served!",
 			},
 			{
 				icon: {
 					img: {
-						src: "/assets/event-icons/techno.svg",
+						src: "/assets/event-icons/snack-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1250,11 +1294,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["21:00", "01:00"],
+				time: ["21:00", "0?:??"],
 				title: "Party, Berlin style!",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "The closing ceremony of amsterDOT. An opportunity to show off with your dance moves to the heavy sounds of Berlin techno.",
 			},
 		],
 		hasArrowDown: true,
@@ -1329,7 +1372,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "12:00",
+					time: "09:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1337,11 +1380,10 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["12:00", "15:00"],
-				title: "Space to hack",
+				time: ["09:00", "12:30"],
+				title: "Workshop #1: Build a Pallet on Substrate",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "The first introductory workshop covers the basics of Substrate pallets and shows you how do build one, hands on. Basic knowledge of Rust is recommended but not required.",
 			},
 			{
 				icon: {
@@ -1359,11 +1401,10 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:00", "18:00"],
-				title: "Workshop #1: Build a pallet on Substrate",
+				time: ["14:00", "18:00"],
+				title: "Workshop #2: Build a UI for a Substrate Pallet",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "In the second introductory workshop, we will be building a frontend for our Substrate pallet. The only prerequisite is basic knowledge of Javascript / React.",
 			},
 		],
 	},
@@ -1392,7 +1433,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "12:00",
+					time: "09:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1400,11 +1441,10 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["12:00", "15:00"],
-				title: "Space to hack",
+				time: ["09:00", "12:30"],
+				title: "Workshop #3",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon."
 			},
 			{
 				icon: {
@@ -1414,7 +1454,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "15:00",
+					time: "12:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1422,11 +1462,10 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:00", "18:00"],
-				title: "Workshop #2: Build a FE for a Substrate pallet",
+				time: ["14:00", "18:00"],
+				title: "Space to hack",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Build teams and hack away! Make sure to check out the bounties offered by the supporting projects.",
 			},
 		],
 	},
@@ -1455,7 +1494,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "12:00",
+					time: "09:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1463,11 +1502,10 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["12:00", "15:00"],
-				title: "Space to hack",
+				time: ["09:00", "12:30"],
+				title: "Workshop #4",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "TBA soon.",
 			},
 			{
 				icon: {
@@ -1485,11 +1523,10 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:00", "18:00"],
-				title: "Workshop #3",
+				time: ["14:00", "18:00"],
+				title: "Space to hack",
 				subTitle: "",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et metus porttitor, aliquet dui id, blandit neque. Nulla facilisi. Morbi at urna non tortor consectetur ullamcorper non ultricies mauris.",
+				description: "Build teams and hack away! Make sure to check out the bounties offered by the supporting projects.",
 			},
 		],
 	},
