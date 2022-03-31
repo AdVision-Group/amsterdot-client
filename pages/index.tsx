@@ -189,7 +189,7 @@ const Home: NextPage = () => {
 				<meta name="title" content="amsterDOT Conf Hack" />
 				<meta
 					name="description"
-					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family."
+					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 4/20-23 in Amsterdam, the Netherlands."
 				/>
 
 				{/* <!-- Open Graph / Facebook --> */}
@@ -198,7 +198,7 @@ const Home: NextPage = () => {
 				<meta property="og:title" content="amsterDOT Conf Hack" />
 				<meta
 					property="og:description"
-					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family."
+					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 4/20-23 in Amsterdam, the Netherlands."
 				/>
 				<meta property="og:image" content="/assets/meta.jpeg" />
 
@@ -208,7 +208,7 @@ const Home: NextPage = () => {
 				<meta property="twitter:title" content="amsterDOT ConfHack" />
 				<meta
 					property="twitter:description"
-					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family."
+					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 4/20-23 in Amsterdam, the Netherlands."
 				/>
 				<meta property="twitter:image" content="/assets/meta.jpeg" />
 			</Head>
