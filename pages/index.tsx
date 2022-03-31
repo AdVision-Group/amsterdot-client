@@ -184,8 +184,24 @@ const Home: NextPage = () => {
 	return (
 		<React.Fragment>
 			<Head>
+				{/* <!-- Primary Meta Tags --> */}
 				<title>amsterDOT Hack Conf</title>
+				<meta name="title" content="amsterDOT Hack Conf" />
 				<meta name="description" content="amsterDOT Hack Conf" />
+
+				{/* <!-- Open Graph / Facebook --> */}
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="https://amsterdot.io/" />
+				<meta property="og:title" content="amsterDOT Hack Conf" />
+				<meta property="og:description" content="amsterDOT Hack Conf" />
+				<meta property="og:image" content="/assets/meta.jpeg" />
+
+				{/* <!-- Twitter --> */}
+				<meta property="twitter:card" content="summary_large_image" />
+				<meta property="twitter:url" content="https://amsterdot.io/" />
+				<meta property="twitter:title" content="amsterDOT Hack Conf" />
+				<meta property="twitter:description" content="amsterDOT Hack Conf" />
+				<meta property="twitter:image" content="/assets/meta.jpeg" />
 			</Head>
 
 			<Header
