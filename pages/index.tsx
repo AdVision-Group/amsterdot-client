@@ -18,6 +18,7 @@ import HackathonSection from "../components/hackathon-section/hackathon-section.
 import FooterSection from "../components/footer-section/footer-section.component"
 import Accordion from "../components/accordion/accordion.component"
 import BountiesSection from "../components/bounties-section/bounties-section.component"
+import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
 
 // Hooks
 import { useRouter } from "next/router"
@@ -326,6 +327,7 @@ const Home: NextPage = () => {
 					/>
 				))}
 			</SectionContainer>
+			<PricepoolSection />
 			<BountiesSection />
 			<FooterSection />
 		</React.Fragment>
