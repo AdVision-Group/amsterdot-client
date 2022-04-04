@@ -186,6 +186,11 @@ const BountiesSection = () => {
 		},
 	]
 
+	const format = (num: number, n: number = 0, x?: number) => {
+		var re = "\\d(?=(\\d{" + (x || 3) + "})+" + (n > 0 ? "\\." : "$") + ")"
+		return num.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, "g"), "$&,")
+	}
+
 	return (
 		<BountiesSectionContainer>
 			<HeadingContainer>
@@ -236,7 +241,7 @@ const BountiesSection = () => {
 			<BountiesDirectory>
 				{bounties.map((i, idx) => (
 					<BountyOverview key={idx}>
-						<figure>
+						<LogoFigure>
 							<Image
 								src={i.logo.src}
 								alt={i.logo.alt}
@@ -244,35 +249,37 @@ const BountiesSection = () => {
 								width={50}
 								height={20}
 							/>
-						</figure>
+						</LogoFigure>
 						<h3>{i.title}</h3>
 						<p>{i.description}</p>
-						<div>
-							<div>
-								<figure>
+						<BountyBottomContainer>
+							<BountyBottomFlexContainer>
+								<IssueFigure>
 									<Image
 										src={i.issueIcon.src}
 										alt={i.issueIcon.alt}
 										layout="responsive"
 										width={50}
-										height={20}
+										height={50}
+										objectFit="contain"
 									/>
-								</figure>
+								</IssueFigure>
 								<a href={i.issue.href}>{i.issue.label}</a>
-							</div>
-							<div>
-								<p>{i.pricepool}</p>
-								<figure>
+							</BountyBottomFlexContainer>
+							<BountyBottomFlexContainer>
+								<p>{format(i.pricepool / 100)}</p>
+								<CurrencyFigure>
 									<Image
 										src={i.currencyIcon.src}
 										alt={i.currencyIcon.alt}
 										layout="responsive"
 										width={50}
-										height={20}
+										height={50}
+										objectFit="contain"
 									/>
-								</figure>
-							</div>
-						</div>
+								</CurrencyFigure>
+							</BountyBottomFlexContainer>
+						</BountyBottomContainer>
 					</BountyOverview>
 				))}
 			</BountiesDirectory>
@@ -353,14 +360,14 @@ const HeadingContainer = styled.div`
 
 const BountiesDirectory = styled.div`
 	/* width: 100vw; */
-	max-width: 90rem;
+	max-width: 130rem;
 	margin: 0 auto;
 
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 1.5rem;
+	gap: 5%;
 
-	margin-bottom: 3rem;
+	margin-bottom: 10rem;
 	margin-top: 3rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -374,6 +381,62 @@ const BountiesDirectory = styled.div`
 const BountyOverview = styled.div`
 	background-color: ${({ theme }) => theme.background.container};
 	padding: 1.5rem;
+
+	h3 {
+		font-weight: 900;
+		color: ${({ theme }) => theme.color.primary};
+		text-transform: uppercase;
+	}
+
+	p {
+		line-height: 1.2;
+	}
+`
+
+const BountyBottomContainer = styled.div`
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+`
+
+const BountyBottomFlexContainer = styled.div`
+	display: grid;
+	align-items: center;
+	grid-template-columns: 3rem auto;
+	grid-template-rows: auto auto;
+	gap: 1rem;
+
+	&:nth-of-type(2) {
+		grid-template-columns: auto 3rem;
+		text-align: end;
+		justify-self: end;
+	}
+
+	a {
+		color: #fff;
+		font-size: 2.5rem;
+		text-decoration: underline;
+	}
+
+	p {
+		color: ${({ theme }) => theme.color.primary};
+		font-weight: 900;
+		font-size: 2.5rem;
+	}
+`
+
+const LogoFigure = styled.figure`
+	position: relative;
+	max-width: 10rem;
+`
+
+const IssueFigure = styled.figure`
+	position: relative;
+	/* max-width: 10rem; */
+`
+const CurrencyFigure = styled.figure`
+	position: relative;
+	/* max-width: 10rem; */
 `
 
 const Title = styled(motion.h3)`
