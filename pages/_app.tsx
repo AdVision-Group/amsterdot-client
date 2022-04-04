@@ -8,7 +8,7 @@ import React from "react"
 import { ThemeProvider } from "styled-components"
 import { GlobalStyle } from "../styles/global.styles"
 import theme from "../styles/theme.styles"
-import { ParallaxProvider } from "react-scroll-parallax"
+import "../styles/global.styles.scss"
 
 type NextPageWithLayout = NextPage & {
 	getLayout?: (page: ReactElement) => ReactNode
@@ -26,9 +26,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 		<>
 			<GlobalStyle />
 			<ThemeProvider theme={theme}>
-				<ParallaxProvider>
-					{getLayout(<Component {...pageProps} />)}
-				</ParallaxProvider>
+				{getLayout(<Component {...pageProps} />)}
 			</ThemeProvider>
 		</>
 	)

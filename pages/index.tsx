@@ -228,7 +228,7 @@ const Home: NextPage = () => {
 				<WatermarkLetters
 					style={{
 						x: transformYAM,
-
+						// fontFamily: "Avenir Next",
 						// opacity: transformWatermarkOpacity,
 					}}
 					className="am"

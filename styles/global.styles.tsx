@@ -3,39 +3,6 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyle = createGlobalStyle`
 
 
-@font-face {
-font-family: 'Acumin';
-src: url('/fonts/AcuminVariableConcept.otf');
-}
-
-@font-face {
-  font-family: 'Avenir Next';
-  src: url('/fonts/final/AvenirNext-Regular-08.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir Next';
-  src: url('/fonts/final/AvenirNext-Medium-06.ttf');
-  font-weight: 700;
-  font-style: medium;
-}
-  
-  @font-face {
-    font-family: 'Avenir Next';
-    src: url('/fonts/final/AvenirNext-Bold-01.ttf');
-    font-weight: 900;
-    font-style: bold;
-  }
-  
-  @font-face {
-    font-family: 'Acumin Variable Concept';
-    src: url('/fonts/AcuminVariableConcept-v2.otf');
-    font-weight: 400;
-    font-style: normal;
-  }
-
   *, *:before, *:after {
     margin: 0;
     padding: 0;
