@@ -12,8 +12,8 @@ const PricepoolSection = () => {
 
 	console.log(scrollYProgress)
 
-	const transformPRIZE = useTransform(scrollYProgress, [0.55, 0.73], [0, 250])
-	const transformPOOL = useTransform(scrollYProgress, [0.55, 0.73], [50, -100])
+	const transformPRIZE = useTransform(scrollYProgress, [0.51, 0.73], [0, 250])
+	const transformPOOL = useTransform(scrollYProgress, [0.51, 0.73], [50, -100])
 
 	const bounties = [
 		{
