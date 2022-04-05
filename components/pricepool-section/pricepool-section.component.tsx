@@ -188,7 +188,7 @@ const PricepoolSection = () => {
 
 	return (
 		<React.Fragment>
-			<BountiesSectionContainer>
+			<BountiesSectionContainer id="pricepool">
 				<HeadingContainer>
 					<Title
 						style={{
@@ -473,7 +473,7 @@ const ArrowContainer = styled(motion.figure)`
 `
 
 const BountiesSectionContainer = styled.section`
-	/* scroll-margin-top: 20rem; */
+	scroll-margin-top: 20rem;
 	/* border: 1px solid yellow; */
 	position: relative;
 	color: ${({ theme }) => theme.fonts.primary};

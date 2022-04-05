@@ -193,7 +193,7 @@ const BountiesSection = () => {
 
 	return (
 		<React.Fragment>
-			<BountiesSectionContainer>
+			<BountiesSectionContainer id="bounties-h">
 				<HeadingContainer>
 					<Title
 						style={{

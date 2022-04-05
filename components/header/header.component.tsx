@@ -274,6 +274,16 @@ const Header: React.FC<IProps> = ({
 										))}
 									</NestedUl>
 								</li>
+								<li>
+									<Link href={"/#pricepool"}>
+										<a onClick={toggleMobileNav}>PRIZE POOL</a>
+									</Link>
+								</li>
+								<li>
+									<Link href={"/#bounties-h"}>
+										<a onClick={toggleMobileNav}>BOUNTIES</a>
+									</Link>
+								</li>
 							</Ul>
 							{/* <ButtonsContainer justifyContent="flex-start">
 								<a
@@ -410,10 +420,10 @@ const Ul = styled.ul`
 
 	li {
 		font-weight: 900;
-		margin-bottom: 0;
+		margin-bottom: 1rem;
 
 		&.first {
-			margin-bottom: 2rem;
+			/* margin-bottom: 2rem; */
 		}
 
 		a {
@@ -439,6 +449,7 @@ const NestedUl = styled.ul`
 
 	li {
 		font-weight: 400 !important;
+		margin-bottom: 0rem;
 
 		&:nth-of-type(4) {
 			margin-bottom: 1rem;
