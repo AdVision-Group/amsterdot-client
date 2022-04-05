@@ -188,6 +188,7 @@ const Header: React.FC<IProps> = ({
 							transition={{
 								duration: 0.8,
 							}}
+							onClick={toggleMobileNav}
 						/>
 						<MobileMenuContainer
 							initial={{
