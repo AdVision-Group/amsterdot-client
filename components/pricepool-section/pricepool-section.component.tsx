@@ -12,8 +12,8 @@ const PricepoolSection = () => {
 
 	console.log(scrollYProgress)
 
-	const transformPRIZE = useTransform(scrollYProgress, [0.22, 0.45], [0, 0])
-	const transformPOOL = useTransform(scrollYProgress, [0.22, 0.45], [0, 0])
+	const transformPRIZE = useTransform(scrollYProgress, [0.55, 0.73], [0, 250])
+	const transformPOOL = useTransform(scrollYProgress, [0.55, 0.73], [50, -100])
 
 	const bounties = [
 		{
@@ -186,11 +186,6 @@ const PricepoolSection = () => {
 		},
 	]
 
-	const format = (num: number, n: number = 0, x?: number) => {
-		var re = "\\d(?=(\\d{" + (x || 3) + "})+" + (n > 0 ? "\\." : "$") + ")"
-		return num.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, "g"), "$&,")
-	}
-
 	return (
 		<BountiesSectionContainer>
 			<HeadingContainer>
@@ -210,13 +205,27 @@ const PricepoolSection = () => {
 				>
 					POOL
 				</Title>
+				<PoolFigure
+					style={{
+						x: transformPOOL,
+					}}
+					className="pool"
+				>
+					<Image
+						src={"/assets/bounty-section/pool.svg"}
+						alt={"pool"}
+						layout="responsive"
+						width={100}
+						height={50}
+					/>
+				</PoolFigure>
 
 				<Link href={"/#day-1"} passHref>
 					<a
 						style={{
 							gridArea: "a",
 							justifySelf: "end",
-							alignSelf: "end",
+							alignSelf: "center",
 						}}
 					>
 						<ArrowContainer
@@ -399,11 +408,11 @@ const Container = styled(motion.div)`
 	/* border: 1px solid green; */
 	/* width: 100%; */
 	/* margin: 25rem 1.5rem 0; */
-	margin: 5rem 3rem 0 1.5rem;
+	margin: 10rem 3rem 0 1.5rem;
 	max-width: 90rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		margin: 12rem 1.5rem 0;
+		margin: 16rem 1.5rem 0;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			max-width: 130rem;
 		}
@@ -417,6 +426,7 @@ const ArrowContainer = styled(motion.figure)`
 	/* bottom: 5rem; */
 	/* left: 3rem; */
 	grid-area: a;
+	align-self: center;
 	/* display: none; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -425,10 +435,9 @@ const ArrowContainer = styled(motion.figure)`
 		heigth: 8rem;
 		/* bottom: 6rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			align-self: end;
 			margin-left: 6rem;
-			width: 14rem;
-			heigth: 14rem;
+			width: 10rem;
+			heigth: 10rem;
 			/* bottom: 25rem; */
 		}
 	}
@@ -459,19 +468,19 @@ const HeadingContainer = styled.div`
 	/* position: relative; */
 	/* background-color: ${({ theme }) => theme.background.primary}; */
 	/* overflow: hidden; */
-	width: 100vw;
+	width: 100%;
 	max-width: 90rem;
 	margin: 0 auto;
 	/* height: 100vh; */
 
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 1fr auto;
 	/* grid-template-columns: minmax(15rem, 25rem) auto; */
 	/* grid-template-rows: auto auto auto; */
 	gap: 1.5rem;
 	grid-template-areas:
-		"a p"
-		"o o";
+		"p p"
+		"o a";
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -550,11 +559,6 @@ const LogoFigure = styled.figure`
 	position: relative;
 	max-width: 10rem;
 `
-
-const IssueFigure = styled.figure`
-	position: relative;
-	/* max-width: 10rem; */
-`
 const CurrencyFigure = styled.figure`
 	position: relative;
 	/* max-width: 10rem; */
@@ -572,13 +576,38 @@ const Title = styled(motion.h3)`
 	}
 	&.pool {
 		grid-area: o;
+		text-align: center;
 		z-index: 1;
+		display: none;
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			font-size: 15rem;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 				font-size: 22rem;
+			}
+		}
+	}
+`
+
+const PoolFigure = styled(motion.figure)`
+	position: relative;
+	/* max-width: 10rem; */
+	grid-area: o;
+	text-align: center;
+	z-index: 1;
+	width: 20rem;
+	justify-self: center;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: 15rem;
+			width: 43rem;
+			margin-top: -2.5rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				/* font-size: 22rem; */
+				margin-top: -5rem;
+				width: 62rem;
 			}
 		}
 	}
