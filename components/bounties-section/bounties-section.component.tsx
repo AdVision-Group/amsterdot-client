@@ -12,8 +12,8 @@ const BountiesSection = () => {
 
 	console.log(scrollYProgress)
 
-	const transformBOUN = useTransform(scrollYProgress, [0.74, 0.89], [200, -50])
-	const transformTIES = useTransform(scrollYProgress, [0.74, 0.89], [0, 100])
+	const transformBOUN = useTransform(scrollYProgress, [0.63, 0.89], [200, -50])
+	const transformTIES = useTransform(scrollYProgress, [0.63, 0.89], [0, 100])
 
 	const bounties = [
 		{
@@ -312,8 +312,8 @@ const ArrowContainer = styled(motion.figure)`
 			margin-right: unset;
 			align-self: end;
 			margin-left: 6rem;
-			width: 10rem;
-			heigth: 10rem;
+			/* width: 10rem;
+			heigth: 10rem; */
 			/* bottom: 25rem; */
 		}
 	}
@@ -348,7 +348,7 @@ const HeadingContainer = styled.div`
 	/* overflow: hidden; */
 	width: 100vw;
 	max-width: 90rem;
-	margin: 0 auto;
+	margin: 0 auto 6rem;
 	/* height: 100vh; */
 
 	display: grid;
@@ -376,7 +376,7 @@ const BountiesDirectory = styled.div`
 	grid-template-columns: 1fr;
 	gap: 4rem;
 
-	margin-bottom: 10rem;
+	margin-bottom: 15rem;
 	margin-top: 3rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {

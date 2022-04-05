@@ -446,8 +446,8 @@ const ArrowContainer = styled(motion.figure)`
 		/* bottom: 6rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-left: 6rem;
-			width: 10rem;
-			heigth: 10rem;
+			/* width: 10rem;
+			heigth: 10rem; */
 			/* bottom: 25rem; */
 		}
 	}
