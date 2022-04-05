@@ -367,19 +367,38 @@ const ContentContainer = styled.div`
 `
 
 const ContentBottomContainer = styled.div`
+	margin-top: 2rem;
 	p {
 		margin: 0;
 		text-align: end;
 
 		&:nth-of-type(1) {
-			font-size: 3.75rem;
+			font-size: 2.4rem;
 			color: ${({ theme }) => theme.color.primary};
 			font-weight: 900;
 		}
 		&:nth-of-type(2) {
-			font-size: 2rem;
+			font-size: 1.6rem;
 			font-weight: 700;
 			/* color: ${({ theme }) => theme.color.primary}; */
+		}
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		p {
+			margin: 0;
+			text-align: end;
+
+			&:nth-of-type(1) {
+				font-size: 3.75rem;
+				color: ${({ theme }) => theme.color.primary};
+				font-weight: 900;
+			}
+			&:nth-of-type(2) {
+				font-size: 2rem;
+				font-weight: 700;
+				/* color: ${({ theme }) => theme.color.primary}; */
+			}
 		}
 	}
 `
