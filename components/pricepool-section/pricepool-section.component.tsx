@@ -187,118 +187,122 @@ const PricepoolSection = () => {
 	]
 
 	return (
-		<BountiesSectionContainer>
-			<HeadingContainer>
-				<Title
-					style={{
-						x: transformPRIZE,
-					}}
-					className="prize"
-				>
-					PRIZE
-				</Title>
-				<Title
-					style={{
-						x: transformPOOL,
-					}}
-					className="pool"
-				>
-					POOL
-				</Title>
-				<PoolFigure
-					style={{
-						x: transformPOOL,
-					}}
-					className="pool"
-				>
-					<Image
-						src={"/assets/bounty-section/pool.svg"}
-						alt={"pool"}
-						layout="responsive"
-						width={100}
-						height={50}
-					/>
-				</PoolFigure>
-
-				<Link href={"/#day-1"} passHref>
-					<a
+		<React.Fragment>
+			<BountiesSectionContainer>
+				<HeadingContainer>
+					<Title
 						style={{
-							gridArea: "a",
-							justifySelf: "end",
-							alignSelf: "center",
+							x: transformPRIZE,
 						}}
+						className="prize"
 					>
-						<ArrowContainer
-							animate={
-								{
-									// y: [0, -10, -5, -15, 0],
-									// scale: [1.2, 1, 0.9, 0.97, 1.2],
-								}
-							}
-						>
-							<Image
-								src={"/assets/arrow-down-final.svg"}
-								alt="red circle"
-								layout="responsive"
-								width={100}
-								height={100}
-								objectFit="contain"
-							/>
-						</ArrowContainer>
-					</a>
-				</Link>
-			</HeadingContainer>
-			<PricepoolContainer>
-				<Container>
-					<ContentContainer>
-						<LogoFigure>
-							<Image
-								src={"/assets/bounty-section/hydra-logo.svg"}
-								alt={"hydra logo"}
-								layout="responsive"
-								width={50}
-								height={20}
-							/>
-						</LogoFigure>
-						<h2>Polkadot prize pool</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
-							risus a sapien pharetra tristique. Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit. Nulla ornare nibh et risus cursus
-							sagittis. Cras molestie porttitor sem elementum varius. Sed
-							tristique turpis ac viverra iaculis. Proin molestie mi libero,
-							rutrum consequat arcu pharetra vitae.
-						</p>
+						PRIZE
+					</Title>
+					<Title
+						style={{
+							x: transformPOOL,
+						}}
+						className="pool"
+					>
+						POOL
+					</Title>
+					<PoolFigure
+						style={{
+							x: transformPOOL,
+						}}
+						className="pool"
+					>
+						<Image
+							src={"/assets/bounty-section/pool.svg"}
+							alt={"pool"}
+							layout="responsive"
+							width={100}
+							height={50}
+						/>
+					</PoolFigure>
 
-						<ContentBottomContainer>
-							<p>$150k PRIZE POOL</p>
-							<p>+ X WORTH OF TREASURY BOUNTIES</p>
-						</ContentBottomContainer>
-						<AnimationContainer
-							className="first"
-							// animate={{
-							// 	x: [0, 20, 10, -5, 0],
-							// 	scale: [1.2, 0.97, 0.9, 1, 1.2],
-							// }}
-							// transition={{
-							// 	repeat: Infinity,
-							// 	ease: "easeInOut",
-							// 	duration: 10,
-							// }}
+					<Link href={"/#prize-pool"} passHref>
+						<a
+							style={{
+								gridArea: "a",
+								justifySelf: "end",
+								alignSelf: "center",
+							}}
 						>
-							<Image
-								src={"/assets/anim-v2.gif"}
-								alt="red circle"
-								layout="responsive"
-								width={100}
-								height={200}
-								objectFit="cover"
-							/>
-						</AnimationContainer>
-					</ContentContainer>
-				</Container>
-			</PricepoolContainer>
-		</BountiesSectionContainer>
+							<ArrowContainer
+								animate={
+									{
+										// y: [0, -10, -5, -15, 0],
+										// scale: [1.2, 1, 0.9, 0.97, 1.2],
+									}
+								}
+							>
+								<Image
+									src={"/assets/arrow-down-final.svg"}
+									alt="red circle"
+									layout="responsive"
+									width={100}
+									height={100}
+									objectFit="contain"
+								/>
+							</ArrowContainer>
+						</a>
+					</Link>
+				</HeadingContainer>
+			</BountiesSectionContainer>
+			<BountiesSectionContainer>
+				<PricepoolContainer id="prize-pool">
+					<Container>
+						<ContentContainer>
+							<LogoFigure>
+								<Image
+									src={"/assets/bounty-section/logo-polkadot.svg"}
+									alt={"hydra logo"}
+									layout="responsive"
+									width={50}
+									height={20}
+								/>
+							</LogoFigure>
+							<h2>Polkadot prize pool</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
+								risus a sapien pharetra tristique. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit. Nulla ornare nibh et risus cursus
+								sagittis. Cras molestie porttitor sem elementum varius. Sed
+								tristique turpis ac viverra iaculis. Proin molestie mi libero,
+								rutrum consequat arcu pharetra vitae.
+							</p>
+
+							<ContentBottomContainer>
+								<p>$150k PRIZE POOL</p>
+								<p>+ X WORTH OF TREASURY BOUNTIES</p>
+							</ContentBottomContainer>
+							<AnimationContainer
+								className="first"
+								// animate={{
+								// 	x: [0, 20, 10, -5, 0],
+								// 	scale: [1.2, 0.97, 0.9, 1, 1.2],
+								// }}
+								// transition={{
+								// 	repeat: Infinity,
+								// 	ease: "easeInOut",
+								// 	duration: 10,
+								// }}
+							>
+								<Image
+									src={"/assets/anim-v2.gif"}
+									alt="red circle"
+									layout="responsive"
+									width={100}
+									height={200}
+									objectFit="cover"
+								/>
+							</AnimationContainer>
+						</ContentContainer>
+					</Container>
+				</PricepoolContainer>
+			</BountiesSectionContainer>
+		</React.Fragment>
 	)
 }
 
@@ -309,6 +313,7 @@ const ContentContainer = styled.div`
 	background-color: ${({ theme }) => theme.background.container};
 	padding: 1.5rem 1.5rem 1.5rem;
 	margin-top: -3rem;
+	/* width: 100%; */
 
 	h2 {
 		font-family: "Avenir Next";
@@ -327,7 +332,7 @@ const ContentContainer = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		p {
-			font-size: 1.8rem;
+			font-size: 1.7rem;
 			margin-bottom: 2rem;
 			max-width: 75rem;
 		}
@@ -335,7 +340,7 @@ const ContentContainer = styled.div`
 			padding: 3rem 3rem 3rem;
 
 			h2 {
-				font-size: 3.5rem;
+				font-size: 3.1rem;
 				/* margin-top: 1rem; */
 				/* margin-bottom: 2rem; */
 			}
@@ -367,7 +372,7 @@ const ContentBottomContainer = styled.div`
 		text-align: end;
 
 		&:nth-of-type(1) {
-			font-size: 2.5rem;
+			font-size: 3.75rem;
 			color: ${({ theme }) => theme.color.primary};
 			font-weight: 900;
 		}
@@ -383,22 +388,27 @@ const AnimationContainer = styled(motion.figure)`
 	position: absolute;
 	z-index: -1;
 	/* padding: 1.5rem; */
-	width: 18rem;
-	left: -1.5rem;
-	top: -13rem;
+	width: 14rem;
+	left: 6rem;
+	top: -8rem;
 	transform: rotate(90deg);
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* bottom: 13rem; */
 		/* bottom: 0rem; */
 
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			width: 24rem;
-			/* right: -6rem; */
-			top: -20rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			left: 6rem;
+			top: -12rem;
 
-			/* heigth: 20rem; */
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				width: 24rem;
+				/* right: -6rem; */
+				top: -18rem;
+				left: 6rem;
+
+				/* heigth: 20rem; */
+			}
 		}
 	}
 `
@@ -408,7 +418,7 @@ const Container = styled(motion.div)`
 	/* border: 1px solid green; */
 	/* width: 100%; */
 	/* margin: 25rem 1.5rem 0; */
-	margin: 10rem 3rem 0 1.5rem;
+	margin: 10rem 0 0 1.5rem;
 	max-width: 90rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -444,6 +454,7 @@ const ArrowContainer = styled(motion.figure)`
 `
 
 const BountiesSectionContainer = styled.section`
+	/* scroll-margin-top: 20rem; */
 	/* border: 1px solid yellow; */
 	position: relative;
 	color: ${({ theme }) => theme.fonts.primary};
@@ -490,6 +501,9 @@ const HeadingContainer = styled.div`
 
 const PricepoolContainer = styled.div`
 	/* width: 100vw; */
+	scroll-margin-top: 20rem;
+	scroll-padding-top: 20rem;
+
 	max-width: 130rem;
 	margin: 0 auto;
 

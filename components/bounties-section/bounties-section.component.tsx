@@ -12,8 +12,8 @@ const BountiesSection = () => {
 
 	console.log(scrollYProgress)
 
-	const transformBOUN = useTransform(scrollYProgress, [0.22, 0.45], [0, 0])
-	const transformTIES = useTransform(scrollYProgress, [0.22, 0.45], [0, 0])
+	const transformBOUN = useTransform(scrollYProgress, [0.74, 0.89], [200, -50])
+	const transformTIES = useTransform(scrollYProgress, [0.74, 0.89], [0, 100])
 
 	const bounties = [
 		{
@@ -192,98 +192,103 @@ const BountiesSection = () => {
 	}
 
 	return (
-		<BountiesSectionContainer>
-			<HeadingContainer>
-				<Title
-					style={{
-						x: transformBOUN,
-					}}
-					className="boun"
-				>
-					BOUN
-				</Title>
-				<Title
-					style={{
-						x: transformTIES,
-					}}
-					className="ties"
-				>
-					TIES
-				</Title>
-
-				<Link href={"/#day-1"} passHref>
-					<a
+		<React.Fragment>
+			<BountiesSectionContainer>
+				<HeadingContainer>
+					<Title
 						style={{
-							justifySelf: "end",
-							alignSelf: "end",
+							x: transformBOUN,
 						}}
+						className="boun"
 					>
-						<ArrowContainer
-							animate={
-								{
-									// y: [0, -10, -5, -15, 0],
-									// scale: [1.2, 1, 0.9, 0.97, 1.2],
-								}
-							}
+						BOUN
+					</Title>
+					<Title
+						style={{
+							x: transformTIES,
+						}}
+						className="ties"
+					>
+						TIES
+					</Title>
+
+					<Link href={"/#bounties"} passHref>
+						<a
+							style={{
+								gridArea: "a",
+								justifySelf: "center",
+								alignSelf: "center",
+							}}
 						>
-							<Image
-								src={"/assets/arrow-down-final.svg"}
-								alt="red circle"
-								layout="responsive"
-								width={100}
-								height={100}
-								objectFit="contain"
-							/>
-						</ArrowContainer>
-					</a>
-				</Link>
-			</HeadingContainer>
-			<BountiesDirectory>
-				{bounties.map((i, idx) => (
-					<BountyOverview key={idx}>
-						<LogoFigure>
-							<Image
-								src={i.logo.src}
-								alt={i.logo.alt}
-								layout="responsive"
-								width={50}
-								height={20}
-							/>
-						</LogoFigure>
-						<h3>{i.title}</h3>
-						<p>{i.description}</p>
-						<BountyBottomContainer>
-							<BountyBottomFlexContainer>
-								<IssueFigure>
-									<Image
-										src={i.issueIcon.src}
-										alt={i.issueIcon.alt}
-										layout="responsive"
-										width={50}
-										height={50}
-										objectFit="contain"
-									/>
-								</IssueFigure>
-								<a href={i.issue.href}>{i.issue.label}</a>
-							</BountyBottomFlexContainer>
-							<BountyBottomFlexContainer>
-								<p>{format(i.pricepool / 100)}</p>
-								<CurrencyFigure>
-									<Image
-										src={i.currencyIcon.src}
-										alt={i.currencyIcon.alt}
-										layout="responsive"
-										width={50}
-										height={50}
-										objectFit="contain"
-									/>
-								</CurrencyFigure>
-							</BountyBottomFlexContainer>
-						</BountyBottomContainer>
-					</BountyOverview>
-				))}
-			</BountiesDirectory>
-		</BountiesSectionContainer>
+							<ArrowContainer
+								animate={
+									{
+										// y: [0, -10, -5, -15, 0],
+										// scale: [1.2, 1, 0.9, 0.97, 1.2],
+									}
+								}
+							>
+								<Image
+									src={"/assets/arrow-down-final.svg"}
+									alt="red circle"
+									layout="responsive"
+									width={100}
+									height={100}
+									objectFit="contain"
+								/>
+							</ArrowContainer>
+						</a>
+					</Link>
+				</HeadingContainer>
+			</BountiesSectionContainer>
+			<BountiesSectionContainer id="bounties">
+				<BountiesDirectory>
+					{bounties.map((i, idx) => (
+						<BountyOverview key={idx}>
+							<LogoFigure>
+								<Image
+									src={i.logo.src}
+									alt={i.logo.alt}
+									layout="responsive"
+									width={50}
+									height={20}
+								/>
+							</LogoFigure>
+							<h3>{i.title}</h3>
+							<p>{i.description}</p>
+							<BountyBottomContainer>
+								<BountyBottomFlexContainer>
+									<IssueFigure>
+										<Image
+											src={i.issueIcon.src}
+											alt={i.issueIcon.alt}
+											layout="responsive"
+											width={50}
+											height={50}
+											objectFit="contain"
+										/>
+									</IssueFigure>
+									<a href={i.issue.href}>{i.issue.label}</a>
+								</BountyBottomFlexContainer>
+								<BountyBottomFlexContainer>
+									<p>{format(i.pricepool / 100)}</p>
+									<CurrencyFigure>
+										<Image
+											src={i.currencyIcon.src}
+											alt={i.currencyIcon.alt}
+											layout="responsive"
+											width={50}
+											height={50}
+											objectFit="contain"
+										/>
+									</CurrencyFigure>
+								</BountyBottomFlexContainer>
+							</BountyBottomContainer>
+						</BountyOverview>
+					))}
+				</BountiesDirectory>
+			</BountiesSectionContainer>
+		</React.Fragment>
 	)
 }
 
@@ -304,10 +309,11 @@ const ArrowContainer = styled(motion.figure)`
 		heigth: 8rem;
 		/* bottom: 6rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			margin-right: unset;
 			align-self: end;
 			margin-left: 6rem;
-			width: 14rem;
-			heigth: 14rem;
+			width: 10rem;
+			heigth: 10rem;
 			/* bottom: 25rem; */
 		}
 	}
@@ -315,6 +321,8 @@ const ArrowContainer = styled(motion.figure)`
 
 const BountiesSectionContainer = styled.section`
 	/* border: 1px solid yellow; */
+	scroll-margin-top: 10rem;
+
 	position: relative;
 	color: ${({ theme }) => theme.fonts.primary};
 	padding: 0rem 1.5rem;
@@ -361,11 +369,12 @@ const HeadingContainer = styled.div`
 const BountiesDirectory = styled.div`
 	/* width: 100vw; */
 	max-width: 130rem;
+	scroll-margin-top: 20rem;
 	margin: 0 auto;
 
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 5%;
+	gap: 4rem;
 
 	margin-bottom: 10rem;
 	margin-top: 3rem;
@@ -386,10 +395,15 @@ const BountyOverview = styled.div`
 		font-weight: 900;
 		color: ${({ theme }) => theme.color.primary};
 		text-transform: uppercase;
+		margin-bottom: 1.5rem;
 	}
 
 	p {
 		line-height: 1.2;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		padding: 1.5rem 3rem;
 	}
 `
 
