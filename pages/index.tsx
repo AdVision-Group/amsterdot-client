@@ -263,7 +263,7 @@ const Home: NextPage = () => {
 					className="st"
 				>
 					<Image
-						src={"/assets/st.svg"}
+						src={"/assets/partners-v2/st.svg"}
 						alt="st letters"
 						width={200}
 						height={200}
@@ -498,7 +498,7 @@ const WatermarkLetters = styled(motion.h2)`
 		}
 		&.st {
 			display: block;
-			width: 45rem;
+			width: 40rem;
 
 			top: 25rem;
 			right: -15rem;

@@ -10,7 +10,7 @@ import Image from "next/image"
 const BountySection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	console.log(scrollYProgress)
+	// console.log(scrollYProgress)
 
 	const transformBOUN = useTransform(scrollYProgress, [0.63, 0.89], [150, -100])
 	const transformTIES = useTransform(scrollYProgress, [0.63, 0.89], [0, 100])

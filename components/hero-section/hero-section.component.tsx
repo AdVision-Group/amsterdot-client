@@ -1,7 +1,7 @@
 // Utils
 import React from "react"
 import styled from "styled-components"
-import { motion, useTransform, useViewportScroll } from "framer-motion"
+import { motion } from "framer-motion"
 
 // Components
 import Image from "next/image"
@@ -9,58 +9,68 @@ import Link from "next/link"
 import Button from "../button/button.component"
 
 const HeroSection = () => {
-	const { scrollYProgress } = useViewportScroll()
-
 	const partners = [
 		{
-			src: "/assets/partners/logo-polkadot.png",
-			alt: "polkadot logo",
-		},
-		{
-			src: "/assets/partners/hydra.png",
+			src: "/assets/partners-v2/logos/hzdra dz.png",
 			alt: "hydra logo",
+			href: "https://hydradx.io/",
 		},
 		{
-			src: "/assets/partners/basilisk.png",
+			src: "/assets/partners-v2/logos/basilisk.png",
 			alt: "basilisk logo",
+			href: "https://bsx.fi/",
 		},
 		{
-			src: "/assets/partners/talisman-logo.png",
-			alt: "talisman logo",
+			src: "/assets/partners-v2/logos/logo-polkadot.png",
+			alt: "polkadot logo",
+			href: "https://polkadot.network/",
 		},
 		{
-			src: "/assets/partners/moonbeam.png",
-			alt: "moonbeam logo",
-		},
-		{
-			src: "/assets/partners/parallel.png",
-			alt: "parallel logo",
-		},
-		{
-			src: "/assets/partners/subsquid.png",
-			alt: "subsquid logo",
-		},
-		{
-			src: "/assets/partners/acala-network.png",
+			src: "/assets/partners-v2/logos/acala-logo.png",
 			alt: "acala network logo",
+			href: "https://acala.network/",
 		},
 		{
-			src: "/assets/partners/astar.png",
+			src: "/assets/partners-v2/logos/Interplay.png",
+			alt: "interplay logo",
+			href: "https://interplay.iterate.ai/",
+		},
+		{
+			src: "/assets/partners-v2/logos/Subsquid.png",
+			alt: "subsquid logo",
+			href: "https://www.subsquid.io/",
+		},
+		{
+			src: "/assets/partners-v2/logos/Parity.png",
+			alt: "parity logo",
+			href: "https://www.parity.io/",
+		},
+		{
+			src: "/assets/partners-v2/logos/talisman-logo.png",
+			alt: "talisman logo",
+			href: "https://talisman.xyz/",
+		},
+		{
+			src: "/assets/partners-v2/logos/DFG.png",
+			alt: "dfg logo",
+			href: "https://www.dfg.group/",
+		},
+		{
+			src: "/assets/partners-v2/logos/Centrifuge.png",
+			alt: "centrifuge logo",
+			href: "https://centrifuge.io/",
+		},
+		{
+			src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
+			alt: "moonbeam logo",
+			href: "https://moonbeam.network/",
+		},
+		{
+			src: "/assets/partners-v2/logos/astar.png",
 			alt: "astar logo",
+			href: "https://astar.network/",
 		},
 	]
-
-	const transformWatermarkOpacity = useTransform(
-		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[1, 0, 0, 0]
-	)
-
-	const transformX = useTransform(
-		scrollYProgress,
-		[0, 0.28, 0.72, 1],
-		[0, -500, 0, -1000]
-	)
 
 	return (
 		<SectionContainer>
@@ -164,16 +174,34 @@ const HeroSection = () => {
 					</PlaceContainer>
 				</ContentContainer>
 				<PartnersContainer>
-					<Image
-						src={"/assets/partners/logaaa-v2.svg"}
-						placeholder="blur"
-						blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
-						alt="partners logo"
-						width={100}
-						height={50}
-						objectFit="contain"
-						layout="responsive"
-					/>
+					{partners.map((partner, idx) => (
+						<a
+							key={idx}
+							href={partner.href}
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<motion.figure
+								whileHover={{
+									scale: 1.05,
+								}}
+								whileTap={{
+									scale: 0.97,
+								}}
+							>
+								<Image
+									src={partner.src}
+									placeholder="blur"
+									blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
+									alt={partner.alt}
+									width={80}
+									height={50}
+									objectFit="contain"
+									layout="responsive"
+								/>
+							</motion.figure>
+						</a>
+					))}
 				</PartnersContainer>
 			</Container>
 		</SectionContainer>
@@ -534,9 +562,24 @@ const PlaceContainer = styled.div`
 	}
 `
 
-const PartnersContainer = styled.figure`
+const PartnersContainer = styled.div`
 	position: relative;
-	max-width: 30rem;
+	display: grid;
+	/* flex-wrap: wrap; */
+	grid-template-columns: repeat(4, auto);
+	max-width: 35rem;
+	margin-left: auto;
+	gap: 1rem;
+	margin-top: 2rem;
+	padding-top: 0.5rem;
+	border-top: 1px solid #fff;
+
+	figure {
+		max-width: 10rem;
+		/* height: 3rem; */
+		position: relative;
+	}
+	/* max-width: 30rem;
 	width: 100%;
 	margin: 0 auto;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -544,5 +587,5 @@ const PartnersContainer = styled.figure`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			max-width: 50rem;
 		}
-	}
+	} */
 `

@@ -10,8 +10,6 @@ import Image from "next/image"
 const PricepoolSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	console.log(scrollYProgress)
-
 	const transformPRIZE = useTransform(scrollYProgress, [0.51, 0.73], [0, 250])
 	const transformPOOL = useTransform(scrollYProgress, [0.51, 0.73], [50, -100])
 
@@ -213,7 +211,7 @@ const PricepoolSection = () => {
 						className="pool"
 					>
 						<Image
-							src={"/assets/bounty-section/pool.svg"}
+							src={"/assets/partners-v2/pool.svg"}
 							alt={"pool"}
 							layout="responsive"
 							width={100}
