@@ -17,7 +17,7 @@ import EventSection from "../components/event-section/event-section.component"
 import HackathonSection from "../components/hackathon-section/hackathon-section.component"
 import FooterSection from "../components/footer-section/footer-section.component"
 import Accordion from "../components/accordion/accordion.component"
-import BountiesSection from "../components/bounties-section/bounties-section.component"
+import BountySection from "../components/bounties-section/bounties-section.component"
 import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
 
 // Hooks
@@ -328,7 +328,7 @@ const Home: NextPage = () => {
 				))}
 			</SectionContainer>
 			<PricepoolSection />
-			<BountiesSection />
+			<BountySection />
 			<FooterSection />
 		</React.Fragment>
 	)

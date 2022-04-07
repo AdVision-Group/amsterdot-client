@@ -7,7 +7,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
 
-const BountiesSection = () => {
+const BountySection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
 	console.log(scrollYProgress)
@@ -23,7 +23,7 @@ const BountiesSection = () => {
 				width: 0,
 				height: 0,
 			},
-			title: "bountie #2 prize",
+			title: "bounty #2 prize",
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
 			issue: {
@@ -51,7 +51,7 @@ const BountiesSection = () => {
 				width: 0,
 				height: 0,
 			},
-			title: "bountie #2 prize",
+			title: "bounty #2 prize",
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
 			issue: {
@@ -79,7 +79,7 @@ const BountiesSection = () => {
 				width: 0,
 				height: 0,
 			},
-			title: "bountie #2 prize",
+			title: "bounty #2 prize",
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
 			issue: {
@@ -107,7 +107,7 @@ const BountiesSection = () => {
 				width: 0,
 				height: 0,
 			},
-			title: "bountie #2 prize",
+			title: "bounty #2 prize",
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
 			issue: {
@@ -135,7 +135,7 @@ const BountiesSection = () => {
 				width: 0,
 				height: 0,
 			},
-			title: "bountie #2 prize",
+			title: "bounty #2 prize",
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
 			issue: {
@@ -163,7 +163,7 @@ const BountiesSection = () => {
 				width: 0,
 				height: 0,
 			},
-			title: "bountie #2 prize",
+			title: "bounty #2 prize",
 			description:
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
 			issue: {
@@ -212,7 +212,7 @@ const BountiesSection = () => {
 						TIES
 					</Title>
 
-					<Link href={"/#bounties"} passHref>
+					<Link href={"/#bounty"} passHref>
 						<a
 							style={{
 								gridArea: "a",
@@ -292,7 +292,7 @@ const BountiesSection = () => {
 	)
 }
 
-export default BountiesSection
+export default BountySection
 
 const ArrowContainer = styled(motion.figure)`
 	width: 6rem;
