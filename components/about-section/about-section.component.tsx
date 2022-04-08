@@ -11,19 +11,11 @@ import Button from "../button/button.component"
 const AboutSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformOpacity = useTransform(scrollYProgress, [0.13, 0.2], [1, 0])
+	// const transformOpacity = useTransform(scrollYProgress, [0.13, 0.2], [1, 0])
 
-	const transformYDO = useTransform(
-		scrollYProgress,
-		[0.01, 0.2, 1, 1],
-		[-200, 70, 15, 15]
-	)
+	const transformYDO = useTransform(scrollYProgress, [0.03, 0.3], [-250, 20])
 
-	const transformYT = useTransform(
-		scrollYProgress,
-		[0.01, 0.2, 0.95, 1],
-		[130, -70, 0, 0]
-	)
+	const transformYT = useTransform(scrollYProgress, [0.03, 0.3], [130, -40])
 
 	const partners = [
 		{

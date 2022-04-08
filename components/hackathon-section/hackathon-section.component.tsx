@@ -10,9 +10,9 @@ import Image from "next/image"
 const HackathonSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformHACK = useTransform(scrollYProgress, [0.35, 0.55], [-100, 0])
-	const transformATH = useTransform(scrollYProgress, [0.35, 0.55], [50, -50])
-	const transformON = useTransform(scrollYProgress, [0.35, 0.55], [-50, 0])
+	const transformHACK = useTransform(scrollYProgress, [0.54, 0.83], [-100, 0])
+	const transformATH = useTransform(scrollYProgress, [0.54, 0.83], [50, -50])
+	const transformON = useTransform(scrollYProgress, [0.54, 0.83], [-50, 0])
 
 	return (
 		<EventSectionContainer>
