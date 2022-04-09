@@ -2,12 +2,12 @@
 import type { NextPage } from "next"
 
 // Utils
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import styled from "styled-components"
 
 // Components
 import Head from "next/head"
-import Link from "next/link"
+// import Link from "next/link"
 import Image from "next/image"
 import Header from "../components/header/header.component"
 // import EventOverview from "../components/event-overview/event-overview.component"
@@ -17,8 +17,8 @@ import EventSection from "../components/event-section/event-section.component"
 import HackathonSection from "../components/hackathon-section/hackathon-section.component"
 import FooterSection from "../components/footer-section/footer-section.component"
 import Accordion from "../components/accordion/accordion.component"
-import BountySection from "../components/bounties-section/bounties-section.component"
-import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
+// import BountySection from "../components/bounties-section/bounties-section.component"
+// import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
 
 // Hooks
 import { useRouter } from "next/router"
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
 	// const containerRefH = useRef<HTMLDivElement>(null)
 	// const sectionRefH = useRef<HTMLDivElement>(null)
 
-	const [numH, { set: setH }] = useNumber(0)
+	// const [numH, { set: setH }] = useNumber(0)
 
 	// HACKATHON horizontal scroll
 	// const transformH = useTransform(scrollYProgress, [0.7, 1], [0, -numH])
