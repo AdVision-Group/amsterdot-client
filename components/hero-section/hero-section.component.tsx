@@ -54,11 +54,13 @@ const HeroSection = () => {
 			src: "/assets/partners-v2/logos/DFG.png",
 			alt: "dfg logo",
 			href: "https://www.dfg.group/",
+			width: 60,
 		},
 		{
 			src: "/assets/partners-v2/logos/Centrifuge.png",
 			alt: "centrifuge logo",
 			href: "https://centrifuge.io/",
+			width: 60,
 		},
 		{
 			src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
@@ -69,6 +71,14 @@ const HeroSection = () => {
 			src: "/assets/partners-v2/logos/astar.png",
 			alt: "astar logo",
 			href: "https://astar.network/",
+			width: 30,
+			height: 40,
+		},
+		{
+			src: "/assets/partners-v2/logos/phala-network-logo-white.png",
+			alt: "phala network logo",
+			href: "https://www.phala.network/en/",
+			width: 70,
 		},
 	]
 
@@ -194,10 +204,10 @@ const HeroSection = () => {
 									placeholder="blur"
 									blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
 									alt={partner.alt}
-									width={80}
-									height={40}
+									width={partner.width || 80}
+									height={partner.height || 40}
 									objectFit="contain"
-									layout="responsive"
+									layout="fixed"
 								/>
 							</motion.figure>
 						</a>
@@ -564,10 +574,15 @@ const PlaceContainer = styled.div`
 
 const PartnersContainer = styled.div`
 	position: relative;
-	display: grid;
-	/* flex-wrap: wrap; */
-	grid-template-columns: repeat(4, auto);
-	max-width: 35rem;
+	/* display: grid; */
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: space-around;
+	justify-content: space-between;
+	justify-content: center; */
+	/* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
+	width: 100%;
+	max-width: 36rem;
 	margin-left: auto;
 	gap: 1rem;
 	margin-top: 2rem;
@@ -575,6 +590,8 @@ const PartnersContainer = styled.div`
 	border-top: 1px solid #fff;
 
 	figure {
+		/* border: 1px solid green; */
+		/* width: 7rem; */
 		max-width: 10rem;
 		/* height: 3rem; */
 		position: relative;

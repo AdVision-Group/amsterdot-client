@@ -13,7 +13,7 @@ const AboutSection = () => {
 
 	// const transformOpacity = useTransform(scrollYProgress, [0.13, 0.2], [1, 0])
 
-	const transformYDO = useTransform(scrollYProgress, [0.03, 0.3], [-250, 20])
+	const transformYDO = useTransform(scrollYProgress, [0.03, 0.3], [-180, 150])
 
 	const transformYT = useTransform(scrollYProgress, [0.03, 0.3], [130, -40])
 
