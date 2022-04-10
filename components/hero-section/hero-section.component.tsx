@@ -577,8 +577,8 @@ const PartnersContainer = styled.div`
 	/* display: grid; */
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	/* justify-content: space-around;
-	justify-content: space-between;
 	justify-content: center; */
 	/* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
 	width: 100%;
