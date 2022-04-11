@@ -30,6 +30,10 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh; */
   }
 
+  section {
+    overflow: hidden;
+  }
+
   button {
     font-family: "Avenir Next", 'Acumin', sans-serif;
   }
