@@ -327,8 +327,8 @@ const Home: NextPage = () => {
 					/>
 				))}
 			</SectionContainer>
-			<PricepoolSection />
-			<BountySection />
+			{/* <PricepoolSection /> */}
+			{/* <BountySection /> */}
 			<FooterSection />
 		</React.Fragment>
 	)
