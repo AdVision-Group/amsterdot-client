@@ -116,7 +116,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d1/Alexei-Zamyatin.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -168,7 +168,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d1/HydraDX-jakub-gregus.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -200,7 +200,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d1/agyle.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -231,7 +231,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d1/danny.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -262,7 +262,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d1/DFG-james-wo.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
