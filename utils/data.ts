@@ -267,7 +267,8 @@ export const events = [
 				time: ["17:00", "17:30"],
 				title: "Intro to Polkadot & Substrate",
 				subTitle: "",
-				description: "This will be a 101-level introduction for developers who are interested in becoming involved in the Polkadot & Kusama ecosystems. It will cover an overview of the following:-Why Polkadot?-Polkadot architecture-Parachains-XCM-Governance-Substrate",
+				description:
+					"This will be a 101-level introduction for developers who are interested in becoming involved in the Polkadot & Kusama ecosystems. It will cover an overview of the following:-Why Polkadot?-Polkadot architecture-Parachains-XCM-Governance-Substrate",
 			},
 			{
 				user: {
@@ -1061,8 +1062,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "18:00"],
-				title:
-					"Robert Habermeier & Cassidy Daly & Jakub Gregus & Peter Mauric",
+				title: "Robert Habermeier & Cassidy Daly & Jakub Gregus & Peter Mauric",
 				subTitle: "",
 				description:
 					"Polkadot or Not: Common misunderstandings of key Polkadot features",
@@ -1289,7 +1289,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d4/Irina.png",
+						src: "/assets/speakers/d4/Irina-Karagyaur.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
