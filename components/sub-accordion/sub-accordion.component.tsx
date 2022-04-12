@@ -134,6 +134,7 @@ const UserContainer = styled.div`
 
 	display: grid;
 	grid-template-columns: auto 1fr;
+	grid-template-rows: auto;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 
@@ -141,9 +142,18 @@ const UserContainer = styled.div`
 		grid-row: 1/3;
 		position: relative;
 		width: 8rem;
+		height: 8rem;
 		margin-right: 1.5rem;
 		border-radius: 50%;
 		overflow: hidden;
+		/* border: 1px solid red; */
+		align-self: center;
+		justify-self: center;
+
+		img {
+			object-fit: contain;
+			/* transform: scale(1.4); */
+		}
 	}
 
 	h4 {
@@ -165,6 +175,7 @@ const UserContainer = styled.div`
 
 		figure {
 			width: 6rem;
+			height: 6rem;
 			margin: auto 1.5rem;
 		}
 	}
