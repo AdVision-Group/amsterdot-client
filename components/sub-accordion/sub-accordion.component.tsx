@@ -100,7 +100,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 							open: {
 								display: "block",
 								opacity: 1,
-								height: width <= 858 ? "20rem" : "12rem",
+								height: width <= 858 ? "64rem" : "28rem",
 							},
 							collapsed: {
 								opacity: 1,
