@@ -60,6 +60,16 @@ export const events = [
 				description: "Grab some snaks to soothe the hunger.",
 			},
 			{
+				user: {
+					img: {
+						src: "/assets/amsterdot-logo-no-text.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Elisabeth, Valery & Jakub",
+					subTitle: "amsterDOT",
+				},
 				icon: {
 					img: {
 						src: "/assets/event-icons/welcome-final.svg",
@@ -70,7 +80,7 @@ export const events = [
 					time: "14:00",
 				},
 				img: {
-					src: "/assets/person-final.svg",
+					src: "/assets/Logo-bg.svg",
 					alt: "ilustration",
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -79,7 +89,7 @@ export const events = [
 				title: "Opening by the organizers",
 				subTitle: "",
 				description:
-					"Our hosts Elisabeth, Valery and Jakub will officially kick off amsterDOT 2022, and also share with you some practical information about the event and the hackathon.",
+					"Our hosts will officially kick off amsterDOT 2022, and also share with you some practical information about the event and the hackathon.",
 			},
 			{
 				user: {
@@ -231,12 +241,12 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d1/danny.png",
+						src: "/assets/speakers/d2/keegan.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Danny",
+					title: "Keegan",
 					subTitle: "W3f",
 				},
 				icon: {
@@ -255,9 +265,9 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "17:30"],
-				title: "Data Layer Composability for Web3 UI",
+				title: "Intro to Polkadot & Substrate",
 				subTitle: "",
-				description: "More info soon.",
+				description: "This will be a 101-level introduction for developers who are interested in becoming involved in the Polkadot & Kusama ecosystems. It will cover an overview of the following:-Why Polkadot?-Polkadot architecture-Parachains-XCM-Governance-Substrate",
 			},
 			{
 				user: {
@@ -591,13 +601,13 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d2/keegan.png",
+						src: "/assets/speakers/d2/Thibaut.jpg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Keegan",
-					subTitle: "W3f",
+					title: "Thibaut",
+					subTitle: "Chainsafe",
 				},
 				icon: {
 					img: {
@@ -615,10 +625,9 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:00", "16:30"],
-				title: "Intro to Polkadot & Substrate",
+				title: "Keep Your Funds Safe, Offline",
 				subTitle: "",
-				description:
-					"This will be a 101-level introduction for developers who are interested in becoming involved in the Polkadot & Kusama ecosystems. It will cover an overview of the following:-Why Polkadot?-Polkadot architecture-Parachains-XCM-Governance-Substrate",
+				description: "More info soon.",
 			},
 			{
 				user: {
@@ -655,7 +664,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d2/Toma-Sadova.png",
+						src: "/assets/speakers/d2/Toma.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -964,7 +973,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d3/iiham.jpeg",
+						src: "/assets/speakers/d3/Ilhan.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -996,7 +1005,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d3/Eliott-Teissonniere.png",
+						src: "/assets/speakers/d3/Eliott.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1026,16 +1035,16 @@ export const events = [
 					"This presentation will cover how the Nodle Parachain and Nodle Network can be used to bring Web3 innovations and protocols to the real world. Today, most Web3 applications are digital-only and do not transcend into our daily lives, we will explain how this can be changed and what it means for the ecosystem and our daily lives.",
 			},
 			{
-				// user: {
-				// 	img: {
-				// 		src: "/assets/person-final.svg",
-				// 		alt: "ilustration",
-				// 		blurDataURL:
-				// 			"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				// 	},
-				// 	title: "",
-				// 	subTitle: "",
-				// },
+				user: {
+					img: {
+						src: "/assets/amsterdot-logo-no-text.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Panel",
+					subTitle: "amsterDOT",
+				},
 				icon: {
 					img: {
 						src: "/assets/event-icons/user-final.svg",
@@ -1053,7 +1062,7 @@ export const events = [
 				},
 				time: ["17:00", "18:00"],
 				title:
-					"Panel: Robert Habermeier & Cassidy Daly & Jakub Gregus & Peter Mauric",
+					"Robert Habermeier & Cassidy Daly & Jakub Gregus & Peter Mauric",
 				subTitle: "",
 				description:
 					"Polkadot or Not: Common misunderstandings of key Polkadot features",
@@ -1249,12 +1258,12 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d4/Alexandra-Heller.png",
+						src: "/assets/speakers/d4/Adam.jpg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Alexandra Heller",
+					title: "Adam Carver",
 					subTitle: "Bitgreen",
 				},
 				icon: {
@@ -1280,7 +1289,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d4/Irina-Karagyaur.png",
+						src: "/assets/speakers/d4/Irina.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
