@@ -100,7 +100,8 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 							open: {
 								display: "block",
 								opacity: 1,
-								height: width <= 858 ? "64rem" : "28rem",
+								// height: width <= 858 ? "64rem" : "28rem",
+								height: "auto",
 							},
 							collapsed: {
 								opacity: 1,
@@ -113,7 +114,10 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 						<Border showBorder={!!item.user} />
 						{!item.user && <Border showBorder={true} />}
 
-						<div>{item.description}</div>
+						<div>
+							{item.description}
+							<p style={{ opacity: 0 }}>{"⠀"}</p>
+						</div>
 					</ContentContainer>
 				)}
 			</AnimatePresence>
@@ -270,7 +274,7 @@ const TitleContainer = styled.div`
 	align-self: center;
 	text-transform: uppercase;
 	font-size: 2.5rem;
-	line-height: 1;
+	line-height: 1.2;
 	font-weight: 900;
 	color: ${({ theme }) => theme.color.primary};
 
