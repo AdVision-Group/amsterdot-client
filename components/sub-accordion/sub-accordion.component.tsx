@@ -136,6 +136,8 @@ const UserContainer = styled.div`
 		position: relative;
 		width: 8rem;
 		margin-right: 1.5rem;
+		border-radius: 50%;
+		overflow: hidden;
 	}
 
 	h4 {
@@ -153,6 +155,7 @@ const UserContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		margin-top: 0;
 		margin-bottom: 0;
+		border-left: 2px solid #333;
 
 		figure {
 			width: 6rem;
@@ -217,17 +220,17 @@ const AccordionHeading = styled(motion.div)`
 	/* gap: 4rem; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		grid-template-columns: auto 1fr auto;
+		grid-template-columns: auto 1fr minmax(auto, 31.5rem) auto;
 		grid-template-rows: auto;
-		gap: 1.8rem;
+		gap: 1.5rem;
 		grid-template-areas: "r t u a s";
-		padding: 1rem 3.5rem;
+		padding: 0.8rem 2.5rem;
 
 		${Border} {
 			display: none;
 		}
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			gap: 5rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* gap: 5rem; */
 		}
 	}
 `
@@ -273,6 +276,7 @@ const TitleContainer = styled.div`
 
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		align-self: center;
+		padding-left: 1.5rem;
 
 `
 
