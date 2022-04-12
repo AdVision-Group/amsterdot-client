@@ -13,7 +13,7 @@ const AboutSection = () => {
 
 	// const transformOpacity = useTransform(scrollYProgress, [0.13, 0.2], [1, 0])
 
-	const transformYDO = useTransform(scrollYProgress, [0.03, 0.3], [-180, 150])
+	const transformYDO = useTransform(scrollYProgress, [0.03, 0.25], [-180, 0])
 
 	const transformYT = useTransform(scrollYProgress, [0.03, 0.3], [130, -40])
 
@@ -329,8 +329,8 @@ const SectionContainer = styled.section`
 	/* height: 100vh; */
 	/* overflow: hidden; */
 	margin: 15rem 0 10rem;
-	/* overflow: unset !important;
-	overflow-x: hidden; */
+	overflow: unset !important;
+	overflow-x: hidden;
 	display: flex;
 	justify-content: center;
 
