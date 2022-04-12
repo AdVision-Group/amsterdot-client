@@ -11,7 +11,7 @@ import Button from "../button/button.component"
 const HeroSection = () => {
 	const partners = [
 		{
-			src: "/assets/partners-v2/logos/hzdra dz.png",
+			src: "/assets/partners-v2/logos/hdx.png",
 			alt: "hydra logo",
 			href: "https://hydradx.io/",
 		},
