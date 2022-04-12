@@ -70,6 +70,8 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 								alt={item.user.img.alt}
 								objectFit="contain"
 								layout="responsive"
+								placeholder="blur"
+								blurDataURL={item.user.img.blurDataURL}
 							/>
 						</figure>
 						<h4>{item.user.subTitle}</h4>
