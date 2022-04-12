@@ -62,7 +62,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/amsterdot-logo-no-text.png",
+						src: "/assets/speakers/d1/amsterdot-logo-conf.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1038,7 +1038,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/amsterdot-logo-no-text.png",
+						src: "/assets/speakers/d1/amsterdot-logo-conf.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
