@@ -275,7 +275,7 @@ const Header: React.FC<IProps> = ({
 										))}
 									</NestedUl>
 								</li>
-								<li>
+								{/* <li>
 									<Link href={"/#pricepool"}>
 										<a onClick={toggleMobileNav}>PRIZE POOL</a>
 									</Link>
@@ -284,7 +284,7 @@ const Header: React.FC<IProps> = ({
 									<Link href={"/#bounties-h"}>
 										<a onClick={toggleMobileNav}>BOUNTIES</a>
 									</Link>
-								</li>
+								</li> */}
 							</Ul>
 							{/* <ButtonsContainer justifyContent="flex-start">
 								<a
