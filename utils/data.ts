@@ -356,7 +356,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d2/Subsquid-dmitry.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -388,7 +388,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d2/bryan-chen.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -420,7 +420,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d2/centrifuge.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -473,7 +473,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d2/Marvin-Tong.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -505,7 +505,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d2/Maarten-Astar.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -537,7 +537,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d2/francisco-agosti.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -591,7 +591,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d2/keegan.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -623,7 +623,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d2/henry-duong.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -655,7 +655,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d2/Toma-Sadova.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -727,7 +727,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d3/Dr-Torsten-Stuber.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -760,7 +760,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d3/Ingo-Ruebe.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -793,7 +793,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d3/alex-hatoum.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -846,7 +846,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d3/polka-dirk.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -878,7 +878,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d3/tyler.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -911,7 +911,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d3/vykival.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -996,7 +996,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d3/Eliott-Teissonniere.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1026,16 +1026,16 @@ export const events = [
 					"This presentation will cover how the Nodle Parachain and Nodle Network can be used to bring Web3 innovations and protocols to the real world. Today, most Web3 applications are digital-only and do not transcend into our daily lives, we will explain how this can be changed and what it means for the ecosystem and our daily lives.",
 			},
 			{
-				// user: {
-				// 	img: {
-				// 		src: "/assets/person-final.svg",
-				// 		alt: "ilustration",
-				// 		blurDataURL:
-				// 			"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				// 	},
-				// 	title: "",
-				// 	subTitle: "",
-				// },
+				user: {
+					img: {
+						src: "/assets/person-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "",
+					subTitle: "",
+				},
 				icon: {
 					img: {
 						src: "/assets/event-icons/user-final.svg",
@@ -1101,7 +1101,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d4/Fabian-Riewe.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1133,7 +1133,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d4/MetaYingzi.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1165,7 +1165,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d4/Harald-Heckmann.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1218,7 +1218,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d4/Shumo-Chu.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1249,7 +1249,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d4/Alexandra-Heller.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1280,7 +1280,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d4/Irina-Karagyaur.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1332,7 +1332,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d4/Deli.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1364,7 +1364,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/person-final.svg",
+						src: "/assets/speakers/d4/birdo.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1692,3 +1692,4 @@ export const hackatons = [
 		],
 	},
 ]
+
