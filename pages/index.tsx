@@ -527,10 +527,7 @@ const WatermarkLetters = styled(motion.h2)`
 			}
 			&.st {
 				top: 21rem;
-<<<<<<< HEAD
 				right: -6rem;
-=======
->>>>>>> main
 			}
 			&.er {
 				display: block;

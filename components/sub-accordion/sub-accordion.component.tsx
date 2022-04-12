@@ -136,6 +136,8 @@ const UserContainer = styled.div`
 		position: relative;
 		width: 8rem;
 		margin-right: 1.5rem;
+		border-radius: 50%;
+		overflow: hidden;
 	}
 
 	h4 {
