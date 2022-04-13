@@ -13,6 +13,7 @@ import { useToggle } from "react-use"
 
 // Icons
 import { FaTwitter, FaDiscord } from "react-icons/fa"
+import { FiMail } from "react-icons/fi"
 
 // Data
 import { events, hackatons } from "../../utils/data"
@@ -268,6 +269,7 @@ const Header: React.FC<IProps> = ({
 										))}
 									</NestedUl>
 								</li>
+
 								{/* <li>
 									<Link href={"/#pricepool"}>
 										<a onClick={toggleMobileNav}>PRIZE POOL</a>
@@ -278,6 +280,18 @@ const Header: React.FC<IProps> = ({
 										<a onClick={toggleMobileNav}>BOUNTIES</a>
 									</Link>
 								</li> */}
+								<li style={{ opacity: 0 }}>x</li>
+								<EmailLi>
+									<figure>
+										<FiMail />
+									</figure>
+									<a
+										style={{ textDecoration: "underline" }}
+										href="mailto:amsterdot@hydradx.io"
+									>
+										amsterdot@hydradx.io
+									</a>
+								</EmailLi>
 							</Ul>
 							{/* <ButtonsContainer justifyContent="flex-start">
 								<a
@@ -304,6 +318,19 @@ const Header: React.FC<IProps> = ({
 }
 
 export default Header
+
+const EmailLi = styled.li`
+	font-weight: 700 !important;
+	display: flex;
+	align-items: center;
+
+	figure {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-right: 0.5rem;
+	}
+`
 
 const ButtonsContainer = styled(motion.div)<{ justifyContent?: string }>`
 	grid-area: b;
@@ -394,6 +421,7 @@ const MobileMenuContainer = styled(motion.div)`
 	color: ${({ theme }) => theme.fonts.primary};
 	/* opacity: 0.6; */
 	padding-top: 18rem;
+	overflow-y: auto;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		width: 55rem;
