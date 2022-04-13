@@ -247,7 +247,7 @@ export const events = [
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
 					title: "Keegan",
-					subTitle: "W3f",
+					subTitle: "Web3 Foundation",
 				},
 				icon: {
 					img: {
@@ -607,7 +607,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Thibaut",
+					title: "Thibaut Sardan",
 					subTitle: "Chainsafe",
 				},
 				icon: {
@@ -628,7 +628,7 @@ export const events = [
 				time: ["16:00", "16:30"],
 				title: "Keep Your Funds Safe, Offline",
 				subTitle: "",
-				description: "More info soon.",
+				description: "When interacting with Polkadot, you are most probably storing your accounts on an extension, or on a Ledger. This talk will walk through the different attack vectors that you could face, how to handle them, and how to securely store your accounts offline, with a mobile phone.",
 			},
 			{
 				user: {
