@@ -105,13 +105,6 @@ const Header: React.FC<IProps> = ({
 								>
 									<Button>BUY TICKETS</Button>
 								</a>
-								<a
-									href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									<Button outline={"true"}>APPLY TO SPEAK</Button>
-								</a>
 							</ButtonsContainer>
 						)}
 					</AnimatePresence>
