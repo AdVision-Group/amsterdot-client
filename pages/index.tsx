@@ -17,6 +17,7 @@ import EventSection from "../components/event-section/event-section.component"
 import HackathonSection from "../components/hackathon-section/hackathon-section.component"
 import FooterSection from "../components/footer-section/footer-section.component"
 import Accordion from "../components/accordion/accordion.component"
+import WorkshopSection from "../components/workshop-section/workshop-section.component"
 // import BountySection from "../components/bounties-section/bounties-section.component"
 // import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
 
@@ -312,7 +313,8 @@ const Home: NextPage = () => {
 				))}
 			</SectionContainer>
 
-			<HackathonSection />
+			{/* <HackathonSection /> */}
+			<WorkshopSection />
 
 			<SectionContainer>
 				{hackatons.map((h, idx) => (
@@ -327,6 +329,9 @@ const Home: NextPage = () => {
 					/>
 				))}
 			</SectionContainer>
+
+			{/* <HackathonSection /> */}
+
 			{/* <PricepoolSection /> */}
 			{/* <BountySection /> */}
 			<FooterSection />
