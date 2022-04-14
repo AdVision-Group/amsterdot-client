@@ -155,11 +155,11 @@ const HeroSection = () => {
 					</ImageContainer>
 					<ButtonsContainer>
 						<a
-							href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
+							href="#"
 							rel="noopener noreferrer"
 							target="_blank"
 						>
-							<Button>BUY TICKETS</Button>
+							<Button>SOLD OUT</Button>
 						</a>
 						<a
 							href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
