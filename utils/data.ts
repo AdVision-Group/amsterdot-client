@@ -126,13 +126,13 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d1/Alexei-Zamyatin.png",
+						src: "/assets/speakers/d2/centrifuge.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Alexei Zamyatin",
-					subTitle: "Interlay",
+					title: "Cassidy & Nicoló",
+					subTitle: "Centrifuge",
 				},
 				icon: {
 					img: {
@@ -150,9 +150,10 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["15:00", "15:30"],
-				title: "Radically open Bitcoin for parachains",
+				title: "Leveraging the power of Real World Assets in Dotsama",
 				subTitle: "",
-				description: "More info to be added",
+				description:
+					"A deep dive on how Centrifuge will integrate into the Dotsama ecosystem to bootstrap DeFi with Real World Assets and start to accelerate its growth.",
 			},
 			{
 				icon: {
@@ -431,13 +432,13 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d2/centrifuge.png",
+						src: "/assets/speakers/d1/Alexei-Zamyatin.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Cassidy & Nicoló",
-					subTitle: "Centrifuge",
+					title: "Alexei Zamyatin",
+					subTitle: "Interlay",
 				},
 				icon: {
 					img: {
@@ -455,10 +456,9 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["12:00", "12:30"],
-				title: "Leveraging the power of Real World Assets in Dotsama",
+				title: "Radically open Bitcoin for parachains",
 				subTitle: "",
-				description:
-					"A deep dive on how Centrifuge will integrate into the Dotsama ecosystem to bootstrap DeFi with Real World Assets and start to accelerate its growth.",
+				description: "More info to be added",
 			},
 			{
 				icon: {
@@ -1524,13 +1524,23 @@ export const hackatons = [
 			height: 200,
 		},
 		day: "#2",
-		title: "HACKATHON",
+		title: "WORKSHOPS",
 		date: {
 			day: 21,
 			month: "APRIL",
 		},
 		items: [
 			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/Parity.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Alejandro",
+					subTitle: "",
+				},
 				icon: {
 					img: {
 						src: "/assets/event-icons/space-to-hack.svg",
@@ -1538,7 +1548,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "09:00",
+					time: "10:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1546,13 +1556,54 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["09:00", "12:30"],
-				title: "Workshop #1: Build a Pallet on Substrate",
+				time: ["10:30", "12:30"],
+				title: "Bringing together hackers and substrate pallets",
 				subTitle: "",
 				description:
-					"The first introductory workshop covers the basics of Substrate pallets and shows you how do build one, hands on. Basic knowledge of Rust is recommended but not required.",
+					"Content covering how to read and work with FRAME, with the objective of getting hackers to know how to properly read pallets and start to design them.",
 			},
 			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/talisman-logo.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Nipsey",
+					subTitle: "",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/workshop-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "14:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["14:00", "15:00"],
+				title: "Adding Talisman wallet integration to your substrate dapp",
+				subTitle: "",
+				description: "Talisman connect lib & Demo of the integration.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/subsquid.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Massimo",
+					subTitle: "",
+				},
 				icon: {
 					img: {
 						src: "/assets/event-icons/workshop-final.svg",
@@ -1568,11 +1619,41 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["14:00", "18:00"],
-				title: "Workshop #2: Build a UI for a Substrate Pallet",
+				time: ["15:00", "16:00"],
+				title: "From Zero to Hero with Subsquid",
 				subTitle: "",
-				description:
-					"In the second introductory workshop, we will be building a frontend for our Substrate pallet. The only prerequisite is basic knowledge of Javascript / React.",
+				description: "Introduction to Subsquid, deeper dive into coding a small project, to showcase the SDK.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/hdx.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "mrq",
+					subTitle: "",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/workshop-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "16:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["16:00", "17:00"],
+				title: "Exploring the substrate state and history by using Subsquid Archive",
+				subTitle: "",
+				description: "We'll look at the options to query the state and history of the substrate chain and on Subsquid Archive in detail from its setup to advanced analysis of chain history.",
 			},
 		],
 	},
@@ -1587,13 +1668,23 @@ export const hackatons = [
 			height: 200,
 		},
 		day: "#3",
-		title: "HACKATHON",
+		title: "WORKSHOPS",
 		date: {
 			day: 22,
 			month: "APRIL",
 		},
 		items: [
 			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/Centrifuge.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Nuno",
+					subTitle: "",
+				},
 				icon: {
 					img: {
 						src: "/assets/event-icons/space-to-hack.svg",
@@ -1601,7 +1692,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "09:00",
+					time: "10:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1609,20 +1700,30 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["09:00", "12:30"],
-				title: "Workshop #3",
+				time: ["10:30", "11:30"],
+				title: "XCMP: Learnings, Tips and Tools",
 				subTitle: "",
-				description: "TBA soon.",
+				description: "More info soon.",
 			},
 			{
-				icon: {
+				user: {
 					img: {
-						src: "/assets/event-icons/workshop-final.svg",
+						src: "/assets/partners-v2/logos/astar.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "12:30",
+					title: "Maarten",
+					subTitle: "",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/space-to-hack.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "11:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1630,11 +1731,41 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["14:00", "18:00"],
-				title: "Space to hack",
+				time: ["11:30", "12:30"],
+				title: "WASM - Building contracts with ink!",
 				subTitle: "",
-				description:
-					"Build teams and hack away! Make sure to check out the bounties offered by the supporting projects.",
+				description: "Explain the power of WASM and ink! language and how to deploy this in our network.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/hdx.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Matej & Istvan",
+					subTitle: "",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/space-to-hack.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "14:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["14:00", "17:00"],
+				title: "Building real-time user intefaces for polkadot based chains, with focus on accuracy",
+				subTitle: "",
+				description: "We'll build a web3 app for the Basilisk AMM to execute trades and view historical price movements. Join this comprehensive workshop to acquire hands-on experience interacting with polkadot based chains and leverage this foundation to build future products (such as an arbitrage bot). Among others, we'll learn how to read and navigate RUST code, identify emitted events and build effective strategies to process data, precompute parameters for trading, basics of GraphQL and writing resolvers in React.",
 			},
 		],
 	},
@@ -1649,13 +1780,23 @@ export const hackatons = [
 			height: 200,
 		},
 		day: "#4",
-		title: "HACKATHON",
+		title: "WORKSHOPS",
 		date: {
 			day: 23,
 			month: "APRIL",
 		},
 		items: [
 			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/Interplay.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Dan Savu",
+					subTitle: "",
+				},
 				icon: {
 					img: {
 						src: "/assets/event-icons/space-to-hack.svg",
@@ -1663,7 +1804,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "09:00",
+					time: "10:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1671,20 +1812,30 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["09:00", "12:30"],
-				title: "Workshop #4",
+				time: ["10:30", "12:30"],
+				title: "Vaults & Mints: Bitcoin DeFi 101 for Dotsama",
 				subTitle: "",
-				description: "TBA soon.",
+				description: "We'll explain how interBTC works, how to mint and how to spin up a Vault. Ideally, also have a demo of how/what you can build on Interlay + a feature bounty.",
 			},
 			{
-				icon: {
+				user: {
 					img: {
-						src: "/assets/event-icons/workshop-final.svg",
+						src: "/assets/partners-v2/logos/acala-logo.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "15:00",
+					title: "Bryan Chen",
+					subTitle: "",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/space-to-hack.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "14:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1692,12 +1843,43 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["14:00", "18:00"],
-				title: "Space to hack",
+				time: ["14:00", "16:00"],
+				title: "How to enhance the EVM via precompiles: a code walkthrough of the Acala EVM+",
 				subTitle: "",
-				description:
-					"Build teams and hack away! Make sure to check out the bounties offered by the supporting projects.",
+				description: "In this workshop, I will do a deep dive overview of the Acala EVM+ which brings together EVM and Substrate.",
 			},
+			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Henry Duong",
+					subTitle: "",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/space-to-hack.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "16:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["16:00", "17:00"],
+				title: "Using Precompiles to Create a Staking DAO on Moonbeam",
+				subTitle: "",
+				description: "A technical demonstration of how to use Moonbeam precompiles to allow Solidity smart contracts to directly interact with Substrate pallets, such as the staking pallet. The workshop will give a quick overview of staking mechanisms on Moonbeam, the Moonbeam staking precompile and its interface, and then will proceed to show how to create and deploy a staking DAO DApp that allows users to trustlessly aggregate and manage their tokens on the DAO, and stake on Moonbeam directly as a DAO entity.",
+			},
+			
 		],
 	},
 ]
