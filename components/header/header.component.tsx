@@ -99,12 +99,8 @@ const Header: React.FC<IProps> = ({
 								}}
 								// justifyContent="center"
 							>
-								<a
-									href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									<Button>BUY TICKETS</Button>
+								<a href="#">
+									<Button>SOLD OUT</Button>
 								</a>
 							</ButtonsContainer>
 						)}
