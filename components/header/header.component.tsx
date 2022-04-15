@@ -100,7 +100,7 @@ const Header: React.FC<IProps> = ({
 								// justifyContent="center"
 							>
 								<a href="#">
-									<Button>SOLD OUT</Button>
+									<Button disabled>SOLD OUT</Button>
 								</a>
 							</ButtonsContainer>
 						)}
@@ -340,12 +340,14 @@ const ButtonsContainer = styled(motion.div)<{ justifyContent?: string }>`
 	/* margin: 2rem 0; */
 	display: flex;
 	padding: 1.5rem 0 0;
+
 	button {
 		font-family: "Avenir Next";
 		font-size: 1.5rem;
 		font-weight: 700;
 		padding: 1rem 1rem 0.8rem;
 		transition: all 0.3s ease-in-out;
+		/* background-color:  */
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {

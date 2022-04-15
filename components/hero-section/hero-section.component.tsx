@@ -165,7 +165,7 @@ const HeroSection = () => {
 					</ImageContainer>
 					<ButtonsContainer>
 						<a href="#">
-							<Button>SOLD OUT</Button>
+							<Button disabled>SOLD OUT</Button>
 						</a>
 					</ButtonsContainer>
 					<PlaceContainer>

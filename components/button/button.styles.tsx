@@ -33,16 +33,11 @@ export const ButtonContainer = styled(motion.button)<IButtonProps>`
 		position: relative;
 		cursor: default;
 		/* opacity: 0.4; */
-		color: ${({ theme }) => theme.color.primary};
-		background-color: ${({ theme }) => theme.background.container};
-		&:after {
-			position: absolute;
-			content: "coming soon";
-			background-color: ${({ theme }) => theme.background.primary};
-			border: 1px solid ${({ theme }) => theme.color.primary};
-			padding: 0.4rem 1rem;
-			border-radius: 0.3rem;
-			bottom: -2rem;
-		}
+		color: ${({ theme }) => theme.fonts.primary};
+		background-color: ${({ theme }) => theme.background.activeContainer};
+		border: ${({ theme, outline }) =>
+			outline
+				? `2px solid ${theme.background.activeContainer}`
+				: `2px solid ${theme.background.activeContainer}`};
 	}
 `
