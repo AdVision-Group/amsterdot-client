@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
-import Link from "next/link"
+// import Link from "next/link"
 import Image from "next/image"
 
 const WorkshopSection = () => {
@@ -110,9 +110,12 @@ const WORKContainer = styled(motion.figure)`
 	/* margin-bottom: 2rem; */
 	width: 28rem;
 	/* border: 1px solid red; */
+	margin-top: -4rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		width: 48rem;
+		margin-top: -8rem;
+
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-top: -10rem;
 			width: 68rem;
@@ -124,9 +127,11 @@ const SHOPContainer = styled(motion.figure)`
 	grid-area: s;
 	width: 28rem;
 	margin-top: -8rem;
+	margin-bottom: -6rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		width: 48rem;
+		margin-bottom: -10rem;
 		margin-top: -14rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-top: -20rem;
