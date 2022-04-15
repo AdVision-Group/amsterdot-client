@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
-// import Link from "next/link"
+import Link from "next/link"
 import Image from "next/image"
 
 const WorkshopSection = () => {
@@ -30,50 +30,82 @@ const WorkshopSection = () => {
 						height={70}
 					/>
 				</WORKContainer>
-				<SHOPContainer
+				<div
 					style={{
-						x: transformSHOP,
+						display: "flex",
+						gap: "3rem",
 					}}
 				>
-					<Image
-						src="/assets/workshop-section/shop.svg"
-						alt="work"
-						objectFit="contain"
-						layout="responsive"
-						width={100}
-						height={70}
-					/>
-				</SHOPContainer>
-				{/* <Title
-					style={{
-						x: transformHACK,
-					}}
-					className="hack"
-				>
-					HACK
-				</Title>
-				<Title
-					style={{
-						x: transformATH,
-					}}
-					className="ath"
-				>
-					ATH
-				</Title>
-				<Title
-					style={{
-						x: transformON,
-					}}
-					className="on"
-				>
-					ON
-				</Title> */}
+					<SHOPContainer
+						style={{
+							x: transformSHOP,
+						}}
+					>
+						<Image
+							src="/assets/workshop-section/shop.svg"
+							alt="work"
+							objectFit="contain"
+							layout="responsive"
+							width={100}
+							height={70}
+						/>
+					</SHOPContainer>
+					<Link href={"/#hack-2"} passHref>
+						<a>
+							<ArrowContainer
+							// animate={{
+							// 	x: [0, -10, -5, -15, 0],
+							// 	// scale: [1.2, 1, 0.9, 0.97, 1.2],
+							// }}
+							// transition={{
+							// 	repeat: Infinity,
+							// 	ease: "easeInOut",
+							// 	duration: 10,
+							// }}
+							>
+								<Image
+									src={"/assets/arrow-down-final.svg"}
+									alt="red circle"
+									layout="responsive"
+									width={100}
+									height={100}
+									objectFit="contain"
+								/>
+							</ArrowContainer>
+						</a>
+					</Link>
+				</div>
 			</Container>
 		</EventSectionContainer>
 	)
 }
 
 export default WorkshopSection
+
+const ArrowContainer = styled(motion.figure)`
+	grid-area: a;
+	position: relative;
+	z-index: -3;
+	justify-self: end;
+	margin: 2rem 0;
+
+	width: 6rem;
+	heigth: 6rem;
+	/* bottom: 5rem; */
+	/* left: 3rem; */
+	/* display: none; */
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		/* display: block; */
+		width: 8rem;
+		heigth: 8rem;
+		/* bottom: 6rem; */
+		align-self: end;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* bottom: 25rem; */
+		}
+	}
+`
 
 const EventSectionContainer = styled.section`
 	/* border: 1px solid yellow; */
