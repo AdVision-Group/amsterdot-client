@@ -320,7 +320,7 @@ const BOUNContainer = styled(motion.figure)`
 	width: 18rem;
 	margin-bottom: -4rem;
 	/* border: 1px solid red; */
-	margin-top: -4rem;
+	margin-top: -2rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		width: 22rem;
