@@ -232,7 +232,7 @@ const BountySection = () => {
 						TIES
 					</Title>
 
-					<Link href={"/#bounty"} passHref>
+					<Link href={"/#bounties"} passHref>
 						<a
 							style={{
 								gridArea: "a",
@@ -281,16 +281,22 @@ const BountySection = () => {
 							<p>{i.description}</p>
 							<BountyBottomContainer>
 								<BountyBottomFlexContainer>
-									<IssueFigure>
-										<Image
-											src={i.issueIcon.src}
-											alt={i.issueIcon.alt}
-											layout="responsive"
-											width={50}
-											height={50}
-											objectFit="contain"
-										/>
-									</IssueFigure>
+									<a
+										href={i.issue.href}
+										rel="noopener noreferrer"
+										target="_blank"
+									>
+										<IssueFigure>
+											<Image
+												src={i.issueIcon.src}
+												alt={i.issueIcon.alt}
+												layout="responsive"
+												width={50}
+												height={50}
+												objectFit="contain"
+											/>
+										</IssueFigure>
+									</a>
 									<a
 										href={i.issue.href}
 										rel="noopener noreferrer"

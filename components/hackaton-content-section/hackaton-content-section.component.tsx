@@ -31,7 +31,7 @@ const HackatonContentSection = () => {
 							rutrum consequat arcu pharetra vitae.
 						</p>
 						<ButtonsContainer>
-							<Link href={"/#day-1"}>
+							<Link href={"/#pricepool"}>
 								<a>
 									<Button>LET{"´"}S HACK</Button>
 								</a>
