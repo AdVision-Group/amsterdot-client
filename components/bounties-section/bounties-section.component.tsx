@@ -18,16 +18,16 @@ const BountySection = () => {
 	const bounties = [
 		{
 			logo: {
-				src: "/assets/bounty-section/hydra-logo.svg",
+				src: "/assets/partners-v2/logos/Subsquid.png",
 				alt: "hydra logo",
 				width: 0,
 				height: 0,
 			},
-			title: "bounty #2 prize",
+			title: "Karura DeFi Dashboard",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
+				"The winning team has to use Subsquid’s SDK to extract and process on-chain data, and then build a lightweight Web UI to access and display it.",
 			issue: {
-				href: "#",
+				href: "https://github.com/subsquid/community/issues/7",
 				label: "issue",
 			},
 			issueIcon: {
