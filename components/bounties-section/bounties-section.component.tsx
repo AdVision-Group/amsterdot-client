@@ -12,7 +12,7 @@ const BountySection = () => {
 
 	// console.log(scrollYProgress)
 
-	const transformBOUN = useTransform(scrollYProgress, [0.63, 0.89], [150, -100])
+	const transformBOUN = useTransform(scrollYProgress, [0.63, 0.89], [150, 0])
 	const transformTIES = useTransform(scrollYProgress, [0.63, 0.89], [0, 100])
 
 	const bounties = [
@@ -195,14 +195,28 @@ const BountySection = () => {
 		<React.Fragment>
 			<BountiesSectionContainer id="bounties-h">
 				<HeadingContainer>
-					<Title
+					{/* <Title
 						style={{
 							x: transformBOUN,
 						}}
 						className="boun"
 					>
 						BOUN
-					</Title>
+					</Title> */}
+					<BOUNContainer
+						style={{
+							x: transformBOUN,
+						}}
+					>
+						<Image
+							src="/assets/bounty-section/boun.png"
+							alt="work"
+							objectFit="contain"
+							layout="responsive"
+							width={100}
+							height={70}
+						/>
+					</BOUNContainer>
 					<Title
 						style={{
 							x: transformTIES,
@@ -293,6 +307,36 @@ const BountySection = () => {
 }
 
 export default BountySection
+
+const BOUNContainer = styled(motion.figure)`
+	position: relative;
+	grid-area: b;
+
+	/* grid-area: w; */
+	/* width: 16rem; */
+	/* height: 5rem; */
+	/* border: 1px solid green; */
+	/* justify-self: end; */
+	width: 18rem;
+	margin-bottom: -4rem;
+	/* border: 1px solid red; */
+	margin-top: -4rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		width: 22rem;
+		margin-top: -3rem;
+		margin-bottom: -5rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			width: 38rem;
+			margin-bottom: -10rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				margin-top: -10rem;
+				width: 68rem;
+			}
+		}
+	}
+`
 
 const ArrowContainer = styled(motion.figure)`
 	width: 6rem;
