@@ -189,18 +189,16 @@ const ContentContainer = styled.div`
 // `
 
 const ButtonsContainer = styled.div`
-	/* grid-area: b; */
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
 	align-self: end;
-	align-items: center;
 	justify-self: end;
-	justify-content: space-between;
 	width: 100%;
 	margin-top: 2rem;
-	margin-left: auto;
-	/* margin: 2rem 0; */
+	display: flex;
+	justify-content: flex-end;
+
+	a {
+		display: block;
+	}
 
 	button {
 		display: block;
@@ -211,12 +209,6 @@ const ButtonsContainer = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		/* flex-gap: 1rem; */
-		/* align-items: end; */
-		justify-content: flex-start;
-		flex-wrap: unset;
-		gap: 2rem;
-
 		button {
 			font-size: 2rem;
 			line-height: 1;
