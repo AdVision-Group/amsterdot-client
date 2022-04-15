@@ -628,7 +628,8 @@ export const events = [
 				time: ["16:00", "16:30"],
 				title: "Keep Your Funds Safe, Offline",
 				subTitle: "",
-				description: "When interacting with Polkadot, you are most probably storing your accounts on an extension, or on a Ledger. This talk will walk through the different attack vectors that you could face, how to handle them, and how to securely store your accounts offline, with a mobile phone.",
+				description:
+					"When interacting with Polkadot, you are most probably storing your accounts on an extension, or on a Ledger. This talk will walk through the different attack vectors that you could face, how to handle them, and how to securely store your accounts offline, with a mobile phone.",
 			},
 			{
 				user: {
@@ -1596,7 +1597,7 @@ export const hackatons = [
 			{
 				user: {
 					img: {
-						src: "/assets/partners-v2/logos/subsquid.png",
+						src: "/assets/partners-v2/logos/Subsquid.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1622,7 +1623,8 @@ export const hackatons = [
 				time: ["15:00", "16:00"],
 				title: "From Zero to Hero with Subsquid",
 				subTitle: "",
-				description: "Introduction to Subsquid, deeper dive into coding a small project, to showcase the SDK.",
+				description:
+					"Introduction to Subsquid, deeper dive into coding a small project, to showcase the SDK.",
 			},
 			{
 				user: {
@@ -1651,9 +1653,11 @@ export const hackatons = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:00", "17:00"],
-				title: "Exploring the substrate state and history by using Subsquid Archive",
+				title:
+					"Exploring the substrate state and history by using Subsquid Archive",
 				subTitle: "",
-				description: "We'll look at the options to query the state and history of the substrate chain and on Subsquid Archive in detail from its setup to advanced analysis of chain history.",
+				description:
+					"We'll look at the options to query the state and history of the substrate chain and on Subsquid Archive in detail from its setup to advanced analysis of chain history.",
 			},
 		],
 	},
@@ -1734,7 +1738,8 @@ export const hackatons = [
 				time: ["11:30", "12:30"],
 				title: "WASM - Building contracts with ink!",
 				subTitle: "",
-				description: "Explain the power of WASM and ink! language and how to deploy this in our network.",
+				description:
+					"Explain the power of WASM and ink! language and how to deploy this in our network.",
 			},
 			{
 				user: {
@@ -1763,9 +1768,11 @@ export const hackatons = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:00", "17:00"],
-				title: "Building real-time user intefaces for polkadot based chains, with focus on accuracy",
+				title:
+					"Building real-time user intefaces for polkadot based chains, with focus on accuracy",
 				subTitle: "",
-				description: "We'll build a web3 app for the Basilisk AMM to execute trades and view historical price movements. Join this comprehensive workshop to acquire hands-on experience interacting with polkadot based chains and leverage this foundation to build future products (such as an arbitrage bot). Among others, we'll learn how to read and navigate RUST code, identify emitted events and build effective strategies to process data, precompute parameters for trading, basics of GraphQL and writing resolvers in React.",
+				description:
+					"We'll build a web3 app for the Basilisk AMM to execute trades and view historical price movements. Join this comprehensive workshop to acquire hands-on experience interacting with polkadot based chains and leverage this foundation to build future products (such as an arbitrage bot). Among others, we'll learn how to read and navigate RUST code, identify emitted events and build effective strategies to process data, precompute parameters for trading, basics of GraphQL and writing resolvers in React.",
 			},
 		],
 	},
@@ -1815,7 +1822,8 @@ export const hackatons = [
 				time: ["10:30", "12:30"],
 				title: "Vaults & Mints: Bitcoin DeFi 101 for Dotsama",
 				subTitle: "",
-				description: "We'll explain how interBTC works, how to mint and how to spin up a Vault. Ideally, also have a demo of how/what you can build on Interlay + a feature bounty.",
+				description:
+					"We'll explain how interBTC works, how to mint and how to spin up a Vault. Ideally, also have a demo of how/what you can build on Interlay + a feature bounty.",
 			},
 			{
 				user: {
@@ -1844,9 +1852,11 @@ export const hackatons = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:00", "16:00"],
-				title: "How to enhance the EVM via precompiles: a code walkthrough of the Acala EVM+",
+				title:
+					"How to enhance the EVM via precompiles: a code walkthrough of the Acala EVM+",
 				subTitle: "",
-				description: "In this workshop, I will do a deep dive overview of the Acala EVM+ which brings together EVM and Substrate.",
+				description:
+					"In this workshop, I will do a deep dive overview of the Acala EVM+ which brings together EVM and Substrate.",
 			},
 			{
 				user: {
@@ -1877,9 +1887,9 @@ export const hackatons = [
 				time: ["16:00", "17:00"],
 				title: "Using Precompiles to Create a Staking DAO on Moonbeam",
 				subTitle: "",
-				description: "A technical demonstration of how to use Moonbeam precompiles to allow Solidity smart contracts to directly interact with Substrate pallets, such as the staking pallet. The workshop will give a quick overview of staking mechanisms on Moonbeam, the Moonbeam staking precompile and its interface, and then will proceed to show how to create and deploy a staking DAO DApp that allows users to trustlessly aggregate and manage their tokens on the DAO, and stake on Moonbeam directly as a DAO entity.",
+				description:
+					"A technical demonstration of how to use Moonbeam precompiles to allow Solidity smart contracts to directly interact with Substrate pallets, such as the staking pallet. The workshop will give a quick overview of staking mechanisms on Moonbeam, the Moonbeam staking precompile and its interface, and then will proceed to show how to create and deploy a staking DAO DApp that allows users to trustlessly aggregate and manage their tokens on the DAO, and stake on Moonbeam directly as a DAO entity.",
 			},
-			
 		],
 	},
 ]
