@@ -242,13 +242,13 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d2/keegan.png",
+						src: "/assets/speakers/d1/tomaz.jpg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Keegan",
-					subTitle: "Web3 Foundation",
+					title: "Tomaz Levak",
+					subTitle: "OriginTrail",
 				},
 				icon: {
 					img: {
@@ -266,10 +266,9 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "17:30"],
-				title: "Intro to Polkadot & Substrate",
+				title: "The Google of Web3 on Polkadot",
 				subTitle: "",
-				description:
-					"This will be a 101-level introduction for developers who are interested in becoming involved in the Polkadot & Kusama ecosystems. It will cover an overview of the following:-Why Polkadot?-Polkadot architecture-Parachains-XCM-Governance-Substrate",
+				description: "Introduction to OriginTrail Parachain - by harnessing the power of the OriginTrail Decentralized Knowledge Graph, OriginTrail Parachain extends discoverability, verifiability and greater value for interconnected Web3 assets to Polkadot.",
 			},
 			{
 				user: {
@@ -1253,7 +1252,7 @@ export const events = [
 				time: ["14:00", "14:30"],
 				title: "Composable privacy on Polkadot",
 				subTitle: "",
-				description: "More info soon.",
+				description: "Manta Network brings privacy to all parachain assets by taking advantage of zero-knowledge proofs (ZKPs), the unspent transaction output model (UTXO), and one of the core functionalities of Polkadot: the cross-consensus message format (XCM). Learn about how Manta Network has combined all of these into a scalable, privacy-first platform that offers private transacting, swapping, and other core functionalities.",
 			},
 			{
 				user: {
@@ -1677,12 +1676,12 @@ export const hackatons = [
 			{
 				user: {
 					img: {
-						src: "/assets/partners-v2/logos/Centrifuge.png",
+						src: "/assets/partners-v2/logos/astar.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Nuno",
+					title: "Maarten",
 					subTitle: "",
 				},
 				icon: {
@@ -1701,19 +1700,19 @@ export const hackatons = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["10:30", "11:30"],
-				title: "XCMP: Learnings, Tips and Tools",
+				title: "WASM - Building contracts with ink!",
 				subTitle: "",
-				description: "More info soon.",
+				description: "Explain the power of WASM and ink! language and how to deploy this in our network.",
 			},
 			{
 				user: {
 					img: {
-						src: "/assets/partners-v2/logos/astar.png",
+						src: "/assets/partners-v2/logos/Centrifuge.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Maarten",
+					title: "Nuno",
 					subTitle: "",
 				},
 				icon: {
@@ -1732,9 +1731,9 @@ export const hackatons = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["11:30", "12:30"],
-				title: "WASM - Building contracts with ink!",
+				title: "XCMP: Learnings, Tips and Tools",
 				subTitle: "",
-				description: "Explain the power of WASM and ink! language and how to deploy this in our network.",
+				description: "More info soon.",
 			},
 			{
 				user: {
@@ -1874,12 +1873,42 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["16:00", "17:00"],
+				time: ["16:00", "16:45"],
 				title: "Using Precompiles to Create a Staking DAO on Moonbeam",
 				subTitle: "",
 				description: "A technical demonstration of how to use Moonbeam precompiles to allow Solidity smart contracts to directly interact with Substrate pallets, such as the staking pallet. The workshop will give a quick overview of staking mechanisms on Moonbeam, the Moonbeam staking precompile and its interface, and then will proceed to show how to create and deploy a staking DAO DApp that allows users to trustlessly aggregate and manage their tokens on the DAO, and stake on Moonbeam directly as a DAO entity.",
 			},
-			
+			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Gorka",
+					subTitle: "",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/space-to-hack.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "16:45",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["16:45", "17:30"],
+				title: "Enabling Cross-Chain Assets on Moonbeam with XCM",
+				subTitle: "",
+				description: "Gorka, Research Developer at Moonbeam, will talk about Moonriver's native cross-chain token capabilities on Moonriver. Learn how to utilize Moonriver's XCM capabilities to allow the use of XC-20s, a type of interoperable token that conforms to the ERC-20 standard but is also Substrate-native assets. In this workshop, learn how to access and interact with xc-20 assets through smart contracts, and how can we use XCM (Cross Consensus Messaging) to transfer them across parachains.",
+			},
 		],
 	},
 ]
