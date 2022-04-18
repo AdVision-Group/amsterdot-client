@@ -1340,13 +1340,13 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d4/Deli.png",
+						src: "/assets/speakers/d4/andrea.jpg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Deli",
-					subTitle: "Automata Network",
+					title: "Andrea Leiter",
+					subTitle: "Sovereign Nature Initiative",
 				},
 				icon: {
 					img: {
@@ -1364,6 +1364,38 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:00", "16:30"],
+				title: "Creating value at the intersection of ecology, technology and economics",
+				subTitle: "",
+				description:
+					"The talk presents the approach of the Sovereign Nature Initiative in reconfiguring the intersection between ecology, economy and emerging technologies in order to open our minds to radical approaches toward sustainability.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/speakers/d4/Deli.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Deli",
+					subTitle: "Automata Network",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "16:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["16:30", "17:00"],
 				title: "Enhance your Web3 app with Automata Middlewares",
 				subTitle: "",
 				description:
@@ -1387,7 +1419,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "16:30",
+					time: "17:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1395,7 +1427,7 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["16:30", "17:00"],
+				time: ["17:00", "17:30"],
 				title: "Collabland Integration & Token Gated Communities",
 				subTitle: "",
 				description: "More info soon.",
@@ -1408,7 +1440,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "17:00",
+					time: "17:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1416,7 +1448,7 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["17:00", "19:00"],
+				time: ["17:30", "19:00"],
 				title: "Drinks",
 				subTitle: "",
 				description: "Offering space to meet, greet and network.",
@@ -1564,6 +1596,38 @@ export const hackatons = [
 			{
 				user: {
 					img: {
+						src: "/assets/partners-v2/logos/Parity.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Dominique",
+					subTitle: "",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/space-to-hack.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "14:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["14:00", "15:00"],
+				title: "Tools to use to interact with the network",
+				subTitle: "",
+				description:
+					"Workshop to show the different ways someone can interact with a node, extract useful information and get a more deeper insight of what is happening in the node (for example when we submit a tx). Hence give an intro to tools like sidecar and txwrapper-core and explain what they do and then show some examples.Setup prerequisitesHave a polkadot full node (cloned + built) locallyDuring the workshopGit clone the sidecar repo and build it.Git clone txwrapper-core and built itSome exercises would be :- Run a dev node locally + sidecar + txwrapper-core- Get the decoded metadata from the node by using sidecar- Submit a transaction through txwrapper-core- Show different ways on how to check how this transaction is processed  - Show p—js apps UI and show the events and what info we get from here  - Show the logs that the node provides by checking different flags (eg. Trace flags)  - Show the endpoints that sidecar provides- Run sidecar and get metadata / run different queries related to the transaction and to the block of the transaction.",
+			},
+			{
+				user: {
+					img: {
 						src: "/assets/partners-v2/logos/talisman-logo.png",
 						alt: "ilustration",
 						blurDataURL:
@@ -1579,7 +1643,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "14:00",
+					time: "15:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1587,7 +1651,7 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["14:00", "15:00"],
+				time: ["15:00", "16:00"],
 				title: "Adding Talisman wallet integration to your substrate dapp",
 				subTitle: "",
 				description: "Talisman connect lib & Demo of the integration.",
@@ -1610,7 +1674,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "15:00",
+					time: "16:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1618,7 +1682,7 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:00", "16:00"],
+				time: ["16:00", "17:00"],
 				title: "From Zero to Hero with Subsquid",
 				subTitle: "",
 				description: "Introduction to Subsquid, deeper dive into coding a small project, to showcase the SDK.",
@@ -1641,7 +1705,7 @@ export const hackatons = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "16:00",
+					time: "17:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1649,7 +1713,7 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["16:00", "17:00"],
+				time: ["17:00", "18:00"],
 				title: "Exploring the substrate state and history by using Subsquid Archive",
 				subTitle: "",
 				description: "We'll look at the options to query the state and history of the substrate chain and on Subsquid Archive in detail from its setup to advanced analysis of chain history.",
