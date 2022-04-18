@@ -34,6 +34,7 @@ const HeroSection = () => {
 			src: "/assets/partners-v2/logos/Interplay.png",
 			alt: "interplay logo",
 			href: "https://interplay.iterate.ai/",
+			width: 30,
 		},
 		{
 			src: "/assets/partners-v2/logos/Subsquid.png",
@@ -46,9 +47,16 @@ const HeroSection = () => {
 			href: "https://www.parity.io/",
 		},
 		{
+			src: "/assets/partners-v2/ORIGIN-TRAIL.png",
+			alt: "origin trail logo",
+			href: "https://origintrail.io/",
+			width: 50,
+		},
+		{
 			src: "/assets/partners-v2/logos/talisman-logo.png",
 			alt: "talisman logo",
 			href: "https://talisman.xyz/",
+			width: 60,
 		},
 		{
 			src: "/assets/partners-v2/logos/DFG.png",
