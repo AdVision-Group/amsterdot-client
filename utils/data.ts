@@ -1802,12 +1802,12 @@ export const hackatons = [
 			{
 				user: {
 					img: {
-						src: "/assets/partners-v2/logos/hdx.png",
+						src: "/assets/partners-v2/ORIGIN-TRAIL.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Matej & Istvan",
+					title: "Branimir Rakic",
 					subTitle: "",
 				},
 				icon: {
@@ -1825,7 +1825,38 @@ export const hackatons = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["14:00", "17:00"],
+				time: ["14:00", "15:00"],
+				title: "Web3 Asset Graphs with OriginTrail Decentralized Knowledge Graph and Polkadot",
+				subTitle: "",
+				description: "Introduction to creating and managing Web3 Asset Graphs with the OriginTrail Decentralized Knowledge Graph and Polkadot.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/partners-v2/logos/hdx.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Matej & Istvan",
+					subTitle: "",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/space-to-hack.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "15:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["15:00", "18:00"],
 				title: "Building real-time user intefaces for polkadot based chains, with focus on accuracy",
 				subTitle: "",
 				description: "We'll build a web3 app for the Basilisk AMM to execute trades and view historical price movements. Join this comprehensive workshop to acquire hands-on experience interacting with polkadot based chains and leverage this foundation to build future products (such as an arbitrage bot). Among others, we'll learn how to read and navigate RUST code, identify emitted events and build effective strategies to process data, precompute parameters for trading, basics of GraphQL and writing resolvers in React.",
