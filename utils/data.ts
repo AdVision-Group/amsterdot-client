@@ -769,12 +769,12 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d3/Ingo-Ruebe.png",
+						src: "/assets/speakers/d3/christine.jpg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Ingo Rübe",
+					title: "Christine Mohan",
 					subTitle: "KILT",
 				},
 				icon: {
