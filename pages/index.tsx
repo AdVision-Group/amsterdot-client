@@ -334,7 +334,7 @@ const Home: NextPage = () => {
 
 			<HackathonSection />
 			<HackatonContentSection />
-			<PricepoolSection />
+			{/* <PricepoolSection /> */}
 			<BountySection />
 			<FooterSection />
 		</React.Fragment>

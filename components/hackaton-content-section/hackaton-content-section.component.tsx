@@ -8,6 +8,43 @@ import Image from "next/image"
 import Link from "next/link"
 import Button from "../button/button.component"
 
+const ContentBottomContainer = styled.div`
+	margin-top: 2rem;
+	p {
+		margin: 0;
+		text-align: end;
+
+		&:nth-of-type(1) {
+			font-size: 2.4rem;
+			color: ${({ theme }) => theme.color.primary};
+			font-weight: 900;
+		}
+		&:nth-of-type(2) {
+			font-size: 1.6rem;
+			font-weight: 700;
+			/* color: ${({ theme }) => theme.color.primary}; */
+		}
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		p {
+			margin: 0;
+			text-align: end;
+
+			&:nth-of-type(1) {
+				font-size: 3.75rem;
+				color: ${({ theme }) => theme.color.primary};
+				font-weight: 900;
+			}
+			&:nth-of-type(2) {
+				font-size: 2rem;
+				font-weight: 700;
+				/* color: ${({ theme }) => theme.color.primary}; */
+			}
+		}
+	}
+`
+
 const HackatonContentSection = () => {
 	return (
 		<React.Fragment>
@@ -21,23 +58,27 @@ const HackatonContentSection = () => {
 						<p>INFO</p>
 					</LabelContainer>
 					<ContentContainer>
-						<h2>Hackathon</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
-							risus a sapien pharetra tristique. Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit. Nulla ornare nibh et risus cursus
-							sagittis. Cras molestie porttitor sem elementum varius. Sed
-							tristique turpis ac viverra iaculis. Proin molestie mi libero,
-							rutrum consequat arcu pharetra vitae.
-						</p>
-						<ButtonsContainer>
-							<Link href={"/#pricepool"}>
-								<a>
-									<Button>LET{"´"}S HACK</Button>
-								</a>
-							</Link>
-						</ButtonsContainer>
+						<h2>Online hackathon, open to anyone</h2>
+						<h3>Start: April 20th</h3>
+						<h3>End: June 3rd (12 UTC)</h3>
+						<h3>Rewards: $300,000+ from bounties and shared prize pool</h3>
+						<h3>Registration: Via DoraHacks (link soon)</h3>
+						<h3>Submission guidelines: Can differ (see Github issue of the bounty)</h3>
+						<h3>Also submit via DoraHacks to participate in the distribution of the prize pool</h3>
+						<h3>Include a short description and a 5-min video</h3>
+						<h3>Bounty rewards are distributed by the teams that own them</h3>
+						<h3>Shared prize pool is distributed by a jury from the sponsoring teams using quadratic voting</h3>
+
+						<ContentBottomContainer>
+							<p>$170,000 BOUNTIES</p>
+							<p>by leading projects from the Polkadot & Kusama ecosystem</p>
+						</ContentBottomContainer>
+						<ContentBottomContainer>
+							<p>+ $150,000 PRIZE POOL</p>
+							<p>by Polkadot Treasury</p>
+						</ContentBottomContainer>
 					</ContentContainer>
+					
 				</Container>
 			</SectionContainer>
 		</React.Fragment>

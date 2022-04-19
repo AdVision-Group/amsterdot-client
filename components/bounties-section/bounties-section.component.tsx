@@ -19,6 +19,282 @@ const BountySection = () => {
 		{
 			logo: {
 				href: "#",
+				src: "/assets/bounty-section/hydra-logo.svg",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Cross chain transfer SDK",
+			description: "Create SDK for sending XCM transactions for polkadot parachains.",
+			issue: {
+				href: "https://github.com/galacticcouncil/amsterdot-bounties-2022/issues/2",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $25,000",
+			prize2: "in HDX / BSX",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/bounty-section/hydra-logo.svg",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "UI for NFT auctions in Basilisk",
+			description: "Create a UI (incl middleware) which interacts with the NFT auctions pallet in Basilisk-node. The pallet supports 3 auction types: English auctions (highest bidder wins), TopUp auctions (used for charity purposes) and Candle auctions.",
+			issue: {
+				href: "https://github.com/galacticcouncil/amsterdot-bounties-2022/issues/1",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $20,000",
+			prize2: "in BSX",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/acala-logo.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "EVM+ DApp for aUSD yield",
+			description: "Build a DApp in the Acala EVM+ enabling users to earn yield with aUSD (money market, DEX, etc.)",
+			issue: {
+				href: "https://github.com/AcalaNetwork/AcalaBounties/issues/1",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $20,000",
+			prize2: "in aUSD",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/astar.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Astar Native Wallet Solution",
+			description: "Build a wallet that can manage various assets and view staking rewards from a single interface that is easy to use.",
+			issue: {
+				href: "https://github.com/AstarNetwork/AstarBounties/issues/1",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $14,000",
+			prize2: "in USDC",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/astar.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Token Bridge Contract Between WASM and EVM",
+			description: "Build a bridge contract on both the WASM contract environment and EVM on the Shibuya test network that can transfer ERC20 (and PSP22) between two different account schemes (SS58 and H160) alongside a simple web-based wallet to manage and transfer from one token to another.",
+			issue: {
+				href: "https://github.com/AstarNetwork/AstarBounties/issues/3",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $14,000",
+			prize2: "in USDC",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/acala-logo.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "EVM+ Substrate Pre-compiles",
+			description: "Build a new pre-compile to expand the functionality of the Acala EVM+",
+			issue: {
+				href: "https://github.com/AcalaNetwork/AcalaBounties/issues/2",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $10,000",
+			prize2: "in aUSD",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/acala-logo.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Cross-parachain DApp",
+			description: "Build a cross-parachain DApp that interacts with multiple parachains on Polkadot or Kusama.",
+			issue: {
+				href: "https://github.com/AcalaNetwork/AcalaBounties/issues/3",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $10,000",
+			prize2: "in aUSD",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/acala-logo.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Front-end, tools, or utility service",
+			description: "Build a front-end, tool, or utility service for the Acala ecosystem.",
+			issue: {
+				href: "https://github.com/AcalaNetwork/AcalaBounties/issues/4",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $10,000",
+			prize2: "in aUSD",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Interplay.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Vault Interface",
+			description: "We have an interface for Vaults running on: https://kintsugi.interlay.io/. However, Vault operators might want to be able to have custom interfaces and see more information like current prices of Bitcoin, incoming oracle price changes, or see how they compare to other Vaults in terms of BTC locked. The idea for this challenge is to build a standalone dashboard for Vaults that operators can extend with their own information. You could do this as a browser-based interface, mobile interface, or terminal interface.",
+			issue: {
+				href: "https://github.com/interlay/bounties/issues/1",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $10,000",
+			prize2: "in KINT / INTR",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Interplay.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Trading/Arbitrage Bots",
+			description: "As with most DeFi systems, it's possible to make a profit by interacting with the Interlay/Kintsugi bridge. It’s possible to automate capturing these profits by using bots. The challenge here is to develop a bot that can capture profits by observing on and off-chain data and execute actions.",
+			issue: {
+				href: "https://github.com/interlay/bounties/issues/2",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $10,000",
+			prize2: "in KINT / INTR",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Interplay.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Dashboard and System Information",
+			description: "It's better to know what's going on. Bridges are complex and displaying all the information of the system health, how much asset are currently bridged, and if the system is secure is vital to understand for the community. We are looking for builders that can take our squid-powered dashboard to a new level.",
+			issue: {
+				href: "https://github.com/interlay/bounties/issues/3",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $10,000",
+			prize2: "in KINT / INTR",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/phala-network-logo-white.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Build Your Own DApp with Fat Contract",
+			description: "In this challenge, you are going to build a fully functional DApp on Phala Confidential Cloud. A qualified DApp should be useful to solve some real-world problems or bring fun to people. It should also address the unique features of Phala (privacy-preserving, CPU extensive, or with HTTP requests)",
+			issue: {
+				href: "https://github.com/Phala-Network/amsterDOT-2022/issues/2",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $5,000",
+			prize2: "in PHA",
+		},
+		{
+			logo: {
+				href: "#",
 				src: "/assets/partners-v2/logos/Subsquid.png",
 				alt: "hydra logo",
 				width: 0,
@@ -37,27 +313,21 @@ const BountySection = () => {
 				width: 0,
 				height: 0,
 			},
-			pricepool: 500000,
-			currencyIcon: {
-				src: "/assets/bounty-section/polkadot-token.svg",
-				alt: "polkadot",
-				width: 0,
-				height: 0,
-			},
+			prize: "$3,000",
+			prize2: "in USDT",
 		},
 		{
 			logo: {
 				href: "#",
-				src: "/assets/bounty-section/hydra-logo.svg",
+				src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
 				alt: "hydra logo",
 				width: 0,
 				height: 0,
 			},
-			title: "bounty #2 prize",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
+			title: "Build a DApp that Uses XCM",
+			description: "XCM functionality was enabled on Moonriver by introducing the XC-20 standard, a Substrate-native asset that conforms to ERC-20 standards. xcKSM or KSM migrated from the Kusama Relay Chain, is the first XC-20 to launch on Moonriver and allows KSM to be harnessed in the growing DeFi ecosystem in Moonriver. xcKSM is already tradable on several decentralized exchanges. XC-20s look and behave like typical ERC-20s, which means that interacting with them is easy. However, before getting started, you should understand the fundamentals of how XCM works. In this challenge, build a project that harnesses XC-20s on Moonriver.",
 			issue: {
-				href: "#",
+				href: "https://github.com/PureStake/moonbeam-docs/issues/295",
 				label: "issue",
 			},
 			issueIcon: {
@@ -66,27 +336,21 @@ const BountySection = () => {
 				width: 0,
 				height: 0,
 			},
-			pricepool: 500000,
-			currencyIcon: {
-				src: "/assets/bounty-section/polkadot-token.svg",
-				alt: "polkadot",
-				width: 0,
-				height: 0,
-			},
+			prize: "$2,000",
+			prize2: "in USDT",
 		},
 		{
 			logo: {
 				href: "#",
-				src: "/assets/bounty-section/hydra-logo.svg",
+				src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
 				alt: "hydra logo",
 				width: 0,
 				height: 0,
 			},
-			title: "bounty #2 prize",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
+			title: "Launch a Cross-Chain Asset owned by a Smart Contract",
+			description: "One of the first major applications of XCM on Moonbeam is sending and receiving assets from other parachains. But did you know Moonbeam also enables you to create your own custom cross-chain assets? The challenge is to create a custom cross-chain asset that is owned by a smart contract on Moonbase Alpha.",
 			issue: {
-				href: "#",
+				href: "https://github.com/PureStake/moonbeam-docs/issues/294",
 				label: "issue",
 			},
 			issueIcon: {
@@ -95,100 +359,8 @@ const BountySection = () => {
 				width: 0,
 				height: 0,
 			},
-			pricepool: 500000,
-			currencyIcon: {
-				src: "/assets/bounty-section/polkadot-token.svg",
-				alt: "polkadot",
-				width: 0,
-				height: 0,
-			},
-		},
-		{
-			logo: {
-				href: "#",
-				src: "/assets/bounty-section/hydra-logo.svg",
-				alt: "hydra logo",
-				width: 0,
-				height: 0,
-			},
-			title: "bounty #2 prize",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
-			issue: {
-				href: "#",
-				label: "issue",
-			},
-			issueIcon: {
-				src: "/assets/bounty-section/github-icon.svg",
-				alt: "github icon",
-				width: 0,
-				height: 0,
-			},
-			pricepool: 500000,
-			currencyIcon: {
-				src: "/assets/bounty-section/polkadot-token.svg",
-				alt: "polkadot",
-				width: 0,
-				height: 0,
-			},
-		},
-		{
-			logo: {
-				href: "#",
-				src: "/assets/bounty-section/hydra-logo.svg",
-				alt: "hydra logo",
-				width: 0,
-				height: 0,
-			},
-			title: "bounty #2 prize",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
-			issue: {
-				href: "#",
-				label: "issue",
-			},
-			issueIcon: {
-				src: "/assets/bounty-section/github-icon.svg",
-				alt: "github icon",
-				width: 0,
-				height: 0,
-			},
-			pricepool: 500000,
-			currencyIcon: {
-				src: "/assets/bounty-section/polkadot-token.svg",
-				alt: "polkadot",
-				width: 0,
-				height: 0,
-			},
-		},
-		{
-			logo: {
-				href: "#",
-				src: "/assets/bounty-section/hydra-logo.svg",
-				alt: "hydra logo",
-				width: 0,
-				height: 0,
-			},
-			title: "bounty #2 prize",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
-			issue: {
-				href: "#",
-				label: "issue",
-			},
-			issueIcon: {
-				src: "/assets/bounty-section/github-icon.svg",
-				alt: "github icon",
-				width: 0,
-				height: 0,
-			},
-			pricepool: 500000,
-			currencyIcon: {
-				src: "/assets/bounty-section/polkadot-token.svg",
-				alt: "polkadot",
-				width: 0,
-				height: 0,
-			},
+			prize: "$1,000",
+			prize2: "in USDT",
 		},
 	]
 
@@ -306,10 +478,9 @@ const BountySection = () => {
 									</a>
 								</BountyBottomFlexContainer>
 								<BountyBottomFlexContainer>
-									<BountyParagraph>{format(i.pricepool / 100)}</BountyParagraph>
-									<BountyParagraph>DOT</BountyParagraph>
+									<BountyParagraph>{i.prize}</BountyParagraph>
 									<EuroPrice>
-										<p>5000 €</p>
+										<p>{i.prize2}</p>
 									</EuroPrice>
 									{/* <CurrencyFigure>
 										<Image
