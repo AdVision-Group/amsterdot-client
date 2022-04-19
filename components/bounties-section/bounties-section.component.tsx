@@ -12,12 +12,42 @@ const BountySection = () => {
 
 	// console.log(scrollYProgress)
 
-	const transformBOUN = useTransform(scrollYProgress, [0.63, 0.89], [150, -100])
+	const transformBOUN = useTransform(scrollYProgress, [0.63, 0.89], [150, 0])
 	const transformTIES = useTransform(scrollYProgress, [0.63, 0.89], [0, 100])
 
 	const bounties = [
 		{
 			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Subsquid.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Karura DeFi Dashboard",
+			description:
+				"The winning team has to use Subsquid’s SDK to extract and process on-chain data, and then build a lightweight Web UI to access and display it.",
+			issue: {
+				href: "https://github.com/subsquid/community/issues/7",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			pricepool: 500000,
+			currencyIcon: {
+				src: "/assets/bounty-section/polkadot-token.svg",
+				alt: "polkadot",
+				width: 0,
+				height: 0,
+			},
+		},
+		{
+			logo: {
+				href: "#",
 				src: "/assets/bounty-section/hydra-logo.svg",
 				alt: "hydra logo",
 				width: 0,
@@ -46,6 +76,7 @@ const BountySection = () => {
 		},
 		{
 			logo: {
+				href: "#",
 				src: "/assets/bounty-section/hydra-logo.svg",
 				alt: "hydra logo",
 				width: 0,
@@ -74,6 +105,7 @@ const BountySection = () => {
 		},
 		{
 			logo: {
+				href: "#",
 				src: "/assets/bounty-section/hydra-logo.svg",
 				alt: "hydra logo",
 				width: 0,
@@ -102,6 +134,7 @@ const BountySection = () => {
 		},
 		{
 			logo: {
+				href: "#",
 				src: "/assets/bounty-section/hydra-logo.svg",
 				alt: "hydra logo",
 				width: 0,
@@ -130,34 +163,7 @@ const BountySection = () => {
 		},
 		{
 			logo: {
-				src: "/assets/bounty-section/hydra-logo.svg",
-				alt: "hydra logo",
-				width: 0,
-				height: 0,
-			},
-			title: "bounty #2 prize",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus a sapien pharetra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare nibh et risus cursus sagittis. Cras",
-			issue: {
 				href: "#",
-				label: "issue",
-			},
-			issueIcon: {
-				src: "/assets/bounty-section/github-icon.svg",
-				alt: "github icon",
-				width: 0,
-				height: 0,
-			},
-			pricepool: 500000,
-			currencyIcon: {
-				src: "/assets/bounty-section/polkadot-token.svg",
-				alt: "polkadot",
-				width: 0,
-				height: 0,
-			},
-		},
-		{
-			logo: {
 				src: "/assets/bounty-section/hydra-logo.svg",
 				alt: "hydra logo",
 				width: 0,
@@ -195,14 +201,28 @@ const BountySection = () => {
 		<React.Fragment>
 			<BountiesSectionContainer id="bounties-h">
 				<HeadingContainer>
-					<Title
+					{/* <Title
 						style={{
 							x: transformBOUN,
 						}}
 						className="boun"
 					>
 						BOUN
-					</Title>
+					</Title> */}
+					<BOUNContainer
+						style={{
+							x: transformBOUN,
+						}}
+					>
+						<Image
+							src="/assets/bounty-section/boun.png"
+							alt="work"
+							objectFit="contain"
+							layout="responsive"
+							width={100}
+							height={70}
+						/>
+					</BOUNContainer>
 					<Title
 						style={{
 							x: transformTIES,
@@ -212,7 +232,7 @@ const BountySection = () => {
 						TIES
 					</Title>
 
-					<Link href={"/#bounty"} passHref>
+					<Link href={"/#bounties"} passHref>
 						<a
 							style={{
 								gridArea: "a",
@@ -245,34 +265,53 @@ const BountySection = () => {
 				<BountiesDirectory>
 					{bounties.map((i, idx) => (
 						<BountyOverview key={idx}>
-							<LogoFigure>
-								<Image
-									src={i.logo.src}
-									alt={i.logo.alt}
-									layout="responsive"
-									width={50}
-									height={20}
-								/>
-							</LogoFigure>
+							<a href={i.logo.href} rel="noopener noreferrer" target="_blank">
+								<LogoFigure>
+									<Image
+										src={i.logo.src}
+										alt={i.logo.alt}
+										layout="responsive"
+										width={50}
+										height={20}
+										objectFit="contain"
+									/>
+								</LogoFigure>
+							</a>
 							<h3>{i.title}</h3>
 							<p>{i.description}</p>
 							<BountyBottomContainer>
 								<BountyBottomFlexContainer>
-									<IssueFigure>
-										<Image
-											src={i.issueIcon.src}
-											alt={i.issueIcon.alt}
-											layout="responsive"
-											width={50}
-											height={50}
-											objectFit="contain"
-										/>
-									</IssueFigure>
-									<a href={i.issue.href}>{i.issue.label}</a>
+									<a
+										href={i.issue.href}
+										rel="noopener noreferrer"
+										target="_blank"
+									>
+										<IssueFigure>
+											<Image
+												src={i.issueIcon.src}
+												alt={i.issueIcon.alt}
+												layout="responsive"
+												width={50}
+												height={50}
+												objectFit="contain"
+											/>
+										</IssueFigure>
+									</a>
+									<a
+										href={i.issue.href}
+										rel="noopener noreferrer"
+										target="_blank"
+									>
+										{i.issue.label}
+									</a>
 								</BountyBottomFlexContainer>
 								<BountyBottomFlexContainer>
-									<p>{format(i.pricepool / 100)}</p>
-									<CurrencyFigure>
+									<BountyParagraph>{format(i.pricepool / 100)}</BountyParagraph>
+									<BountyParagraph>DOT</BountyParagraph>
+									<EuroPrice>
+										<p>5000 €</p>
+									</EuroPrice>
+									{/* <CurrencyFigure>
 										<Image
 											src={i.currencyIcon.src}
 											alt={i.currencyIcon.alt}
@@ -281,7 +320,7 @@ const BountySection = () => {
 											height={50}
 											objectFit="contain"
 										/>
-									</CurrencyFigure>
+									</CurrencyFigure> */}
 								</BountyBottomFlexContainer>
 							</BountyBottomContainer>
 						</BountyOverview>
@@ -293,6 +332,71 @@ const BountySection = () => {
 }
 
 export default BountySection
+
+const EuroPrice = styled.div`
+	grid-column: 1/3;
+	/* justify-self: end; */
+	margin-left: 4rem;
+
+	position: relative;
+
+	p {
+		color: #ddd;
+		text-align: center;
+	}
+
+	&:before {
+		position: absolute;
+		content: "";
+		background-color: #ddd;
+		width: 2rem;
+		height: 0.2rem;
+		top: 50%;
+		left: -2rem;
+		transform: translateY(-50%);
+	}
+
+	&:after {
+		position: absolute;
+		content: "";
+		background-color: #ddd;
+		width: 2rem;
+		height: 0.2rem;
+		top: 50%;
+		right: -2rem;
+		transform: translateY(-50%);
+	}
+`
+
+const BOUNContainer = styled(motion.figure)`
+	position: relative;
+	grid-area: b;
+
+	/* grid-area: w; */
+	/* width: 16rem; */
+	/* height: 5rem; */
+	/* border: 1px solid green; */
+	/* justify-self: end; */
+	width: 18rem;
+	margin-bottom: -4rem;
+	/* border: 1px solid red; */
+	margin-top: -2rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		width: 22rem;
+		margin-top: -3rem;
+		margin-bottom: -5rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			width: 38rem;
+			margin-bottom: -10rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				margin-top: -10rem;
+				width: 68rem;
+			}
+		}
+	}
+`
 
 const ArrowContainer = styled(motion.figure)`
 	width: 6rem;
@@ -390,6 +494,8 @@ const BountiesDirectory = styled.div`
 const BountyOverview = styled.div`
 	background-color: ${({ theme }) => theme.background.container};
 	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
 
 	h3 {
 		font-weight: 900;
@@ -400,6 +506,7 @@ const BountyOverview = styled.div`
 
 	p {
 		line-height: 1.2;
+		flex: 1;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -419,6 +526,7 @@ const BountyBottomFlexContainer = styled.div`
 	grid-template-columns: 3rem auto;
 	grid-template-rows: auto auto;
 	gap: 1rem;
+	padding-right: 3rem;
 
 	&:nth-of-type(2) {
 		grid-template-columns: auto 3rem;
@@ -431,12 +539,12 @@ const BountyBottomFlexContainer = styled.div`
 		font-size: 2.5rem;
 		text-decoration: underline;
 	}
+`
 
-	p {
-		color: ${({ theme }) => theme.color.primary};
-		font-weight: 900;
-		font-size: 2.5rem;
-	}
+const BountyParagraph = styled.p`
+	color: ${({ theme }) => theme.color.primary};
+	font-weight: 900;
+	font-size: 2.5rem;
 `
 
 const LogoFigure = styled.figure`

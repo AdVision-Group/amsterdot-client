@@ -10,9 +10,9 @@ import Image from "next/image"
 const HackathonSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformHACK = useTransform(scrollYProgress, [0.54, 0.83], [-100, 0])
-	const transformATH = useTransform(scrollYProgress, [0.54, 0.83], [50, -50])
-	const transformON = useTransform(scrollYProgress, [0.54, 0.83], [-50, 0])
+	const transformHACK = useTransform(scrollYProgress, [0.46, 0.61], [-100, 0])
+	const transformATH = useTransform(scrollYProgress, [0.46, 0.61], [50, -50])
+	const transformON = useTransform(scrollYProgress, [0.46, 0.61], [-50, 0])
 
 	return (
 		<EventSectionContainer>
@@ -89,7 +89,7 @@ const HackathonSection = () => {
 						<span>Westerliefde Klönneplein 4-6, 1014 DD</span>
 					</div>
 				</PlaceContainer>
-				<Link href={"/#hack-2"} passHref>
+				<Link href={"/#hackaton-content"} passHref>
 					<a>
 						<ArrowContainer
 						// animate={{
