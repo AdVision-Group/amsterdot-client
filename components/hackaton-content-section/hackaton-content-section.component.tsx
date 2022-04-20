@@ -61,7 +61,7 @@ const HackatonContentSection = () => {
 						<h2>Online hackathon, open to anyone</h2>
 						<h3>Start: April 20th</h3>
 						<h3>End: June 3rd (12 UTC)</h3>
-						<h3>Rewards: $300,000+ from bounties and shared prize pool</h3>
+						<h3>Rewards: $350,000+ from bounties and shared prize pool</h3>
 						<h3>Registration: Via DoraHacks (link soon)</h3>
 						<h3>Submission guidelines: Can differ (see Github issue of the bounty)</h3>
 						<h3>Also submit via DoraHacks to participate in the distribution of the prize pool</h3>
@@ -70,7 +70,7 @@ const HackatonContentSection = () => {
 						<h3>Shared prize pool is distributed by a jury from the sponsoring teams using quadratic voting</h3>
 
 						<ContentBottomContainer>
-							<p>$170,000 BOUNTIES</p>
+							<p>$190,000+ BOUNTIES</p>
 							<p>by leading projects from the Polkadot & Kusama ecosystem</p>
 						</ContentBottomContainer>
 						<ContentBottomContainer>

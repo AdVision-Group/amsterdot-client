@@ -47,6 +47,29 @@ const BountySection = () => {
 				width: 0,
 				height: 0,
 			},
+			title: "UI for an NFT marketplace in Basilisk",
+			description: "The objective is to use a middleware to index and process historical node data and to build a user interface for the NFT infrastructure and its trading functionality we have built as set of Substrate pallets.",
+			issue: {
+				href: "https://github.com/galacticcouncil/amsterdot-bounties-2022/issues/3",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $25,000",
+			prize2: "in BSX",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/bounty-section/hydra-logo.svg",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
 			title: "UI for NFT auctions in Basilisk",
 			description: "Create a UI (incl middleware) which interacts with the NFT auctions pallet in Basilisk-node. The pallet supports 3 auction types: English auctions (highest bidder wins), TopUp auctions (used for charity purposes) and Candle auctions.",
 			issue: {
@@ -361,6 +384,52 @@ const BountySection = () => {
 			},
 			prize: "$1,000",
 			prize2: "in USDT",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/phala-network-logo-white.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Link your Github account to on-chain identity with HTTP Request",
+			description: "In this challenge, you will experience how to use Fat Contract's HTTP request capability to associate a Phala account with a Github user. Such functionality serves as the core for Decentralized Identity (DID). Further, we will show how to deploy your contract in Phala Testnet and interact with it through our frontend SDK.",
+			issue: {
+				href: "https://github.com/Phala-Network/amsterDOT-2022/issues/1",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $1,500",
+			prize2: "in PHA",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/Logo-bg.svg",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Open Category",
+			description: "Open to submissions of all projects which contribute to the Polkadot and/or Kusama ecosystems. Not based on a specific project bounty, however the submissions (via DoraHacks) are eligible for the distrinbution of the prize pool from Polkadot treasury.",
+			issue: {
+				href: "",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "??",
+			prize2: "Shared prize pool",
 		},
 	]
 
