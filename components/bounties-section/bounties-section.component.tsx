@@ -295,6 +295,52 @@ const BountySection = () => {
 		{
 			logo: {
 				href: "#",
+				src: "/assets/partners-v2/logos/astar.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Astar Native Wallet Solution",
+			description: "Build a marketplace for providing micro-rewards to artists for their artwork.",
+			issue: {
+				href: "https://github.com/AstarNetwork/AstarBounties/issues/2",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $10,000",
+			prize2: "in USDC",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/astar.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Liquid Staking Solution for dApps Staking",
+			description: "Build a UI and smart contracts that allow the users to stake ASTR to earn dApp staking rewards while receiving Liquid ASTR to maintain full control of their staked tokens and use the value across Astar DeFi applications.",
+			issue: {
+				href: "https://github.com/AstarNetwork/AstarBounties/issues/4",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $7,000",
+			prize2: "in USDC",
+		},
+		{
+			logo: {
+				href: "#",
 				src: "/assets/partners-v2/logos/phala-network-logo-white.png",
 				alt: "hydra logo",
 				width: 0,
