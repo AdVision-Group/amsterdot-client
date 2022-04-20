@@ -268,7 +268,8 @@ export const events = [
 				time: ["17:00", "17:30"],
 				title: "The Google of Web3 on Polkadot",
 				subTitle: "",
-				description: "Introduction to OriginTrail Parachain - by harnessing the power of the OriginTrail Decentralized Knowledge Graph, OriginTrail Parachain extends discoverability, verifiability and greater value for interconnected Web3 assets to Polkadot.",
+				description:
+					"Introduction to OriginTrail Parachain - by harnessing the power of the OriginTrail Decentralized Knowledge Graph, OriginTrail Parachain extends discoverability, verifiability and greater value for interconnected Web3 assets to Polkadot.",
 			},
 			{
 				user: {
@@ -921,7 +922,7 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d3/vykival.png",
+						src: "/assets/speakers/d3/vikiival.jpeg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1253,7 +1254,8 @@ export const events = [
 				time: ["14:00", "14:30"],
 				title: "Composable privacy on Polkadot",
 				subTitle: "",
-				description: "Manta Network brings privacy to all parachain assets by taking advantage of zero-knowledge proofs (ZKPs), the unspent transaction output model (UTXO), and one of the core functionalities of Polkadot: the cross-consensus message format (XCM). Learn about how Manta Network has combined all of these into a scalable, privacy-first platform that offers private transacting, swapping, and other core functionalities.",
+				description:
+					"Manta Network brings privacy to all parachain assets by taking advantage of zero-knowledge proofs (ZKPs), the unspent transaction output model (UTXO), and one of the core functionalities of Polkadot: the cross-consensus message format (XCM). Learn about how Manta Network has combined all of these into a scalable, privacy-first platform that offers private transacting, swapping, and other core functionalities.",
 			},
 			{
 				user: {
@@ -1365,7 +1367,8 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:00", "16:30"],
-				title: "Creating value at the intersection of ecology, technology and economics",
+				title:
+					"Creating value at the intersection of ecology, technology and economics",
 				subTitle: "",
 				description:
 					"The talk presents the approach of the Sovereign Nature Initiative in reconfiguring the intersection between ecology, economy and emerging technologies in order to open our minds to radical approaches toward sustainability.",
@@ -1716,7 +1719,8 @@ export const hackatons = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "18:00"],
-				title: "Exploring the substrate state and history by using Subsquid Archive",
+				title:
+					"Exploring the substrate state and history by using Subsquid Archive",
 				subTitle: "",
 				description:
 					"We'll look at the options to query the state and history of the substrate chain and on Subsquid Archive in detail from its setup to advanced analysis of chain history.",
@@ -1769,7 +1773,8 @@ export const hackatons = [
 				time: ["10:30", "11:30"],
 				title: "WASM - Building contracts with ink!",
 				subTitle: "",
-				description: "Explain the power of WASM and ink! language and how to deploy this in our network.",
+				description:
+					"Explain the power of WASM and ink! language and how to deploy this in our network.",
 			},
 			{
 				user: {
@@ -1829,9 +1834,11 @@ export const hackatons = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:00", "15:00"],
-				title: "Web3 Asset Graphs with OriginTrail Decentralized Knowledge Graph and Polkadot",
+				title:
+					"Web3 Asset Graphs with OriginTrail Decentralized Knowledge Graph and Polkadot",
 				subTitle: "",
-				description: "Introduction to creating and managing Web3 Asset Graphs with the OriginTrail Decentralized Knowledge Graph and Polkadot.",
+				description:
+					"Introduction to creating and managing Web3 Asset Graphs with the OriginTrail Decentralized Knowledge Graph and Polkadot.",
 			},
 			{
 				user: {
@@ -1860,7 +1867,8 @@ export const hackatons = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["15:00", "18:00"],
-				title: "Building real-time user intefaces for polkadot based chains, with focus on accuracy",
+				title:
+					"Building real-time user intefaces for polkadot based chains, with focus on accuracy",
 				subTitle: "",
 				description:
 					"We'll build a web3 app for the Basilisk AMM to execute trades and view historical price movements. Join this comprehensive workshop to acquire hands-on experience interacting with polkadot based chains and leverage this foundation to build future products (such as an arbitrage bot). Among others, we'll learn how to read and navigate RUST code, identify emitted events and build effective strategies to process data, precompute parameters for trading, basics of GraphQL and writing resolvers in React.",
@@ -2010,7 +2018,8 @@ export const hackatons = [
 				time: ["16:45", "17:30"],
 				title: "Enabling Cross-Chain Assets on Moonbeam with XCM",
 				subTitle: "",
-				description: "Gorka, Research Developer at Moonbeam, will talk about Moonriver's native cross-chain token capabilities on Moonriver. Learn how to utilize Moonriver's XCM capabilities to allow the use of XC-20s, a type of interoperable token that conforms to the ERC-20 standard but is also Substrate-native assets. In this workshop, learn how to access and interact with xc-20 assets through smart contracts, and how can we use XCM (Cross Consensus Messaging) to transfer them across parachains.",
+				description:
+					"Gorka, Research Developer at Moonbeam, will talk about Moonriver's native cross-chain token capabilities on Moonriver. Learn how to utilize Moonriver's XCM capabilities to allow the use of XC-20s, a type of interoperable token that conforms to the ERC-20 standard but is also Substrate-native assets. In this workshop, learn how to access and interact with xc-20 assets through smart contracts, and how can we use XCM (Cross Consensus Messaging) to transfer them across parachains.",
 			},
 		],
 	},

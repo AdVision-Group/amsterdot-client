@@ -12,8 +12,8 @@ const BountySection = () => {
 
 	// console.log(scrollYProgress)
 
-	const transformBOUN = useTransform(scrollYProgress, [0.63, 0.89], [150, 0])
-	const transformTIES = useTransform(scrollYProgress, [0.63, 0.89], [0, 100])
+	const transformBOUN = useTransform(scrollYProgress, [0.51, 0.65], [150, 0])
+	const transformTIES = useTransform(scrollYProgress, [0.51, 0.65], [0, 100])
 
 	const bounties = [
 		{
@@ -25,7 +25,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Cross chain transfer SDK",
-			description: "Create SDK for sending XCM transactions for polkadot parachains.",
+			description:
+				"Create SDK for sending XCM transactions for polkadot parachains.",
 			issue: {
 				href: "https://github.com/galacticcouncil/amsterdot-bounties-2022/issues/2",
 				label: "issue",
@@ -48,7 +49,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "UI for an NFT marketplace in Basilisk",
-			description: "The objective is to use a middleware to index and process historical node data and to build a user interface for the NFT infrastructure and its trading functionality we have built as set of Substrate pallets.",
+			description:
+				"The objective is to use a middleware to index and process historical node data and to build a user interface for the NFT infrastructure and its trading functionality we have built as set of Substrate pallets.",
 			issue: {
 				href: "https://github.com/galacticcouncil/amsterdot-bounties-2022/issues/3",
 				label: "issue",
@@ -71,7 +73,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "UI for NFT auctions in Basilisk",
-			description: "Create a UI (incl middleware) which interacts with the NFT auctions pallet in Basilisk-node. The pallet supports 3 auction types: English auctions (highest bidder wins), TopUp auctions (used for charity purposes) and Candle auctions.",
+			description:
+				"Create a UI (incl middleware) which interacts with the NFT auctions pallet in Basilisk-node. The pallet supports 3 auction types: English auctions (highest bidder wins), TopUp auctions (used for charity purposes) and Candle auctions.",
 			issue: {
 				href: "https://github.com/galacticcouncil/amsterdot-bounties-2022/issues/1",
 				label: "issue",
@@ -94,7 +97,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "EVM+ DApp for aUSD yield",
-			description: "Build a DApp in the Acala EVM+ enabling users to earn yield with aUSD (money market, DEX, etc.)",
+			description:
+				"Build a DApp in the Acala EVM+ enabling users to earn yield with aUSD (money market, DEX, etc.)",
 			issue: {
 				href: "https://github.com/AcalaNetwork/AcalaBounties/issues/1",
 				label: "issue",
@@ -117,7 +121,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Astar Native Wallet Solution",
-			description: "Build a wallet that can manage various assets and view staking rewards from a single interface that is easy to use.",
+			description:
+				"Build a wallet that can manage various assets and view staking rewards from a single interface that is easy to use.",
 			issue: {
 				href: "https://github.com/AstarNetwork/AstarBounties/issues/1",
 				label: "issue",
@@ -140,7 +145,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Token Bridge Contract Between WASM and EVM",
-			description: "Build a bridge contract on both the WASM contract environment and EVM on the Shibuya test network that can transfer ERC20 (and PSP22) between two different account schemes (SS58 and H160) alongside a simple web-based wallet to manage and transfer from one token to another.",
+			description:
+				"Build a bridge contract on both the WASM contract environment and EVM on the Shibuya test network that can transfer ERC20 (and PSP22) between two different account schemes (SS58 and H160) alongside a simple web-based wallet to manage and transfer from one token to another.",
 			issue: {
 				href: "https://github.com/AstarNetwork/AstarBounties/issues/3",
 				label: "issue",
@@ -163,7 +169,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "EVM+ Substrate Pre-compiles",
-			description: "Build a new pre-compile to expand the functionality of the Acala EVM+",
+			description:
+				"Build a new pre-compile to expand the functionality of the Acala EVM+",
 			issue: {
 				href: "https://github.com/AcalaNetwork/AcalaBounties/issues/2",
 				label: "issue",
@@ -186,7 +193,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Cross-parachain DApp",
-			description: "Build a cross-parachain DApp that interacts with multiple parachains on Polkadot or Kusama.",
+			description:
+				"Build a cross-parachain DApp that interacts with multiple parachains on Polkadot or Kusama.",
 			issue: {
 				href: "https://github.com/AcalaNetwork/AcalaBounties/issues/3",
 				label: "issue",
@@ -209,7 +217,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Front-end, tools, or utility service",
-			description: "Build a front-end, tool, or utility service for the Acala ecosystem.",
+			description:
+				"Build a front-end, tool, or utility service for the Acala ecosystem.",
 			issue: {
 				href: "https://github.com/AcalaNetwork/AcalaBounties/issues/4",
 				label: "issue",
@@ -232,7 +241,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Vault Interface",
-			description: "We have an interface for Vaults running on: https://kintsugi.interlay.io/. However, Vault operators might want to be able to have custom interfaces and see more information like current prices of Bitcoin, incoming oracle price changes, or see how they compare to other Vaults in terms of BTC locked. The idea for this challenge is to build a standalone dashboard for Vaults that operators can extend with their own information. You could do this as a browser-based interface, mobile interface, or terminal interface.",
+			description:
+				"We have an interface for Vaults running on: https://kintsugi.interlay.io/. However, Vault operators might want to be able to have custom interfaces and see more information like current prices of Bitcoin, incoming oracle price changes, or see how they compare to other Vaults in terms of BTC locked. The idea for this challenge is to build a standalone dashboard for Vaults that operators can extend with their own information. You could do this as a browser-based interface, mobile interface, or terminal interface.",
 			issue: {
 				href: "https://github.com/interlay/bounties/issues/1",
 				label: "issue",
@@ -255,7 +265,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Trading/Arbitrage Bots",
-			description: "As with most DeFi systems, it's possible to make a profit by interacting with the Interlay/Kintsugi bridge. It’s possible to automate capturing these profits by using bots. The challenge here is to develop a bot that can capture profits by observing on and off-chain data and execute actions.",
+			description:
+				"As with most DeFi systems, it's possible to make a profit by interacting with the Interlay/Kintsugi bridge. It’s possible to automate capturing these profits by using bots. The challenge here is to develop a bot that can capture profits by observing on and off-chain data and execute actions.",
 			issue: {
 				href: "https://github.com/interlay/bounties/issues/2",
 				label: "issue",
@@ -278,7 +289,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Dashboard and System Information",
-			description: "It's better to know what's going on. Bridges are complex and displaying all the information of the system health, how much asset are currently bridged, and if the system is secure is vital to understand for the community. We are looking for builders that can take our squid-powered dashboard to a new level.",
+			description:
+				"It's better to know what's going on. Bridges are complex and displaying all the information of the system health, how much asset are currently bridged, and if the system is secure is vital to understand for the community. We are looking for builders that can take our squid-powered dashboard to a new level.",
 			issue: {
 				href: "https://github.com/interlay/bounties/issues/3",
 				label: "issue",
@@ -301,7 +313,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Astar Native Wallet Solution",
-			description: "Build a marketplace for providing micro-rewards to artists for their artwork.",
+			description:
+				"Build a marketplace for providing micro-rewards to artists for their artwork.",
 			issue: {
 				href: "https://github.com/AstarNetwork/AstarBounties/issues/2",
 				label: "issue",
@@ -324,7 +337,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Liquid Staking Solution for dApps Staking",
-			description: "Build a UI and smart contracts that allow the users to stake ASTR to earn dApp staking rewards while receiving Liquid ASTR to maintain full control of their staked tokens and use the value across Astar DeFi applications.",
+			description:
+				"Build a UI and smart contracts that allow the users to stake ASTR to earn dApp staking rewards while receiving Liquid ASTR to maintain full control of their staked tokens and use the value across Astar DeFi applications.",
 			issue: {
 				href: "https://github.com/AstarNetwork/AstarBounties/issues/4",
 				label: "issue",
@@ -347,7 +361,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Build Your Own DApp with Fat Contract",
-			description: "In this challenge, you are going to build a fully functional DApp on Phala Confidential Cloud. A qualified DApp should be useful to solve some real-world problems or bring fun to people. It should also address the unique features of Phala (privacy-preserving, CPU extensive, or with HTTP requests)",
+			description:
+				"In this challenge, you are going to build a fully functional DApp on Phala Confidential Cloud. A qualified DApp should be useful to solve some real-world problems or bring fun to people. It should also address the unique features of Phala (privacy-preserving, CPU extensive, or with HTTP requests)",
 			issue: {
 				href: "https://github.com/Phala-Network/amsterDOT-2022/issues/2",
 				label: "issue",
@@ -394,7 +409,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Build a DApp that Uses XCM",
-			description: "XCM functionality was enabled on Moonriver by introducing the XC-20 standard, a Substrate-native asset that conforms to ERC-20 standards. xcKSM or KSM migrated from the Kusama Relay Chain, is the first XC-20 to launch on Moonriver and allows KSM to be harnessed in the growing DeFi ecosystem in Moonriver. xcKSM is already tradable on several decentralized exchanges. XC-20s look and behave like typical ERC-20s, which means that interacting with them is easy. However, before getting started, you should understand the fundamentals of how XCM works. In this challenge, build a project that harnesses XC-20s on Moonriver.",
+			description:
+				"XCM functionality was enabled on Moonriver by introducing the XC-20 standard, a Substrate-native asset that conforms to ERC-20 standards. xcKSM or KSM migrated from the Kusama Relay Chain, is the first XC-20 to launch on Moonriver and allows KSM to be harnessed in the growing DeFi ecosystem in Moonriver. xcKSM is already tradable on several decentralized exchanges. XC-20s look and behave like typical ERC-20s, which means that interacting with them is easy. However, before getting started, you should understand the fundamentals of how XCM works. In this challenge, build a project that harnesses XC-20s on Moonriver.",
 			issue: {
 				href: "https://github.com/PureStake/moonbeam-docs/issues/295",
 				label: "issue",
@@ -417,7 +433,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Launch a Cross-Chain Asset owned by a Smart Contract",
-			description: "One of the first major applications of XCM on Moonbeam is sending and receiving assets from other parachains. But did you know Moonbeam also enables you to create your own custom cross-chain assets? The challenge is to create a custom cross-chain asset that is owned by a smart contract on Moonbase Alpha.",
+			description:
+				"One of the first major applications of XCM on Moonbeam is sending and receiving assets from other parachains. But did you know Moonbeam also enables you to create your own custom cross-chain assets? The challenge is to create a custom cross-chain asset that is owned by a smart contract on Moonbase Alpha.",
 			issue: {
 				href: "https://github.com/PureStake/moonbeam-docs/issues/294",
 				label: "issue",
@@ -440,7 +457,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Link your Github account to on-chain identity with HTTP Request",
-			description: "In this challenge, you will experience how to use Fat Contract's HTTP request capability to associate a Phala account with a Github user. Such functionality serves as the core for Decentralized Identity (DID). Further, we will show how to deploy your contract in Phala Testnet and interact with it through our frontend SDK.",
+			description:
+				"In this challenge, you will experience how to use Fat Contract's HTTP request capability to associate a Phala account with a Github user. Such functionality serves as the core for Decentralized Identity (DID). Further, we will show how to deploy your contract in Phala Testnet and interact with it through our frontend SDK.",
 			issue: {
 				href: "https://github.com/Phala-Network/amsterDOT-2022/issues/1",
 				label: "issue",
@@ -463,7 +481,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Open Category",
-			description: "Open to submissions of all projects which contribute to the Polkadot and/or Kusama ecosystems. Not based on a specific project bounty, however the submissions (via DoraHacks) are eligible for the distrinbution of the prize pool from Polkadot treasury.",
+			description:
+				"Open to submissions of all projects which contribute to the Polkadot and/or Kusama ecosystems. Not based on a specific project bounty, however the submissions (via DoraHacks) are eligible for the distrinbution of the prize pool from Polkadot treasury.",
 			issue: {
 				href: "",
 				label: "issue",
@@ -595,7 +614,9 @@ const BountySection = () => {
 								<BountyBottomFlexContainer>
 									<BountyParagraph>{i.prize}</BountyParagraph>
 									<EuroPrice>
+										<span />
 										<p>{i.prize2}</p>
+										<span />
 									</EuroPrice>
 									{/* <CurrencyFigure>
 										<Image
@@ -622,16 +643,27 @@ export default BountySection
 const EuroPrice = styled.div`
 	grid-column: 1/3;
 	/* justify-self: end; */
-	margin-left: 4rem;
+	/* margin-left: 4rem; */
+	text-align: center;
+	display: flex;
+	align-items: center;
 
 	position: relative;
 
 	p {
 		color: #ddd;
 		text-align: center;
+		padding: 0 0.8rem;
 	}
 
-	&:before {
+	span {
+		display: block;
+		width: 2rem;
+		height: 0.2rem;
+		background-color: #ddd;
+	}
+
+	/* &:before {
 		position: absolute;
 		content: "";
 		background-color: #ddd;
@@ -651,7 +683,7 @@ const EuroPrice = styled.div`
 		top: 50%;
 		right: -2rem;
 		transform: translateY(-50%);
-	}
+	} */
 `
 
 const BOUNContainer = styled(motion.figure)`
@@ -828,14 +860,18 @@ const BountyBottomFlexContainer = styled.div`
 `
 
 const BountyParagraph = styled.p`
+	grid-column: 1/3;
+
 	color: ${({ theme }) => theme.color.primary};
 	font-weight: 900;
 	font-size: 2.5rem;
+	text-align: center;
 `
 
 const LogoFigure = styled.figure`
 	position: relative;
 	max-width: 10rem;
+	margin-bottom: 1rem;
 `
 
 const IssueFigure = styled.figure`
