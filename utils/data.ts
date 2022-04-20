@@ -171,42 +171,10 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:30", "16:00"],
+				time: ["15:30", "16:30"],
 				title: "Coffee Break",
 				subTitle: "",
 				description: "Grab some refreshments.",
-			},
-			{
-				user: {
-					img: {
-						src: "/assets/speakers/d1/HydraDX-jakub-gregus.png",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "Jakub Gregus",
-					subTitle: "HydraDX",
-				},
-				icon: {
-					img: {
-						src: "/assets/event-icons/user-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "16:00",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["16:00", "16:30"],
-				title: "Economic Efficiency as the Killer Feature of Dotsama",
-				subTitle: "",
-				description:
-					"In high inflationary times when crypto projects went brrrrr ironically similar to central banks, HydraDX & Polkadot are offering unprecedented capital & cost efficiency in comparison to other ecosystems.",
 			},
 			{
 				user: {
@@ -766,7 +734,7 @@ export const events = [
 					"Spacewalk - a trustless decentralized multiasset bridge for Polkadot",
 				subTitle: "",
 				description:
-					"Spacewalk is a decentralized bridge from Stellar to Polkadot parachains. It solves multiple challenges when the source chain does neither support smart contracts nor SPV. It supports multiple Stellar assets and stable coins and allows any third-party to join and operate an over-collateralized vault to lock tokens on Stellar. It uses unique features of the Stellar Consensus Algorithm for transaction inclusion proofs.",
+					"Spacewalk is a framework for trust-minimized and decentralized bridges. It enables Polkadot parachains to connect to various blockchains in a unified manner. Spacewalk solves multiple challenges that bridge builders encounter, e.g., when the connecting to chains don’t support smart contracts or SPV. As an example we present a bridge to Stellar that supports multiple assets and stable coins and share our concept for bridging to other chains like Terra or Solana.",
 			},
 			{
 				user: {
@@ -1039,13 +1007,13 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/amsterdot-logo-no-text.png",
+						src: "/assets/speakers/d1/HydraDX-jakub-gregus.png",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Panel",
-					subTitle: "amsterDOT",
+					title: "Jakub Gregus",
+					subTitle: "HydraDX",
 				},
 				icon: {
 					img: {
@@ -1062,11 +1030,11 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["17:00", "18:00"],
-				title: "Robert Habermeier & Cassidy Daly & Jakub Gregus & Peter Mauric",
+				time: ["17:00", "17:30"],
+				title: "Economic Efficiency as the Killer Feature of Dotsama",
 				subTitle: "",
 				description:
-					"Polkadot or Not: Common misunderstandings of key Polkadot features",
+					"In high inflationary times when crypto projects went brrrrr ironically similar to central banks, HydraDX & Polkadot are offering unprecedented capital & cost efficiency in comparison to other ecosystems.",
 			},
 			{
 				icon: {
