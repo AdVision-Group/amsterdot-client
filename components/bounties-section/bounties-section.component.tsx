@@ -43,7 +43,7 @@ const BountySection = () => {
 		{
 			logo: {
 				href: "#",
-				src: "/assets/bounty-section/hydra-logo.svg",
+				src: "/assets/partners-v2/logos/basilisk-v2.png",
 				alt: "hydra logo",
 				width: 0,
 				height: 0,
@@ -67,7 +67,7 @@ const BountySection = () => {
 		{
 			logo: {
 				href: "#",
-				src: "/assets/bounty-section/hydra-logo.svg",
+				src: "/assets/partners-v2/logos/basilisk-v2.png",
 				alt: "hydra logo",
 				width: 0,
 				height: 0,
@@ -111,6 +111,29 @@ const BountySection = () => {
 			},
 			prize: "< $20,000",
 			prize2: "in aUSD",
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/basilisk-v2.png",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Arbitrage Bot for Basilisk",
+			description: "Create an arbitrage bot that speculates on the price differences between 2 or more markets. The solution must be able to trade between Basilisk and any other Kusama parachain. There is a bonus bounty for CEX integration and another bonus for utilising the node's mempool.",
+			issue: {
+				href: "https://github.com/galacticcouncil/amsterdot-bounties-2022/issues/4",
+				label: "issue",
+			},
+			issueIcon: {
+				src: "/assets/bounty-section/github-icon.svg",
+				alt: "github icon",
+				width: 0,
+				height: 0,
+			},
+			prize: "< $14,500",
+			prize2: "in BSX",
 		},
 		{
 			logo: {
