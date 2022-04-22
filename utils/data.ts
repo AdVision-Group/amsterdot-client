@@ -849,7 +849,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["13:30", "14:30"],
-				title: "Jeff Burdges, Cassidy Daly, Jakub Gregus & Peter Mauric",
+				title: "Jeff Burdges, Cassidy Daly, Alexei Zamyatin, Jakub Gregus & Peter Mauric",
 				subTitle: "",
 				description:
 					"Polkadot or Not: Common misunderstandings of key Polkadot features",
