@@ -817,10 +817,42 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["12:30", "14:00"],
+				time: ["12:30", "13:30"],
 				title: "Lunch",
 				subTitle: "",
 				description: "Grab some snaks to soothe the hunger.",
+			},
+			{
+				user: {
+					img: {
+						src: "/assets/amsterdot-logo-no-text.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Panel",
+					subTitle: "amsterDOT",
+				},
+				icon: {
+					img: {
+						src: "/assets/event-icons/user-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "13:30",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["13:30", "14:30"],
+				title: "Jeff Burdges, Cassidy Daly, Jakub Gregus & Peter Mauric",
+				subTitle: "",
+				description:
+					"Polkadot or Not: Common misunderstandings of key Polkadot features",
 			},
 			{
 				user: {
@@ -840,7 +872,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "14:00",
+					time: "14:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -848,7 +880,7 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["14:00", "14:30"],
+				time: ["14:30", "15:00"],
 				title: "The value of research methodologies within parachains.",
 				subTitle: "",
 				description:
@@ -872,7 +904,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "14:30",
+					time: "15:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -880,7 +912,7 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["14:30", "15:00"],
+				time: ["15:00", "15:30"],
 				title:
 					"Concentrated liquidity, efficient market making, and sustainable LP fee generation for projects without token dilution",
 				subTitle: "",
@@ -905,7 +937,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "15:00",
+					time: "15:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -913,7 +945,7 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:00", "15:30"],
+				time: ["15:30", "16:00"],
 				title: "Reactive NFTs",
 				subTitle: "",
 				description:
@@ -927,7 +959,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "15:30",
+					time: "16:00",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -935,7 +967,7 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["15:30", "16:00"],
+				time: ["16:00", "16:30"],
 				title: "Coffee Break",
 				subTitle: "",
 				description: "Grab some refreshments.",
@@ -958,7 +990,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "16:00",
+					time: "16:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -966,7 +998,7 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["16:00", "16:30"],
+				time: ["16:30", "17:00"],
 				title: "Fair Housing market built on substrate",
 				subTitle: "",
 				description:
@@ -990,38 +1022,6 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "16:30",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["16:30", "17:00"],
-				title: "Bringing Web3 to the real world",
-				subTitle: "",
-				description:
-					"This presentation will cover how the Nodle Parachain and Nodle Network can be used to bring Web3 innovations and protocols to the real world. Today, most Web3 applications are digital-only and do not transcend into our daily lives, we will explain how this can be changed and what it means for the ecosystem and our daily lives.",
-			},
-			{
-				user: {
-					img: {
-						src: "/assets/speakers/d1/HydraDX-jakub-gregus.png",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "Jakub Gregus",
-					subTitle: "HydraDX",
-				},
-				icon: {
-					img: {
-						src: "/assets/event-icons/user-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
 					time: "17:00",
 				},
 				img: {
@@ -1031,10 +1031,10 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "17:30"],
-				title: "Economic Efficiency as the Killer Feature of Dotsama",
+				title: "Bringing Web3 to the real world",
 				subTitle: "",
 				description:
-					"In high inflationary times when crypto projects went brrrrr ironically similar to central banks, HydraDX & Polkadot are offering unprecedented capital & cost efficiency in comparison to other ecosystems.",
+					"This presentation will cover how the Nodle Parachain and Nodle Network can be used to bring Web3 innovations and protocols to the real world. Today, most Web3 applications are digital-only and do not transcend into our daily lives, we will explain how this can be changed and what it means for the ecosystem and our daily lives.",
 			},
 			{
 				icon: {
@@ -1044,7 +1044,7 @@ export const events = [
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					time: "18:00",
+					time: "17:30",
 				},
 				img: {
 					src: "/assets/person-final.svg",
@@ -1052,7 +1052,7 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["18:00", "20:00"],
+				time: ["17:30", "20:00"],
 				title: "Drinks",
 				subTitle: "",
 				description: "Offering space to meet, greet and network.",
@@ -1405,9 +1405,19 @@ export const events = [
 				description: "More info soon.",
 			},
 			{
+				user: {
+					img: {
+						src: "/assets/speakers/d1/HydraDX-jakub-gregus.png",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					title: "Jakub Gregus",
+					subTitle: "HydraDX",
+				},
 				icon: {
 					img: {
-						src: "/assets/event-icons/aperitiv-final.svg",
+						src: "/assets/event-icons/user-final.svg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
@@ -1420,7 +1430,29 @@ export const events = [
 					blurDataURL:
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
-				time: ["17:30", "19:00"],
+				time: ["17:30", "18:00"],
+				title: "Economic Efficiency as the Killer Feature of Dotsama",
+				subTitle: "",
+				description:
+					"In high inflationary times when crypto projects went brrrrr ironically similar to central banks, HydraDX & Polkadot are offering unprecedented capital & cost efficiency in comparison to other ecosystems.",
+			},
+			{
+				icon: {
+					img: {
+						src: "/assets/event-icons/aperitiv-final.svg",
+						alt: "ilustration",
+						blurDataURL:
+							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+					},
+					time: "18:00",
+				},
+				img: {
+					src: "/assets/person-final.svg",
+					alt: "ilustration",
+					blurDataURL:
+						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
+				},
+				time: ["18:00", "19:00"],
 				title: "Drinks",
 				subTitle: "",
 				description: "Offering space to meet, greet and network.",
