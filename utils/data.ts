@@ -1311,12 +1311,12 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d4/andrea.jpg",
+						src: "/assets/speakers/d4/alessandro.jpg",
 						alt: "ilustration",
 						blurDataURL:
 							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 					},
-					title: "Andrea Leiter",
+					title: "Alessandro Mazzi",
 					subTitle: "Sovereign Nature Initiative",
 				},
 				icon: {
