@@ -99,9 +99,8 @@ const Header: React.FC<IProps> = ({
 								}}
 								// justifyContent="center"
 							>
-								<a href="#">
-									<Button disabled>SOLD OUT</Button>
-								</a>
+								<Link href={"/#hackaton-content"} passHref><a><Button>HACKATHON</Button></a></Link>
+								<Link href={"/#bounties"} passHref><a><Button outline={"true"}>BOUNTIES</Button></a></Link>
 							</ButtonsContainer>
 						)}
 					</AnimatePresence>

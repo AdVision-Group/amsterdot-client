@@ -172,9 +172,8 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<a href="#">
-							<Button disabled>SOLD OUT</Button>
-						</a>
+						<Link href={"/#hackaton-content"} passHref><a><Button>HACKATHON</Button></a></Link>
+						<Link href={"/#bounties"} passHref><a><Button outline={"true"}>BOUNTIES</Button></a></Link>
 					</ButtonsContainer>
 					<PlaceContainer>
 						<p>IN AMSTERDAM / NETHERLANDS</p>

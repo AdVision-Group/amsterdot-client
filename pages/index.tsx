@@ -297,6 +297,10 @@ const Home: NextPage = () => {
 			</WatermarkContainer>
 
 			<HeroSection />
+			<HackathonSection />
+			<HackatonContentSection />
+			{/* <PricepoolSection /> */}
+			<BountySection />
 			<AboutSection />
 			<EventSection />
 
@@ -332,10 +336,6 @@ const Home: NextPage = () => {
 				))}
 			</SectionContainer>
 
-			<HackathonSection />
-			<HackatonContentSection />
-			{/* <PricepoolSection /> */}
-			<BountySection />
 			{/* <FooterSection /> */}
 		</React.Fragment>
 	)

@@ -55,14 +55,14 @@ const HackatonContentSection = () => {
 				// }}
 				>
 					<LabelContainer>
-						<p>INFO</p>
+						<p>amsterDOT 2022</p>
 					</LabelContainer>
 					<ContentContainer>
-						<h2>Online hackathon, open to anyone</h2>
+						<h2>Online Dotsama hackathon, open to anyone</h2>
 						<h3>Start: April 20th</h3>
 						<h3>End: June 3rd (12 UTC)</h3>
 						<h3>Rewards: $350,000+ from bounties and shared prize pool</h3>
-						<h3>Registration: Via DoraHacks (link soon)</h3>
+						<h3>Registration: Via <a target="_blank" href="https://dorahacks.io/hackathon/22/detail" rel="noopener noreferrer">DoraHacks</a></h3>
 						<h3>Submission guidelines: Can differ (see Github issue of the bounty)</h3>
 						<h3>Also submit via DoraHacks to participate in the distribution of the prize pool</h3>
 						<h3>Include a short description and a 5-min video</h3>
@@ -78,7 +78,6 @@ const HackatonContentSection = () => {
 							<p>by Polkadot Treasury</p>
 						</ContentBottomContainer>
 					</ContentContainer>
-					
 				</Container>
 			</SectionContainer>
 		</React.Fragment>
