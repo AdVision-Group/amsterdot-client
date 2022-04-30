@@ -141,20 +141,20 @@ const HeroSection = () => {
 					</AnimationContainer>
 					<HeadContainer>
 						<h1>
-							<span>CONF</span>
+							<span>ONLINE</span>
 							<span>HACK</span>
 						</h1>
 					</HeadContainer>
 					<DateContainer>
 						<p>
-							<span>20</span>
+							<span>4/20</span>
 							<span />
 						</p>
 						<p>
 							<span />
-							<span>23</span>
+							<span>6/03</span>
 						</p>
-						<p>APRIL</p>
+						<p>&nbsp;</p>
 						<p>2022</p>
 					</DateContainer>
 					<ImageContainer>

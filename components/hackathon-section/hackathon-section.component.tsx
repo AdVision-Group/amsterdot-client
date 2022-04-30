@@ -74,7 +74,6 @@ const HackathonSection = () => {
 					</figure>
 				</IluContainer>
 				<PlaceContainer>
-					<p>IN AMSTERDAM / NETHERLANDS</p>
 					<div>
 						<figure>
 							<Image
@@ -86,7 +85,7 @@ const HackathonSection = () => {
 								height={30}
 							/>
 						</figure>
-						<span>Westerliefde Klönneplein 4-6, 1014 DD</span>
+						<span>ONLINE</span>
 					</div>
 				</PlaceContainer>
 				<Link href={"/#hackaton-content"} passHref>
