@@ -889,39 +889,6 @@ export const events = [
 			{
 				user: {
 					img: {
-						src: "/assets/speakers/d3/tyler.png",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					title: "Tyler",
-					subTitle: "ICHI",
-				},
-				icon: {
-					img: {
-						src: "/assets/event-icons/user-final.svg",
-						alt: "ilustration",
-						blurDataURL:
-							"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-					},
-					time: "15:00",
-				},
-				img: {
-					src: "/assets/person-final.svg",
-					alt: "ilustration",
-					blurDataURL:
-						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
-				},
-				time: ["15:00", "15:30"],
-				title:
-					"Concentrated liquidity, efficient market making, and sustainable LP fee generation for projects without token dilution",
-				subTitle: "",
-				description:
-					"This talk is about the importance of efficient use of liquidity across DEXs. Most DEXs use Uniswap V2 AMMs resulting in unpredictable price volatility and far less fee generation. V2 pools stack liquidity from 0 until infinity on both sides. This results in most of the liquidity never even being traded and LP providers splitting fees amongst what is essentially unused capital. Polkadot and Kusama projects must focus on using concentrated liquidity from the start in order to incentivize their LP providers with much higher fees instead of relying on diluting their precious tokens. Concentrated liquidity also allows for projects to efficiently place liquidity in strategic price points resulting in efficient market making and far less volatility.",
-			},
-			{
-				user: {
-					img: {
 						src: "/assets/speakers/d3/vikiival.jpeg",
 						alt: "ilustration",
 						blurDataURL:
