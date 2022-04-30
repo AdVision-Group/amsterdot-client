@@ -14,9 +14,9 @@ const AboutSection = () => {
 	// const tr
 	// ansformOpacity = useTransform(scrollYProgress, [0.13, 0.2], [1, 0])
 
-	const transformYDO = useTransform(scrollYProgress, [0.03, 0.25], [-180, 0])
+	const transformYDO = useTransform(scrollYProgress, [0.62, 0.77], [-180, 0])
 
-	const transformYT = useTransform(scrollYProgress, [0.03, 0.3], [130, -40])
+	const transformYT = useTransform(scrollYProgress, [0.62, 0.77], [130, -40])
 
 	const partners = [
 		{

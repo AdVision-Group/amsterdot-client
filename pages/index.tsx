@@ -14,13 +14,13 @@ import Header from "../components/header/header.component"
 import HeroSection from "../components/hero-section/hero-section.component"
 import AboutSection from "../components/about-section/about-section.component"
 import EventSection from "../components/event-section/event-section.component"
-import FooterSection from "../components/footer-section/footer-section.component"
+// import FooterSection from "../components/footer-section/footer-section.component"
 import Accordion from "../components/accordion/accordion.component"
 import WorkshopSection from "../components/workshop-section/workshop-section.component"
 import HackathonSection from "../components/hackathon-section/hackathon-section.component"
 import HackatonContentSection from "../components/hackaton-content-section/hackaton-content-section.component"
 import BountySection from "../components/bounties-section/bounties-section.component"
-import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
+// import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
 
 // Hooks
 import { useRouter } from "next/router"
@@ -31,7 +31,7 @@ import {
 	// useSpring,
 } from "framer-motion"
 import {
-	useNumber,
+	// useNumber,
 	useMap,
 	//  useWindowSize
 } from "react-use"

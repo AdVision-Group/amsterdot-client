@@ -12,8 +12,8 @@ const BountySection = () => {
 
 	// console.log(scrollYProgress)
 
-	const transformBOUN = useTransform(scrollYProgress, [0.51, 0.65], [40, -150])
-	const transformTIES = useTransform(scrollYProgress, [0.51, 0.65], [0, 100])
+	const transformBOUN = useTransform(scrollYProgress, [0.18, 0.32], [40, -150])
+	const transformTIES = useTransform(scrollYProgress, [0.18, 0.32], [0, 100])
 
 	const bounties = [
 		{
@@ -121,7 +121,8 @@ const BountySection = () => {
 				height: 0,
 			},
 			title: "Arbitrage Bot for Basilisk",
-			description: "Create an arbitrage bot that speculates on the price differences between 2 or more markets. The solution must be able to trade between Basilisk and any other Kusama parachain. There is a bonus bounty for CEX integration and another bonus for utilising the node's mempool.",
+			description:
+				"Create an arbitrage bot that speculates on the price differences between 2 or more markets. The solution must be able to trade between Basilisk and any other Kusama parachain. There is a bonus bounty for CEX integration and another bonus for utilising the node's mempool.",
 			issue: {
 				href: "https://github.com/galacticcouncil/amsterdot-bounties-2022/issues/4",
 				label: "issue",
