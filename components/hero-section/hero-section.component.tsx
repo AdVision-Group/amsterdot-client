@@ -413,9 +413,10 @@ const DateContainer = styled.div`
 	max-width: 10rem;
 	/* border: 1px solid green; */
 	justify-self: end;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	line-height: 1.1;
 	text-align: center;
+	margin-top: 0.7rem;
 
 	p {
 		font-family: "Avenir Next";
@@ -455,19 +456,15 @@ const DateContainer = styled.div`
 			}
 		}
 	}
-	p:nth-of-type(4) {
+	p:nth-of-type(3) {
 		/* border: 1px solid green; */
-		font-size: 2.5rem;
+		font-size: 3.5rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		p:nth-of-type(3) {
 			/* border: 1px solid green; */
-			font-size: 2.8rem;
-		}
-		p:nth-of-type(4) {
-			/* border: 1px solid green; */
-			font-size: 3.3rem;
+			/* font-size: 4.5rem; */
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
