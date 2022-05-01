@@ -99,8 +99,16 @@ const Header: React.FC<IProps> = ({
 								}}
 								// justifyContent="center"
 							>
-								<Link href={"/#hackaton-content"} passHref><a><Button>HACKATHON</Button></a></Link>
-								<Link href={"/#bounties"} passHref><a><Button outline={"true"}>BOUNTIES</Button></a></Link>
+								<Link href={"/#hackaton-content"} passHref>
+									<a>
+										<Button>HACKATHON</Button>
+									</a>
+								</Link>
+								<Link href={"/#bounties"} passHref>
+									<a>
+										<Button outline={"true"}>BOUNTIES</Button>
+									</a>
+								</Link>
 							</ButtonsContainer>
 						)}
 					</AnimatePresence>
@@ -217,6 +225,16 @@ const Header: React.FC<IProps> = ({
 
 							<Ul>
 								<li className="first">
+									<Link href={"/#hackaton-content"}>
+										<a onClick={toggleMobileNav}>HACKATON</a>
+									</Link>
+								</li>
+								<li>
+									<Link href={"/#bounties-h"}>
+										<a onClick={toggleMobileNav}>BOUNTIES</a>
+									</Link>
+								</li>
+								<li>
 									<Link href={"/#about"}>
 										<a onClick={toggleMobileNav}>WHAT IS amsterDOT</a>
 									</Link>
@@ -244,7 +262,7 @@ const Header: React.FC<IProps> = ({
 								</li>
 								<li>
 									<Link href={"/#hack-2"}>
-										<a onClick={toggleMobileNav}>HACKATON PROGRAM</a>
+										<a onClick={toggleMobileNav}>WOKSHOP PROGRAM</a>
 									</Link>
 									<NestedUl>
 										{hackatons.map((e, idx) => (
@@ -265,16 +283,6 @@ const Header: React.FC<IProps> = ({
 									</NestedUl>
 								</li>
 
-								<li>
-									<Link href={"/#pricepool"}>
-										<a onClick={toggleMobileNav}>PRIZE POOL</a>
-									</Link>
-								</li>
-								<li>
-									<Link href={"/#bounties-h"}>
-										<a onClick={toggleMobileNav}>BOUNTIES</a>
-									</Link>
-								</li>
 								<li style={{ opacity: 0 }}>x</li>
 								<EmailLi>
 									<figure>

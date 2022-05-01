@@ -12,8 +12,8 @@ const BountySection = () => {
 
 	// console.log(scrollYProgress)
 
-	const transformBOUN = useTransform(scrollYProgress, [0.18, 0.32], [40, -150])
-	const transformTIES = useTransform(scrollYProgress, [0.18, 0.32], [0, 100])
+	const transformBOUN = useTransform(scrollYProgress, [0.13, 0.32], [40, -150])
+	const transformTIES = useTransform(scrollYProgress, [0.13, 0.32], [0, 100])
 
 	const bounties = [
 		{

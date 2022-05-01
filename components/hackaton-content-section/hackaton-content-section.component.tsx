@@ -215,11 +215,16 @@ const DateContainer = styled.div`
 	align-items: center;
 	width: 100%;
 	max-width: 55rem;
-	margin: 0 auto 7rem;
+	margin: 3rem auto 7rem;
 
 	figure {
 		position: relative;
 		width: 10rem;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		/* font-size: 3.2rem; */
+		margin: 0 auto 7rem;
 	}
 `
 

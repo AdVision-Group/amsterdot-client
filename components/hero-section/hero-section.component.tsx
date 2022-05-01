@@ -147,14 +147,14 @@ const HeroSection = () => {
 					</HeadContainer>
 					<DateContainer>
 						<p>
-							<span>4/20</span>
+							<span>04/20</span>
 							<span />
 						</p>
 						<p>
 							<span />
-							<span>6/03</span>
+							<span>06/03</span>
 						</p>
-						<p>&nbsp;</p>
+						{/* <p>&nbsp;</p> */}
 						<p>2022</p>
 					</DateContainer>
 					<ImageContainer>
@@ -172,8 +172,16 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<Link href={"/#hackaton-content"} passHref><a><Button>HACKATHON</Button></a></Link>
-						<Link href={"/#bounties"} passHref><a><Button outline={"true"}>BOUNTIES</Button></a></Link>
+						<Link href={"/#hackaton-content"} passHref>
+							<a>
+								<Button>HACKATHON</Button>
+							</a>
+						</Link>
+						<Link href={"/#bounties"} passHref>
+							<a>
+								<Button outline={"true"}>BOUNTIES</Button>
+							</a>
+						</Link>
 					</ButtonsContainer>
 					<PlaceContainer>
 						<p>IN AMSTERDAM / NETHERLANDS</p>
@@ -405,7 +413,7 @@ const DateContainer = styled.div`
 	max-width: 10rem;
 	/* border: 1px solid green; */
 	justify-self: end;
-	font-size: 2.2rem;
+	font-size: 1.4rem;
 	line-height: 1.1;
 	text-align: center;
 
