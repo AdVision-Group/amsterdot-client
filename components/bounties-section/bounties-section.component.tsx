@@ -604,6 +604,7 @@ const BountySection = () => {
 										width={50}
 										height={20}
 										objectFit="contain"
+										objectPosition={"left"}
 									/>
 								</LogoFigure>
 							</a>
