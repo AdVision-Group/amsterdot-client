@@ -17,6 +17,18 @@ const HackatonContentSection = () => {
 				// 	opacity: transformOpacity,
 				// }}
 				>
+					<IluContainer>
+						<figure>
+							<Image
+								src="/assets/anim-v2.gif"
+								alt="conf ilu"
+								objectFit="cover"
+								layout="responsive"
+								width={100}
+								height={50}
+							/>
+						</figure>
+					</IluContainer>
 					<LabelContainer>
 						<p>amsterDOT 2022</p>
 					</LabelContainer>
@@ -138,6 +150,64 @@ const Container = styled(motion.div)`
 	}
 `
 
+const IluContainer = styled.div`
+	/* grid-area: i; */
+	right: -1rem;
+	top: 10rem;
+	position: absolute;
+	width: 40rem;
+	/* border: 1px solid green; */
+	/* margin: 6rem 0rem 0rem; */
+	/* width: 18rem;
+	height: 26rem;
+
+	margin-top: -5rem;
+	margin-bottom: 5rem;
+
+	figure {
+		width: 18rem;
+		height: 25rem;
+		&:nth-of-type(1) {
+			position: absolute;
+			z-index: 1;
+			bottom: -2rem;
+			right: -5rem;
+		}
+		&:nth-of-type(2) {
+			width: 15rem;
+			position: absolute;
+			bottom: 0;
+		}
+	} */
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		right: -3rem;
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			top: 0;
+			/* margin-top: 0rem; */
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				/* width: 48rem;
+				margin-top: -8rem;
+
+				figure {
+					width: 30rem;
+
+					&:nth-of-type(1) {
+						top: -12.5rem;
+						right: -3rem;
+					}
+					&:nth-of-type(2) {
+						right: 12rem;
+						width: 22rem;
+						bottom: 0;
+					}
+				} */
+			}
+		}
+	}
+`
+
 const DateContainer = styled.div`
 	position: relative;
 	display: flex;
@@ -225,6 +295,10 @@ const ContentContainer = styled.div`
 		font-weight: 400;
 		font-size: 1.6rem;
 		margin-bottom: 0.5rem;
+
+		&:nth-of-type(3) {
+			margin-bottom: 3rem;
+		}
 	}
 
 	a {
