@@ -91,7 +91,7 @@ const BountySection = () => {
 		{
 			logo: {
 				href: "#",
-				src: "/assets/partners-v2/logos/acala-logo.png",
+				src: "/assets/bounty-section/acala-v2.png",
 				alt: "hydra logo",
 				width: 0,
 				height: 0,
@@ -187,7 +187,7 @@ const BountySection = () => {
 		{
 			logo: {
 				href: "#",
-				src: "/assets/partners-v2/logos/acala-logo.png",
+				src: "/assets/bounty-section/acala-v2.png",
 				alt: "hydra logo",
 				width: 0,
 				height: 0,
@@ -211,7 +211,7 @@ const BountySection = () => {
 		{
 			logo: {
 				href: "#",
-				src: "/assets/partners-v2/logos/acala-logo.png",
+				src: "/assets/bounty-section/acala-v2.png",
 				alt: "hydra logo",
 				width: 0,
 				height: 0,
@@ -235,7 +235,7 @@ const BountySection = () => {
 		{
 			logo: {
 				href: "#",
-				src: "/assets/partners-v2/logos/acala-logo.png",
+				src: "/assets/bounty-section/acala-v2.png",
 				alt: "hydra logo",
 				width: 0,
 				height: 0,
