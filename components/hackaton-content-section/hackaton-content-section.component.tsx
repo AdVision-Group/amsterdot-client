@@ -8,43 +8,6 @@ import Image from "next/image"
 import Link from "next/link"
 import Button from "../button/button.component"
 
-const ContentBottomContainer = styled.div`
-	margin-top: 2rem;
-	p {
-		margin: 0;
-		text-align: end;
-
-		&:nth-of-type(1) {
-			font-size: 2.4rem;
-			color: ${({ theme }) => theme.color.primary};
-			font-weight: 900;
-		}
-		&:nth-of-type(2) {
-			font-size: 1.6rem;
-			font-weight: 700;
-			/* color: ${({ theme }) => theme.color.primary}; */
-		}
-	}
-
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		p {
-			margin: 0;
-			text-align: end;
-
-			&:nth-of-type(1) {
-				font-size: 3.75rem;
-				color: ${({ theme }) => theme.color.primary};
-				font-weight: 900;
-			}
-			&:nth-of-type(2) {
-				font-size: 2rem;
-				font-weight: 700;
-				/* color: ${({ theme }) => theme.color.primary}; */
-			}
-		}
-	}
-`
-
 const HackatonContentSection = () => {
 	return (
 		<React.Fragment>
@@ -59,8 +22,35 @@ const HackatonContentSection = () => {
 					</LabelContainer>
 					<ContentContainer>
 						<h2>Online Dotsama hackathon, open to anyone</h2>
-						<h3>Start: April 20th</h3>
-						<h3>End: June 3rd (12 UTC)</h3>
+
+						<DateContainer>
+							<DateContent>
+								<figure>
+									<Image
+										src={"/assets/hackaton-section/rocket.svg"}
+										alt={"rocket ilu"}
+										width={40}
+										height={40}
+										layout="responsive"
+									/>
+								</figure>
+								<h3>20.04.22</h3>
+							</DateContent>
+							<Line />
+							<DateContent>
+								<figure>
+									<Image
+										src={"/assets/hackaton-section/chess.svg"}
+										alt={"chess ilu"}
+										width={40}
+										height={40}
+										layout="responsive"
+									/>
+								</figure>
+								<h3>03.06.22</h3>
+							</DateContent>
+						</DateContainer>
+
 						<h3>Rewards: $350,000+ from bounties and shared prize pool</h3>
 						<h3>
 							Registration: Via{" "}
@@ -86,14 +76,16 @@ const HackatonContentSection = () => {
 							teams using quadratic voting
 						</h3>
 
-						<ContentBottomContainer>
-							<p>$190,000+ BOUNTIES</p>
-							<p>by leading projects from the Polkadot & Kusama ecosystem</p>
-						</ContentBottomContainer>
-						<ContentBottomContainer>
-							<p>+ $150,000 PRIZE POOL</p>
-							<p>by Polkadot Treasury</p>
-						</ContentBottomContainer>
+						<FlexContainer>
+							<ContentBottomContainer>
+								<p>$190,000+ BOUNTIES</p>
+								<p>by leading projects from the Polkadot & Kusama ecosystem</p>
+							</ContentBottomContainer>
+							<ContentBottomContainer>
+								<p>+ $150,000 PRIZE POOL</p>
+								<p>by Polkadot Treasury</p>
+							</ContentBottomContainer>
+						</FlexContainer>
 					</ContentContainer>
 				</Container>
 			</SectionContainer>
@@ -111,7 +103,7 @@ const SectionContainer = styled.section`
 	z-index: 99;
 	/* height: 100vh; */
 	/* overflow: hidden; */
-	margin: 15rem 0 10rem;
+	margin: 5rem 0 10rem;
 	overflow: unset !important;
 	overflow-x: hidden;
 	display: flex;
@@ -146,21 +138,66 @@ const Container = styled(motion.div)`
 	}
 `
 
+const DateContainer = styled.div`
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 55rem;
+	margin: 0 auto 7rem;
+
+	figure {
+		position: relative;
+		width: 10rem;
+	}
+`
+
+const DateContent = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	h3 {
+		bottom: -4rem;
+		position: absolute;
+		padding-top: 0.5rem;
+		font-family: "Avenir Next";
+		line-height: 1.5;
+		font-weight: 900 !important;
+		font-size: 2rem !important;
+	}
+`
+
+const Line = styled.div`
+	flex-grow: 1;
+	height: 0.9rem;
+	/* background-color: green; */
+	background: linear-gradient(
+		90deg,
+		rgba(255, 0, 140, 1) 0%,
+		rgba(39, 39, 39, 1) 50%
+	);
+	/* margin-bottom: 3.9rem; */
+`
+
 const LabelContainer = styled.div`
 	position: relative;
 	z-index: 1;
 	background-color: ${({ theme }) => theme.color.primary};
-	padding: 0.8rem 1rem 0.5rem;
+	padding: 0.8rem 1.8rem 0.5rem;
 	display: inline-block;
 	margin-left: 1.5rem;
-	color: ${({ theme }) => theme.fonts.secondary};
+	color: ${({ theme }) => theme.fonts.primary};
+	text-transform: uppercase;
 	font-weight: 500;
 	font-size: 2.5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-left: 3rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			font-size: 3.5rem;
+			font-size: 3.2rem;
 		}
 	}
 `
@@ -176,13 +213,27 @@ const ContentContainer = styled.div`
 	h2 {
 		font-family: "Avenir Next";
 		line-height: 1.5;
-		font-weight: 500;
+		font-weight: 900;
 		font-size: 2.8rem;
+		margin-bottom: 0.5rem;
+		color: ${({ theme }) => theme.color.primary};
+	}
+
+	h3 {
+		font-family: "Avenir Next";
+		line-height: 1.5;
+		font-weight: 400;
+		font-size: 1.6rem;
 		margin-bottom: 0.5rem;
 	}
 
 	a {
-		color: ${({ theme }) => theme.color.primary};
+		color: ${({ theme }) => theme.fonts.primary};
+		text-decoration: underline;
+
+		&:hover {
+			color: ${({ theme }) => theme.color.primary};
+		}
 	}
 
 	p {
@@ -192,7 +243,7 @@ const ContentContainer = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		p {
-			font-size: 1.8rem;
+			/* font-size: 1.8rem; */
 			margin-bottom: 2rem;
 			max-width: 75rem;
 		}
@@ -200,7 +251,7 @@ const ContentContainer = styled.div`
 			padding: 4rem 3rem 3rem;
 
 			h2 {
-				font-size: 4rem;
+				font-size: 3.8rem;
 				margin-top: 1rem;
 				margin-bottom: 2rem;
 			}
@@ -221,6 +272,57 @@ const ContentContainer = styled.div`
 				p {
 					margin-bottom: 2rem;
 				}
+			}
+		}
+	}
+`
+
+const FlexContainer = styled.div`
+	margin-top: 4rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		grid-template-columns: 1fr 1fr;
+	}
+`
+
+const ContentBottomContainer = styled.div`
+	border: 1px solid ${({ theme }) => theme.color.primary};
+	padding: 1rem 2rem;
+
+	p {
+		margin: 0;
+		/* text-align: end; */
+
+		&:nth-of-type(1) {
+			font-size: 2.4rem;
+			color: ${({ theme }) => theme.color.primary};
+			font-weight: 900;
+			margin-bottom: 0.5rem;
+		}
+		&:nth-of-type(2) {
+			font-size: 1.6rem;
+			font-weight: 700;
+			/* color: ${({ theme }) => theme.color.primary}; */
+		}
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		p {
+			margin: 0;
+			/* text-align: end; */
+
+			&:nth-of-type(1) {
+				font-size: 3rem;
+				color: ${({ theme }) => theme.color.primary};
+				font-weight: 900;
+			}
+			&:nth-of-type(2) {
+				font-size: 1.6rem;
+				font-weight: 700;
+				/* color: ${({ theme }) => theme.color.primary}; */
 			}
 		}
 	}

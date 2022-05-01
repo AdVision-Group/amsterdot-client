@@ -910,7 +910,7 @@ const CurrencyFigure = styled.figure`
 const Title = styled(motion.h3)`
 	position: relative;
 	font-size: 7rem;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: 1;
 	z-index: 3;
 
