@@ -12,6 +12,8 @@ import { useToggle, useWindowSize } from "react-use"
 // Icons
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri"
 
+import { AiFillYoutube, AiOutlineYoutube } from "react-icons/ai"
+
 interface IProps {
 	id: string | number
 	item: {
@@ -39,6 +41,7 @@ interface IProps {
 		}
 		time: string[]
 		title: string
+		youtubeLink?: string
 		subTitle: string
 		description: string
 	}
@@ -53,6 +56,20 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 	return (
 		<AccordionContainer isactive={showContent}>
 			<AccordionHeading onClick={toggleContent}>
+				<YoutubeContainer>
+					{item.youtubeLink && (
+						<a
+							href={item.youtubeLink || "#"}
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<figure>
+								<AiFillYoutube />
+								{/* <AiOutlineYoutube /> */}
+							</figure>
+						</a>
+					)}
+				</YoutubeContainer>
 				<TimeRange>
 					{item.time[0]} <span /> {item.time[1]}
 				</TimeRange>
@@ -128,6 +145,25 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 }
 
 export default SubAccordion
+
+const YoutubeContainer = styled.div`
+	grid-area: y;
+
+	figure {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 3rem;
+		color: ${({ theme }) => theme.color.primary};
+	}
+	justify-self: end;
+	padding-right: 0.95rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		align-self: center;
+	}
+`
 
 const UserContainer = styled.div`
 	grid-area: u;
@@ -228,7 +264,7 @@ const AccordionHeading = styled(motion.div)`
 	/* grid-template-columns: auto auto;
 	grid-template-rows: auto auto auto; */
 	grid-template-areas:
-		"r r"
+		"r y"
 		"t s"
 		"b b"
 		"u a";
@@ -237,10 +273,10 @@ const AccordionHeading = styled(motion.div)`
 	/* gap: 4rem; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		grid-template-columns: auto 1fr minmax(auto, 31.5rem) auto;
+		grid-template-columns: auto auto 1fr minmax(auto, 31.5rem) auto;
 		grid-template-rows: auto;
 		gap: 1.5rem;
-		grid-template-areas: "r t u a s";
+		grid-template-areas: "y r t u a s";
 		padding: 0.8rem 2.5rem;
 
 		${Border} {

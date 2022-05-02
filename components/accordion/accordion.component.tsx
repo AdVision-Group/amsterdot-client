@@ -53,6 +53,7 @@ interface IProps {
 			}
 			time: string[]
 			title: string
+			youtubeLink?: string
 			subTitle: string
 			description: string
 		}[]

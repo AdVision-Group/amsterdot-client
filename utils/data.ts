@@ -118,6 +118,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:30", "15:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=GQGWzBUake0",
 				title: "An overview of aUSD",
 				subTitle: "",
 				description:
@@ -150,6 +151,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["15:00", "15:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=sGDpxXfVSAk",
 				title: "Leveraging the power of Real World Assets in Dotsama",
 				subTitle: "",
 				description:
@@ -203,6 +205,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:30", "17:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=ko7hzq1Zlaw",
 				title: "Traverse the Paraverse",
 				subTitle: "",
 				description: "How Talisman is bringing multi-chain to the masses.",
@@ -234,6 +237,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "17:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=g2S783CvR0I",
 				title: "The Google of Web3 on Polkadot",
 				subTitle: "",
 				description:
@@ -266,6 +270,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:30", "18:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=SUj146iCWX4",
 				title: "Investment in the crypto industry",
 				subTitle: "",
 				description:
@@ -360,6 +365,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["11:00", "11:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=pEy9zkhh9oY",
 				title: "A Peek into the Future of Data Indexing",
 				subTitle: "",
 				description:
@@ -392,6 +398,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["11:30", "12:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=3FPDdiT6uVA",
 				title: "The Future of DApp development",
 				subTitle: "",
 				description:
@@ -424,6 +431,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["12:00", "12:30"],
+				// youtubeLink: "",
 				title: "Radically open Bitcoin for parachains",
 				subTitle: "",
 				description: "More info to be added",
@@ -476,6 +484,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:00", "14:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=HH_6ZIZbIkw",
 				title: "Web3 computation for Metaverse",
 				subTitle: "",
 				description:
@@ -508,6 +517,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:30", "15:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=N6taPrICr4E",
 				title: "Introduction into Astar Network",
 				subTitle: "",
 				description:
@@ -540,6 +550,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["15:00", "15:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=Ilx6XgeeXfs",
 				title:
 					"Bootstrapping an Ethereum-compatible and Interoperable Ecosystem in Polkadot",
 				subTitle: "",
@@ -594,6 +605,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:00", "16:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=FlAYT9uOaXU",
 				title: "Keep Your Funds Safe, Offline",
 				subTitle: "",
 				description:
@@ -626,6 +638,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:30", "17:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=KsM6829lT74",
 				title: "Deep Dive into Moonbeam EVM Compatibility",
 				subTitle: "",
 				description:
@@ -658,6 +671,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "17:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=30-Su6VWppk",
 				title: "Tools for Smart Contracts in Polkadot",
 				subTitle: "",
 				description:
@@ -730,6 +744,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["11:00", "11:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=OY4Y13EN6lM",
 				title:
 					"Spacewalk - a trustless decentralized multiasset bridge for Polkadot",
 				subTitle: "",
@@ -763,6 +778,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["11:30", "12:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=bT0dhiFWuOc",
 				title:
 					"Built on KILT: An Identity Layer for Polkadot Enterprise Applications",
 				subTitle: "",
@@ -796,6 +812,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["12:00", "12:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=XRLJYkht9m8",
 				title: "Communities in DotSama",
 				subTitle: "",
 				description:
@@ -849,7 +866,9 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["13:30", "14:30"],
-				title: "Jeff Burdges, Cassidy Daly, Alexei Zamyatin, Jakub Gregus & Peter Mauric",
+				youtubeLink: "https://www.youtube.com/watch?v=4RyO21fl9ZU",
+				title:
+					"Jeff Burdges, Cassidy Daly, Alexei Zamyatin, Jakub Gregus & Peter Mauric",
 				subTitle: "",
 				description:
 					"Polkadot or Not: Common misunderstandings of key Polkadot features",
@@ -881,6 +900,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:30", "15:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=ZwNcgXg4dv8",
 				title: "The value of research methodologies within parachains.",
 				subTitle: "",
 				description:
@@ -913,6 +933,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["15:30", "16:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=3i1nVK-y424",
 				title: "Reactive NFTs",
 				subTitle: "",
 				description:
@@ -966,6 +987,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:30", "17:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=rZdqHgn69wU",
 				title: "Fair Housing market built on substrate",
 				subTitle: "",
 				description:
@@ -998,6 +1020,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "17:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=xc_D8QrBbq4",
 				title: "Bringing Web3 to the real world",
 				subTitle: "",
 				description:
@@ -1070,6 +1093,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["11:00", "11:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=492EnoPgrJY",
 				title: "Building a Web3 data-lake",
 				subTitle: "",
 				description:
@@ -1102,6 +1126,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["11:30", "12:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=wauxPBRL0aY",
 				title: "Interoperability in the web 3 gaming & metaverse",
 				subTitle: "",
 				description:
@@ -1134,6 +1159,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["12:00", "12:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=nV3o3KtwRKE",
 				title: "Zeitgeist: Predicting the future",
 				subTitle: "",
 				description:
@@ -1187,6 +1213,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:00", "14:30"],
+				// youtubeLink: "",
 				title: "Composable privacy on Polkadot",
 				subTitle: "",
 				description:
@@ -1219,6 +1246,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:30", "15:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=OoElpVgpx-k",
 				title: "Making Polkadot a hub for sustainability",
 				subTitle: "",
 				description: "More info soon.",
@@ -1250,6 +1278,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["15:00", "15:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=ixZJtuItD8E",
 				title: "Next Generation NFT and Climate Impact on Polkadot",
 				subTitle: "",
 				description: "More info soon.",
@@ -1302,6 +1331,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:00", "16:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=miXupSB5LSo",
 				title:
 					"Creating value at the intersection of ecology, technology and economics",
 				subTitle: "",
@@ -1335,6 +1365,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["16:30", "17:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=yGoZE6omXjE",
 				title: "Enhance your Web3 app with Automata Middlewares",
 				subTitle: "",
 				description:
@@ -1367,6 +1398,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:00", "17:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=XhMin9M-t0o&t=9s",
 				title: "Collabland Integration & Token Gated Communities",
 				subTitle: "",
 				description: "More info soon.",
@@ -1398,6 +1430,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["17:30", "18:00"],
+				youtubeLink: "https://www.youtube.com/watch?v=azwkJy6itqc",
 				title: "Economic Efficiency as the Killer Feature of Dotsama",
 				subTitle: "",
 				description:
