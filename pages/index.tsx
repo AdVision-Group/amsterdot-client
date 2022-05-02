@@ -39,6 +39,9 @@ import {
 // Data
 import { events, hackatons } from "../utils/data"
 
+// Icons
+import { AiFillGithub } from "react-icons/ai"
+
 const Home: NextPage = () => {
 	const { push } = useRouter()
 	// const { width } = useWindowSize()
@@ -337,11 +340,32 @@ const Home: NextPage = () => {
 			</SectionContainer>
 
 			{/* <FooterSection /> */}
+			<Footer>
+				<a
+					href="https://github.com/AdVision-Group/amsterdot-client"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<figure>
+						<AiFillGithub />
+					</figure>
+				</a>
+			</Footer>
 		</React.Fragment>
 	)
 }
 
 export default Home
+
+const Footer = styled.footer`
+	display: flex;
+	justify-content: center;
+
+	figure {
+		color: ${({ theme }) => theme.color.primary};
+		font-size: 3rem;
+	}
+`
 
 // const Circle1 = styled(motion.figure)`
 // 	position: absolute;
