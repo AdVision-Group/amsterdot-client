@@ -1,12 +1,16 @@
 // Utils
 import React from "react"
 import styled from "styled-components"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 // Components
 import Image from "next/image"
 import Link from "next/link"
 import Button from "../button/button.component"
+import VideoModal from "../video-modal/video-modal.component"
+
+// Hooks
+import { useToggle } from "react-use"
 
 const HeroSection = () => {
 	const partners = [
@@ -90,8 +94,15 @@ const HeroSection = () => {
 		},
 	]
 
+	const [showModal, toggleModal] = useToggle(false)
+
 	return (
 		<SectionContainer>
+			{showModal && (
+				<AnimatePresence exitBeforeEnter>
+					<VideoModal onClose={toggleModal} />
+				</AnimatePresence>
+			)}
 			<Link href={"/#about"} passHref>
 				<a>
 					<ArrowContainer
@@ -139,6 +150,37 @@ const HeroSection = () => {
 							objectFit="contain"
 						/>
 					</AnimationContainer>
+					<PlayButtonContainer>
+						<motion.figure
+							whileHover={{
+								scale: 1.1,
+							}}
+							whileDrag={{
+								scale: 0.97,
+							}}
+							onClick={toggleModal}
+						>
+							<Image
+								src={"/assets/hero-section/circle.svg"}
+								alt={"circle"}
+								width={80}
+								height={80}
+								objectFit="contain"
+								layout="fill"
+								className="circle"
+							/>
+
+							<Image
+								src={"/assets/hero-section/center.svg"}
+								alt={"center "}
+								width={80}
+								height={80}
+								objectFit="contain"
+								layout="fill"
+								className="center"
+							/>
+						</motion.figure>
+					</PlayButtonContainer>
 					<HeadContainer>
 						<h1>
 							<span>ONLINE</span>
@@ -249,6 +291,47 @@ const ArrowContainer = styled(motion.figure)`
 				bottom: 13rem;
 			}
 		}
+	}
+`
+
+const PlayButtonContainer = styled.div`
+	position: absolute;
+	left: 1.5rem;
+	top: 50%;
+	z-index: 9;
+
+	figure {
+		cursor: pointer;
+		position: relative;
+
+		width: 8rem;
+		height: 8rem;
+
+		.circle {
+			animation-name: rotation;
+			animation-duration: 40s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			/* animation-timing-function: ease; */
+		}
+
+		.center {
+			padding: 2.5rem !important;
+		}
+	}
+
+	@keyframes rotation {
+		0% {
+			transform: rotate(0);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		left: unset;
+		right: 3rem;
 	}
 `
 
