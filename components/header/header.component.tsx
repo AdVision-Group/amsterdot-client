@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import Button from "../button/button.component"
+import VideoModal from "../video-modal/video-modal.component"
 
 // Hooks
 import { useToggle } from "react-use"
@@ -39,6 +40,8 @@ const Header: React.FC<IProps> = ({
 	const [isOnTop, toggleIsOnTop] = useToggle(true)
 	const [showCTAs, toggleShowCTAs] = useToggle(true)
 
+	const [showModal, toggleModal] = useToggle(false)
+
 	useEffect(() => {
 		if (typeof window !== "undefined") {
 			// Client-side-only code
@@ -64,6 +67,11 @@ const Header: React.FC<IProps> = ({
 
 	return (
 		<React.Fragment>
+			{showModal && (
+				<AnimatePresence exitBeforeEnter>
+					<VideoModal onClose={toggleModal} />
+				</AnimatePresence>
+			)}
 			<HeaderContainer isOnTop={isOnTop}>
 				<Container>
 					<LogoContainer>
@@ -113,6 +121,13 @@ const Header: React.FC<IProps> = ({
 						)}
 					</AnimatePresence>
 					<Socials>
+						{/* <Link href={"/#bounties"} passHref> */}
+						<a href="#" className="after-movie">
+							<Button onClick={toggleModal} outline={"true"}>
+								AFTERMOVIE
+							</Button>
+						</a>
+						{/* </Link> */}
 						<a
 							href="https://twitter.com/amsterdot_conf"
 							rel="noopener noreferrer"
@@ -296,8 +311,13 @@ const Header: React.FC<IProps> = ({
 									</a>
 								</EmailLi>
 							</Ul>
-							{/* <ButtonsContainer justifyContent="flex-start">
-								<a
+							<ButtonsContainer justifyContent="flex-start">
+								<Link href={"/#bounties"} passHref>
+									<a className="after-movie">
+										<Button outline={"true"}>AFTERMOVIE</Button>
+									</a>
+								</Link>
+								{/* <a
 									href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
 									rel="noopener noreferrer"
 									target="_blank"
@@ -310,8 +330,8 @@ const Header: React.FC<IProps> = ({
 									target="_blank"
 								>
 									<Button outline={"true"}>APPLY TO SPEAK</Button>
-								</a>
-							</ButtonsContainer> */}
+								</a> */}
+							</ButtonsContainer>
 						</MobileMenuContainer>
 					</React.Fragment>
 				)}
@@ -347,6 +367,11 @@ const ButtonsContainer = styled(motion.div)<{ justifyContent?: string }>`
 	/* margin: 2rem 0; */
 	display: flex;
 	padding: 1.5rem 0 0;
+
+	.after-movie {
+		padding-left: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
 
 	button {
 		font-family: "Avenir Next";
@@ -494,6 +519,15 @@ const Socials = styled.div`
 	justify-self: end;
 	gap: 1rem;
 
+	.after-movie {
+		button {
+			display: none;
+			/* padding: 1.5rem 2.5rem; */
+			margin-right: 1rem;
+			font-size: 1.5rem;
+		}
+	}
+
 	a {
 		/* background-color: ${({ theme }) => theme.background.primary}; */
 		/* padding: 1rem; */
@@ -515,6 +549,17 @@ const Socials = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		gap: 1rem;
+
+		.after-movie {
+			button {
+				display: block;
+				/* padding: 1.5rem 2.5rem; */
+				margin-right: 1rem;
+				font-size: 2rem;
+				font-weight: 400;
+				line-height: 1;
+			}
+		}
 	}
 `
 

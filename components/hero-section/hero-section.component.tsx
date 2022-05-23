@@ -1,13 +1,12 @@
 // Utils
 import React from "react"
 import styled from "styled-components"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
 // Components
 import Image from "next/image"
 import Link from "next/link"
 import Button from "../button/button.component"
-import VideoModal from "../video-modal/video-modal.component"
 
 // Hooks
 import { useToggle } from "react-use"
@@ -94,15 +93,8 @@ const HeroSection = () => {
 		},
 	]
 
-	const [showModal, toggleModal] = useToggle(false)
-
 	return (
 		<SectionContainer>
-			{showModal && (
-				<AnimatePresence exitBeforeEnter>
-					<VideoModal onClose={toggleModal} />
-				</AnimatePresence>
-			)}
 			<Link href={"/#about"} passHref>
 				<a>
 					<ArrowContainer
@@ -150,7 +142,7 @@ const HeroSection = () => {
 							objectFit="contain"
 						/>
 					</AnimationContainer>
-					<PlayButtonContainer>
+					{/* <PlayButtonContainer>
 						<motion.figure
 							whileHover={{
 								scale: 1.1,
@@ -180,12 +172,13 @@ const HeroSection = () => {
 								className="center"
 							/>
 						</motion.figure>
-					</PlayButtonContainer>
+					</PlayButtonContainer> */}
 					<HeadContainer>
 						<h1>
 							<span>ONLINE</span>
 							<span>HACK</span>
 						</h1>
+						<p>Selected winners will present at Polkadot Decoded</p>
 					</HeadContainer>
 					<DateContainer>
 						<p>
@@ -216,18 +209,18 @@ const HeroSection = () => {
 					<ButtonsContainer>
 						<Link href={"/#hackaton-content"} passHref>
 							<a>
-								<Button>HACKATHON</Button>
+								<Button>$330k + COMBINED prize pool</Button>
 							</a>
 						</Link>
-						<Link href={"/#bounties"} passHref>
+						{/* <Link href={"/#bounties"} passHref>
 							<a>
 								<Button outline={"true"}>BOUNTIES</Button>
 							</a>
-						</Link>
+						</Link> */}
 					</ButtonsContainer>
-					<PlaceContainer>
+					{/* <PlaceContainer>
 						<p>IN AMSTERDAM / NETHERLANDS</p>
-					</PlaceContainer>
+					</PlaceContainer> */}
 				</ContentContainer>
 				<PartnersContainer>
 					{partners.map((partner, idx) => (
@@ -374,13 +367,13 @@ const Container = styled(motion.div)`
 	width: 100%;
 	/* margin: 25rem 1.5rem 0; */
 	margin: 6rem 3rem 0;
-	max-width: 90rem;
+	max-width: 84rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		margin: 13rem 3rem 0;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin: 2rem 1.5rem 0;
+			margin: 4rem 1.5rem 0;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				max-width: 130rem;
 			}
@@ -423,13 +416,23 @@ const HeadContainer = styled.div`
 	grid-area: h;
 
 	h1 {
+		display: inline-block;
 		font-family: "Avenir Next";
 		line-height: 1.2;
 		font-weight: 500;
+		padding-bottom: 1rem;
+		/* padding-right: 4rem; */
+		border-bottom: 1px solid #fff;
 		span {
 			display: block;
 			font-size: 4.5rem;
 		}
+	}
+
+	p {
+		margin-top: 2rem;
+		font-size: 1.8rem;
+		max-width: 31rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -474,7 +477,7 @@ const ImageContainer = styled.figure`
 			width: 25rem;
 			height: 30rem;
 			margin-bottom: 4rem;
-			margin-right: -5rem;
+			margin-right: 5rem;
 			/* border: 1px solid green; */
 		}
 		/* width: 25rem; */
