@@ -395,8 +395,8 @@ const ContentContainer = styled.div`
 	grid-template-areas:
 		"h h"
 		"i i"
-		"b b"
-		"p p";
+		"b b";
+	/* "p p"; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-template-columns: auto 1fr 10rem;
@@ -440,6 +440,7 @@ const HeadContainer = styled.div`
 		/* margin-top: 2rem; */
 		border-top: 1px solid #fff;
 		padding-top: 2rem;
+		margin-bottom: 2rem;
 
 		font-size: 1.8rem;
 		/* max-width: 31rem; */
@@ -456,6 +457,7 @@ const HeadContainer = styled.div`
 		p {
 			border-top: unset;
 			max-width: 31rem;
+			margin-bottom: unset;
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
@@ -481,7 +483,7 @@ const ImageContainer = styled.figure`
 		position: relative;
 		width: 17rem;
 		height: 23rem;
-		margin-bottom: 4rem;
+		/* margin-bottom: 4rem; */
 		/* border: 1px solid green; */
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
