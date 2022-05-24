@@ -93,19 +93,19 @@ const Header: React.FC<IProps> = ({
 					<AnimatePresence>
 						{!showCTAs && (
 							<ButtonsContainer
-								initial={{
-									opacity: 0,
-									scale: 0.97,
-								}}
-								animate={{
-									opacity: 1,
-									scale: 1,
-								}}
-								exit={{
-									opacity: 0,
-									scale: 0.97,
-								}}
-								// justifyContent="center"
+							// initial={{
+							// 	opacity: 0,
+							// 	scale: 0.97,
+							// }}
+							// animate={{
+							// 	opacity: 1,
+							// 	scale: 1,
+							// }}
+							// exit={{
+							// 	opacity: 0,
+							// 	scale: 0.97,
+							// }}
+							// justifyContent="center"
 							>
 								<Link href={"/#bounties"} passHref>
 									<a>
@@ -387,7 +387,7 @@ const ButtonsContainer = styled(motion.div)<{ justifyContent?: string }>`
 		font-size: 1.5rem;
 		font-weight: 700;
 		padding: 1rem 1rem 0.8rem;
-		transition: all 0.3s ease-in-out;
+		/* transition: all 0.3s ease-in-out; */
 		/* background-color:  */
 	}
 
