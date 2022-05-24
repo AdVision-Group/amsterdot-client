@@ -107,14 +107,9 @@ const Header: React.FC<IProps> = ({
 								}}
 								// justifyContent="center"
 							>
-								<Link href={"/#hackaton-content"} passHref>
-									<a>
-										<Button>HACKATHON</Button>
-									</a>
-								</Link>
 								<Link href={"/#bounties"} passHref>
 									<a>
-										<Button outline={"true"}>BOUNTIES</Button>
+										<Button>BOUNTIES</Button>
 									</a>
 								</Link>
 							</ButtonsContainer>
