@@ -59,9 +59,15 @@ const BackgroundContainer = styled(motion.div)`
 const VideoContainer = styled(motion.div)`
 	position: relative;
 	/* background-color: ${({ theme }) => theme.background.container}; */
+	width: 100%;
+	/* border: 1px solid green; */
+	max-width: 80rem;
+	aspect-ratio: 4/3;
+	padding: 1.5rem;
 
 	iframe {
 		width: 100%;
+		height: 100%;
 		/* border: 1px solid green; */
 		max-width: 80rem;
 		/* height: 30rem; */

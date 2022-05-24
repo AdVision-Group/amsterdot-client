@@ -59,11 +59,11 @@ const HackatonContentSection = () => {
 										layout="responsive"
 									/>
 								</figure>
-								<h3>03.06.22</h3>
+								<h3>20.06.22</h3>
 							</DateContent>
 						</DateContainer>
 
-						<h3>Rewards: $350,000+ from bounties and shared prize pool</h3>
+						<h3>Rewards: $330,000+ from bounties and shared prize pool</h3>
 						<h3>
 							Registration: Via{" "}
 							<a

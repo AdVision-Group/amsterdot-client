@@ -313,7 +313,7 @@ const Header: React.FC<IProps> = ({
 							</Ul>
 							<ButtonsContainer justifyContent="flex-start">
 								<Link href={"/#bounties"} passHref>
-									<a className="after-movie">
+									<a className="after-movie-sidebar">
 										<Button outline={"true"}>AFTERMOVIE</Button>
 									</a>
 								</Link>
@@ -368,9 +368,23 @@ const ButtonsContainer = styled(motion.div)<{ justifyContent?: string }>`
 	display: flex;
 	padding: 1.5rem 0 0;
 
-	.after-movie {
+	.after-movie-sidebar {
 		padding-left: 1.5rem;
 		padding-bottom: 1.5rem;
+		margin-top: 2rem;
+		margin-right: auto;
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			padding-left: 3rem;
+
+			@media all and (min-width: 865px) {
+				/* justify-content: flex-end; */
+
+				button {
+					display: none;
+				}
+			}
+		}
 	}
 
 	button {
@@ -526,6 +540,19 @@ const Socials = styled.div`
 			margin-right: 1rem;
 			font-size: 1.5rem;
 		}
+
+		@media all and (min-width: 865px) {
+			gap: 1rem;
+
+			button {
+				display: block;
+				/* padding: 1.5rem 2.5rem; */
+				margin-right: 1rem;
+				font-size: 2rem;
+				font-weight: 400;
+				line-height: 1;
+			}
+		}
 	}
 
 	a {
@@ -548,18 +575,6 @@ const Socials = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		gap: 1rem;
-
-		.after-movie {
-			button {
-				display: block;
-				/* padding: 1.5rem 2.5rem; */
-				margin-right: 1rem;
-				font-size: 2rem;
-				font-weight: 400;
-				line-height: 1;
-			}
-		}
 	}
 `
 

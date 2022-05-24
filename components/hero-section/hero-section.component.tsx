@@ -187,7 +187,7 @@ const HeroSection = () => {
 						</p>
 						<p>
 							<span />
-							<span>06/03</span>
+							<span>06/20</span>
 						</p>
 						{/* <p>&nbsp;</p> */}
 						<p>2022</p>
@@ -209,7 +209,9 @@ const HeroSection = () => {
 					<ButtonsContainer>
 						<Link href={"/#hackaton-content"} passHref>
 							<a>
-								<Button>$330k + COMBINED prize pool</Button>
+								<Button>
+									<span>$330k + COMBINED</span> <span>prize pool</span>
+								</Button>
 							</a>
 						</Link>
 						{/* <Link href={"/#bounties"} passHref>
@@ -391,7 +393,7 @@ const ContentContainer = styled.div`
 	grid-template-columns: 1fr auto;
 	grid-template-rows: auto auto auto;
 	grid-template-areas:
-		"h d"
+		"h h"
 		"i i"
 		"b b"
 		"p p";
@@ -422,17 +424,25 @@ const HeadContainer = styled.div`
 		font-weight: 500;
 		padding-bottom: 1rem;
 		/* padding-right: 4rem; */
-		border-bottom: 1px solid #fff;
 		span {
 			display: block;
 			font-size: 4.5rem;
 		}
+
+		@media all and (max-width: 355px) {
+			span {
+				font-size: 3.5rem;
+			}
+		}
 	}
 
 	p {
-		margin-top: 2rem;
+		/* margin-top: 2rem; */
+		border-top: 1px solid #fff;
+		padding-top: 2rem;
+
 		font-size: 1.8rem;
-		max-width: 31rem;
+		/* max-width: 31rem; */
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -441,6 +451,11 @@ const HeadContainer = styled.div`
 				font-size: 8rem;
 				line-height: 1.1;
 			}
+			border-bottom: 1px solid #fff;
+		}
+		p {
+			border-top: unset;
+			max-width: 31rem;
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
@@ -494,6 +509,9 @@ const ImageContainer = styled.figure`
 `
 
 const DateContainer = styled.div`
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
 	grid-area: d;
 	/* width: 100%; */
 	max-width: 10rem;
@@ -548,6 +566,10 @@ const DateContainer = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		position: relative;
+		top: 0;
+		right: 0;
+
 		p:nth-of-type(3) {
 			/* border: 1px solid green; */
 			/* font-size: 4.5rem; */
@@ -578,10 +600,26 @@ const ButtonsContainer = styled.div`
 	/* margin: 2rem 0; */
 
 	button {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: 65%;
+		width: calc(100% - 3rem);
 		font-family: "Avenir Next";
+
 		font-size: 1.4rem;
 		font-weight: 700;
-		padding: 1rem 1rem 0.8rem;
+		padding: 1rem 1rem 1rem;
+
+		span {
+			display: block;
+			text-transform: uppercase;
+
+			&:nth-of-type(2) {
+				/* margin-left: 1rem; */
+				font-weight: 900;
+			}
+		}
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -592,7 +630,7 @@ const ButtonsContainer = styled.div`
 		gap: 2rem;
 
 		button {
-			font-size: 2rem;
+			font-size: 2.5rem;
 			line-height: 1;
 			/* margin-bottom: 1rem; */
 		}
@@ -603,9 +641,24 @@ const ButtonsContainer = styled.div`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			button {
+				width: unset;
+				position: relative;
+				flex-direction: row;
+
+				top: unset;
 				font-weight: 400;
 				/* font-size: 3rem; */
-				padding: 1.2rem 2rem 0.8rem;
+				padding: 1.8rem;
+
+				span {
+					display: block;
+					text-transform: uppercase;
+
+					&:nth-of-type(2) {
+						margin-left: 1rem;
+						font-weight: 900;
+					}
+				}
 			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				button {
