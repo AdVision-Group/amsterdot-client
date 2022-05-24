@@ -178,7 +178,16 @@ const HeroSection = () => {
 							<span>ONLINE</span>
 							<span>HACK</span>
 						</h1>
-						<p>Selected winners will present at Polkadot Decoded</p>
+						<p>
+							Selected winners will present at{" "}
+							<a
+								href="https://decoded.polkadot.network/"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								Polkadot Decoded
+							</a>
+						</p>
 					</HeadContainer>
 					<DateContainer>
 						<p>
@@ -444,6 +453,12 @@ const HeadContainer = styled.div`
 
 		font-size: 1.8rem;
 		/* max-width: 31rem; */
+
+		a {
+			text-decoration: underline;
+			color: #fff;
+			font-weight: 700;
+		}
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {

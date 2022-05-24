@@ -112,16 +112,19 @@ const Header: React.FC<IProps> = ({
 										<Button>BOUNTIES</Button>
 									</a>
 								</Link>
+								<a href="#">
+									<Button outline={"true"}>AFTERMOVIE</Button>
+								</a>
 							</ButtonsContainer>
 						)}
 					</AnimatePresence>
 					<Socials>
 						{/* <Link href={"/#bounties"} passHref> */}
-						<a href="#" className="after-movie">
+						{/* <a href="#" className="after-movie">
 							<Button onClick={toggleModal} outline={"true"}>
 								AFTERMOVIE
 							</Button>
-						</a>
+						</a> */}
 						{/* </Link> */}
 						<a
 							href="https://twitter.com/amsterdot_conf"
@@ -306,27 +309,14 @@ const Header: React.FC<IProps> = ({
 									</a>
 								</EmailLi>
 							</Ul>
-							<ButtonsContainer justifyContent="flex-start">
+							{/* <ButtonsContainer justifyContent="flex-start">
 								<Link href={"/#bounties"} passHref>
 									<a className="after-movie-sidebar">
 										<Button outline={"true"}>AFTERMOVIE</Button>
 									</a>
 								</Link>
-								{/* <a
-									href="https://www.eventbrite.com/e/amsterdot-tickets-303713895437"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									<Button>BUY TICKETS</Button>
-								</a>
-								<a
-									href="https://xkmlgcptw4h.typeform.com/to/eNdSewiY"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									<Button outline={"true"}>APPLY TO SPEAK</Button>
-								</a> */}
-							</ButtonsContainer>
+	
+							</ButtonsContainer> */}
 						</MobileMenuContainer>
 					</React.Fragment>
 				)}
