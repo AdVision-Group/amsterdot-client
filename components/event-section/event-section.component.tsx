@@ -63,7 +63,17 @@ const EventSection = () => {
 					}}
 					className="fere"
 				>
-					FERE
+					<span>FERE</span>
+					<figure>
+						<Image
+							src="/assets/2022.svg"
+							alt="2222"
+							objectFit="contain"
+							layout="fill"
+							// width={100}
+							// height={50}
+						/>
+					</figure>
 				</Title>
 				<Title
 					style={{
@@ -310,6 +320,21 @@ const Title = styled(motion.h3)`
 	}
 	&.fere {
 		grid-area: f;
+		display: grid;
+		grid-template-columns: 1fr 3.3rem;
+
+		span {
+			text-align: end;
+		}
+
+		figure {
+			position: relative;
+			/* border: 1px solid red; */
+			width: 100%;
+			/* height: 100%; */
+
+			margin-top: -4rem;
+		}
 	}
 	&.nce {
 		grid-area: n;
@@ -323,13 +348,33 @@ const Title = styled(motion.h3)`
 			margin-left: 0rem;
 		}
 		&.fere {
+			grid-template-columns: 1fr 4.5rem;
+
+			figure {
+				margin-top: -1rem;
+			}
 		}
 		&.nce {
 			z-index: 1;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			&.fere {
+				grid-template-columns: 1fr 7rem;
+
+				figure {
+					margin-top: -1rem;
+				}
+			}
+
 			font-size: 15rem;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				&.fere {
+					grid-template-columns: 1fr 9.9rem;
+
+					figure {
+						margin-top: -2rem;
+					}
+				}
 				font-size: 22rem;
 			}
 		}
