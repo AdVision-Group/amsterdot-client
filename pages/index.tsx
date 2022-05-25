@@ -55,7 +55,7 @@ const Home: NextPage = () => {
 	// const [num, { set }] = useNumber(0)
 
 	// Scroll position
-	const { scrollYProgress } = useViewportScroll()
+	// const { scrollYProgress } = useViewportScroll()
 
 	const [event, { setAll }] = useMap({
 		events: events.map((i, idx) => ({
