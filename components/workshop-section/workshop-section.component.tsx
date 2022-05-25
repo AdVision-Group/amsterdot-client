@@ -10,7 +10,7 @@ import Image from "next/image"
 const WorkshopSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformWORK = useTransform(scrollYProgress, [0.87, 1.01], [10, 100])
+	const transformWORK = useTransform(scrollYProgress, [0.87, 1.01], [10, 70])
 	const transformSHOP = useTransform(scrollYProgress, [0.87, 1.01], [20, -50])
 
 	return (
@@ -21,14 +21,26 @@ const WorkshopSection = () => {
 						x: transformWORK,
 					}}
 				>
-					<Image
-						src="/assets/workshop-section/work.svg"
-						alt="work"
-						objectFit="contain"
-						layout="responsive"
-						width={100}
-						height={70}
-					/>
+					<figure className="work">
+						<Image
+							src="/assets/workshop-section/work.svg"
+							alt="work"
+							objectFit="contain"
+							layout="responsive"
+							width={100}
+							height={70}
+						/>
+					</figure>
+					<figure className="year">
+						<Image
+							src="/assets/2022.svg"
+							alt="2222"
+							objectFit="contain"
+							layout="fill"
+							// width={100}
+							// height={50}
+						/>
+					</figure>
 				</WORKContainer>
 				<div
 					style={{
@@ -132,25 +144,55 @@ const Container = styled.div`
 	}
 `
 
-const WORKContainer = styled(motion.figure)`
-	position: relative;
+const WORKContainer = styled(motion.div)`
 	grid-area: w;
-	/* width: 16rem; */
-	/* height: 5rem; */
-	/* border: 1px solid green; */
-	/* justify-self: end; */
-	/* margin-bottom: 2rem; */
-	width: 28rem;
-	/* border: 1px solid red; */
-	margin-top: -4rem;
+	display: grid;
+	grid-template-columns: 1fr 4rem;
 
+	.work {
+		position: relative;
+		/* width: 16rem; */
+		/* height: 5rem; */
+		/* border: 1px solid green; */
+		/* justify-self: end; */
+		/* margin-bottom: 2rem; */
+		width: 28rem;
+		/* border: 1px solid red; */
+		margin-top: -4rem;
+
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+			width: 48rem;
+			margin-top: -8rem;
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				margin-top: -10rem;
+				width: 68rem;
+			}
+		}
+	}
+
+	.year {
+		position: relative;
+
+		/* border: 1px solid red; */
+		width: 100%;
+		/* height: 100%; */
+		margin-left: -4rem;
+		margin-top: -4rem;
+	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		width: 48rem;
-		margin-top: -8rem;
+		grid-template-columns: 1fr 7rem;
+		.year {
+			margin-left: -2rem;
+			margin-top: -9rem;
+		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin-top: -10rem;
-			width: 68rem;
+			grid-template-columns: 1fr 9.7rem;
+			.year {
+				margin-left: -1.5rem;
+				margin-top: -12rem;
+			}
 		}
 	}
 `
