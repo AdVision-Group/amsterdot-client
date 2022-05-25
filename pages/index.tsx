@@ -20,6 +20,7 @@ import WorkshopSection from "../components/workshop-section/workshop-section.com
 import HackathonSection from "../components/hackathon-section/hackathon-section.component"
 import HackatonContentSection from "../components/hackaton-content-section/hackaton-content-section.component"
 import BountySection from "../components/bounties-section/bounties-section.component"
+import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
 // import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
 
 // Hooks
@@ -106,7 +107,7 @@ const Home: NextPage = () => {
 	// 	[0, 1, 1, 1]
 	// )
 
-	// scrollYProgress.onChange((e) => console.log(e))
+	scrollYProgress.onChange((e) => console.log(e))
 
 	// Set horizontal container width on change
 	// useEffect(() => {
@@ -305,6 +306,7 @@ const Home: NextPage = () => {
 			{/* <PricepoolSection /> */}
 			<BountySection />
 			<AboutSection />
+			<AftermovieSection />
 			<EventSection />
 
 			<SectionContainer>
