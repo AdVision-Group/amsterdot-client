@@ -9,8 +9,8 @@ import Image from "next/image"
 const AftermovieSection: React.FC = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformAFTER = useTransform(scrollYProgress, [0.62, 0.69], [-70, 70])
-	const transformMOVIE = useTransform(scrollYProgress, [0.62, 0.69], [70, -70])
+	const transformAFTER = useTransform(scrollYProgress, [0.62, 0.7], [-70, 14])
+	const transformMOVIE = useTransform(scrollYProgress, [0.62, 0.7], [70, -14])
 
 	return (
 		<AftermovieSectionContainer>
