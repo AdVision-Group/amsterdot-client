@@ -95,7 +95,7 @@ const HeroSection = () => {
 
 	return (
 		<SectionContainer>
-			<Link href={"/#about"} passHref>
+			<Link href={"/#hackaton-content"} passHref>
 				<a>
 					<ArrowContainer
 					// animate={{

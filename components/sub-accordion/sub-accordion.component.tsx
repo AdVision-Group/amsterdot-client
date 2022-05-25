@@ -12,7 +12,7 @@ import { useToggle, useWindowSize } from "react-use"
 // Icons
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri"
 
-import { AiFillYoutube, AiOutlineYoutube } from "react-icons/ai"
+import { AiFillYoutube } from "react-icons/ai"
 
 interface IProps {
 	id: string | number
@@ -67,6 +67,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 								<AiFillYoutube />
 								{/* <AiOutlineYoutube /> */}
 							</figure>
+							<p>RECORD</p>
 						</a>
 					)}
 				</YoutubeContainer>
@@ -148,6 +149,14 @@ export default SubAccordion
 
 const YoutubeContainer = styled.div`
 	grid-area: y;
+	position: relative;
+	z-index: 1;
+
+	a {
+		color: ${({ theme }) => theme.fonts.primary};
+		font-weight: 900;
+		font-size: 1.2rem;
+	}
 
 	figure {
 		cursor: pointer;
@@ -158,10 +167,22 @@ const YoutubeContainer = styled.div`
 		color: ${({ theme }) => theme.color.primary};
 	}
 	justify-self: end;
-	padding-right: 0.95rem;
+	/* padding-right: 0.95rem; */
 
+	align-self: center;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		align-self: center;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				background-color: #313131;
+				top: -1.9rem;
+				left: -1.8rem;
+				right: -1.8rem;
+				bottom: -1.9rem;
+				z-index: -1;
+			}
+		}
 	}
 `
 
@@ -265,7 +286,7 @@ const AccordionHeading = styled(motion.div)`
 	grid-template-rows: auto auto auto; */
 	grid-template-areas:
 		"r y"
-		"t s"
+		"t y"
 		"b b"
 		"u a";
 
@@ -276,7 +297,7 @@ const AccordionHeading = styled(motion.div)`
 		grid-template-columns: auto auto 1fr minmax(auto, 31.5rem) auto;
 		grid-template-rows: auto;
 		gap: 1.5rem;
-		grid-template-areas: "y r t u a s";
+		grid-template-areas: " r t y u  a s";
 		padding: 0.8rem 2.5rem;
 
 		${Border} {
