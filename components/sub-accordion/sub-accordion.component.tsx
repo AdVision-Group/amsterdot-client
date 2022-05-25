@@ -67,7 +67,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 								<AiFillYoutube />
 								{/* <AiOutlineYoutube /> */}
 							</figure>
-							<p>RECORD</p>
+							<p>WATCH</p>
 						</a>
 					)}
 				</YoutubeContainer>
@@ -167,22 +167,43 @@ const YoutubeContainer = styled.div`
 		color: ${({ theme }) => theme.color.primary};
 	}
 	justify-self: end;
-	/* padding-right: 0.95rem; */
+	padding-right: 1.5rem;
+	padding-top: 1.5rem;
 
 	align-self: center;
+	a {
+		font-size: 1.6rem;
+	}
+
+	figure {
+		font-size: 4.5rem;
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		&:hover {
-			&:before {
-				content: "";
-				position: absolute;
-				background-color: #313131;
-				top: -1.9rem;
-				left: -1.8rem;
-				right: -1.8rem;
-				bottom: -1.9rem;
-				z-index: -1;
-			}
+		align-self: stretch;
+		/* content: ""; */
+		padding-right: unset;
+		padding-top: unset;
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			padding: 2rem;
+			background-color: #313131;
+			height: 100%;
+			font-size: 1.4rem;
 		}
+
+		figure {
+			font-size: 3rem;
+		}
+		/* position: absolute; */
+		/* top: -1.9rem;
+		left: -1.8rem;
+		right: -1.8rem;
+		bottom: -1.9rem;
+		z-index: -1; */
 	}
 `
 
@@ -249,7 +270,7 @@ const Border = styled.div<{ showBorder?: boolean }>`
 
 const TimeRange = styled.p`
 	grid-area: r;
-
+	padding: 1.5rem;
 	font-size: 2rem;
 	font-weight: 900;
 	text-align: center;
@@ -276,7 +297,7 @@ const TimeRange = styled.p`
 const AccordionHeading = styled(motion.div)`
 	cursor: pointer;
 	/* width: 100%; */
-	padding: 1rem;
+	padding: 0;
 	/* margin-bottom: 1rem; */
 	border: none;
 	color: ${({ theme }) => theme.fonts.primary};
@@ -296,9 +317,9 @@ const AccordionHeading = styled(motion.div)`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-template-columns: auto auto 1fr minmax(auto, 31.5rem) auto;
 		grid-template-rows: auto;
-		gap: 1.5rem;
+		/* gap: 1.5rem; */
 		grid-template-areas: " r t y u  a s";
-		padding: 0.8rem 2.5rem;
+		/* padding: 0.8rem 2.5rem; */
 
 		${Border} {
 			display: none;
@@ -343,6 +364,7 @@ const TitleContainer = styled.div`
 	justify-self: start;
 	align-self: center;
 	text-transform: uppercase;
+	padding: 1.5rem;
 	font-size: 2.5rem;
 	line-height: 1.2;
 	font-weight: 900;
