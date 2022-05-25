@@ -112,8 +112,12 @@ const Header: React.FC<IProps> = ({
 										<Button>BOUNTIES</Button>
 									</a>
 								</Link>
-								<a href="#">
-									<Button outline={"true"}>AFTERMOVIE</Button>
+								<a
+									rel="noopener noreferrer"
+									target="_blank"
+									href="https://youtube.com/playlist?list=PLpyT58HowFcU-pM-Q9Ms9eq0mRSP950ky"
+								>
+									<Button outline={"true"}>CONF VIDS</Button>
 								</a>
 							</ButtonsContainer>
 						)}
