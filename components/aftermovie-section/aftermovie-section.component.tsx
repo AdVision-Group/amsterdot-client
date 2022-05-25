@@ -9,8 +9,8 @@ import Image from "next/image"
 const AftermovieSection: React.FC = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformAFTER = useTransform(scrollYProgress, [0.62, 0.7], [-70, 14])
-	const transformMOVIE = useTransform(scrollYProgress, [0.62, 0.7], [70, -14])
+	const transformAFTER = useTransform(scrollYProgress, [0.62, 0.68], [-70, 0])
+	const transformMOVIE = useTransform(scrollYProgress, [0.62, 0.68], [70, 0])
 
 	return (
 		<AftermovieSectionContainer>
@@ -26,8 +26,8 @@ const AftermovieSection: React.FC = () => {
 							alt="work"
 							objectFit="contain"
 							layout="responsive"
-							width={100}
-							height={35}
+							width={50}
+							height={32}
 						/>
 					</Figure>
 					<Figure
@@ -40,8 +40,8 @@ const AftermovieSection: React.FC = () => {
 							alt="work"
 							objectFit="contain"
 							layout="responsive"
-							width={100}
-							height={35}
+							width={50}
+							height={32}
 						/>
 					</Figure>
 				</Title>
@@ -118,4 +118,8 @@ const Span = styled(motion.span)`
 	align-self: center;
 `
 
-const Figure = styled(motion.figure)``
+const Figure = styled(motion.figure)`
+	&:nth-of-type(2) {
+		/* margin-top: -3rem; */
+	}
+`
