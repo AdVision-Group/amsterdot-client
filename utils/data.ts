@@ -431,6 +431,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["12:00", "12:30"],
+				youtubeLink: "https://www.youtube.com/watch?v=rUa0pqF8F18",
 				// youtubeLink: "",
 				title: "Radically open Bitcoin for parachains",
 				subTitle: "",
@@ -1213,7 +1214,7 @@ export const events = [
 						"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjZGC0+29r8YOBsaam9b+OliYDADMPBakYzxUsAAAAAElFTkSuQmCC",
 				},
 				time: ["14:00", "14:30"],
-				// youtubeLink: "",
+				youtubeLink: "https://www.youtube.com/watch?v=PpDmB_t25Z4",
 				title: "Composable privacy on Polkadot",
 				subTitle: "",
 				description:
