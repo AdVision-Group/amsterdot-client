@@ -374,6 +374,7 @@ const TitleContainer = styled.div`
 	line-height: 1.2;
 	font-weight: 900;
 	color: ${({ theme }) => theme.color.primary};
+	max-width: 85%;
 
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		align-self: center;
