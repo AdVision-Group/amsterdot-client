@@ -55,7 +55,7 @@ const Home: NextPage = () => {
 	// const [num, { set }] = useNumber(0)
 
 	// Scroll position
-	// const { scrollYProgress } = useViewportScroll()
+	const { scrollYProgress } = useViewportScroll()
 
 	const [event, { setAll }] = useMap({
 		events: events.map((i, idx) => ({
@@ -107,7 +107,7 @@ const Home: NextPage = () => {
 	// 	[0, 1, 1, 1]
 	// )
 
-	scrollYProgress.onChange((e) => console.log(e))
+	// scrollYProgress.onChange((e) => console.log(e))
 
 	// Set horizontal container width on change
 	// useEffect(() => {
