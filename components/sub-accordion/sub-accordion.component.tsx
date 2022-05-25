@@ -56,8 +56,8 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 	return (
 		<AccordionContainer isactive={showContent}>
 			<AccordionHeading onClick={toggleContent}>
-				<YoutubeContainer>
-					{item.youtubeLink && (
+				<YoutubeContainer hasLink={!!item.youtubeLink}>
+					{!!item.youtubeLink && (
 						<a
 							href={item.youtubeLink || "#"}
 							rel="noopener noreferrer"
@@ -147,7 +147,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 
 export default SubAccordion
 
-const YoutubeContainer = styled.div`
+const YoutubeContainer = styled.div<{ hasLink: boolean }>`
 	grid-area: y;
 	position: relative;
 	z-index: 1;
@@ -167,8 +167,9 @@ const YoutubeContainer = styled.div`
 		color: ${({ theme }) => theme.color.primary};
 	}
 	justify-self: end;
-	padding-right: 1.5rem;
-	padding-top: 1.5rem;
+	/* padding-top: 1.5rem; */
+	padding-right: ${({ hasLink }) => (hasLink ? "1.5rem" : "0")};
+	padding-top: ${({ hasLink }) => (hasLink ? "1.5rem" : "0")};
 
 	align-self: center;
 	a {
@@ -215,6 +216,7 @@ const UserContainer = styled.div`
 	grid-template-rows: auto;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+	margin-left: 1.5rem;
 
 	figure {
 		grid-row: 1/3;
@@ -250,6 +252,7 @@ const UserContainer = styled.div`
 		margin-top: 0;
 		margin-bottom: 0;
 		border-left: 2px solid #333;
+		margin-left: unset;
 
 		figure {
 			width: 6rem;
@@ -263,9 +266,9 @@ const Border = styled.div<{ showBorder?: boolean }>`
 	display: ${({ theme, showBorder }) => (showBorder ? "block" : "none")};
 	grid-area: b;
 	height: 0.2rem;
-	width: 100%;
+	width: calc(100% - 3rem);
 	background-color: ${({ theme }) => theme.fonts.primary};
-	margin: 1rem 0 2rem;
+	margin: 1rem 1.5rem 2rem;
 `
 
 const TimeRange = styled.p`
@@ -343,6 +346,8 @@ const ContentContainer = styled(motion.div)`
 `
 
 const AccordionContainer = styled.div<{ isactive: boolean }>`
+	position: relative;
+
 	max-width: 120rem;
 	width: 100%;
 	margin: 0 auto;
@@ -364,7 +369,7 @@ const TitleContainer = styled.div`
 	justify-self: start;
 	align-self: center;
 	text-transform: uppercase;
-	padding: 1.5rem;
+	padding: 0 1.5rem 1rem;
 	font-size: 2.5rem;
 	line-height: 1.2;
 	font-weight: 900;
@@ -373,6 +378,8 @@ const TitleContainer = styled.div`
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		align-self: center;
 		padding-left: 1.5rem;
+		padding: 1.5rem;
+
 
 `
 
@@ -385,19 +392,25 @@ const ArrowContainer = styled.span<{ showContent: boolean }>`
 	align-self: center;
 	justify-self: end;
 	margin-bottom: -1.5rem;
+	margin-right: 1.2rem;
 	padding-top: 1rem;
+	/* border: 1px solid red; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-column: 5/6;
+		margin-right: unset;
 	}
 `
 
 const ArrowContainer2 = styled.span<{ showContent: boolean }>`
+	position: absolute;
+	bottom: 1.5rem;
 	grid-area: s;
 	display: block;
 	color: ${({ theme, showContent }) =>
 		showContent ? theme.color.primary : theme.fonts.primary};
 	font-size: 5rem;
+	margin-right: 1.2rem;
 	align-self: center;
 	justify-self: end;
 	margin-bottom: -1.5rem;
