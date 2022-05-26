@@ -304,7 +304,7 @@ const TimeRange = styled.p`
 const workshopGrid = css`
 	grid-template-areas:
 		"r y"
-		"t s"
+		"t t"
 		"b b"
 		"u a";
 `
