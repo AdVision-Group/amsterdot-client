@@ -304,14 +304,14 @@ const TimeRange = styled.p`
 const workshopGrid = css`
 	grid-template-areas:
 		"r y"
-		"t t"
+		"t s"
 		"b b"
 		"u a";
 `
 const workshoplessGrid = css`
 	grid-template-areas:
 		"r y"
-		"t y"
+		"t s"
 		"b b"
 		"u a";
 `
@@ -419,21 +419,21 @@ const ArrowContainer = styled.span<{ showContent: boolean }>`
 `
 
 const ArrowContainer2 = styled.span<{ showContent: boolean }>`
-	position: absolute;
-	bottom: 1.5rem;
-	right: 1.2rem;
+	/* position: absolute; */
+	/* bottom: 1.5rem;
+	right: 1.2rem; */
 	grid-area: s;
 	display: block;
 	color: ${({ theme, showContent }) =>
 		showContent ? theme.color.primary : theme.fonts.primary};
 	font-size: 5rem;
-	margin-right: 0;
+	margin-right: 1.4rem;
 	align-self: center;
 	justify-self: end;
 	margin-bottom: -1.5rem;
 	padding-top: 1rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		margin-right: 1.9rem;
+		margin-right: 3.3rem;
 	}
 `
