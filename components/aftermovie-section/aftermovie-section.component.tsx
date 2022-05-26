@@ -13,7 +13,7 @@ const AftermovieSection: React.FC = () => {
 	const transformMOVIE = useTransform(scrollYProgress, [0.58, 0.68], [70, 0])
 
 	return (
-		<AftermovieSectionContainer>
+		<AftermovieSectionContainer id="after-movie">
 			<div>
 				<Title>
 					<Figure

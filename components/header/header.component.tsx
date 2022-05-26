@@ -257,6 +257,11 @@ const Header: React.FC<IProps> = ({
 									</Link>
 								</li>
 								<li>
+									<Link href={"/#after-movie"}>
+										<a onClick={toggleMobileNav}>AFTERMOVIE</a>
+									</Link>
+								</li>
+								<li>
 									<Link href={"/#day-1"}>
 										<a onClick={toggleMobileNav}>CONFERENCE PROGRAM</a>
 									</Link>
