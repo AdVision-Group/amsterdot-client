@@ -388,7 +388,7 @@ const TitleContainer = styled.div<{ isWorkshop: boolean }>`
 	line-height: 1.2;
 	font-weight: 900;
 	color: ${({ theme }) => theme.color.primary};
-	max-width: ${({ isWorkshop }) => (isWorkshop ? "unset" : "85%")};
+	max-width: ${({ isWorkshop }) => (isWorkshop ? "unset" : "95%")};
 
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		align-self: center;
