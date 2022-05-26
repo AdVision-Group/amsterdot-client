@@ -337,6 +337,7 @@ const Home: NextPage = () => {
 						idx={idx}
 						item={h}
 						dayID={h.id}
+						isWorkshop={true}
 					/>
 				))}
 			</SectionContainer>

@@ -1,13 +1,16 @@
 // Utils
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
 
 // Components
 import Image from "next/image"
 
 // Hooks
-import { useToggle, useWindowSize } from "react-use"
+import {
+	useToggle,
+	// useWindowSize
+} from "react-use"
 
 // Icons
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri"
@@ -45,17 +48,18 @@ interface IProps {
 		subTitle: string
 		description: string
 	}
+	isWorkshop?: boolean
 }
 
-const SubAccordion: React.FC<IProps> = ({ item, id }) => {
+const SubAccordion: React.FC<IProps> = ({ item, id, isWorkshop }) => {
 	const [showContent, toggleContent] = useToggle(false)
-	const { width } = useWindowSize()
+	// const { width } = useWindowSize()
 
 	// console.log(width)
 
 	return (
 		<AccordionContainer isactive={showContent}>
-			<AccordionHeading onClick={toggleContent}>
+			<AccordionHeading onClick={toggleContent} isWorkshop={!!isWorkshop}>
 				<YoutubeContainer hasLink={!!item.youtubeLink}>
 					{!!item.youtubeLink && (
 						<a
@@ -74,7 +78,7 @@ const SubAccordion: React.FC<IProps> = ({ item, id }) => {
 				<TimeRange>
 					{item.time[0]} <span /> {item.time[1]}
 				</TimeRange>
-				<TitleContainer>
+				<TitleContainer isWorkshop={!!isWorkshop}>
 					<p>{item.title}</p>
 				</TitleContainer>
 				{item.user && <Border showBorder={true} />}
@@ -297,7 +301,22 @@ const TimeRange = styled.p`
 	}
 `
 
-const AccordionHeading = styled(motion.div)`
+const workshopGrid = css`
+	grid-template-areas:
+		"r y"
+		"t t"
+		"b b"
+		"u a";
+`
+const workshoplessGrid = css`
+	grid-template-areas:
+		"r y"
+		"t y"
+		"b b"
+		"u a";
+`
+
+const AccordionHeading = styled(motion.div)<{ isWorkshop: boolean }>`
 	cursor: pointer;
 	/* width: 100%; */
 	padding: 0;
@@ -308,15 +327,10 @@ const AccordionHeading = styled(motion.div)`
 	display: grid;
 	/* grid-template-columns: auto auto;
 	grid-template-rows: auto auto auto; */
-	grid-template-areas:
-		"r y"
-		"t y"
-		"b b"
-		"u a";
+	${({ isWorkshop }) => (isWorkshop ? workshopGrid : workshoplessGrid)};
 
 	/* gap: 1rem; */
 	/* gap: 4rem; */
-
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		grid-template-columns: auto auto 1fr minmax(auto, 31.5rem) auto;
 		grid-template-rows: auto;
@@ -364,7 +378,7 @@ const AccordionContainer = styled.div<{ isactive: boolean }>`
 	}
 `
 
-const TitleContainer = styled.div`
+const TitleContainer = styled.div<{ isWorkshop: boolean }>`
 	grid-area: t;
 	justify-self: start;
 	align-self: center;
@@ -374,7 +388,7 @@ const TitleContainer = styled.div`
 	line-height: 1.2;
 	font-weight: 900;
 	color: ${({ theme }) => theme.color.primary};
-	max-width: 85%;
+	max-width: ${({ isWorkshop }) => (isWorkshop ? "unset" : "85%")};
 
     @media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		align-self: center;

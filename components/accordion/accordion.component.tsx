@@ -72,6 +72,7 @@ interface IProps {
 	) => void
 	idx: number
 	dayID: string
+	isWorkshop?: boolean
 }
 
 const Accordion: React.FC<IProps> = ({
@@ -81,6 +82,7 @@ const Accordion: React.FC<IProps> = ({
 	openHackathonDayProgram,
 	idx,
 	dayID,
+	isWorkshop,
 }) => {
 	return (
 		<AccordionContainer id={dayID} isactive={showContent}>
@@ -130,7 +132,12 @@ const Accordion: React.FC<IProps> = ({
 						transition={{ duration: 1, ease: "linear" }}
 					>
 						{item.items.map((i, idx) => (
-							<SubAccordion item={i} id={idx} key={idx} />
+							<SubAccordion
+								item={i}
+								id={idx}
+								key={idx}
+								isWorkshop={isWorkshop}
+							/>
 						))}
 					</ContentContainer>
 				)}
