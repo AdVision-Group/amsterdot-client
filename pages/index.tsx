@@ -24,6 +24,7 @@ import AftermovieSection from "../components/aftermovie-section/aftermovie-secti
 import PhotosSection from "../components/photos-section/photos-section.component"
 import SpeakersSection from "../components/speakers-section/speakers-section.component"
 import BountyWinnersSection from "../components/bounty-winners-section/bounty-winners-section.component"
+import ScoreboardSection from "../components/scoreboard-section/scoreboard-section.component"
 // import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
 
 // Hooks
