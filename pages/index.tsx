@@ -305,6 +305,7 @@ const Home: NextPage = () => {
 			</WatermarkContainer>
 
 			<HeroSection />
+			<ScoreboardSection />
 			<HackathonSection />
 			<HackatonContentSection />
 			{/* <PricepoolSection /> */}
