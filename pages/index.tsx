@@ -111,7 +111,7 @@ const Home: NextPage = () => {
 	// 	[0, 1, 1, 1]
 	// )
 
-	// scrollYProgress.onChange((e) => console.log(e))
+	scrollYProgress.onChange((e) => console.log(e))
 
 	// Set horizontal container width on change
 	// useEffect(() => {
@@ -128,21 +128,9 @@ const Home: NextPage = () => {
 	// 	}
 	// }, [width, sectionRefH, setH])
 
-	const transformYAM = useTransform(
-		scrollYProgress,
-		[0, 0.14, 1, 1],
-		[0, 150, 150, 150]
-	)
-	const transformYST = useTransform(
-		scrollYProgress,
-		[0, 0.14, 1, 1],
-		[20, -100, -100, -100]
-	)
-	const transformYER = useTransform(
-		scrollYProgress,
-		[0, 0.14, 1, 1],
-		[0, -100, -50, -50]
-	)
+	const transformYAM = useTransform(scrollYProgress, [0, 0.14], [0, 150])
+	const transformYST = useTransform(scrollYProgress, [0, 0.14], [20, -100])
+	const transformYER = useTransform(scrollYProgress, [0, 0.14], [0, -100])
 
 	// console.log(event)
 
@@ -565,11 +553,11 @@ const WatermarkLetters = styled(motion.h2)`
 
 			&.am {
 				top: 7rem;
-				left: -11rem;
+				left: 0rem;
 			}
 			&.st {
 				top: 21rem;
-				right: -6rem;
+				right: 0rem;
 			}
 			&.er {
 				display: block;
@@ -577,7 +565,7 @@ const WatermarkLetters = styled(motion.h2)`
 				left: 30rem;
 			}
 
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				font-size: 50rem;
 
 				&.am {
@@ -594,7 +582,7 @@ const WatermarkLetters = styled(motion.h2)`
 					top: 60rem;
 					left: 40rem;
 				}
-			}
+			} */
 		}
 	}
 `

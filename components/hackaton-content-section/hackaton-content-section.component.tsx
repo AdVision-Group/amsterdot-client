@@ -144,9 +144,9 @@ const Container = styled(motion.div)`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin: 0rem 1.5rem 0;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			max-width: 130rem;
-		}
+		} */
 	}
 `
 
@@ -339,7 +339,7 @@ const ContentContainer = styled.div`
 				margin-bottom: 2rem;
 			}
 
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				padding: 4rem 4rem 4rem;
 
 				h2 {
@@ -351,7 +351,7 @@ const ContentContainer = styled.div`
 				p {
 					margin-bottom: 2rem;
 				}
-			}
+			} */
 		}
 	}
 `
@@ -467,12 +467,12 @@ const ButtonsContainer = styled.div`
 				padding: 1.2rem 2rem 0.8rem;
 				font-weight: 400;
 			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				button {
 					font-size: 3rem;
 					padding: 1.8rem 4rem 1.5rem;
 				}
-			}
+			} */
 		}
 	}
 `

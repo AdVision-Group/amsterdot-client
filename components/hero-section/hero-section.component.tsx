@@ -369,9 +369,9 @@ const SectionContainer = styled.section`
 
 	color: ${({ theme }) => theme.fonts.primary};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+	/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 		align-items: center;
-	}
+	} */
 `
 
 const Container = styled(motion.div)`
@@ -385,9 +385,9 @@ const Container = styled(motion.div)`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin: 4rem 1.5rem 0;
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				max-width: 130rem;
-			}
+			} */
 		}
 	}
 `
@@ -417,9 +417,9 @@ const ContentContainer = styled.div`
 		padding: 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			padding: 3rem;
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				min-height: 65rem;
-			}
+			} */
 		}
 	}
 `
@@ -475,13 +475,13 @@ const HeadContainer = styled.div`
 			margin-bottom: unset;
 		}
 
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			h1 {
 				span {
 					font-size: 15rem;
 				}
 			}
-		}
+		} */
 	}
 `
 
@@ -507,21 +507,11 @@ const ImageContainer = styled.figure`
 		figure {
 			position: relative;
 			width: 25rem;
-			height: 30rem;
 			margin-bottom: 4rem;
 			margin-right: 5rem;
 			/* border: 1px solid green; */
 		}
 		/* width: 25rem; */
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-			figure {
-				width: 46rem;
-				height: 60rem;
-				margin-bottom: 4rem;
-				margin-right: -10rem;
-				/* border: 1px solid green; */
-			}
-		}
 	}
 `
 
@@ -592,8 +582,7 @@ const DateContainer = styled.div`
 			/* font-size: 4.5rem; */
 		}
 
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-			/* width: 100%; */
+		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			max-width: 15rem;
 			p {
 				font-size: 4.4rem;
@@ -601,7 +590,7 @@ const DateContainer = styled.div`
 			p:nth-of-type(4) {
 				font-size: 5.2rem;
 			}
-		}
+		} */
 	}
 `
 
@@ -677,12 +666,12 @@ const ButtonsContainer = styled.div`
 					}
 				}
 			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				button {
 					font-size: 3rem;
 					padding: 1.8rem 4rem 1.5rem;
 				}
-			}
+			} */
 		}
 	}
 `
@@ -723,10 +712,10 @@ const PlaceContainer = styled.div`
 				font-size: 1.8rem;
 			}
 			/* margin-right: -12rem; */
-
+			/* 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				font-size: 2.5rem;
-			}
+			} */
 		}
 	}
 `

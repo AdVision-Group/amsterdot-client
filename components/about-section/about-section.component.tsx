@@ -14,9 +14,9 @@ const AboutSection = () => {
 	// const tr
 	// ansformOpacity = useTransform(scrollYProgress, [0.13, 0.2], [1, 0])
 
-	const transformYDO = useTransform(scrollYProgress, [0.54, 0.7], [-180, 0])
+	const transformYDO = useTransform(scrollYProgress, [0.4, 0.55], [0, 60])
 
-	const transformYT = useTransform(scrollYProgress, [0.54, 0.77], [130, -40])
+	const transformYT = useTransform(scrollYProgress, [0.4, 0.55], [0, -40])
 
 	const partners = [
 		{
@@ -314,9 +314,9 @@ const WatermarkLetters = styled(motion.h2)`
 				top: 25rem;
 				right: 0rem;
 			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				font-size: 50rem;
-			}
+			} */
 		}
 	}
 `
@@ -343,9 +343,9 @@ const SectionContainer = styled.section`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin: 12rem 0 10rem;
 
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				align-items: center;
-			}
+			} */
 		}
 	}
 `
@@ -360,9 +360,9 @@ const Container = styled(motion.div)`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin: 0rem 1.5rem 0;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			max-width: 130rem;
-		}
+		} */
 	}
 `
 
@@ -422,7 +422,7 @@ const ContentContainer = styled.div`
 			p {
 				margin-bottom: 2rem;
 			}
-
+/* 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				padding: 4rem 4rem 4rem;
 
@@ -434,7 +434,7 @@ const ContentContainer = styled.div`
 
 				p {
 					margin-bottom: 2rem;
-				}
+				} */
 			}
 		}
 	}
@@ -557,12 +557,12 @@ const ButtonsContainer = styled.div`
 				padding: 1.2rem 2rem 0.8rem;
 				font-weight: 400;
 			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				button {
 					font-size: 3rem;
 					padding: 1.8rem 4rem 1.5rem;
 				}
-			}
+			} */
 		}
 	}
 `

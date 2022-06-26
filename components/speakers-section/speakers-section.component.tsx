@@ -1,7 +1,7 @@
 // Utils
 import React from "react"
 import styled from "styled-components"
-import { motion } from "framer-motion"
+import { motion, useViewportScroll, useTransform } from "framer-motion"
 
 // Components
 import Image from "next/image"
@@ -9,6 +9,10 @@ import Link from "next/link"
 import SpeakerOverview from "../speaker-overview/speaker-overview.component"
 
 const SpeakersSection: React.FC = () => {
+	const { scrollYProgress } = useViewportScroll()
+	const transformSPEA = useTransform(scrollYProgress, [0.68, 0.82], [0, 60])
+	const transformKERS = useTransform(scrollYProgress, [0.68, 0.82], [0, -40])
+
 	const speakers = [
 		{
 			image: {
@@ -99,7 +103,12 @@ const SpeakersSection: React.FC = () => {
 	return (
 		<SpeakersSectionContainer>
 			<TitleContainer>
-				<figure className="spea">
+				<motion.figure
+					style={{
+						x: transformSPEA,
+					}}
+					className="spea"
+				>
 					<Image
 						src="/assets/speakers-section/SPEA.svg"
 						alt="spea"
@@ -108,7 +117,7 @@ const SpeakersSection: React.FC = () => {
 						width={50}
 						height={25}
 					/>
-				</figure>
+				</motion.figure>
 				<Link href={"/#day-1"} passHref>
 					<a className="arrow">
 						<ArrowContainer
@@ -130,7 +139,12 @@ const SpeakersSection: React.FC = () => {
 						</ArrowContainer>
 					</a>
 				</Link>
-				<figure className="kers">
+				<motion.figure
+					style={{
+						x: transformKERS,
+					}}
+					className="kers"
+				>
 					<Image
 						src="/assets/speakers-section/kers.svg"
 						alt="kers"
@@ -139,7 +153,7 @@ const SpeakersSection: React.FC = () => {
 						width={50}
 						height={25}
 					/>
-				</figure>
+				</motion.figure>
 			</TitleContainer>
 			<SpeakersDirectory>
 				{speakers.map(({ ...props }, idx) => (

@@ -1,7 +1,7 @@
 // Utils
 import React from "react"
 import styled from "styled-components"
-import { motion } from "framer-motion"
+import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
 import Link from "next/link"
@@ -9,6 +9,10 @@ import Image from "next/image"
 import BountyWinnerOverview from "../bounty-winner-overview/bounty-winner-overview.component"
 
 const BountyWinnersSection = () => {
+	const { scrollYProgress } = useViewportScroll()
+	const transformWINNERS = useTransform(scrollYProgress, [0.57, 0.7], [0, 60])
+	const transformBOUNTIES = useTransform(scrollYProgress, [0.57, 0.7], [0, -40])
+
 	const bounties = [
 		{
 			logo: {
@@ -151,7 +155,12 @@ const BountyWinnersSection = () => {
 	return (
 		<BountyWinnersSectionContainer>
 			<TitleContainer>
-				<figure className="winners">
+				<motion.figure
+					style={{
+						x: transformWINNERS,
+					}}
+					className="winners"
+				>
 					<Image
 						src="/assets/bounty-winners/WINNERS.svg"
 						alt="kers"
@@ -160,7 +169,7 @@ const BountyWinnersSection = () => {
 						width={50}
 						height={25}
 					/>
-				</figure>
+				</motion.figure>
 				{/* <h2 className="winners">Winners</h2> */}
 				<Link href={"/#day-1"} passHref>
 					<a className="arrow">
@@ -184,7 +193,12 @@ const BountyWinnersSection = () => {
 					</a>
 				</Link>
 
-				<figure className="of-bounties">
+				<motion.figure
+					style={{
+						x: transformBOUNTIES,
+					}}
+					className="of-bounties"
+				>
 					<Image
 						src="/assets/bounty-winners/bounties.svg"
 						alt="kers"
@@ -193,7 +207,7 @@ const BountyWinnersSection = () => {
 						width={50}
 						height={25}
 					/>
-				</figure>
+				</motion.figure>
 			</TitleContainer>
 
 			<BountiesDirectory>

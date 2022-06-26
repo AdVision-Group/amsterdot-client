@@ -9,8 +9,8 @@ import Image from "next/image"
 const AftermovieSection: React.FC = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformAFTER = useTransform(scrollYProgress, [0.58, 0.68], [-70, 0])
-	const transformMOVIE = useTransform(scrollYProgress, [0.58, 0.68], [70, 0])
+	const transformAFTER = useTransform(scrollYProgress, [0.46, 0.61], [-70, 0])
+	const transformMOVIE = useTransform(scrollYProgress, [0.46, 0.61], [70, 0])
 
 	return (
 		<AftermovieSectionContainer id="after-movie">
@@ -102,6 +102,8 @@ const Title = styled(motion.h3)`
 	line-height: 1;
 	z-index: 3;
 	margin-bottom: 2rem;
+	max-width: 120rem;
+	margin: 0 auto;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
