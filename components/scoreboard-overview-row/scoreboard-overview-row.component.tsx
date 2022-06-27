@@ -109,6 +109,7 @@ const ContentContainer = styled.div`
 		color: ${({ theme }) => theme.color.primary};
 		font-size: 1.7rem;
 		font-weight: 400;
+		font-family: "Pixel12x10";
 		text-transform: uppercase;
 	}
 

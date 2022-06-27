@@ -11,6 +11,9 @@ interface IProps {
 	teamName: string
 	score: string
 	submission: string
+	submission2?: string
+	submissionLabel?: string
+	submissionLabel2?: string
 	prizePool: string
 }
 
@@ -21,6 +24,9 @@ const ScoreboardOverview: React.FC<IProps> = ({
 	score,
 	submission,
 	prizePool,
+	submission2,
+	submissionLabel,
+	submissionLabel2,
 }) => {
 	return (
 		<ScoreboardOverviewContainer className="top">
@@ -42,8 +48,27 @@ const ScoreboardOverview: React.FC<IProps> = ({
 						height={20}
 					/>
 				</figure>
-				<a href={submission}>submission</a>
+				<a rel="noopener noreferrer" target="_blank" href={submission}>
+					{submissionLabel ? submissionLabel : "submission"}
+				</a>
 			</SubmissionContainer>
+			{submission2 && (
+				<SubmissionContainer>
+					<figure>
+						<Image
+							src="/assets/scoreboard-section/icon.svg"
+							alt="submission icon"
+							objectFit="contain"
+							layout="fixed"
+							width={20}
+							height={20}
+						/>
+					</figure>
+					<a rel="noopener noreferrer" target="_blank" href={submission}>
+						{submissionLabel2}
+					</a>
+				</SubmissionContainer>
+			)}
 			<PrizePoolContainer>
 				<p>FROM SHARED PRIZE POOL</p>
 				<p>{prizePool}</p>
@@ -62,9 +87,10 @@ const ScoreboardOverviewContainer = styled.div`
 
 	h2 {
 		color: ${({ theme }) => theme.color.primary};
-		font-size: 2rem;
+		font-size: 3.5rem;
 		font-weight: 400;
 		text-transform: uppercase;
+		font-family: "Pixel12x10";
 	}
 
 	h3 {

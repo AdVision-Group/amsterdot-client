@@ -107,9 +107,9 @@ const Header: React.FC<IProps> = ({
 							// }}
 							// justifyContent="center"
 							>
-								<Link href={"/#bounties"} passHref>
+								<Link href={"/#scoreboard"} passHref>
 									<a>
-										<Button>BOUNTIES</Button>
+										<Button>HACK WINNERS</Button>
 									</a>
 								</Link>
 								<a

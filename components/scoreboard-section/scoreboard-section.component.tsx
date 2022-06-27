@@ -30,6 +30,9 @@ const ScoreboardSection: React.FC = () => {
 			teamName: "Ang",
 			score: "16 / 100",
 			submission: "https://dorahacks.io/buidl/3059",
+			submission2: "https://dorahacks.io/buidl/3060",
+			submissionLabel: "Submission #1 for Acala",
+			submissionLabel2: "Submission #2 for Basilisk",
 			prizePool: "$24,000",
 		},
 		{
@@ -130,6 +133,66 @@ const ScoreboardSection: React.FC = () => {
 		},
 	]
 
+	const jury = [
+		{
+			src: "/assets/partners-v2/logos/hdx.png",
+			alt: "hydra logo",
+			href: "https://hydradx.io/",
+		},
+		{
+			src: "/assets/partners-v2/logos/acala-logo.png",
+			alt: "acala network logo",
+			href: "https://acala.network/",
+		},
+		{
+			src: "/assets/partners-v2/logos/Interplay.png",
+			alt: "interplay logo",
+			href: "https://interplay.iterate.ai/",
+			width: 80,
+		},
+		{
+			src: "/assets/partners-v2/logos/phala-network-logo-white.png",
+			alt: "phala network logo",
+			href: "https://www.phala.network/en/",
+			width: 70,
+		},
+		{
+			src: "/assets/partners-v2/logos/Subsquid.png",
+			alt: "subsquid logo",
+			href: "https://www.subsquid.io/",
+			width: 90,
+		},
+		{
+			src: "/assets/partners-v2/logos/astar.png",
+			alt: "astar logo",
+			href: "https://astar.network/",
+			width: 40,
+			// height: 30,
+		},
+		// {
+		// 	src: "/assets/partners-v2/logos/talisman-logo.png",
+		// 	alt: "talisman logo",
+		// 	href: "https://talisman.xyz/",
+		// 	width: 60,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/Centrifuge.png",
+		// 	alt: "centrifuge logo",
+		// 	href: "https://centrifuge.io/",
+		// 	width: 60,
+		// },
+		{
+			src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
+			alt: "moonbeam logo",
+			href: "https://moonbeam.network/",
+		},
+		// {
+		// 	src: "/assets/partners-v2/logos/Parity.png",
+		// 	alt: "parity logo",
+		// 	href: "https://www.parity.io/",
+		// },
+	]
+
 	return (
 		<React.Fragment>
 			<ScoreboardSectionContainer id="scoreboard">
@@ -193,6 +256,36 @@ const ScoreboardSection: React.FC = () => {
 			</ScoreboardSectionContainer>
 			<JuryCompositionContainer>
 				<h3>JURY COMPOSITION</h3>
+				<PartnersContainer>
+					{jury.map((partner, idx) => (
+						<a
+							key={idx}
+							href={partner.href}
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<motion.figure
+								whileHover={{
+									scale: 1.05,
+								}}
+								whileTap={{
+									scale: 0.97,
+								}}
+							>
+								<Image
+									src={partner.src}
+									placeholder="blur"
+									blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
+									alt={partner.alt}
+									width={partner.width || 120}
+									height={60}
+									objectFit="contain"
+									layout="fixed"
+								/>
+							</motion.figure>
+						</a>
+					))}
+				</PartnersContainer>
 			</JuryCompositionContainer>
 		</React.Fragment>
 	)
@@ -309,7 +402,7 @@ const JuryCompositionContainer = styled.div`
 	scroll-margin-top: 10rem;
 	max-width: 135rem;
 	margin: 0 auto 5rem;
-	border: 1px solid red;
+	/* border: 1px solid red; */
 
 	position: relative;
 	color: ${({ theme }) => theme.fonts.primary};
@@ -319,4 +412,39 @@ const JuryCompositionContainer = styled.div`
 		font-weight: 400;
 		font-size: clamp(2.5rem, 4vw, 7rem);
 	}
+`
+
+const PartnersContainer = styled.div`
+	position: relative;
+	/* display: grid; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* justify-content: space-around;
+	justify-content: center; */
+	/* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
+	width: 100%;
+	/* max-width: 47rem; */
+	margin: 0 auto;
+	gap: 1.5rem;
+	margin-top: 2rem;
+	padding-top: 0.5rem;
+	/* border-top: 1px solid #fff; */
+
+	figure {
+		/* border: 1px solid green; */
+		/* width: 7rem; */
+		max-width: 10rem;
+		/* height: 3rem; */
+		position: relative;
+	}
+	/* max-width: 30rem;
+	width: 100%;
+	margin: 0 auto;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin: 0 0 0 auto;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			max-width: 50rem;
+		}
+	} */
 `
