@@ -148,6 +148,7 @@ const SubmissionContainer = styled.div`
 
 const PrizePoolContainer = styled.div`
 	margin-top: 2rem;
+	padding: 1.5rem 0;
 	border: 1px solid ${({ theme }) => theme.color.primary};
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -158,7 +159,7 @@ const PrizePoolContainer = styled.div`
 		font-weight: 900;
 
 		&:nth-child(1) {
-			padding: 2rem 1.2rem;
+			padding: 1rem 1.2rem;
 			font-size: 1.7rem;
 			font-weight: 400;
 			border-right: 1px solid ${({ theme }) => theme.color.primary};

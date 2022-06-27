@@ -90,7 +90,7 @@ const NumberContainer = styled.div`
 	margin-top: -2rem;
 	margin-bottom: 2rem;
 	background-color: ${({ theme }) => theme.color.primary};
-	padding: 1rem 2rem;
+	padding: 1.4rem 2rem 1rem;
 	color: ${({ theme }) => theme.fonts.secondary};
 	font-size: 7rem;
 	font-weight: 900;
@@ -107,7 +107,7 @@ const ContentContainer = styled.div`
 
 	h2 {
 		color: ${({ theme }) => theme.color.primary};
-		font-size: 1.7rem;
+		font-size: 2.5rem;
 		font-weight: 400;
 		font-family: "Pixel12x10";
 		text-transform: uppercase;
@@ -178,6 +178,7 @@ const PrizePoolContainer = styled.div`
 	align-self: center;
 	grid-template-columns: 1fr 1fr;
 	max-width: 30rem;
+	padding: 1.5rem 0;
 
 	p {
 		align-self: center;
@@ -185,7 +186,7 @@ const PrizePoolContainer = styled.div`
 		font-weight: 900;
 
 		&:nth-child(1) {
-			padding: 2rem 1.2rem;
+			padding: 1rem 1.2rem;
 			font-size: 1.5rem;
 			font-weight: 400;
 			border-right: 1px solid ${({ theme }) => theme.color.primary};

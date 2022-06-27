@@ -21,9 +21,9 @@ import HackathonSection from "../components/hackathon-section/hackathon-section.
 import HackatonContentSection from "../components/hackaton-content-section/hackaton-content-section.component"
 import BountySection from "../components/bounties-section/bounties-section.component"
 import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
-import PhotosSection from "../components/photos-section/photos-section.component"
-import SpeakersSection from "../components/speakers-section/speakers-section.component"
-import BountyWinnersSection from "../components/bounty-winners-section/bounty-winners-section.component"
+// import PhotosSection from "../components/photos-section/photos-section.component"
+// import SpeakersSection from "../components/speakers-section/speakers-section.component"
+// import BountyWinnersSection from "../components/bounty-winners-section/bounty-winners-section.component"
 import ScoreboardSection from "../components/scoreboard-section/scoreboard-section.component"
 // import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
 
@@ -300,9 +300,9 @@ const Home: NextPage = () => {
 			<BountySection />
 			<AboutSection />
 			<AftermovieSection />
-			<PhotosSection />
-			<BountyWinnersSection />
-			<SpeakersSection />
+			{/* <PhotosSection /> */}
+			{/* <BountyWinnersSection /> */}
+			{/* <SpeakersSection /> */}
 			<EventSection />
 
 			<SectionContainer>
