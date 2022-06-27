@@ -15,21 +15,10 @@ const FooterSection = () => {
 	// 	[1, 1, 1, 1]
 	// )
 
-	const transformSEE = useTransform(
-		scrollYProgress,
-		[0.83, 1, 1, 1],
-		[100, 0, 0, 0]
-	)
-	const transformYOU = useTransform(
-		scrollYProgress,
-		[0.83, 1, 1, 1],
-		[-50, 0, 0, 0]
-	)
-	const transformTHERE = useTransform(
-		scrollYProgress,
-		[0.83, 1, 1, 1],
-		[50, 0, 0, 0]
-	)
+	const transformSEE = useTransform(scrollYProgress, [0.83, 1], [100, 0])
+	const transformYOU = useTransform(scrollYProgress, [0.83, 1], [-50, 0])
+	const transformTHERE = useTransform(scrollYProgress, [0.83, 1], [80, 0])
+	const transformYEAR = useTransform(scrollYProgress, [0.83, 1], [-70, 0])
 
 	return (
 		<EventSectionContainer>
@@ -82,7 +71,7 @@ const FooterSection = () => {
 				</Title>
 				<Title
 					style={{
-						x: transformTHERE,
+						x: transformYEAR,
 					}}
 					className="year"
 				>
