@@ -401,7 +401,7 @@ const JuryCompositionContainer = styled.div`
 	padding: 0rem 1.5rem 2rem;
 	scroll-margin-top: 10rem;
 	max-width: 135rem;
-	margin: 0 auto 5rem;
+	margin: 0 auto 10rem;
 	/* border: 1px solid red; */
 
 	position: relative;

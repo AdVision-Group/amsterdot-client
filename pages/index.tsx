@@ -200,10 +200,7 @@ const Home: NextPage = () => {
 					property="og:description"
 					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 4/20-23 in Amsterdam, the Netherlands."
 				/>
-				<meta
-					property="og:image"
-					content="https://res.cloudinary.com/coderkin/image/upload/v1648731047/amsterDOT/meta-v2_oq32v3.png"
-				/>
+				<meta property="og:image" content="/assets/meta-a.png" />
 
 				{/* <!-- Twitter --> */}
 				<meta property="twitter:card" content="summary_large_image" />
@@ -213,10 +210,7 @@ const Home: NextPage = () => {
 					property="twitter:description"
 					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 4/20-23 in Amsterdam, the Netherlands."
 				/>
-				<meta
-					property="twitter:image"
-					content="https://res.cloudinary.com/coderkin/image/upload/v1648731047/amsterDOT/meta-v2_oq32v3.png"
-				/>
+				<meta property="twitter:image" content="/assets/meta-a.png" />
 			</Head>
 
 			<Header

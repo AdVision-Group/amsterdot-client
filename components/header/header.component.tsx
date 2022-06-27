@@ -242,6 +242,11 @@ const Header: React.FC<IProps> = ({
 
 							<Ul>
 								<li className="first">
+									<Link href={"/#scoreboard"}>
+										<a onClick={toggleMobileNav}>HACK SCOREBOARD</a>
+									</Link>
+								</li>
+								<li>
 									<Link href={"/#hackaton-content"}>
 										<a onClick={toggleMobileNav}>HACKATON</a>
 									</Link>

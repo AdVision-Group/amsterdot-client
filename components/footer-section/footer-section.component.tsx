@@ -78,7 +78,15 @@ const FooterSection = () => {
 					}}
 					className="there"
 				>
-					THERE
+					NEXT
+				</Title>
+				<Title
+					style={{
+						x: transformTHERE,
+					}}
+					className="year"
+				>
+					YEAR
 				</Title>
 				<ImageContainer className="first">
 					<figure>
@@ -221,6 +229,7 @@ const Container = styled.div`
 		"s f"
 		"i u"
 		"d d"
+		"n n"
 		"t t";
 
 	&:before {
@@ -244,6 +253,7 @@ const Container = styled.div`
 			"i f"
 			"i u"
 			"d d"
+			"n n"
 			"t t";
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -251,9 +261,10 @@ const Container = styled.div`
 			max-width: unset; */
 			/* background-color: red; */
 			grid-template-areas:
-				"s f d"
+				"s f f"
 				"i u u"
-				"i t t";
+				"n n d"
+				"t t t";
 		}
 	}
 `
@@ -272,7 +283,11 @@ const Title = styled(motion.h3)`
 		grid-area: u;
 		align-self: end;
 	}
-	&.there {
+	&.next {
+		grid-area: n;
+	}
+	&.year {
+		justify-self: end;
 		grid-area: t;
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -283,7 +298,9 @@ const Title = styled(motion.h3)`
 		&.you {
 			justify-self: end;
 		}
-		&.there {
+		&.next {
+		}
+		&.year {
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			font-size: 15rem;
@@ -293,8 +310,10 @@ const Title = styled(motion.h3)`
 			&.you {
 				justify-self: start;
 			}
-			&.there {
-				justify-self: start;
+			&.next {
+			}
+			&.year {
+				justify-self: end;
 				margin-left: -4rem;
 			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
