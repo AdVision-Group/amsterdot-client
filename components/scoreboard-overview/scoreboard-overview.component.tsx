@@ -23,11 +23,11 @@ const ScoreboardOverview: React.FC<IProps> = ({
 	prizePool,
 }) => {
 	return (
-		<ScoreboardOverviewContainer>
+		<ScoreboardOverviewContainer className="top">
 			<NumberContainer>#{number}</NumberContainer>
 			<h2>{teamName}</h2>
 			<h3>{title}</h3>
-			<ScoreContainer>
+			<ScoreContainer className="score">
 				<p>{score}</p>
 				<p>JURY VOTES</p>
 			</ScoreContainer>
@@ -58,6 +58,7 @@ const ScoreboardOverviewContainer = styled.div`
 	max-width: 37rem;
 	padding: 0rem 1.5rem 2rem;
 	background-color: ${({ theme }) => theme.background.container};
+	align-self: end;
 
 	h2 {
 		color: ${({ theme }) => theme.color.primary};
@@ -79,7 +80,7 @@ const NumberContainer = styled.div`
 	margin-top: -4.5rem;
 	margin-bottom: 2rem;
 	background-color: ${({ theme }) => theme.color.primary};
-	padding: 1rem 2rem;
+	padding: 1.4rem 2rem 1rem;
 	color: ${({ theme }) => theme.fonts.secondary};
 	font-size: 7rem;
 	font-weight: 900;

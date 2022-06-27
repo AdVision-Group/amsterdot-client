@@ -216,10 +216,11 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<Link href={"/#hackaton-content"} passHref>
+						<Link href={"/#scoreboard"} passHref>
 							<a>
 								<Button>
-									<span>$330k + COMBINED</span> <span>prize pool</span>
+									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
+									<span>HACK SCOREBOARD</span>
 								</Button>
 							</a>
 						</Link>

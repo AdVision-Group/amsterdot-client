@@ -131,61 +131,70 @@ const ScoreboardSection: React.FC = () => {
 	]
 
 	return (
-		<ScoreboardSectionContainer>
-			<TitleContainer>
-				<figure>
-					<Image
-						src="/assets/scoreboard-section/scoreboard.svg"
-						alt="photos"
-						objectFit="contain"
-						layout="responsive"
-						width={50}
-						height={15}
-					/>
-				</figure>
-			</TitleContainer>
+		<React.Fragment>
+			<ScoreboardSectionContainer id="scoreboard">
+				<TitleContainer>
+					<figure>
+						<Image
+							src="/assets/scoreboard-section/scoreboard.svg"
+							alt="photos"
+							objectFit="contain"
+							layout="responsive"
+							width={50}
+							height={15}
+						/>
+					</figure>
+				</TitleContainer>
 
-			<TopScoreboardDirectory>
-				{items.slice(0, 3).map((item, index) => (
-					<ScoreboardOverview key={index} {...item} />
-				))}
-			</TopScoreboardDirectory>
+				<TopScoreboardDirectory>
+					{items.slice(0, 3).map((item, index) => (
+						<ScoreboardOverview key={index} {...item} />
+					))}
+				</TopScoreboardDirectory>
 
-			<div style={{ position: "relative" }}>
-				<AnimatePresence initial={false}>
-					<ScoreboardDirectory
-						id={"scoreboard-directory"}
-						key={"scoreboard-directory"}
-						initial="collapsed"
-						animate={showContent ? "open" : "collapsed"}
-						exit={"collapsed"}
-						variants={{
-							open: {
-								display: "flex",
-								opacity: 1,
-								// height: width <= 858 ? "64rem" : "28rem",
-								height: "auto",
-							},
-							collapsed: {
-								opacity: 1,
-								height: 200,
-								transitionEnd: { opacity: 1 },
-							},
-						}}
-						transition={{ duration: 0.8, ease: [0.04, 0.2, 0.23, 0.98] }}
-					>
-						{items.slice(3, items.length).map((item, index) => (
-							<ScoreboardOverviewRow key={index} {...item} number={index + 4} />
-						))}
-					</ScoreboardDirectory>
-					{!showContent && <ScoreboardOverlay />}
-				</AnimatePresence>
-			</div>
+				<div style={{ position: "relative" }}>
+					<AnimatePresence initial={false}>
+						<ScoreboardDirectory
+							id={"scoreboard-directory"}
+							key={"scoreboard-directory"}
+							initial="collapsed"
+							animate={showContent ? "open" : "collapsed"}
+							exit={"collapsed"}
+							variants={{
+								open: {
+									display: "flex",
+									opacity: 1,
+									// height: width <= 858 ? "64rem" : "28rem",
+									height: "auto",
+								},
+								collapsed: {
+									opacity: 1,
+									height: 200,
+									transitionEnd: { opacity: 1 },
+								},
+							}}
+							transition={{ duration: 0.8, ease: [0.04, 0.2, 0.23, 0.98] }}
+						>
+							{items.slice(3, items.length).map((item, index) => (
+								<ScoreboardOverviewRow
+									key={index}
+									{...item}
+									number={index + 4}
+								/>
+							))}
+						</ScoreboardDirectory>
+						{!showContent && <ScoreboardOverlay />}
+					</AnimatePresence>
+				</div>
 
-			<CustomButton showContent={showContent} onClick={toggleContent}>
-				{showContent ? "SHOW LESS" : "VIEW ALL"}
-			</CustomButton>
-		</ScoreboardSectionContainer>
+				<CustomButton showContent={showContent} onClick={toggleContent}>
+					{showContent ? "SHOW LESS" : "VIEW ALL"}
+				</CustomButton>
+			</ScoreboardSectionContainer>
+			<JuryCompositionContainer>
+				<h3>JURY COMPOSITION</h3>
+			</JuryCompositionContainer>
+		</React.Fragment>
 	)
 }
 
@@ -195,7 +204,7 @@ const ScoreboardSectionContainer = styled.div`
 	padding: 0rem 1.5rem 2rem;
 	scroll-margin-top: 10rem;
 	max-width: 135rem;
-	margin: 0 auto 10rem;
+	margin: 0 auto 5rem;
 	overflow: hidden;
 
 	position: relative;
@@ -215,12 +224,36 @@ const TopScoreboardDirectory = styled.div`
 	gap: 10rem;
 	margin-top: 5rem;
 
+	.top {
+		:nth-child(2) {
+			grid-column: 1 / 2;
+			grid-row: 1;
+		}
+	}
+
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		grid-template-columns: repeat(2, 1fr);
+		.top {
+			:nth-child(2) {
+				grid-column: 1 / 3;
+				grid-row: 1;
+			}
+		}
+
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 				gap: 2rem;
 				grid-template-columns: repeat(3, 1fr);
+
+				.top {
+					:nth-child(2) {
+						grid-column: unset;
+						grid-row: unset;
+						.score {
+							padding: 5rem 1.5rem;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -269,4 +302,21 @@ const CustomButton = styled(Button)<{ showContent: boolean }>`
 	position: relative;
 	z-index: 9;
 	margin: ${({ showContent }) => (showContent ? "5rem" : "18rem")} auto 0;
+`
+
+const JuryCompositionContainer = styled.div`
+	padding: 0rem 1.5rem 2rem;
+	scroll-margin-top: 10rem;
+	max-width: 135rem;
+	margin: 0 auto 5rem;
+	border: 1px solid red;
+
+	position: relative;
+	color: ${({ theme }) => theme.fonts.primary};
+
+	h3 {
+		text-align: center;
+		font-weight: 400;
+		font-size: clamp(2.5rem, 4vw, 7rem);
+	}
 `
