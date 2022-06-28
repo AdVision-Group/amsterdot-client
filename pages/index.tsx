@@ -111,7 +111,7 @@ const Home: NextPage = () => {
 	// 	[0, 1, 1, 1]
 	// )
 
-	// scrollYProgress.onChange((e) => console.log(e))
+	scrollYProgress.onChange((e) => console.log(e))
 
 	// Set horizontal container width on change
 	// useEffect(() => {
@@ -290,9 +290,9 @@ const Home: NextPage = () => {
 			<ScoreboardSection />
 			<HackathonSection />
 			<HackatonContentSection />
+			<AboutSection />
 			{/* <PricepoolSection /> */}
 			<BountySection />
-			<AboutSection />
 			<AftermovieSection />
 			{/* <PhotosSection /> */}
 			{/* <BountyWinnersSection /> */}
