@@ -426,7 +426,7 @@ const PartnersContainer = styled.div`
 	width: 100%;
 	/* max-width: 47rem; */
 	margin: 0 auto;
-	gap: 1.5rem;
+	gap: 2.5rem;
 	margin-top: 2rem;
 	padding-top: 0.5rem;
 	/* border-top: 1px solid #fff; */
