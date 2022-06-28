@@ -8,7 +8,7 @@ import Image from "next/image"
 interface IProps {
 	number: number
 	title: string
-	teamName: string
+	teamName: string[]
 	score: string
 	submission: string
 	prizePool: string
@@ -26,7 +26,14 @@ const ScoreboardOverviewRow: React.FC<IProps> = ({
 		<ScoreboardOverviewRowContainer>
 			<NumberContainer>#{number}</NumberContainer>
 			<ContentContainer>
-				<h2>{teamName}</h2>
+				<TeamContainer>
+					{teamName.map((name, index) => (
+						<h2 key={index}>
+							{name}
+							<span>,</span>
+						</h2>
+					))}
+				</TeamContainer>
 				<h3>{title}</h3>
 			</ContentContainer>
 			<ScoreContainer>
@@ -112,6 +119,12 @@ const ContentContainer = styled.div`
 		font-weight: 400;
 		font-family: "Pixel12x10";
 		text-transform: uppercase;
+
+		&:last-child {
+			span {
+				display: none;
+			}
+		}
 	}
 
 	h3 {
@@ -130,10 +143,16 @@ const ContentContainer = styled.div`
 	}
 `
 
+const TeamContainer = styled.div`
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+`
+
 const ScoreContainer = styled.div`
 	grid-area: s;
 	text-align: center;
-	padding: 0rem 1.5rem;
+	padding: 1rem 1.5rem;
 
 	p {
 		&:nth-of-type(1) {

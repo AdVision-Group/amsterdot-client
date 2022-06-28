@@ -19,7 +19,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 2,
 			title: "KodaDot x BSX Marketplace",
-			teamName: "Vikiival",
+			teamName: ["Vikiival", "Yangwao"],
 			score: "13 / 100",
 			submission: "https://dorahacks.io/buidl/3055",
 			prizePool: "$19,500",
@@ -27,7 +27,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 1,
 			title: "MORPH FOR ACALA, MORPH FOR BASILISK",
-			teamName: "Ang",
+			teamName: ["Ang", "Entity64"],
 			score: "16 / 100",
 			submission: "https://dorahacks.io/buidl/3059",
 			submission2: "https://dorahacks.io/buidl/3060",
@@ -38,7 +38,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 3,
 			title: "Kintsugi-X Blockchain analysis",
-			teamName: "Mafux777",
+			teamName: ["Mafux777", "Caron"],
 			score: "11 / 100",
 			submission: "https://dorahacks.io/buidl/3064",
 			prizePool: "$16,500",
@@ -46,7 +46,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 4,
 			title: "Karura defi dashboard",
-			teamName: "FC",
+			teamName: ["FC"],
 			score: "10 / 100",
 			submission: "https://dorahacks.io/buidl/3076",
 			prizePool: "$15,000",
@@ -54,7 +54,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 5,
 			title: "POLYWARS P2E",
-			teamName: "xtools",
+			teamName: ["xtools"],
 			score: "10 / 100",
 			submission: "https://dorahacks.io/buidl/3011",
 			prizePool: "$15,000",
@@ -62,7 +62,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 6,
 			title: "FOLIOS ASTAR BROWSER EXT",
-			teamName: "shutanaka",
+			teamName: ["shutanaka"],
 			score: "7 / 100",
 			submission: "https://dorahacks.io/buidl/3069",
 			prizePool: "$10,500",
@@ -70,7 +70,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 7,
 			title: "Karura Dash with Subsquid",
-			teamName: "timbotro",
+			teamName: ["timbotro"],
 			score: "7 / 100",
 			submission: "https://dorahacks.io/buidl/3065",
 			prizePool: "$10,500",
@@ -78,7 +78,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 8,
 			title: "ACALA YIELD MANAGER",
-			teamName: "Ang",
+			teamName: ["Ang"],
 			score: "6 / 100",
 			submission: "https://dorahacks.io/buidl/3073",
 			prizePool: "$9,000",
@@ -86,7 +86,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 9,
 			title: "KINTSUGI VAULT RUNNER CLI",
-			teamName: "timbotro",
+			teamName: ["timbotro"],
 			score: "6 / 100",
 			submission: "https://dorahacks.io/buidl/2991",
 			prizePool: "$9,000",
@@ -94,7 +94,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 10,
 			title: "INTERLAY PREMIUMBOT",
-			teamName: "Kint0Sens",
+			teamName: ["Kint0Sens"],
 			score: "6 / 100",
 			submission: "https://dorahacks.io/buidl/3049",
 			prizePool: "$9,000",
@@ -102,7 +102,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 11,
 			title: "PARACHAIN BLOG ENGINE",
-			teamName: "PolkaHacks",
+			teamName: ["PolkaHacks"],
 			score: "4 / 100",
 			submission: "https://dorahacks.io/buidl/3067",
 			prizePool: "$6,000",
@@ -110,7 +110,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 12,
 			title: "PHALA VOTING TEMPLATE",
-			teamName: "marlowl",
+			teamName: ["marlowl"],
 			score: "3 / 100",
 			submission: "https://dorahacks.io/buidl/2863",
 			prizePool: "$4,500",
@@ -118,7 +118,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 13,
 			title: "INTERBTC VAULT CLI",
-			teamName: "Kint0Sens",
+			teamName: ["Kint0Sens"],
 			score: "1 / 100",
 			submission: "https://dorahacks.io/buidl/3056",
 			prizePool: "$1,500",
@@ -126,7 +126,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 14,
 			title: "OpenLand Land fractions",
-			teamName: "slim12kg",
+			teamName: ["slim12kg"],
 			score: "0 / 100",
 			submission: "https://dorahacks.io/buidl/1845",
 			prizePool: "$0",
