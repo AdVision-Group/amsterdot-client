@@ -145,8 +145,23 @@ const ContentContainer = styled.div`
 
 const TeamContainer = styled.div`
 	display: flex;
-	gap: 1.5rem;
+	/* gap: 1rem; */
 	flex-wrap: wrap;
+	margin-right: unset;
+
+	h2 {
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				/* margin-right: 1rem; */
+			}
+		}
+	}
 `
 
 const ScoreContainer = styled.div`

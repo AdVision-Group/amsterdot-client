@@ -14,7 +14,6 @@ import { useToggle } from "react-use"
 
 const ScoreboardSection: React.FC = () => {
 	const [showContent, toggleContent] = useToggle(false)
-
 	const items = [
 		{
 			number: 2,
@@ -62,7 +61,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 6,
 			title: "FOLIOS ASTAR BROWSER EXT",
-			teamName: ["shutanaka"],
+			teamName: ["SHU", "Cielo", "Daichi", "Hiro"],
 			score: "7 / 100",
 			submission: "https://dorahacks.io/buidl/3069",
 			prizePool: "$10,500",
@@ -70,7 +69,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 7,
 			title: "Karura Dash with Subsquid",
-			teamName: ["timbotro"],
+			teamName: ["timbotro", "Brett"],
 			score: "7 / 100",
 			submission: "https://dorahacks.io/buidl/3065",
 			prizePool: "$10,500",
@@ -78,7 +77,7 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 8,
 			title: "ACALA YIELD MANAGER",
-			teamName: ["Ang"],
+			teamName: ["Ang", "Entity54"],
 			score: "6 / 100",
 			submission: "https://dorahacks.io/buidl/3073",
 			prizePool: "$9,000",
@@ -126,13 +125,12 @@ const ScoreboardSection: React.FC = () => {
 		{
 			number: 14,
 			title: "OpenLand Land fractions",
-			teamName: ["slim12kg"],
+			teamName: ["slim12kg", "iemarjay", "MayBose"],
 			score: "0 / 100",
 			submission: "https://dorahacks.io/buidl/1845",
 			prizePool: "$0",
 		},
 	]
-
 	const jury = [
 		{
 			src: "/assets/partners-v2/logos/hdx.png",
