@@ -178,16 +178,6 @@ const HeroSection = () => {
 							<span>ONLINE</span>
 							<span>HACK</span>
 						</h1>
-						<p>
-							Selected winners will be invited to present at{" "}
-							<a
-								href="https://decoded.polkadot.network/"
-								rel="noopener noreferrer"
-								target="_blank"
-							>
-								Polkadot Decoded (Berlin)
-							</a>
-						</p>
 					</HeadContainer>
 					<DateContainer>
 						<p>
