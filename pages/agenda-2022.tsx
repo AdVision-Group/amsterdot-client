@@ -7,39 +7,21 @@ import styled from "styled-components"
 
 // Components
 import Head from "next/head"
-// import Link from "next/link"
 import Image from "next/image"
 import Header from "../components/header/header.component"
-// import EventOverview from "../components/event-overview/event-overview.component"
 import HeroSection from "../components/hero-section/hero-section.component"
-import AboutSection from "../components/about-section/about-section.component"
+import EventSection from "../components/event-section/event-section.component"
 import FooterSection from "../components/footer-section/footer-section.component"
-// import EventSection from "../components/event-section/event-section.component"
-// import Accordion from "../components/accordion/accordion.component"
-// import WorkshopSection from "../components/workshop-section/workshop-section.component"
-// import HackathonSection from "../components/hackathon-section/hackathon-section.component"
-// import HackatonContentSection from "../components/hackaton-content-section/hackaton-content-section.component"
-// import BountySection from "../components/bounties-section/bounties-section.component"
-// import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
-// import PhotosSection from "../components/photos-section/photos-section.component"
-// import SpeakersSection from "../components/speakers-section/speakers-section.component"
-// import BountyWinnersSection from "../components/bounty-winners-section/bounty-winners-section.component"
-// import ScoreboardSection from "../components/scoreboard-section/scoreboard-section.component"
-// import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
+import Accordion from "../components/accordion/accordion.component"
+import WorkshopSection from "../components/workshop-section/workshop-section.component"
+import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
+import PhotosSection from "../components/photos-section/photos-section.component"
+import SpeakersSection from "../components/speakers-section/speakers-section.component"
 
 // Hooks
 import { useRouter } from "next/router"
-import {
-	motion,
-	useViewportScroll,
-	useTransform,
-	// useSpring,
-} from "framer-motion"
-import {
-	// useNumber,
-	useMap,
-	//  useWindowSize
-} from "react-use"
+import { motion, useViewportScroll, useTransform } from "framer-motion"
+import { useMap } from "react-use"
 
 // Data
 import { events, hackatons } from "../utils/data"
@@ -47,7 +29,7 @@ import { events, hackatons } from "../utils/data"
 // Icons
 import { AiFillGithub } from "react-icons/ai"
 
-const Home: NextPage = () => {
+const AgendaPage: NextPage = () => {
 	const { push } = useRouter()
 
 	const { scrollYProgress } = useViewportScroll()
@@ -65,11 +47,11 @@ const Home: NextPage = () => {
 		})),
 	})
 
-	// scrollYProgress.onChange((e) => console.log(e))
+	scrollYProgress.onChange((e) => console.log(e))
 
-	const transformYAM = useTransform(scrollYProgress, [0, 0.5], [0, 150])
-	const transformYST = useTransform(scrollYProgress, [0, 0.5], [20, -100])
-	const transformYER = useTransform(scrollYProgress, [0, 0.5], [0, -100])
+	const transformYAM = useTransform(scrollYProgress, [0, 0.14], [0, 150])
+	const transformYST = useTransform(scrollYProgress, [0, 0.14], [20, -100])
+	const transformYER = useTransform(scrollYProgress, [0, 0.14], [0, -100])
 
 	const openEventDayProgram = (
 		showContent: boolean,
@@ -224,13 +206,46 @@ const Home: NextPage = () => {
 			</WatermarkContainer>
 
 			<HeroSection />
-			<AboutSection />
+			<AftermovieSection />
+			<PhotosSection />
+			<EventSection />
+			<SpeakersSection />
+			<SectionContainer>
+				{events.map((e, idx) => (
+					<Accordion
+						showContent={event.events[idx].showContent}
+						openEventDayProgram={openEventDayProgram}
+						openHackathonDayProgram={openHackathonDayProgram}
+						key={idx}
+						idx={idx}
+						item={e}
+						dayID={e.id}
+					/>
+				))}
+			</SectionContainer>
+
+			<WorkshopSection />
+
+			<SectionContainer>
+				{hackatons.map((h, idx) => (
+					<Accordion
+						showContent={hackaton.hackatons[idx].showContent}
+						openEventDayProgram={openEventDayProgram}
+						openHackathonDayProgram={openHackathonDayProgram}
+						key={idx}
+						idx={idx}
+						item={h}
+						dayID={h.id}
+						isWorkshop={true}
+					/>
+				))}
+			</SectionContainer>
 
 			<FooterSection
-				transformSEERange={[0.4, 1]}
-				transformYOURange={[0.4, 1]}
-				transformTHERERange={[0.4, 1]}
-				transformYEARRange={[0.4, 1]}
+				transformSEERange={[0.85, 1]}
+				transformYOURange={[0.85, 1]}
+				transformTHERERange={[0.85, 1]}
+				transformYEARRange={[0.85, 1]}
 			/>
 			<Footer>
 				<a
@@ -247,7 +262,7 @@ const Home: NextPage = () => {
 	)
 }
 
-export default Home
+export default AgendaPage
 
 const Footer = styled.footer`
 	display: flex;
@@ -396,4 +411,8 @@ const WatermarkLetters = styled(motion.h2)`
 			} */
 		}
 	}
+`
+
+const SectionContainer = styled.section`
+	padding: 10rem 0;
 `

@@ -10,9 +10,9 @@ import Image from "next/image"
 const HackathonSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformHACK = useTransform(scrollYProgress, [0.13, 0.25], [-100, 0])
-	const transformATH = useTransform(scrollYProgress, [0.13, 0.25], [50, -50])
-	const transformON = useTransform(scrollYProgress, [0.13, 0.25], [-50, 0])
+	const transformHACK = useTransform(scrollYProgress, [0, 0.22], [-100, 0])
+	const transformATH = useTransform(scrollYProgress, [0, 0.22], [25, -50])
+	const transformON = useTransform(scrollYProgress, [0, 0.22], [-50, 0])
 
 	return (
 		<EventSectionContainer>
@@ -147,7 +147,7 @@ const ArrowContainer = styled(motion.figure)`
 const EventSectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 	color: ${({ theme }) => theme.fonts.primary};
-	padding: 0rem 1.5rem;
+	padding: 10rem 1.5rem 5rem;
 	width: 100vw;
 	display: flex;
 	justify-content: center;

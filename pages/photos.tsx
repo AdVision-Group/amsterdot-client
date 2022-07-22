@@ -7,39 +7,12 @@ import styled from "styled-components"
 
 // Components
 import Head from "next/head"
-// import Link from "next/link"
-import Image from "next/image"
 import Header from "../components/header/header.component"
-// import EventOverview from "../components/event-overview/event-overview.component"
-import HeroSection from "../components/hero-section/hero-section.component"
-import AboutSection from "../components/about-section/about-section.component"
-import FooterSection from "../components/footer-section/footer-section.component"
-// import EventSection from "../components/event-section/event-section.component"
-// import Accordion from "../components/accordion/accordion.component"
-// import WorkshopSection from "../components/workshop-section/workshop-section.component"
-// import HackathonSection from "../components/hackathon-section/hackathon-section.component"
-// import HackatonContentSection from "../components/hackaton-content-section/hackaton-content-section.component"
-// import BountySection from "../components/bounties-section/bounties-section.component"
-// import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
-// import PhotosSection from "../components/photos-section/photos-section.component"
-// import SpeakersSection from "../components/speakers-section/speakers-section.component"
-// import BountyWinnersSection from "../components/bounty-winners-section/bounty-winners-section.component"
-// import ScoreboardSection from "../components/scoreboard-section/scoreboard-section.component"
-// import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
 
 // Hooks
 import { useRouter } from "next/router"
-import {
-	motion,
-	useViewportScroll,
-	useTransform,
-	// useSpring,
-} from "framer-motion"
-import {
-	// useNumber,
-	useMap,
-	//  useWindowSize
-} from "react-use"
+import { motion, useViewportScroll } from "framer-motion"
+import { useMap } from "react-use"
 
 // Data
 import { events, hackatons } from "../utils/data"
@@ -47,7 +20,7 @@ import { events, hackatons } from "../utils/data"
 // Icons
 import { AiFillGithub } from "react-icons/ai"
 
-const Home: NextPage = () => {
+const PhotosPage: NextPage = () => {
 	const { push } = useRouter()
 
 	const { scrollYProgress } = useViewportScroll()
@@ -65,11 +38,7 @@ const Home: NextPage = () => {
 		})),
 	})
 
-	// scrollYProgress.onChange((e) => console.log(e))
-
-	const transformYAM = useTransform(scrollYProgress, [0, 0.5], [0, 150])
-	const transformYST = useTransform(scrollYProgress, [0, 0.5], [20, -100])
-	const transformYER = useTransform(scrollYProgress, [0, 0.5], [0, -100])
+	scrollYProgress.onChange((e) => console.log(e))
 
 	const openEventDayProgram = (
 		showContent: boolean,
@@ -155,83 +124,6 @@ const Home: NextPage = () => {
 				openHackathonDayProgram={openHackathonDayProgram}
 			/>
 
-			<WatermarkContainer>
-				<WatermarkLetters
-					style={{
-						x: transformYAM,
-						// fontFamily: "Avenir Next",
-						// opacity: transformWatermarkOpacity,
-					}}
-					className="am"
-				>
-					AM
-				</WatermarkLetters>
-				<WatermarkLetters
-					style={{
-						x: transformYST,
-
-						// opacity: transformWatermarkOpacity,
-					}}
-					className="st-horizontal"
-				>
-					<Image
-						src={"/assets/st-h.svg"}
-						alt="st letters"
-						width={200}
-						height={400}
-						layout="responsive"
-						objectFit="contain"
-					/>
-				</WatermarkLetters>
-				<WatermarkLetters
-					style={{
-						x: transformYST,
-
-						// opacity: transformWatermarkOpacity,
-					}}
-					className="st"
-				>
-					<Image
-						src={"/assets/partners-v2/st.svg"}
-						alt="st letters"
-						width={200}
-						height={200}
-						layout="responsive"
-						objectFit="contain"
-					/>
-				</WatermarkLetters>
-				<WatermarkLetters
-					style={{
-						x: transformYER,
-
-						// opacity: transformWatermarkOpacity,
-					}}
-					className="er"
-				>
-					ER
-				</WatermarkLetters>
-				<WatermarkLetters
-					style={{
-						x: transformYER,
-
-						// opacity: transformWatermarkOpacity,
-					}}
-					className="er-horizontal"
-				>
-					<span>E</span>
-					<span>R</span>
-				</WatermarkLetters>
-			</WatermarkContainer>
-
-			<HeroSection />
-			<AboutSection />
-
-			<FooterSection
-				transformSEERange={[0.4, 1]}
-				transformYOURange={[0.4, 1]}
-				transformTHERERange={[0.4, 1]}
-				transformYEARRange={[0.4, 1]}
-			/>
 			<Footer>
 				<a
 					href="https://github.com/AdVision-Group/amsterdot-client"
@@ -247,7 +139,7 @@ const Home: NextPage = () => {
 	)
 }
 
-export default Home
+export default PhotosPage
 
 const Footer = styled.footer`
 	display: flex;
@@ -256,6 +148,88 @@ const Footer = styled.footer`
 	figure {
 		color: ${({ theme }) => theme.color.primary};
 		font-size: 3rem;
+	}
+`
+
+// const Circle1 = styled(motion.figure)`
+// 	position: absolute;
+// 	z-index: -3;
+
+// 	width: 5rem;
+// 	heigth: 5rem;
+// 	left: 50%;
+// 	top: 10%;
+
+// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+// 		width: 10rem;
+// 		heigth: 10rem;
+// 	}
+// `
+const Circle2 = styled(motion.figure)`
+	position: absolute;
+	z-index: -3;
+
+	width: 6rem;
+	heigth: 6rem;
+	top: 5rem;
+	right: 6rem;
+	border-radius: 50%;
+	overflow: hidden;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		width: 12rem;
+		heigth: 12rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			top: 5rem;
+			right: 5rem;
+		}
+	}
+`
+
+// const Circle3 = styled(motion.figure)`
+// 	display: none;
+// 	position: absolute;
+// 	z-index: -3;
+
+// 	width: 6rem;
+// 	heigth: 6rem;
+// 	bottom: 3rem;
+// 	left: 3rem;
+
+// 	border-radius: 50%;
+// 	overflow: hidden;
+
+// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+// 		display: block;
+// 		width: 12rem;
+// 		heigth: 12rem;
+// 	}
+// `
+const ArrowContainer = styled(motion.figure)`
+	position: absolute;
+	z-index: 111;
+
+	width: 6rem;
+	heigth: 6rem;
+	bottom: 22rem;
+	right: 3rem;
+	/* display: none; */
+
+	@media all and (max-height: 650px) {
+		display: none;
+	}
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		right: unset;
+		left: 3rem;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			display: block;
+			width: 8rem;
+			heigth: 8rem;
+			bottom: 6rem;
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				bottom: 25rem;
+			}
+		}
 	}
 `
 
@@ -396,4 +370,8 @@ const WatermarkLetters = styled(motion.h2)`
 			} */
 		}
 	}
+`
+
+const SectionContainer = styled.section`
+	padding: 10rem 0;
 `

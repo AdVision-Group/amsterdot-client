@@ -10,8 +10,8 @@ import Image from "next/image"
 const WorkshopSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformWORK = useTransform(scrollYProgress, [0.87, 1.01], [10, 70])
-	const transformSHOP = useTransform(scrollYProgress, [0.87, 1.01], [20, -50])
+	const transformWORK = useTransform(scrollYProgress, [0.65, 0.87], [10, 70])
+	const transformSHOP = useTransform(scrollYProgress, [0.65, 0.87], [20, -50])
 
 	return (
 		<EventSectionContainer>

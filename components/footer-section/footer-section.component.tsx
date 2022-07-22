@@ -6,7 +6,19 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 // Components
 import Image from "next/image"
 
-const FooterSection = () => {
+interface IProps {
+	transformSEERange: number[]
+	transformYOURange: number[]
+	transformTHERERange: number[]
+	transformYEARRange: number[]
+}
+
+const FooterSection: React.FC<IProps> = ({
+	transformSEERange,
+	transformYOURange,
+	transformTHERERange,
+	transformYEARRange,
+}) => {
 	const { scrollYProgress } = useViewportScroll()
 
 	// const transformWatermarkOpacity = useTransform(
@@ -15,10 +27,26 @@ const FooterSection = () => {
 	// 	[1, 1, 1, 1]
 	// )
 
-	const transformSEE = useTransform(scrollYProgress, [0.83, 1], [100, 0])
-	const transformYOU = useTransform(scrollYProgress, [0.83, 1], [-50, 0])
-	const transformTHERE = useTransform(scrollYProgress, [0.83, 1], [80, 0])
-	const transformYEAR = useTransform(scrollYProgress, [0.83, 1], [-70, 0])
+	const transformSEE = useTransform(
+		scrollYProgress,
+		transformSEERange,
+		[100, 0]
+	)
+	const transformYOU = useTransform(
+		scrollYProgress,
+		transformYOURange,
+		[-50, 0]
+	)
+	const transformTHERE = useTransform(
+		scrollYProgress,
+		transformTHERERange,
+		[80, 0]
+	)
+	const transformYEAR = useTransform(
+		scrollYProgress,
+		transformYEARRange,
+		[-70, 0]
+	)
 
 	return (
 		<EventSectionContainer>

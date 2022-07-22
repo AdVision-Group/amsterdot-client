@@ -10,8 +10,8 @@ import BountyWinnerOverview from "../bounty-winner-overview/bounty-winner-overvi
 
 const BountyWinnersSection = () => {
 	const { scrollYProgress } = useViewportScroll()
-	const transformWINNERS = useTransform(scrollYProgress, [0.57, 0.7], [0, 60])
-	const transformBOUNTIES = useTransform(scrollYProgress, [0.57, 0.7], [0, -40])
+	const transformWINNERS = useTransform(scrollYProgress, [0.54, 0.9], [0, 60])
+	const transformBOUNTIES = useTransform(scrollYProgress, [0.54, 0.9], [0, -40])
 
 	const bounties = [
 		{

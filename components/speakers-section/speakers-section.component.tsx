@@ -70,40 +70,13 @@ const SpeakersSection: React.FC = () => {
 			},
 			url: "https://www.google.com/",
 		},
-		{
-			image: {
-				src: "/assets/speakers-section/speaker-placeholder.png",
-				alt: "speaker placeholder",
-			},
-			name: "John doe",
-			logo: {
-				src: "/assets/speakers-section/logo-placeholder.png",
-				alt: "logo placeholder",
-				// width: 0,
-				// height: 0,
-			},
-			url: "https://www.google.com/",
-		},
-		{
-			image: {
-				src: "/assets/speakers-section/speaker-placeholder.png",
-				alt: "speaker placeholder",
-			},
-			name: "John doe",
-			logo: {
-				src: "/assets/speakers-section/logo-placeholder.png",
-				alt: "logo placeholder",
-				// width: 0,
-				// height: 0,
-			},
-			url: "https://www.google.com/",
-		},
 	]
 
 	return (
 		<SpeakersSectionContainer>
 			<TitleContainer>
-				<motion.figure
+				<h3>Speakers</h3>
+				{/* <motion.figure
 					style={{
 						x: transformSPEA,
 					}}
@@ -153,7 +126,7 @@ const SpeakersSection: React.FC = () => {
 						width={50}
 						height={25}
 					/>
-				</motion.figure>
+				</motion.figure> */}
 			</TitleContainer>
 			<SpeakersDirectory>
 				{speakers.map(({ ...props }, idx) => (
@@ -189,23 +162,30 @@ const SpeakersSectionContainer = styled.section`
 	padding: 0rem 1.5rem 2rem;
 	scroll-margin-top: 10rem;
 	max-width: 135rem;
-	margin: 0 auto 10rem;
+	margin: 0 auto 0rem;
 
 	position: relative;
 	color: ${({ theme }) => theme.fonts.primary};
 `
 
 const TitleContainer = styled.div`
-	margin-bottom: -10rem;
+	/* margin-bottom: -10rem; */
 	max-width: 86rem;
-	margin: 0 auto;
+	margin: 4rem auto 2rem;
 
-	display: grid;
-	grid-template-columns: 14rem 1fr;
+	/* display: grid;
+	grid-template-columns: 14rem 1fr; */
+
+	h3 {
+		font-size: 8rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		text-align: center;
+	}
 
 	.spea {
 		grid-column: 1/3;
-		margin-bottom: -5rem;
+		/* margin-bottom: -5rem; */
 	}
 
 	.arrow {
@@ -214,11 +194,11 @@ const TitleContainer = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		grid-template-columns: 23rem 1fr;
+		/* grid-template-columns: 23rem 1fr; */
 
 		.spea {
 			grid-column: 1/3;
-			margin-bottom: -10rem;
+			/* margin-bottom: -10rem; */
 		}
 	}
 `

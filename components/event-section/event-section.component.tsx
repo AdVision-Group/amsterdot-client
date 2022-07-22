@@ -10,9 +10,9 @@ import Image from "next/image"
 const EventSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformCON = useTransform(scrollYProgress, [0.7, 0.9], [-50, 50])
-	const transformFERE = useTransform(scrollYProgress, [0.7, 0.9], [50, -50])
-	const transformNCE = useTransform(scrollYProgress, [0.7, 0.9], [-50, 0])
+	const transformCON = useTransform(scrollYProgress, [0.31, 0.55], [-50, 50])
+	const transformFERE = useTransform(scrollYProgress, [0.31, 0.55], [50, -50])
+	const transformNCE = useTransform(scrollYProgress, [0.31, 0.55], [-50, 0])
 
 	return (
 		<EventSectionContainer>
