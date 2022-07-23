@@ -122,6 +122,18 @@ const PhotosPage: NextPage = () => {
 			<Header
 				openEventDayProgram={openEventDayProgram}
 				openHackathonDayProgram={openHackathonDayProgram}
+				ctas={[
+					{
+						label: "AGENDA 2022",
+						slug: "/agenda-2022",
+						outline: false,
+					},
+					{
+						label: "HACKATHON 2022",
+						slug: "/hackathon-2022",
+						outline: true,
+					},
+				]}
 			/>
 
 			<Footer>
