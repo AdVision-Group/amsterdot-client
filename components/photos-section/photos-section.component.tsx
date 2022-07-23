@@ -6,6 +6,8 @@ import { Controller } from "swiper"
 // Components
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
+import Button from "../button/button.component"
+import Link from "next/link"
 
 // Hooks
 import { useMedia } from "react-use"
@@ -186,6 +188,16 @@ const PhotosSection = () => {
 					</Swiper>
 				</ArrowButton>
 			</Container>
+			<ButtonsContainer>
+				<Link href={"/photos"} passHref>
+					<a>
+						<Button>
+							{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
+							<span>VIEW ALL</span>
+						</Button>
+					</a>
+				</Link>
+			</ButtonsContainer>
 		</PhotosSectionContainer>
 	)
 }
@@ -259,4 +271,9 @@ const ImageContainer = styled.figure`
 	/* width: 100%;
 	height: 30rem;
 	border: 1px solid red; */
+`
+
+const ButtonsContainer = styled.div`
+	display: flex;
+	justify-content: center;
 `

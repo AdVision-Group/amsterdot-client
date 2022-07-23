@@ -746,7 +746,7 @@ const PartnersContainer = styled.div`
 		max-width: 10rem;
 		/* height: 3rem; */
 		position: relative;
-		filter: blur(0.7rem);
+		/* filter: blur(0.7rem); */
 	}
 	/* max-width: 30rem;
 	width: 100%;

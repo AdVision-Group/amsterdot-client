@@ -250,32 +250,32 @@ const Header: React.FC<IProps> = ({
 
 							<Ul>
 								<li className="first">
-									<Link href={"/#scoreboard"}>
+									<Link href={"/hackathon-2022/#scoreboard"}>
 										<a onClick={toggleMobileNav}>HACK SCOREBOARD</a>
 									</Link>
 								</li>
-								<li>
+								{/* <li>
 									<Link href={"/#hackaton-content"}>
 										<a onClick={toggleMobileNav}>HACKATON</a>
 									</Link>
-								</li>
-								<li>
+								</li> */}
+								{/* <li>
 									<Link href={"/#bounties-h"}>
 										<a onClick={toggleMobileNav}>BOUNTIES</a>
 									</Link>
-								</li>
+								</li> */}
 								<li>
 									<Link href={"/#about"}>
 										<a onClick={toggleMobileNav}>WHAT IS amsterDOT</a>
 									</Link>
 								</li>
 								<li>
-									<Link href={"/#after-movie"}>
+									<Link href={"/agenda-2022/#after-movie"}>
 										<a onClick={toggleMobileNav}>AFTERMOVIE</a>
 									</Link>
 								</li>
 								<li>
-									<Link href={"/#day-1"}>
+									<Link href={"/agenda-2022/#day-1"}>
 										<a onClick={toggleMobileNav}>CONFERENCE PROGRAM</a>
 									</Link>
 									<NestedUl>
@@ -296,7 +296,7 @@ const Header: React.FC<IProps> = ({
 									</NestedUl>
 								</li>
 								<li>
-									<Link href={"/#hack-2"}>
+									<Link href={"/agenda-2022/#hack-2"}>
 										<a onClick={toggleMobileNav}>WOKSHOP PROGRAM</a>
 									</Link>
 									<NestedUl>
