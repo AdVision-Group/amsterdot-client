@@ -122,6 +122,13 @@ const HackathonPage: NextPage = () => {
 			<Header
 				openEventDayProgram={openEventDayProgram}
 				openHackathonDayProgram={openHackathonDayProgram}
+				ctas={[
+					{
+						label: "AGENDA 2022",
+						slug: "/agenda-2022",
+						outline: true,
+					},
+				]}
 			/>
 
 			<HackathonSection />

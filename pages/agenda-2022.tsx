@@ -9,7 +9,7 @@ import styled from "styled-components"
 import Head from "next/head"
 import Image from "next/image"
 import Header from "../components/header/header.component"
-import HeroSection from "../components/hero-section/hero-section.component"
+import AgendaHeroSection from "../components/agenda-hero-section/agenda-hero-section.component"
 import EventSection from "../components/event-section/event-section.component"
 import FooterSection from "../components/footer-section/footer-section.component"
 import Accordion from "../components/accordion/accordion.component"
@@ -47,7 +47,7 @@ const AgendaPage: NextPage = () => {
 		})),
 	})
 
-	scrollYProgress.onChange((e) => console.log(e))
+	// scrollYProgress.onChange((e) => console.log(e))
 
 	const transformYAM = useTransform(scrollYProgress, [0, 0.14], [0, 150])
 	const transformYST = useTransform(scrollYProgress, [0, 0.14], [20, -100])
@@ -135,6 +135,18 @@ const AgendaPage: NextPage = () => {
 			<Header
 				openEventDayProgram={openEventDayProgram}
 				openHackathonDayProgram={openHackathonDayProgram}
+				ctas={[
+					{
+						label: "HACKATHON",
+						slug: "/hackathon-2022",
+						outline: false,
+					},
+					{
+						label: "CONFERENCE",
+						slug: "/agenda-2022/#conference",
+						outline: true,
+					},
+				]}
 			/>
 
 			<WatermarkContainer>
@@ -205,7 +217,7 @@ const AgendaPage: NextPage = () => {
 				</WatermarkLetters>
 			</WatermarkContainer>
 
-			<HeroSection />
+			<AgendaHeroSection />
 			<AftermovieSection />
 			<PhotosSection />
 			<EventSection />

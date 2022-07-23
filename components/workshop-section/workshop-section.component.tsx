@@ -62,7 +62,7 @@ const WorkshopSection = () => {
 							height={70}
 						/>
 					</SHOPContainer>
-					<Link href={"/#hack-2"} passHref>
+					<Link href={"/agenda-2022/#hack-2"} passHref>
 						<a>
 							<ArrowContainer
 							// animate={{

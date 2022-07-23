@@ -171,7 +171,7 @@ const BountyWinnersSection = () => {
 					/>
 				</motion.figure>
 				{/* <h2 className="winners">Winners</h2> */}
-				<Link href={"/#day-1"} passHref>
+				<Link href={"/hackathon-2022/#bounty-directory"} passHref>
 					<a className="arrow">
 						<ArrowContainer
 							animate={
@@ -210,7 +210,7 @@ const BountyWinnersSection = () => {
 				</motion.figure>
 			</TitleContainer>
 
-			<BountiesDirectory>
+			<BountiesDirectory id="bounty-directory">
 				{bounties.map((bounty, idx) => (
 					<BountyWinnerOverview key={idx} {...bounty} />
 				))}

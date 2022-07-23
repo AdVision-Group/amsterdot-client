@@ -20,6 +20,11 @@ import { FiMail } from "react-icons/fi"
 import { events, hackatons } from "../../utils/data"
 
 interface IProps {
+	ctas: {
+		slug: string
+		label: string
+		outline: boolean
+	}[]
 	openEventDayProgram: (
 		showContent: boolean,
 		idx: number,
@@ -33,6 +38,7 @@ interface IProps {
 }
 
 const Header: React.FC<IProps> = ({
+	ctas,
 	openEventDayProgram,
 	openHackathonDayProgram,
 }) => {
@@ -107,18 +113,20 @@ const Header: React.FC<IProps> = ({
 							// }}
 							// justifyContent="center"
 							>
-								<Link href={"/#scoreboard"} passHref>
-									<a>
-										<Button>HACK WINNERS</Button>
-									</a>
-								</Link>
-								<a
+								{ctas.map((cta, idx) => (
+									<Link key={idx} href={cta.slug} passHref>
+										<a>
+											<Button outline={cta.outline}>{cta.label}</Button>
+										</a>
+									</Link>
+								))}
+								{/* <a
 									rel="noopener noreferrer"
 									target="_blank"
 									href="https://youtube.com/playlist?list=PLpyT58HowFcU-pM-Q9Ms9eq0mRSP950ky"
 								>
 									<Button outline={"true"}>CONF VIDS</Button>
-								</a>
+								</a> */}
 							</ButtonsContainer>
 						)}
 					</AnimatePresence>

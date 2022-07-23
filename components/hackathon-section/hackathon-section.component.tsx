@@ -88,7 +88,7 @@ const HackathonSection = () => {
 						<span>ONLINE</span>
 					</div>
 				</PlaceContainer>
-				<Link href={"/#hackaton-content"} passHref>
+				<Link href={"/hackathon-2022/#scoreboard"} passHref>
 					<a>
 						<ArrowContainer
 						// animate={{

@@ -4,14 +4,14 @@ import styled from "styled-components"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 
 // Components
-import Image from "next/image"
-import Link from "next/link"
+// import Image from "next/image"
+// import Link from "next/link"
 import SpeakerOverview from "../speaker-overview/speaker-overview.component"
 
 const SpeakersSection: React.FC = () => {
 	const { scrollYProgress } = useViewportScroll()
-	const transformSPEA = useTransform(scrollYProgress, [0.68, 0.82], [0, 60])
-	const transformKERS = useTransform(scrollYProgress, [0.68, 0.82], [0, -40])
+	// const transformSPEA = useTransform(scrollYProgress, [0.68, 0.82], [0, 60])
+	// const transformKERS = useTransform(scrollYProgress, [0.68, 0.82], [0, -40])
 
 	const speakers = [
 		{
@@ -73,7 +73,7 @@ const SpeakersSection: React.FC = () => {
 	]
 
 	return (
-		<SpeakersSectionContainer>
+		<SpeakersSectionContainer id="speakers">
 			<TitleContainer>
 				<h3>Speakers</h3>
 				{/* <motion.figure

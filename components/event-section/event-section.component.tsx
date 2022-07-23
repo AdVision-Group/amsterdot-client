@@ -15,7 +15,7 @@ const EventSection = () => {
 	const transformNCE = useTransform(scrollYProgress, [0.31, 0.55], [-50, 0])
 
 	return (
-		<EventSectionContainer>
+		<EventSectionContainer id="conference">
 			<WatermarkContainer>
 				{/* <Circle1
 					className="first"
@@ -121,7 +121,7 @@ const EventSection = () => {
 						<span>WESTERUNIE Klönneplein 4-6, 1014 DD</span>
 					</div>
 				</PlaceContainer>
-				<Link href={"/#day-1"} passHref>
+				<Link href={"/agenda-2022/#speakers"} passHref>
 					<a>
 						<ArrowContainer
 							animate={

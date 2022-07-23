@@ -95,7 +95,7 @@ const HeroSection = () => {
 
 	return (
 		<SectionContainer>
-			<Link href={"/#about"} passHref>
+			<Link href={"/agenda-2022/#after-movie"} passHref>
 				<a>
 					<ArrowContainer
 					// animate={{
@@ -175,8 +175,8 @@ const HeroSection = () => {
 					</PlayButtonContainer> */}
 					<HeadContainer>
 						<h1>
-							<span>CONF</span>
-							<span>HACK</span>
+							<span>AGENDA</span>
+							<span>2022</span>
 						</h1>
 						{/* <p>
 							Selected winners will present at{" "}
@@ -198,7 +198,7 @@ const HeroSection = () => {
 							<span />
 							<span>06/20</span>
 						</p> */}
-						<p>XXXX</p>
+						{/* <p>XXXX</p> */}
 						{/* <p>&nbsp;</p> */}
 						<p>2022</p>
 					</DateContainer>
@@ -217,17 +217,17 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<Link href={"/agenda-2022"} passHref>
+						<Link href={"/hackathon-2022"} passHref>
 							<a>
 								<Button>
 									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
-									<span>AGENDA 2022</span>
+									<span>HACKATHON</span>
 								</Button>
 							</a>
 						</Link>
-						<Link href={"/hackathon-2022"} passHref>
+						<Link href={"/agenda-2022/#conference"} passHref>
 							<a>
-								<Button outline={"true"}>HACKATHON 2022</Button>
+								<Button outline={"true"}>CONFERENCE</Button>
 							</a>
 						</Link>
 					</ButtonsContainer>
@@ -264,11 +264,6 @@ const HeroSection = () => {
 							</motion.figure>
 						</a>
 					))}
-					<PartnersOverlay>
-						<a href="#" rel="noopener noreferrer" target="_blank">
-							APPLY TO SPONSOR
-						</a>
-					</PartnersOverlay>
 				</PartnersContainer>
 			</Container>
 		</SectionContainer>
@@ -573,10 +568,10 @@ const DateContainer = styled.div`
 			}
 		}
 	} */
-	p:nth-of-type(1) {
+	/* p:nth-of-type(1) {
 		font-size: 3rem;
-	}
-	p:nth-of-type(2) {
+	} */
+	p:nth-of-type(1) {
 		font-size: 3.5rem;
 	}
 
@@ -762,23 +757,4 @@ const PartnersContainer = styled.div`
 			max-width: 50rem;
 		}
 	} */
-`
-
-const PartnersOverlay = styled.div`
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	/* background-color: rgba(0, 0, 0, 0.5); */
-	z-index: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	a {
-		color: #fff;
-		text-decoration: underline;
-		font-size: 1.5rem;
-	}
 `
