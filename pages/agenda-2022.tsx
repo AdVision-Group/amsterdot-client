@@ -11,7 +11,7 @@ import Image from "next/image"
 import Header from "../components/header/header.component"
 import AgendaHeroSection from "../components/agenda-hero-section/agenda-hero-section.component"
 import EventSection from "../components/event-section/event-section.component"
-import FooterSection from "../components/footer-section/footer-section.component"
+// import FooterSection from "../components/footer-section/footer-section.component"
 import Accordion from "../components/accordion/accordion.component"
 import WorkshopSection from "../components/workshop-section/workshop-section.component"
 import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
@@ -74,7 +74,7 @@ const AgendaPage: NextPage = () => {
 				}
 			}),
 		})
-		push(`/#${dayID}`)
+		push(`/agenda-2022/#${dayID}`)
 	}
 	const openHackathonDayProgram = (
 		showContent: boolean,
@@ -97,7 +97,7 @@ const AgendaPage: NextPage = () => {
 				}
 			}),
 		})
-		push(`/#${dayID}`)
+		push(`/agenda-2022/#${dayID}`)
 	}
 
 	return (
@@ -137,12 +137,12 @@ const AgendaPage: NextPage = () => {
 				openHackathonDayProgram={openHackathonDayProgram}
 				ctas={[
 					{
-						label: "HACKATHON",
+						label: "HACKATHON 2022",
 						slug: "/hackathon-2022",
 						outline: false,
 					},
 					{
-						label: "CONFERENCE",
+						label: "CONFERENCE 2022",
 						slug: "/agenda-2022/#conference",
 						outline: true,
 					},
@@ -253,12 +253,12 @@ const AgendaPage: NextPage = () => {
 				))}
 			</SectionContainer>
 
-			<FooterSection
+			{/* <FooterSection
 				transformSEERange={[0.85, 1]}
 				transformYOURange={[0.85, 1]}
 				transformTHERERange={[0.85, 1]}
 				transformYEARRange={[0.85, 1]}
-			/>
+			/> */}
 			<Footer>
 				<a
 					href="https://github.com/AdVision-Group/amsterdot-client"

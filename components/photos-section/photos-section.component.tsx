@@ -2,16 +2,18 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Controller } from "swiper"
+import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
 import Image from "next/image"
+import CustomImage from "../image/image.component"
 import { Swiper, SwiperSlide } from "swiper/react"
 import Button from "../button/button.component"
 import Link from "next/link"
 
 // Hooks
-import { useMedia } from "react-use"
-import { useTheme } from "styled-components"
+import { useBoolean } from "react-use"
+// import { useTheme } from "styled-components"
 
 // Types
 import ISwiper from "swiper/swiper"
@@ -20,8 +22,12 @@ import ISwiper from "swiper/swiper"
 import "swiper/css"
 
 const PhotosSection = () => {
-	const theme = useTheme()
-	const isSmall = useMedia(`(min-width: ${theme.breakpoints.md})`)
+	const { scrollYProgress } = useViewportScroll()
+
+	const transformPHOTOS = useTransform(scrollYProgress, [0.2, 0.45], [-50, 50])
+
+	// const theme = useTheme()
+	// const isSmall = useMedia(`(min-width: ${theme.breakpoints.md})`)
 	const [controlledSwiper, setControlledSwiper] = useState<ISwiper>()
 
 	const images = [
@@ -94,9 +100,76 @@ const PhotosSection = () => {
 		// dec()
 	}
 
+	const [showModal, toggleModal] = useBoolean(false)
+
+	const [selectedImageIdx, setSelectedImageIdx] = useState<null | number>(null)
+
+	const onImageSelect = (idx: number) => {
+		console.log(idx)
+		setSelectedImageIdx(idx)
+		toggleModal(true)
+	}
+
+	const onModalClose = () => {
+		setSelectedImageIdx(null)
+		toggleModal(false)
+	}
+
+	const onClickNext = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+		e.preventDefault()
+		e.stopPropagation()
+		setSelectedImageIdx((idx) => {
+			if (idx === null) {
+				return 0
+			}
+			if (idx === images.length - 1) {
+				return 0
+			}
+			return idx + 1
+		})
+	}
+	const onClickPrev = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+		e.preventDefault()
+		e.stopPropagation()
+		setSelectedImageIdx((idx) => {
+			if (idx === null) {
+				return 0
+			}
+			if (idx === 0) {
+				return images.length - 1
+			}
+			return idx - 1
+		})
+	}
+
 	return (
 		<PhotosSectionContainer>
-			<TitleContainer>
+			{showModal && selectedImageIdx !== null && (
+				<Modal onClick={onModalClose}>
+					<figure>
+						<CustomImage
+							src={images[selectedImageIdx].src}
+							alt={images[selectedImageIdx].alt}
+							effect="blur"
+							style={{
+								objectFit: "contain",
+							}}
+							width={"100%"}
+							// height={15}
+						/>
+						<LeftOverlay onClick={onClickPrev} />
+						<RightOverlay onClick={onClickNext} />
+					</figure>
+				</Modal>
+			)}
+
+			<TitleContainer
+				style={{
+					x: transformPHOTOS,
+
+					// opacity: transformWatermarkOpacity,
+				}}
+			>
 				<figure>
 					<Image
 						src="/assets/photos-section/photos.svg"
@@ -154,7 +227,7 @@ const PhotosSection = () => {
 					>
 						{images.map((item, idx) => (
 							<SwiperSlide key={idx}>
-								<ImageContainer>
+								<ImageContainer onClick={() => onImageSelect(idx)}>
 									<Image
 										placeholder="blur"
 										blurDataURL={item.thumbnail_url}
@@ -204,7 +277,44 @@ const PhotosSection = () => {
 
 export default PhotosSection
 
-const TitleContainer = styled.div`
+const Modal = styled.div`
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	figure {
+		/* width: 80%; */
+		/* height: 80%; */
+
+		position: relative;
+	}
+`
+
+const LeftOverlay = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	bottom: 0;
+	/* background-color: red; */
+`
+const RightOverlay = styled.div`
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	bottom: 0;
+	/* background-color: blue; */
+`
+
+const TitleContainer = styled(motion.div)`
 	margin-bottom: -10rem;
 	max-width: 86rem;
 	margin: 0 auto;

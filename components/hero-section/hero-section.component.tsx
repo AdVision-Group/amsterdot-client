@@ -198,7 +198,7 @@ const HeroSection = () => {
 							<span />
 							<span>06/20</span>
 						</p> */}
-						<p>XXXX</p>
+						{/* <p>XXXX</p> */}
 						{/* <p>&nbsp;</p> */}
 						<p>2022</p>
 					</DateContainer>
@@ -418,8 +418,8 @@ const ContentContainer = styled.div`
 		grid-template-columns: auto 1fr auto 10rem;
 		grid-template-rows: auto auto;
 		grid-template-areas:
-			"h h i d"
-			"h h i d"
+			"h i i d"
+			"h i i d"
 			"b b p p";
 		min-height: 45rem;
 		padding: 2rem;
@@ -573,10 +573,10 @@ const DateContainer = styled.div`
 			}
 		}
 	} */
-	p:nth-of-type(1) {
+	/* p:nth-of-type(1) {
 		font-size: 3rem;
-	}
-	p:nth-of-type(2) {
+	} */
+	p:nth-of-type(1) {
 		font-size: 3.5rem;
 	}
 
@@ -644,7 +644,7 @@ const ButtonsContainer = styled.div`
 		gap: 2rem;
 
 		button {
-			font-size: 1.7rem;
+			font-size: 2rem;
 			line-height: 1;
 			/* margin-bottom: 1rem; */
 		}
@@ -662,7 +662,7 @@ const ButtonsContainer = styled.div`
 				top: unset;
 				font-weight: 400;
 				/* font-size: 3rem; */
-				padding: 1.8rem;
+				padding: 1.2rem 2rem;
 
 				span {
 					display: block;
@@ -751,7 +751,7 @@ const PartnersContainer = styled.div`
 		max-width: 10rem;
 		/* height: 3rem; */
 		position: relative;
-		filter: blur(0.7rem);
+		filter: blur(2rem);
 	}
 	/* max-width: 30rem;
 	width: 100%;

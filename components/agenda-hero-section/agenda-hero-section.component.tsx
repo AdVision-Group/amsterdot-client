@@ -190,14 +190,14 @@ const HeroSection = () => {
 						</p> */}
 					</HeadContainer>
 					<DateContainer>
-						{/* <p>
+						<p>
 							<span>04/20</span>
 							<span />
 						</p>
 						<p>
 							<span />
 							<span>06/20</span>
-						</p> */}
+						</p>
 						{/* <p>XXXX</p> */}
 						{/* <p>&nbsp;</p> */}
 						<p>2022</p>
@@ -217,17 +217,17 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
+						<Link href={"/agenda-2022/#conference"} passHref>
+							<a>
+								<Button>CONFERENCE</Button>
+							</a>
+						</Link>
 						<Link href={"/hackathon-2022"} passHref>
 							<a>
-								<Button>
+								<Button outline={"true"}>
 									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
 									<span>HACKATHON</span>
 								</Button>
-							</a>
-						</Link>
-						<Link href={"/agenda-2022/#conference"} passHref>
-							<a>
-								<Button outline={"true"}>CONFERENCE</Button>
 							</a>
 						</Link>
 					</ButtonsContainer>
@@ -413,8 +413,8 @@ const ContentContainer = styled.div`
 		grid-template-columns: auto 1fr auto 10rem;
 		grid-template-rows: auto auto;
 		grid-template-areas:
-			"h h i d"
-			"h h i d"
+			"h i i d"
+			"h i i d"
 			"b b p p";
 		min-height: 45rem;
 		padding: 2rem;
@@ -536,7 +536,7 @@ const DateContainer = styled.div`
 		font-family: "Avenir Next";
 		font-weight: 900;
 	}
-	/* 
+
 	p:nth-of-type(1) {
 		display: flex;
 		align-items: center;
@@ -567,11 +567,11 @@ const DateContainer = styled.div`
 				margin-right: 1.5rem;
 			}
 		}
-	} */
+	}
 	/* p:nth-of-type(1) {
 		font-size: 3rem;
 	} */
-	p:nth-of-type(1) {
+	p:nth-of-type(3) {
 		font-size: 3.5rem;
 	}
 
@@ -639,7 +639,7 @@ const ButtonsContainer = styled.div`
 		gap: 2rem;
 
 		button {
-			font-size: 1.7rem;
+			font-size: 2rem;
 			line-height: 1;
 			/* margin-bottom: 1rem; */
 		}
@@ -657,7 +657,8 @@ const ButtonsContainer = styled.div`
 				top: unset;
 				font-weight: 400;
 				/* font-size: 3rem; */
-				padding: 1.8rem;
+				padding: 1.2rem 2rem;
+				/* padding: 1.8rem; */
 
 				span {
 					display: block;

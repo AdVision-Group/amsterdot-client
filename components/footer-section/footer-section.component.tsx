@@ -103,7 +103,17 @@ const FooterSection: React.FC<IProps> = ({
 					}}
 					className="year"
 				>
-					YEAR
+					<span>YEAR</span>
+					<figure>
+						<Image
+							src="/assets/2023.svg"
+							alt="2222"
+							objectFit="contain"
+							layout="fill"
+							// width={100}
+							// height={50}
+						/>
+					</figure>
 				</Title>
 				<ImageContainer className="first">
 					<figure>
@@ -306,6 +316,22 @@ const Title = styled(motion.h3)`
 	&.year {
 		justify-self: end;
 		grid-area: t;
+
+		display: grid;
+		grid-template-columns: 1fr 9rem;
+
+		span {
+			text-align: end;
+		}
+
+		figure {
+			position: relative;
+			/* border: 1px solid red; */
+			width: 100%;
+			/* height: 100%; */
+
+			margin-top: -1rem;
+		}
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 10rem;

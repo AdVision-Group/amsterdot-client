@@ -224,6 +224,7 @@ export default BountyWinnersSection
 const BountiesDirectory = styled.div`
 	width: 100%;
 	/* max-width: 130rem; */
+	scroll-margin-top: 20rem;
 
 	margin: 0 auto;
 

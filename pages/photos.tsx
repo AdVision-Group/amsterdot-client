@@ -156,6 +156,33 @@ const PhotosPage: NextPage = () => {
 		toggleModal(false)
 	}
 
+	const onClickNext = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+		e.preventDefault()
+		e.stopPropagation()
+		setSelectedImageIdx((idx) => {
+			if (idx === null) {
+				return 0
+			}
+			if (idx === images.length - 1) {
+				return 0
+			}
+			return idx + 1
+		})
+	}
+	const onClickPrev = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+		e.preventDefault()
+		e.stopPropagation()
+		setSelectedImageIdx((idx) => {
+			if (idx === null) {
+				return 0
+			}
+			if (idx === 0) {
+				return images.length - 1
+			}
+			return idx - 1
+		})
+	}
+
 	return (
 		<React.Fragment>
 			<Head>
@@ -218,6 +245,8 @@ const PhotosPage: NextPage = () => {
 							width={"100%"}
 							// height={15}
 						/>
+						<LeftOverlay onClick={onClickPrev} />
+						<RightOverlay onClick={onClickNext} />
 					</figure>
 				</Modal>
 			)}
@@ -272,6 +301,23 @@ const PhotosPage: NextPage = () => {
 
 export default PhotosPage
 
+const LeftOverlay = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	bottom: 0;
+	/* background-color: red; */
+`
+const RightOverlay = styled.div`
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	bottom: 0;
+	/* background-color: blue; */
+`
+
 const TitleContainer = styled.div`
 	margin-bottom: -10rem;
 	max-width: 86rem;
@@ -312,4 +358,11 @@ const Modal = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	figure {
+		/* width: 80%; */
+		/* height: 80%; */
+
+		position: relative;
+	}
 `
