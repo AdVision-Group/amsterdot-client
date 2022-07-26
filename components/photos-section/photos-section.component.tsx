@@ -1,7 +1,7 @@
 // Utils
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Controller } from "swiper"
+import { Controller, Grid } from "swiper"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 // Components
@@ -20,6 +20,8 @@ import ISwiper from "swiper/swiper"
 
 // Styles
 import "swiper/css"
+import "swiper/css/grid"
+import "swiper/css/pagination"
 
 const PhotosSection = () => {
 	const { scrollYProgress } = useViewportScroll()
@@ -184,7 +186,7 @@ const PhotosSection = () => {
 			<Container>
 				<ArrowButton className="left">
 					<Swiper
-						modules={[Controller]}
+						modules={[Controller, Grid]}
 						controller={{ control: controlledSwiper }}
 					>
 						<figure onClick={handleClickPrev}>
@@ -202,26 +204,35 @@ const PhotosSection = () => {
 				<SwiperContainer>
 					<Swiper
 						className="main-swipe"
-						modules={[Controller]}
+						modules={[Controller, Grid]}
 						onSwiper={setControlledSwiper}
 						spaceBetween={70}
 						slidesPerView={3}
-						navigation={true}
+						// navigation={true}
 						breakpoints={{
 							// when window width is >= 320px
 							320: {
-								slidesPerView: 1,
-								spaceBetween: 20,
+								slidesPerView: 2,
+								spaceBetween: 10,
+								grid: {
+									rows: 2,
+								},
 							},
 							// when window width is >= 480px
 							480: {
 								slidesPerView: 2,
 								spaceBetween: 20,
+								grid: {
+									rows: 1,
+								},
 							},
 							// when window width is >= 768px
 							768: {
 								slidesPerView: 3,
 								spaceBetween: 20,
+								grid: {
+									rows: 1,
+								},
 							},
 						}}
 					>
@@ -335,11 +346,35 @@ const Container = styled.div`
 `
 
 const SwiperContainer = styled.div`
-	margin: 0 10rem;
+	margin: 0 0rem;
 	/* display: flex; */
 	/* 
 	grid-template-columns: 5rem auto 5rem;
 	gap: 1rem; */
+
+	.swiper {
+		width: 100%;
+		height: 33rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.swiper-slide {
+		text-align: center;
+		font-size: 18px;
+		height: calc((100% - 30px) / 2) !important;
+		margin: auto;
+	}
+
+	@media all and (min-width: 480px) {
+		margin: 0 10rem;
+		.swiper {
+			width: 100%;
+			height: initial;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 `
 
 const ArrowButton = styled.button`
@@ -352,19 +387,35 @@ const ArrowButton = styled.button`
 
 	&.left {
 		left: 0;
-		top: 50%;
-		transform: translateY(-50%);
+		bottom: -8.5rem;
+		/* transform: translateY(-50%); */
 	}
 	&.right {
 		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
+		bottom: -8.5rem;
+		/* top: 50%; */
+		/* transform: translateY(-50%); */
 	}
 
 	figure {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+
+	@media all and (min-width: 480px) {
+		&.left {
+			left: 0;
+			bottom: unset;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&.right {
+			bottom: unset;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
 `
 
@@ -386,4 +437,9 @@ const ImageContainer = styled.figure`
 const ButtonsContainer = styled.div`
 	display: flex;
 	justify-content: center;
+	margin-top: 4rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin-top: unset;
+	}
 `
