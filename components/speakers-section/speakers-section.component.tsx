@@ -143,16 +143,71 @@ const SpeakersDirectory = styled.div`
 	display: grid;
 	/* flex-wrap: wrap; */
 	grid-template-columns: repeat(1, 1fr);
-	justify-items: center;
-	gap: 1.5rem;
+	/* justify-items: center; */
+	/* gap: 1.5rem; */
+	.speaker {
+		border-bottom: 1px solid #707070;
+	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		grid-template-columns: repeat(2, 1fr);
 
+		.speaker {
+			border-bottom: unset;
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				/* border-right: 0.5px solid #707070; */
+				border-bottom: 1px solid #707070;
+			}
+			&:nth-child(2n) {
+				border-left: 1px solid #707070;
+				/* border-right: 1px solid #707070; */
+				/* border-bottom: 1px solid #707070; */
+			}
+		}
+
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			grid-template-columns: repeat(3, 1fr);
+			.speaker {
+				&:nth-child(2n) {
+					border-left: unset;
+					/* border-right: 1px solid #707070; */
+					/* border-bottom: 1px solid #707070; */
+				}
+
+				&:nth-child(2) {
+					border-left: 1px solid #707070;
+					border-right: 1px solid #707070;
+				}
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					/* border-left: 0.5px solid #707070; */
+					/* border-right: 1px solid #707070; */
+					border-bottom: 1px solid #707070;
+				}
+			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 				grid-template-columns: repeat(4, 1fr);
+				.speaker {
+					&:nth-child(2) {
+						border-left: 1px solid #707070;
+						border-right: 0.5px solid #707070;
+					}
+					&:nth-child(3) {
+						border-left: 0.5px solid #707070;
+						border-right: 1px solid #707070;
+					}
+
+					&:nth-child(1),
+					&:nth-child(2),
+					&:nth-child(3) {
+						/* border-left: 0.5px solid #707070; */
+						/* border-right: 1px solid #707070; */
+						border-bottom: unset;
+					}
+				}
 			}
 		}
 	}

@@ -24,7 +24,7 @@ import "swiper/css"
 const PhotosSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformPHOTOS = useTransform(scrollYProgress, [0.2, 0.45], [-50, 50])
+	const transformPHOTOS = useTransform(scrollYProgress, [0.12, 0.45], [-50, 50])
 
 	// const theme = useTheme()
 	// const isSmall = useMedia(`(min-width: ${theme.breakpoints.md})`)

@@ -22,7 +22,7 @@ interface IProps {
 
 const SpeakerOverview: React.FC<IProps> = ({ image, name, logo, url }) => {
 	return (
-		<SpeakerOverviewContainer>
+		<SpeakerOverviewContainer className="speaker">
 			<AvatarContainer>
 				<figure className="avatar">
 					<Image
@@ -71,9 +71,9 @@ const SpeakerOverviewContainer = styled.div`
 	align-items: center;
 	flex-direction: column;
 	position: relative;
-	max-width: 30rem;
+	/* max-width: 30rem; */
 	/* border: 1px solid red; */
-	padding: 4rem 2rem;
+	padding: 6rem 2rem;
 
 	.logo {
 	}
