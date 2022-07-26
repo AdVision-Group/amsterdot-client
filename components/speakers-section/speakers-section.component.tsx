@@ -177,7 +177,7 @@ const TitleContainer = styled.div`
 	grid-template-columns: 14rem 1fr; */
 
 	h3 {
-		font-size: 8rem;
+		font-size: 6rem;
 		font-weight: 400;
 		text-transform: uppercase;
 		text-align: center;
@@ -195,6 +195,9 @@ const TitleContainer = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		/* grid-template-columns: 23rem 1fr; */
+		h3 {
+			font-size: 8rem;
+		}
 
 		.spea {
 			grid-column: 1/3;

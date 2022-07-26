@@ -438,7 +438,7 @@ const HeadContainer = styled.div`
 		/* padding-right: 4rem; */
 		span {
 			display: block;
-			font-size: 4.5rem;
+			font-size: 4rem;
 		}
 
 		@media all and (max-width: 355px) {
@@ -608,6 +608,10 @@ const ButtonsContainer = styled.div`
 	width: 100%;
 	/* margin: 2rem 0; */
 
+	a {
+		width: 100%;
+	}
+
 	button {
 		/* position: absolute;
 		display: flex;
@@ -615,6 +619,7 @@ const ButtonsContainer = styled.div`
 		top: 65%; */
 		/* width: calc(100% - 3rem); */
 		font-family: "Avenir Next";
+		width: 100%;
 
 		font-size: 2rem;
 		font-weight: 700;
@@ -649,6 +654,10 @@ const ButtonsContainer = styled.div`
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			a {
+				width: unset;
+			}
+
 			button {
 				width: unset;
 				position: relative;
@@ -697,7 +706,7 @@ const PlaceContainer = styled.div`
 	position: absolute;
 	transform: rotate(-90deg);
 	right: -10rem;
-	bottom: 21rem;
+	bottom: 26rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: relative;

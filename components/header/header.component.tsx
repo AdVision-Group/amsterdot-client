@@ -250,8 +250,8 @@ const Header: React.FC<IProps> = ({
 
 							<Ul>
 								<li className="first">
-									<Link href={"/hackathon-2022/#scoreboard"}>
-										<a onClick={toggleMobileNav}>HACK SCOREBOARD</a>
+									<Link href={"/"}>
+										<a onClick={toggleMobileNav}>AmsterDOT</a>
 									</Link>
 								</li>
 								{/* <li>
@@ -265,23 +265,92 @@ const Header: React.FC<IProps> = ({
 									</Link>
 								</li> */}
 								<li>
-									<Link href={"/#about"}>
-										<a onClick={toggleMobileNav}>WHAT IS amsterDOT</a>
+									<Link href={"/agenda-2022"}>
+										<a onClick={toggleMobileNav}>Agenda 2022</a>
 									</Link>
+									<NestedUl>
+										<li>
+											<Link href={`/photos`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Photos
+												</a>
+											</Link>
+										</li>
+										<li>
+											<Link href={`/agenda-2022/#after-movie`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Aftermovie
+												</a>
+											</Link>
+										</li>
+										<li>
+											<Link href={`/agenda-2022/#day-1`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Conference 2022
+												</a>
+											</Link>
+										</li>
+										<li>
+											<Link href={`/agenda-2022/#hack-2`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Workshops 2022
+												</a>
+											</Link>
+										</li>
+									</NestedUl>
 								</li>
 								<li>
-									<Link href={"/agenda-2022/#after-movie"}>
-										<a onClick={toggleMobileNav}>AFTERMOVIE</a>
+									<Link href={"/hackathon-2022"}>
+										<a onClick={toggleMobileNav}>Hackathon 2022</a>
 									</Link>
+									<NestedUl>
+										<li>
+											<Link href={`/hackathon-2022/#scoreboard`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Hackathon scoreboard
+												</a>
+											</Link>
+										</li>
+										<li>
+											<Link href={`/hackathon-2022/#bounty-directory`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Winners of bounties
+												</a>
+											</Link>
+										</li>
+									</NestedUl>
 								</li>
-								<li>
+								{/* <li>
 									<Link href={"/agenda-2022/#day-1"}>
 										<a onClick={toggleMobileNav}>CONFERENCE PROGRAM</a>
 									</Link>
 									<NestedUl>
 										{events.map((e, idx) => (
 											<li key={idx}>
-												{/* <Link href={`/#${e.id}`} passHref> */}
 												<a
 													onClick={() => {
 														openEventDayProgram(true, idx, e.id)
@@ -290,20 +359,17 @@ const Header: React.FC<IProps> = ({
 												>
 													#{idx + 1} DAY
 												</a>
-												{/* </Link> */}
 											</li>
 										))}
 									</NestedUl>
-								</li>
-								<li>
+								</li> */}
+								{/* <li>
 									<Link href={"/agenda-2022/#hack-2"}>
 										<a onClick={toggleMobileNav}>WOKSHOP PROGRAM</a>
 									</Link>
 									<NestedUl>
 										{hackatons.map((e, idx) => (
 											<li key={idx}>
-												{/* <Link href={`/#${e.id}`} passHref> */}
-
 												<a
 													onClick={() => {
 														openHackathonDayProgram(true, idx, e.id)
@@ -312,11 +378,10 @@ const Header: React.FC<IProps> = ({
 												>
 													#{idx + 2} DAY
 												</a>
-												{/* </Link> */}
 											</li>
 										))}
 									</NestedUl>
-								</li>
+								</li> */}
 
 								<li style={{ opacity: 0 }}>x</li>
 								<EmailLi>

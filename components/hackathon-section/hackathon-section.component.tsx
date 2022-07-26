@@ -147,7 +147,7 @@ const ArrowContainer = styled(motion.figure)`
 const EventSectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 	color: ${({ theme }) => theme.fonts.primary};
-	padding: 10rem 1.5rem 5rem;
+	padding: 15rem 1.5rem 0;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
@@ -155,6 +155,7 @@ const EventSectionContainer = styled.section`
 	overflow: hidden;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		padding: 10rem 1.5rem 5rem;
 		/* margin-top: 10rem; */
 		/* height: 100vh; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {

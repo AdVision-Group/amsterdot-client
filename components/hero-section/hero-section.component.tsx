@@ -200,7 +200,7 @@ const HeroSection = () => {
 						</p> */}
 						{/* <p>XXXX</p> */}
 						{/* <p>&nbsp;</p> */}
-						<p>2022</p>
+						{/* <p>2022</p> */}
 					</DateContainer>
 					<ImageContainer>
 						<figure>
@@ -613,12 +613,16 @@ const ButtonsContainer = styled.div`
 	width: 100%;
 	/* margin: 2rem 0; */
 
+	a {
+		width: 100%;
+	}
+
 	button {
 		/* position: absolute;
 		display: flex;
 		flex-direction: column;
 		top: 65%; */
-		/* width: calc(100% - 3rem); */
+		width: 100%;
 		font-family: "Avenir Next";
 
 		font-size: 2rem;
@@ -654,6 +658,10 @@ const ButtonsContainer = styled.div`
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			a {
+				width: unset;
+			}
+
 			button {
 				width: unset;
 				position: relative;
@@ -701,7 +709,7 @@ const PlaceContainer = styled.div`
 	position: absolute;
 	transform: rotate(-90deg);
 	right: -10rem;
-	bottom: 21rem;
+	bottom: 37rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: relative;
