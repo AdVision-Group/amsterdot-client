@@ -117,7 +117,11 @@ const PhotosSection = () => {
 		toggleModal(false)
 	}
 
-	const onClickNext = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+	const onClickNext = (
+		e:
+			| React.MouseEvent<HTMLDivElement, MouseEvent>
+			| React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) => {
 		e.preventDefault()
 		e.stopPropagation()
 		setSelectedImageIdx((idx) => {
@@ -130,7 +134,11 @@ const PhotosSection = () => {
 			return idx + 1
 		})
 	}
-	const onClickPrev = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+	const onClickPrev = (
+		e:
+			| React.MouseEvent<HTMLDivElement, MouseEvent>
+			| React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) => {
 		e.preventDefault()
 		e.stopPropagation()
 		setSelectedImageIdx((idx) => {
@@ -148,6 +156,18 @@ const PhotosSection = () => {
 		<PhotosSectionContainer>
 			{showModal && selectedImageIdx !== null && (
 				<Modal onClick={onModalClose}>
+					<ModalArrowButton className="left" onClick={onClickPrev}>
+						<figure>
+							<Image
+								src="/assets/photos-section/left-arrow.svg"
+								alt="left arrow"
+								objectFit="contain"
+								layout="fixed"
+								width={50}
+								height={50}
+							/>
+						</figure>
+					</ModalArrowButton>
 					<figure>
 						<CustomImage
 							src={images[selectedImageIdx].src}
@@ -162,6 +182,18 @@ const PhotosSection = () => {
 						<LeftOverlay onClick={onClickPrev} />
 						<RightOverlay onClick={onClickNext} />
 					</figure>
+					<ModalArrowButton className="right" onClick={onClickNext}>
+						<figure>
+							<Image
+								src="/assets/photos-section/right-arrow.svg"
+								alt="left arrow"
+								objectFit="contain"
+								layout="fixed"
+								width={50}
+								height={50}
+							/>
+						</figure>
+					</ModalArrowButton>
 				</Modal>
 			)}
 
@@ -297,7 +329,9 @@ const Modal = styled.div`
 	background: rgba(0, 0, 0, 0.5);
 	z-index: 999999;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.5rem;
 	align-items: center;
 
 	figure {
@@ -441,5 +475,31 @@ const ButtonsContainer = styled.div`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		margin-top: unset;
+	}
+`
+
+const ModalArrowButton = styled.button`
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	color: ${({ theme }) => theme.fonts.primary};
+	font-size: 1.8rem;
+
+	&.left {
+		/* left: 0;
+		bottom: -8.5rem; */
+		/* transform: translateY(-50%); */
+	}
+	&.right {
+		/* right: 0;
+		bottom: -8.5rem; */
+		/* top: 50%; */
+		/* transform: translateY(-50%); */
+	}
+
+	figure {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 `

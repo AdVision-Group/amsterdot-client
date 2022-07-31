@@ -156,7 +156,11 @@ const PhotosPage: NextPage = () => {
 		toggleModal(false)
 	}
 
-	const onClickNext = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+	const onClickNext = (
+		e:
+			| React.MouseEvent<HTMLDivElement, MouseEvent>
+			| React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) => {
 		e.preventDefault()
 		e.stopPropagation()
 		setSelectedImageIdx((idx) => {
@@ -169,7 +173,11 @@ const PhotosPage: NextPage = () => {
 			return idx + 1
 		})
 	}
-	const onClickPrev = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+	const onClickPrev = (
+		e:
+			| React.MouseEvent<HTMLDivElement, MouseEvent>
+			| React.MouseEvent<HTMLButtonElement, MouseEvent>
+	) => {
 		e.preventDefault()
 		e.stopPropagation()
 		setSelectedImageIdx((idx) => {
@@ -234,6 +242,20 @@ const PhotosPage: NextPage = () => {
 
 			{showModal && selectedImageIdx !== null && (
 				<Modal onClick={onModalClose}>
+					<ModalArrowButton className="left" onClick={onClickPrev}>
+						<figure>
+							<Image
+								src="/assets/photos-section/left-arrow.svg"
+								alt="left arrow"
+								style={{
+									objectFit: "contain",
+								}}
+								effect="blur"
+								width={50}
+								height={50}
+							/>
+						</figure>
+					</ModalArrowButton>
 					<figure>
 						<Image
 							src={images[selectedImageIdx].src}
@@ -248,6 +270,20 @@ const PhotosPage: NextPage = () => {
 						<LeftOverlay onClick={onClickPrev} />
 						<RightOverlay onClick={onClickNext} />
 					</figure>
+					<ModalArrowButton className="right" onClick={onClickNext}>
+						<figure>
+							<Image
+								src="/assets/photos-section/right-arrow.svg"
+								alt="left arrow"
+								style={{
+									objectFit: "contain",
+								}}
+								effect="blur"
+								width={50}
+								height={50}
+							/>
+						</figure>
+					</ModalArrowButton>
 				</Modal>
 			)}
 
@@ -301,6 +337,32 @@ const PhotosPage: NextPage = () => {
 
 export default PhotosPage
 
+const ModalArrowButton = styled.button`
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	color: ${({ theme }) => theme.fonts.primary};
+	font-size: 1.8rem;
+
+	&.left {
+		/* left: 0;
+		bottom: -8.5rem; */
+		/* transform: translateY(-50%); */
+	}
+	&.right {
+		/* right: 0;
+		bottom: -8.5rem; */
+		/* top: 50%; */
+		/* transform: translateY(-50%); */
+	}
+
+	figure {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+`
+
 const LeftOverlay = styled.div`
 	position: absolute;
 	top: 0;
@@ -345,6 +407,10 @@ const FlexContainer = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 3rem;
+
+	figure {
+		cursor: pointer;
+	}
 `
 
 const Modal = styled.div`
@@ -356,8 +422,10 @@ const Modal = styled.div`
 	background: rgba(0, 0, 0, 0.5);
 	z-index: 999999;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.5rem;
 
 	figure {
 		/* width: 80%; */
