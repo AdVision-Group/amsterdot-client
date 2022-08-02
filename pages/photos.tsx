@@ -97,7 +97,7 @@ const PhotosPage: NextPage = () => {
 
 	const [showModal, toggleModal] = useBoolean(false)
 
-	const [selectedDayIdx, setSelectedDayIdx] = useState<number>(1)
+	const [selectedDayIdx, setSelectedDayIdx] = useState<number>(2)
 	const [selectedImageIdx, setSelectedImageIdx] = useState<null | number>(null)
 	const [selectedImageArrlength, setSelectedImageArrlength] = useState<
 		null | number

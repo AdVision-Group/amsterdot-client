@@ -305,7 +305,7 @@ const PhotosSection = () => {
 				</ArrowButton>
 			</Container>
 			<ButtonsContainer>
-				<Link href={"/photos/day-1"} passHref>
+				<Link href={"/photos"} passHref>
 					<a>
 						<Button>
 							{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
