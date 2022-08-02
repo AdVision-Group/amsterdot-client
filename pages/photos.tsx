@@ -32,12 +32,6 @@ interface IDayButtonProps {
 	isActive: boolean
 }
 
-interface IState {
-	selectedDayIdx: number
-	selectedImageIdx: number | null
-	selectedImageArrlength: number | null
-}
-
 const PhotosPage: NextPage = () => {
 	const { push } = useRouter()
 
@@ -103,28 +97,22 @@ const PhotosPage: NextPage = () => {
 
 	const [showModal, toggleModal] = useBoolean(false)
 
-	const [state, setState] = useState<IState>({
-		selectedDayIdx: 1,
-		selectedImageIdx: null,
-		selectedImageArrlength: null,
-	})
+	const [selectedDayIdx, setSelectedDayIdx] = useState<number>(1)
+	const [selectedImageIdx, setSelectedImageIdx] = useState<null | number>(null)
+	const [selectedImageArrlength, setSelectedImageArrlength] = useState<
+		null | number
+	>(null)
 
 	const onImageSelect = (idx: number, dayLength: number) => {
+		setSelectedImageIdx(idx)
 		toggleModal(true)
-		setState((prevValue) => ({
-			...prevValue,
-			selectedImageIdx: idx,
-			selectedImageArrlength: dayLength,
-		}))
+		setSelectedImageArrlength(dayLength)
 	}
 
 	const onModalClose = () => {
+		setSelectedImageIdx(null)
+		setSelectedImageArrlength(null)
 		toggleModal(false)
-		setState((prevValue) => ({
-			...prevValue,
-			selectedImageIdx: null,
-			selectedImageArrlength: null,
-		}))
 	}
 
 	const onClickNext = (
@@ -134,21 +122,14 @@ const PhotosPage: NextPage = () => {
 	) => {
 		e.preventDefault()
 		e.stopPropagation()
-		setState((prevValue) => {
-			if (
-				prevValue.selectedImageIdx ===
-				(prevValue.selectedImageArrlength || 0) - 1
-			) {
-				return {
-					...prevValue,
-					selectedImageIdx: 0,
-				}
-			} else {
-				return {
-					...prevValue,
-					selectedImageIdx: (prevValue.selectedImageIdx || 0) + 1,
-				}
+		setSelectedImageIdx((idx) => {
+			if (idx === null) {
+				return 0
 			}
+			if (idx === (selectedImageArrlength || 0) - 1) {
+				return 0
+			}
+			return idx + 1
 		})
 	}
 	const onClickPrev = (
@@ -158,34 +139,23 @@ const PhotosPage: NextPage = () => {
 	) => {
 		e.preventDefault()
 		e.stopPropagation()
-
-		setState((prevValue) => {
-			if (
-				prevValue.selectedImageIdx ===
-				(prevValue.selectedImageArrlength || 0) - 1
-			) {
-				return {
-					...prevValue,
-					selectedImageIdx: 0,
-				}
-			} else {
-				return {
-					...prevValue,
-					selectedImageIdx: (prevValue.selectedImageIdx || 0) + 1,
-				}
+		setSelectedImageIdx((idx) => {
+			if (idx === null) {
+				return 0
 			}
+			if (idx === 0) {
+				return (selectedImageArrlength || 0) - 1
+			}
+			return idx - 1
 		})
 	}
 
 	const onClickDay = (
-		e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+		e: React.MouseEvent<HTMLDivElement, MouseEvent>,
 		idx: number
 	) => {
 		e.preventDefault()
-		setState((prevValue) => ({
-			...prevValue,
-			selectedDayIdx: idx,
-		}))
+		setSelectedDayIdx(idx)
 	}
 
 	const getDayImages = (dayIdx: number) => {
@@ -252,7 +222,7 @@ const PhotosPage: NextPage = () => {
 				]}
 			/>
 
-			{showModal && state.selectedImageIdx !== null && (
+			{showModal && selectedImageIdx !== null && (
 				<Modal onClick={onModalClose}>
 					<ModalArrowButton className="left" onClick={onClickPrev}>
 						<figure>
@@ -270,17 +240,13 @@ const PhotosPage: NextPage = () => {
 					</ModalArrowButton>
 					<figure>
 						<Image
-							src={
-								getDayImages(state.selectedDayIdx)[state.selectedImageIdx].src
-							}
-							alt={
-								getDayImages(state.selectedDayIdx)[state.selectedImageIdx].alt
-							}
+							src={getDayImages(selectedDayIdx)[selectedImageIdx].src}
+							alt={getDayImages(selectedDayIdx)[selectedImageIdx].alt}
 							effect="blur"
 							style={{
 								objectFit: "contain",
 							}}
-							width={"100%"}
+							// width={"100%"}
 							height={"100%"}
 							// height={15}
 						/>
@@ -314,6 +280,7 @@ const PhotosPage: NextPage = () => {
 							objectFit: "contain",
 						}}
 						width={"100%"}
+
 						// height={15}
 					/>
 				</TitleContainer>
@@ -322,66 +289,50 @@ const PhotosPage: NextPage = () => {
 					<li>
 						<DayButton
 							onClick={(e) => onClickDay(e, 1)}
-							isActive={state.selectedDayIdx === 1}
+							isActive={selectedDayIdx === 1}
 						>
 							<span>DAY 01</span>
 							<span>
-								{state.selectedDayIdx === 1 ? (
-									<AiOutlineDown />
-								) : (
-									<AiOutlineRight />
-								)}
+								{selectedDayIdx === 1 ? <AiOutlineDown /> : <AiOutlineRight />}
 							</span>
 						</DayButton>
 					</li>
 					<li>
 						<DayButton
 							onClick={(e) => onClickDay(e, 2)}
-							isActive={state.selectedDayIdx === 2}
+							isActive={selectedDayIdx === 2}
 						>
 							<span>DAY 02</span>
 							<span>
-								{state.selectedDayIdx === 2 ? (
-									<AiOutlineDown />
-								) : (
-									<AiOutlineRight />
-								)}
+								{selectedDayIdx === 2 ? <AiOutlineDown /> : <AiOutlineRight />}
 							</span>
 						</DayButton>
 					</li>
 					<li>
 						<DayButton
 							onClick={(e) => onClickDay(e, 3)}
-							isActive={state.selectedDayIdx === 3}
+							isActive={selectedDayIdx === 3}
 						>
 							<span>DAY 03</span>
 							<span>
-								{state.selectedDayIdx === 3 ? (
-									<AiOutlineDown />
-								) : (
-									<AiOutlineRight />
-								)}
+								{selectedDayIdx === 3 ? <AiOutlineDown /> : <AiOutlineRight />}
 							</span>
 						</DayButton>
 					</li>
 					<li>
 						<DayButton
 							onClick={(e) => onClickDay(e, 4)}
-							isActive={state.selectedDayIdx === 4}
+							isActive={selectedDayIdx === 4}
 						>
 							<span>DAY 04</span>
 							<span>
-								{state.selectedDayIdx === 4 ? (
-									<AiOutlineDown />
-								) : (
-									<AiOutlineRight />
-								)}
+								{selectedDayIdx === 4 ? <AiOutlineDown /> : <AiOutlineRight />}
 							</span>
 						</DayButton>
 					</li>
 				</ButtonsUl>
 
-				{state.selectedDayIdx === 1 && (
+				{selectedDayIdx === 1 && (
 					<React.Fragment>
 						{/* <h2>DAY 01</h2> */}
 						<FlexContainer>
@@ -406,7 +357,7 @@ const PhotosPage: NextPage = () => {
 						</FlexContainer>
 					</React.Fragment>
 				)}
-				{state.selectedDayIdx === 2 && (
+				{selectedDayIdx === 2 && (
 					<React.Fragment>
 						{/* <h2>DAY 02</h2> */}
 						<FlexContainer>
@@ -431,7 +382,7 @@ const PhotosPage: NextPage = () => {
 						</FlexContainer>
 					</React.Fragment>
 				)}
-				{state.selectedDayIdx === 3 && (
+				{selectedDayIdx === 3 && (
 					<React.Fragment>
 						{/* <h2>DAY 03</h2> */}
 						<FlexContainer>
@@ -456,7 +407,7 @@ const PhotosPage: NextPage = () => {
 						</FlexContainer>
 					</React.Fragment>
 				)}
-				{state.selectedDayIdx === 4 && (
+				{selectedDayIdx === 4 && (
 					<React.Fragment>
 						{/* <h2>DAY 04</h2> */}
 						<FlexContainer>
@@ -509,7 +460,7 @@ const ButtonsUl = styled.ul`
 	justify-content: center;
 `
 
-const DayButton = styled.button<IDayButtonProps>`
+const DayButton = styled.div<IDayButtonProps>`
 	cursor: pointer;
 	background: transparent;
 	border: 1px solid
@@ -636,19 +587,14 @@ const Modal = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	gap: 1rem;
+	padding: 1.5rem;
 
 	figure {
+		/* width: 80%; */
 		/* height: 80%; */
 		height: 100%;
 		max-height: 80vh;
 
 		position: relative;
-	}
-
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		padding: 3rem;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-			padding: 4.5rem;
-		}
 	}
 `
