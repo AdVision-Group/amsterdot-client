@@ -151,7 +151,7 @@ const PhotosPage: NextPage = () => {
 	}
 
 	const onClickDay = (
-		e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+		e: React.MouseEvent<HTMLDivElement, MouseEvent>,
 		idx: number
 	) => {
 		e.preventDefault()
@@ -459,7 +459,7 @@ const ButtonsUl = styled.ul`
 	justify-content: center;
 `
 
-const DayButton = styled.button<IDayButtonProps>`
+const DayButton = styled.div<IDayButtonProps>`
 	cursor: pointer;
 	background: transparent;
 	border: 1px solid
