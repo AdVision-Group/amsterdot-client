@@ -267,7 +267,7 @@ const PhotosPage: NextPage = () => {
 							style={{
 								objectFit: "contain",
 							}}
-							// width={"100%"}
+							width={"100%"}
 							height={"100%"}
 							// height={15}
 						/>
@@ -626,6 +626,8 @@ const Footer = styled.footer`
 
 const SectionContainer = styled.section`
 	padding: 12rem 3rem;
+	max-width: 132rem;
+	margin: 0 auto;
 
 	h2 {
 		font-size: 5rem;
@@ -663,7 +665,7 @@ const Modal = styled.div`
 	padding: 1.5rem;
 
 	figure {
-		/* width: 80%; */
+		/* width: 100%; */
 		/* height: 80%; */
 		height: 100%;
 		max-height: 80vh;

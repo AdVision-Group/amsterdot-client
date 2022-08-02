@@ -2028,20 +2028,6 @@ export const hackatons = [
 
 export const day1Images = [
 	{
-		src: "/assets/photos/day-1/DSC_0195.jpg",
-		alt: "1",
-		width: 100,
-		height: 100,
-		objectFit: "contain",
-	},
-	{
-		src: "/assets/photos/day-1/DSC_0377.jpg",
-		alt: "1",
-		width: 100,
-		height: 100,
-		objectFit: "contain",
-	},
-	{
 		src: "/assets/photos/day-1/DSC_0381.jpg",
 		alt: "1",
 		width: 100,
@@ -2316,6 +2302,20 @@ export const day1Images = [
 	},
 	{
 		src: "/assets/photos/day-1/P1100210.jpg",
+		alt: "1",
+		width: 100,
+		height: 100,
+		objectFit: "contain",
+	},
+	{
+		src: "/assets/photos/day-1/DSC_0195.jpg",
+		alt: "1",
+		width: 100,
+		height: 100,
+		objectFit: "contain",
+	},
+	{
+		src: "/assets/photos/day-1/DSC_0377.jpg",
 		alt: "1",
 		width: 100,
 		height: 100,
