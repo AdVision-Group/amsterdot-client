@@ -26,7 +26,7 @@ import {
 } from "../utils/data"
 
 // Icons
-import { AiFillGithub } from "react-icons/ai"
+import { AiFillGithub, AiOutlineRight, AiOutlineDown } from "react-icons/ai"
 
 interface IDayButtonProps {
 	isActive: boolean
@@ -150,7 +150,11 @@ const PhotosPage: NextPage = () => {
 		})
 	}
 
-	const onClickDay = (idx: number) => {
+	const onClickDay = (
+		e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+		idx: number
+	) => {
+		e.preventDefault()
 		setSelectedDayIdx(idx)
 	}
 
@@ -283,34 +287,46 @@ const PhotosPage: NextPage = () => {
 				<ButtonsUl>
 					<li>
 						<DayButton
-							onClick={() => onClickDay(1)}
+							onClick={(e) => onClickDay(e, 1)}
 							isActive={selectedDayIdx === 1}
 						>
-							DAY 01
+							<span>DAY 01</span>
+							<span>
+								{selectedDayIdx === 1 ? <AiOutlineDown /> : <AiOutlineRight />}
+							</span>
 						</DayButton>
 					</li>
 					<li>
 						<DayButton
-							onClick={() => onClickDay(2)}
+							onClick={(e) => onClickDay(e, 2)}
 							isActive={selectedDayIdx === 2}
 						>
-							DAY 02
+							<span>DAY 02</span>
+							<span>
+								{selectedDayIdx === 2 ? <AiOutlineDown /> : <AiOutlineRight />}
+							</span>
 						</DayButton>
 					</li>
 					<li>
 						<DayButton
-							onClick={() => onClickDay(3)}
+							onClick={(e) => onClickDay(e, 3)}
 							isActive={selectedDayIdx === 3}
 						>
-							DAY 03
+							<span>DAY 03</span>
+							<span>
+								{selectedDayIdx === 3 ? <AiOutlineDown /> : <AiOutlineRight />}
+							</span>
 						</DayButton>
 					</li>
 					<li>
 						<DayButton
-							onClick={() => onClickDay(4)}
+							onClick={(e) => onClickDay(e, 4)}
 							isActive={selectedDayIdx === 4}
 						>
-							DAY 04
+							<span>DAY 04</span>
+							<span>
+								{selectedDayIdx === 4 ? <AiOutlineDown /> : <AiOutlineRight />}
+							</span>
 						</DayButton>
 					</li>
 				</ButtonsUl>
@@ -438,8 +454,9 @@ const ButtonsUl = styled.ul`
 	display: flex;
 	gap: 2rem;
 	list-style: none;
-	margin-bottom: 4rem;
+	margin-bottom: 6rem;
 	flex-wrap: wrap;
+	justify-content: center;
 `
 
 const DayButton = styled.button<IDayButtonProps>`
@@ -451,6 +468,21 @@ const DayButton = styled.button<IDayButtonProps>`
 	font-size: 1.6rem;
 	color: ${({ theme }) => theme.fonts.primary};
 	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:nth-of-type(2) {
+			color: ${({ theme, isActive }) =>
+				isActive ? theme.color.primary : "#fff"};
+		}
+	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 3.7rem;
@@ -503,9 +535,9 @@ const RightOverlay = styled.div`
 const TitleContainer = styled.div`
 	margin-bottom: -10rem;
 	max-width: 86rem;
-	margin: 0 0 3rem -1.5rem;
+	margin: 0 auto 1rem;
 	display: flex;
-	/* justify-content: center; */
+	justify-content: center;
 `
 
 const Footer = styled.footer`
