@@ -9,11 +9,12 @@ import styled from "styled-components"
 import Head from "next/head"
 import Header from "../components/header/header.component"
 import Image from "../components/image/image.component"
+import Pagination from "../components/pagination/pagination.component"
 
 // Hooks
 import { useRouter } from "next/router"
 // import { motion, useViewportScroll } from "framer-motion"
-import { useMap, useBoolean } from "react-use"
+import { useMap, useBoolean, useTimeout } from "react-use"
 
 // Data
 import {
@@ -30,6 +31,11 @@ import { AiFillGithub, AiOutlineRight, AiOutlineDown } from "react-icons/ai"
 
 interface IDayButtonProps {
 	isActive: boolean
+}
+
+interface IState {
+	limit: number
+	skip: number
 }
 
 const PhotosPage: NextPage = () => {
@@ -97,6 +103,10 @@ const PhotosPage: NextPage = () => {
 
 	const [showModal, toggleModal] = useBoolean(false)
 
+	const [state, setState] = useState<IState>({
+		limit: 9,
+		skip: 0,
+	})
 	const [selectedDayIdx, setSelectedDayIdx] = useState<number>(2)
 	const [selectedImageIdx, setSelectedImageIdx] = useState<null | number>(null)
 	const [selectedImageArrlength, setSelectedImageArrlength] = useState<
@@ -156,6 +166,10 @@ const PhotosPage: NextPage = () => {
 	) => {
 		e.preventDefault()
 		setSelectedDayIdx(idx)
+		setState({
+			limit: 9,
+			skip: 0,
+		})
 	}
 
 	const getDayImages = (dayIdx: number) => {
@@ -172,6 +186,13 @@ const PhotosPage: NextPage = () => {
 				return day1Images
 		}
 	}
+
+	// console.log({
+	// 	day1Images: day1Images.length,
+	// 	day2Images: day2Images.length,
+	// 	day3Images: day3Images.length,
+	// 	day4Images: day4Images.length,
+	// })
 
 	return (
 		<React.Fragment>
@@ -336,100 +357,152 @@ const PhotosPage: NextPage = () => {
 					<React.Fragment>
 						{/* <h2>DAY 01</h2> */}
 						<FlexContainer>
-							{day1Images.map((image, index) => (
-								<figure
-									onClick={() => onImageSelect(index, day1Images.length)}
-									key={index}
-								>
-									<Image
-										src={image.src}
-										alt={image.alt}
-										effect="blur"
-										style={{
-											objectFit: "contain",
-										}}
-										width={"100%"}
-										// width={image.width}
-										// height={image.height}
-									/>
-								</figure>
-							))}
+							{day1Images
+								.slice(state.skip, state.skip + state.limit)
+								.map((image, index) => (
+									<figure
+										onClick={() => onImageSelect(index, day1Images.length)}
+										key={index}
+									>
+										<Image
+											src={image.src}
+											alt={image.alt}
+											effect="blur"
+											style={{
+												objectFit: "contain",
+											}}
+											width={"100%"}
+											// width={image.width}
+											// height={image.height}
+										/>
+									</figure>
+								))}
 						</FlexContainer>
+						<Pagination
+							onClick={(skip) => {
+								setState((prevValue) => ({
+									...prevValue,
+									skip: skip,
+								}))
+							}}
+							count={day1Images.length}
+							limit={state.limit}
+							skip={state.skip}
+						/>
 					</React.Fragment>
 				)}
 				{selectedDayIdx === 2 && (
 					<React.Fragment>
 						{/* <h2>DAY 02</h2> */}
 						<FlexContainer>
-							{day2Images.map((image, index) => (
-								<figure
-									onClick={() => onImageSelect(index, day2Images.length)}
-									key={index}
-								>
-									<Image
-										src={image.src}
-										alt={image.alt}
-										effect="blur"
-										style={{
-											objectFit: "contain",
-										}}
-										width={"100%"}
-										// width={image.width}
-										// height={image.height}
-									/>
-								</figure>
-							))}
+							{day2Images
+								.slice(state.skip, state.skip + state.limit)
+								.map((image, index) => (
+									<figure
+										onClick={() => onImageSelect(index, day2Images.length)}
+										key={index}
+									>
+										<Image
+											src={image.src}
+											alt={image.alt}
+											effect="blur"
+											style={{
+												objectFit: "contain",
+											}}
+											width={"100%"}
+											// width={image.width}
+											// height={image.height}
+										/>
+									</figure>
+								))}
 						</FlexContainer>
+						<Pagination
+							onClick={(skip) => {
+								setState((prevValue) => ({
+									...prevValue,
+									skip: skip,
+								}))
+							}}
+							count={day2Images.length}
+							limit={state.limit}
+							skip={state.skip}
+						/>
 					</React.Fragment>
 				)}
 				{selectedDayIdx === 3 && (
 					<React.Fragment>
 						{/* <h2>DAY 03</h2> */}
 						<FlexContainer>
-							{day3Images.map((image, index) => (
-								<figure
-									onClick={() => onImageSelect(index, day3Images.length)}
-									key={index}
-								>
-									<Image
-										src={image.src}
-										alt={image.alt}
-										effect="blur"
-										style={{
-											objectFit: "contain",
-										}}
-										width={"100%"}
+							{day3Images
+								.slice(state.skip, state.skip + state.limit)
+								.map((image, index) => (
+									<figure
+										onClick={() => onImageSelect(index, day3Images.length)}
+										key={index}
+									>
+										<Image
+											src={image.src}
+											alt={image.alt}
+											effect="blur"
+											style={{
+												objectFit: "contain",
+											}}
+											width={"100%"}
 
-										// width={image.width}
-									/>
-								</figure>
-							))}
+											// width={image.width}
+										/>
+									</figure>
+								))}
 						</FlexContainer>
+						<Pagination
+							onClick={(skip) => {
+								setState((prevValue) => ({
+									...prevValue,
+									skip: skip,
+								}))
+							}}
+							count={day3Images.length}
+							limit={state.limit}
+							skip={state.skip}
+						/>
 					</React.Fragment>
 				)}
 				{selectedDayIdx === 4 && (
 					<React.Fragment>
 						{/* <h2>DAY 04</h2> */}
 						<FlexContainer>
-							{day4Images.map((image, index) => (
-								<figure
-									onClick={() => onImageSelect(index, day4Images.length)}
-									key={index}
-								>
-									<Image
-										src={image.src}
-										alt={image.alt}
-										effect="blur"
-										style={{
-											objectFit: "contain",
-										}}
-										width={"100%"}
-										// width={image.width}
-										// height={image.height}
-									/>
-								</figure>
-							))}
+							{day4Images
+								.slice(state.skip, state.skip + state.limit)
+								.map((image, index) => (
+									<figure
+										onClick={() => onImageSelect(index, day4Images.length)}
+										key={index}
+									>
+										<Image
+											src={image.src}
+											alt={image.alt}
+											effect="blur"
+											style={{
+												objectFit: "contain",
+											}}
+											width={"100%"}
+											// width={image.width}
+											// height={image.height}
+										/>
+									</figure>
+								))}
 						</FlexContainer>
+						<Pagination
+							onClick={(skip) => {
+								setState((prevValue) => ({
+									...prevValue,
+									skip: skip,
+								}))
+							}}
+							count={day4Images.length}
+							limit={state.limit}
+							skip={state.skip}
+						/>
 					</React.Fragment>
 				)}
 			</SectionContainer>
