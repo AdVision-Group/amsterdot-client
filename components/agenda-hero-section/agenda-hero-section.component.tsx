@@ -217,7 +217,7 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<Link href={"/agenda-2022/#conference"} passHref>
+						<Link href={"/#conference"} passHref>
 							<a>
 								<Button>CONFERENCE</Button>
 							</a>

@@ -249,11 +249,11 @@ const Header: React.FC<IProps> = ({
 							</ToggleMobileButton> */}
 
 							<Ul>
-								<li className="first">
+								{/* <li className="first">
 									<Link href={"/"}>
 										<a onClick={toggleMobileNav}>AmsterDOT</a>
 									</Link>
-								</li>
+								</li> */}
 								{/* <li>
 									<Link href={"/#hackaton-content"}>
 										<a onClick={toggleMobileNav}>HACKATON</a>
@@ -264,8 +264,8 @@ const Header: React.FC<IProps> = ({
 										<a onClick={toggleMobileNav}>BOUNTIES</a>
 									</Link>
 								</li> */}
-								<li>
-									<Link href={"/agenda-2022"}>
+								<li className="first">
+									<Link href={"/"}>
 										<a onClick={toggleMobileNav}>Agenda 2022</a>
 									</Link>
 									<NestedUl>
@@ -281,7 +281,7 @@ const Header: React.FC<IProps> = ({
 											</Link>
 										</li>
 										<li>
-											<Link href={`/agenda-2022/#after-movie`} passHref>
+											<Link href={`/#after-movie`} passHref>
 												<a
 													onClick={() => {
 														toggleMobileNav()
@@ -292,7 +292,7 @@ const Header: React.FC<IProps> = ({
 											</Link>
 										</li>
 										<li>
-											<Link href={`/agenda-2022/#day-1`} passHref>
+											<Link href={`/#day-1`} passHref>
 												<a
 													onClick={() => {
 														toggleMobileNav()
@@ -303,7 +303,7 @@ const Header: React.FC<IProps> = ({
 											</Link>
 										</li>
 										<li>
-											<Link href={`/agenda-2022/#hack-2`} passHref>
+											<Link href={`/#hack-2`} passHref>
 												<a
 													onClick={() => {
 														toggleMobileNav()

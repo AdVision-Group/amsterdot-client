@@ -144,7 +144,7 @@ const AgendaPage: NextPage = () => {
 					},
 					{
 						label: "CONFERENCE 2022",
-						slug: "/agenda-2022/#conference",
+						slug: "/#conference",
 						outline: true,
 					},
 				]}

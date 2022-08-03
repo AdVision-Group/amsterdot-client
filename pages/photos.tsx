@@ -232,7 +232,7 @@ const PhotosPage: NextPage = () => {
 				ctas={[
 					{
 						label: "AGENDA 2022",
-						slug: "/agenda-2022",
+						slug: "/",
 						outline: false,
 					},
 					{

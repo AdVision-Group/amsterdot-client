@@ -95,7 +95,7 @@ const HeroSection = () => {
 
 	return (
 		<SectionContainer>
-			<Link href={"/#about"} passHref>
+			<Link href={"/hackathon-2022/#scoreboard"} passHref>
 				<a>
 					<ArrowContainer
 					// animate={{
@@ -217,17 +217,17 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<Link href={"/agenda-2022"} passHref>
+						<Link href={"/hackathon-2022/#scoreboard"} passHref>
 							<a>
 								<Button>
 									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
-									<span>AGENDA 2022</span>
+									<span>SCOREBOARD</span>
 								</Button>
 							</a>
 						</Link>
-						<Link href={"/hackathon-2022"} passHref>
+						<Link href={"/hackathon-2022/#bounty-directory"} passHref>
 							<a>
-								<Button outline={"true"}>HACKATHON 2022</Button>
+								<Button outline={"true"}>WINNERS OF BOUNTIES</Button>
 							</a>
 						</Link>
 					</ButtonsContainer>
@@ -264,11 +264,11 @@ const HeroSection = () => {
 							</motion.figure>
 						</a>
 					))}
-					<PartnersOverlay>
+					{/* <PartnersOverlay>
 						<a href="#" rel="noopener noreferrer" target="_blank">
 							APPLY TO SPONSOR
 						</a>
-					</PartnersOverlay>
+					</PartnersOverlay> */}
 				</PartnersContainer>
 			</Container>
 		</SectionContainer>
@@ -639,12 +639,19 @@ const ButtonsContainer = styled.div`
 			}
 		}
 	}
+	button:nth-of-type(1) {
+		border: 1px solid #707070;
+		/* font-size: 2rem; */
+		/* margin-right: 1rem; */
+	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* flex-gap: 1rem; */
 		/* align-items: end; */
 		justify-content: flex-start;
-		flex-wrap: unset;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: start;
 		gap: 2rem;
 
 		button {
@@ -759,7 +766,7 @@ const PartnersContainer = styled.div`
 		max-width: 10rem;
 		/* height: 3rem; */
 		position: relative;
-		filter: blur(2rem);
+		/* filter: blur(2rem); */
 	}
 	/* max-width: 30rem;
 	width: 100%;
