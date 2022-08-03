@@ -35,10 +35,10 @@ const BountyWinnersSection = () => {
 				width: 0,
 				height: 0,
 			},
-			prize: "< $25,000",
-			prize2: "in HDX / BSX",
+			prize: "$20,000",
+			prize2: "IN HDX + BSX",
 			winner: {
-				name: "TEAM ALFA",
+				name: "Morph - For Basilisk",
 				logo: {
 					href: "#",
 					src: "/assets/partners-v2/logos/basilisk-v2.png",
@@ -46,6 +46,29 @@ const BountyWinnersSection = () => {
 					width: 0,
 					height: 0,
 				},
+				members: [
+					{
+						name: "ANG",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					{
+						name: "Entity54",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					// {
+					// 	name: "",
+					// 	avatar: {
+					// 		src: "",
+					// 		alt: ""
+					// 	}
+					// },
+				],
 			},
 		},
 		{
@@ -69,10 +92,10 @@ const BountyWinnersSection = () => {
 				width: 0,
 				height: 0,
 			},
-			prize: "< $25,000",
+			prize: "$20,000",
 			prize2: "in BSX",
 			winner: {
-				name: "TEAM ALFA",
+				name: "KodaDot x BSX Marketplace",
 				logo: {
 					href: "#",
 					src: "/assets/partners-v2/logos/basilisk-v2.png",
@@ -80,6 +103,22 @@ const BountyWinnersSection = () => {
 					width: 0,
 					height: 0,
 				},
+				members: [
+					{
+						name: "vikiival",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					{
+						name: "yangwao",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+				],
 			},
 		},
 		{
@@ -114,6 +153,22 @@ const BountyWinnersSection = () => {
 					width: 0,
 					height: 0,
 				},
+				members: [
+					{
+						name: "",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					{
+						name: "",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+				],
 			},
 		},
 		{
@@ -148,7 +203,64 @@ const BountyWinnersSection = () => {
 					width: 0,
 					height: 0,
 				},
+				members: [
+					{
+						name: "",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					{
+						name: "",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+				],
 			},
+		},
+	]
+
+	const bountiesV2 = [
+		{
+			logo: {
+				href: "#",
+				src: "",
+				alt: "",
+				width: 0,
+				height: 0,
+			},
+			title: "",
+			description: "",
+			submissionIcon: {
+				src: "",
+				alt: "",
+			},
+			submissions: [
+				{
+					link: "",
+					label: "",
+					price: "",
+					currency: "",
+				},
+			],
+			winners: [
+				{
+					label: "",
+					name: "",
+					members: [
+						{
+							name: "",
+							avatar: {
+								src: "",
+								alt: "",
+							},
+						},
+					],
+				},
+			],
 		},
 	]
 
@@ -211,7 +323,7 @@ const BountyWinnersSection = () => {
 			</TitleContainer>
 
 			<BountiesDirectory id="bounty-directory">
-				{bounties.map((bounty, idx) => (
+				{bountiesV2.map((bounty, idx) => (
 					<BountyWinnerOverview key={idx} {...bounty} />
 				))}
 			</BountiesDirectory>
