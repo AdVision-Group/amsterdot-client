@@ -227,35 +227,363 @@ const BountyWinnersSection = () => {
 		{
 			logo: {
 				href: "#",
-				src: "",
-				alt: "",
+				src: "/assets/bounty-section/hydra-logo.svg",
+				alt: "hydra logo",
 				width: 0,
 				height: 0,
 			},
-			title: "",
-			description: "",
+			title: "Cross chain transfer SDK",
+			description:
+				"Create SDK for sending XCM transactions for polkadot parachains.",
 			submissionIcon: {
-				src: "",
-				alt: "",
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
 			},
 			submissions: [
 				{
 					link: "",
-					label: "",
-					price: "",
-					currency: "",
+					label: "Submission",
+					price: "$20,000",
+					currency: "IN HDX + BSX",
 				},
 			],
 			winners: [
 				{
-					label: "",
-					name: "",
+					label: "Winner",
+					name: "Morph - For Basilisk",
 					members: [
 						{
-							name: "",
+							name: "ANG",
 							avatar: {
-								src: "",
-								alt: "",
+								src: "/assets/scoreboard-section/avatars/ang.png",
+								alt: "ang",
+							},
+						},
+						{
+							name: "Entity54",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/entity54.png",
+								alt: "Entity54",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/basilisk-v2.png",
+				alt: "basilisk logo",
+				width: 0,
+				height: 0,
+			},
+			title: "UI for an NFT marketplace in Basilisk",
+			description:
+				"The objective is to use a middleware to index and process historical node data and to build a user interface for the NFT infrastructure and its trading functionality we have built as set of Substrate pallets.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "",
+					label: "Submission",
+					price: "$20,000",
+					currency: "IN BSX",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "KodaDot x BSX Marketplace",
+					members: [
+						{
+							name: "vikiival",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/vikiival.png",
+								alt: "vikiival",
+							},
+						},
+						{
+							name: "yangwao",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/yangwao.png",
+								alt: "yangwao",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/bounty-section/acala-v2.png",
+				alt: "acala logo",
+				width: 0,
+				height: 0,
+			},
+			title: "EVM+ DAPP FOR AUSD YIELD",
+			description:
+				"Build a DApp in the Acala EVM+ enabling users to earn yield with aUSD (money market, DEX, etc.)",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "",
+					label: "Submission",
+					price: "$10,000",
+					currency: "IN aUSD",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "aUSD Yield Manager",
+					members: [
+						{
+							name: "ANG",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/ang.png",
+								alt: "ang",
+							},
+						},
+						{
+							name: "Entity54",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/entity54.png",
+								alt: "Entity54",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/bounty-section/acala-v2.png",
+				alt: "acala logo",
+				width: 0,
+				height: 0,
+			},
+			title: "CROSS-PARACHAIN DAPP",
+			description:
+				"Build a cross-parachain DApp that interacts with multiple parachains on Polkadot or Kusama.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "",
+					label: "Submission",
+					price: "$5,000",
+					currency: "IN aUSD",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Morph for Acala",
+					members: [
+						{
+							name: "ANG",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/ang.png",
+								alt: "ang",
+							},
+						},
+						{
+							name: "Entity54",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/entity54.png",
+								alt: "Entity54",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/bounty-section/acala-v2.png",
+				alt: "acala logo",
+				width: 0,
+				height: 0,
+			},
+			title: "FRONT-END, TOOLS, OR UTILITY SERVICE",
+			description:
+				"Build a DApp in the Acala EVM+ enabling users to earn yield with aUSD (money market, DEX, etc.)",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "",
+					label: "Submission",
+					price: "$5,000",
+					currency: "IN aUSD",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Karura Dash with Subsquid",
+					members: [
+						{
+							name: "timbotro",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/timbotro.png",
+								alt: "timbotro",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Interplay.png",
+				alt: "interlay logo",
+				width: 0,
+				height: 0,
+			},
+			title: "VAULT INTERFACE",
+			description:
+				"We have an interface for Vaults running on: https://kintsugi.interlay.io/. However, Vault operators might want to be able to have custom interfaces and see more information like current prices of Bitcoin, incoming oracle price changes, or see how they compare to other Vaults in terms of BTC locked. The idea for this challenge is to build a standalone dashboard for Vaults that operators can extend with their own information. You could do this as a browser-based interface, mobile interface, or terminal interface.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "",
+					label: "Submission 1",
+					price: "$6,125",
+					currency: "IN KINT/INTR",
+				},
+				{
+					link: "",
+					label: "Submission 2",
+					price: "$1,125",
+					currency: "IN KINT/INTR",
+				},
+			],
+			winners: [
+				{
+					label: "Winner 1st place",
+					name: "Kintsugi Vault Runner cli",
+					members: [
+						{
+							name: "timbotro",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/timbotro.png",
+								alt: "timbotro",
+							},
+						},
+					],
+				},
+				{
+					label: "Winner 2nd place",
+					name: "Interbtc vault cli",
+					members: [
+						{
+							name: "Kint0Sens",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/kint0sens.png",
+								alt: "Kint0Sens",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Interplay.png",
+				alt: "interlay logo",
+				width: 0,
+				height: 0,
+			},
+			title: "TRADING/ARBITRAGE BOTS",
+			description:
+				"As with most DeFi systems, it's possible to make a profit by interacting with the Interlay/Kintsugi bridge. It’s possible to automate capturing these profits by using bots. The challenge here is to develop a bot that can capture profits by observing on and off-chain data and execute actions.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "",
+					label: "Submission",
+					price: "$4,375",
+					currency: "IN KINT/INTR",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Interlay PremiumBOT",
+					members: [
+						{
+							name: "Kint0Sens",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/kint0sens.png",
+								alt: "Kint0Sens",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Interplay.png",
+				alt: "interlay logo",
+				width: 0,
+				height: 0,
+			},
+			title: "DASHBOARD AND SYSTEM INFORMATION",
+			description:
+				"It's better to know what's going on. Bridges are complex and displaying all the information of the system health, how much asset are currently bridged, and if the system is secure is vital to understand for the community. We are looking for builders that can take our squid-powered dashboard to a new level.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "",
+					label: "Submission",
+					price: "$6,125",
+					currency: "IN KINT/INTR",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Kintsugi-X Blockchain Analysis",
+					members: [
+						{
+							name: "mafux777",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/mafux777.png",
+								alt: "mafux777",
+							},
+						},
+						{
+							name: "caron",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/caron.png",
+								alt: "caron",
 							},
 						},
 					],
@@ -349,7 +677,7 @@ const BountiesDirectory = styled.div`
 		grid-template-columns: 1fr 1fr;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-top: -5rem;
-			grid-template-columns: 1fr 1fr 1fr;
+			/* grid-template-columns: 1fr 1fr 1fr; */
 		}
 	}
 `
