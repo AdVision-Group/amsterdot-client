@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Icons
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 
 export interface IProps {
 	count: number
@@ -14,6 +14,7 @@ export interface IProps {
 
 interface IContainerProps {
 	active: boolean
+	isArrov: boolean
 }
 
 const Pagination: React.FC<IProps> = ({ count, limit, skip, onClick }) => {
@@ -38,6 +39,7 @@ const Pagination: React.FC<IProps> = ({ count, limit, skip, onClick }) => {
 		<Container>
 			<PaginationContainer>
 				<PaginationButton
+					isArrov={true}
 					active={false}
 					disabled={currentPage === 1}
 					onClick={() => {
@@ -51,10 +53,11 @@ const Pagination: React.FC<IProps> = ({ count, limit, skip, onClick }) => {
 						if (onClick) onClick(+newSkip)
 					}}
 				>
-					<IoIosArrowBack />
+					<FaAngleLeft />
 				</PaginationButton>
 				{pagesArray.map((page, i) => (
 					<PaginationButton
+						isArrov={false}
 						key={i}
 						onClick={() => {
 							if (onClick) onClick(+((page || 0) - 1) * limit)
@@ -65,6 +68,7 @@ const Pagination: React.FC<IProps> = ({ count, limit, skip, onClick }) => {
 					</PaginationButton>
 				))}
 				<PaginationButton
+					isArrov={true}
 					disabled={currentPage === pages}
 					active={false}
 					onClick={() => {
@@ -78,7 +82,7 @@ const Pagination: React.FC<IProps> = ({ count, limit, skip, onClick }) => {
 						if (onClick) onClick(+newSkip)
 					}}
 				>
-					<IoIosArrowForward />
+					<FaAngleRight />
 				</PaginationButton>
 			</PaginationContainer>
 		</Container>
@@ -101,9 +105,17 @@ const PaginationButton = styled.button<IContainerProps>`
 	justify-content: center;
 	background-color: ${({ active }) => (active ? "transparent" : "transparent")};
 	border-radius: 50%;
-	border: 1px solid
-		${({ theme, active }) => (!active ? "#dfdfdf" : theme.color.primary)};
+	border: ${({ theme, active, isArrov }) =>
+		isArrov
+			? "none"
+			: !active
+			? "1px solid #dfdfdf"
+			: `1px solid ${theme.color.primary}`};
 	height: 4rem;
 	width: 4rem;
 	color: #fff;
+
+	.arrow {
+		/* border: none !important; */
+	}
 `

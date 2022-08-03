@@ -75,7 +75,7 @@ const AgendaPage: NextPage = () => {
 				}
 			}),
 		})
-		push(`/agenda-2022/#${dayID}`)
+		push(`/#${dayID}`)
 	}
 	const openHackathonDayProgram = (
 		showContent: boolean,
@@ -98,7 +98,7 @@ const AgendaPage: NextPage = () => {
 				}
 			}),
 		})
-		push(`/agenda-2022/#${dayID}`)
+		push(`/#${dayID}`)
 	}
 
 	return (
@@ -223,7 +223,7 @@ const AgendaPage: NextPage = () => {
 			<AftermovieSection />
 			<PhotosSection />
 			<EventSection />
-			<SpeakersSection />
+			{/* <SpeakersSection /> */}
 			<SectionContainer>
 				{events.map((e, idx) => (
 					<Accordion

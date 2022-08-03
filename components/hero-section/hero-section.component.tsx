@@ -622,6 +622,7 @@ const ButtonsContainer = styled.div`
 		display: flex;
 		flex-direction: column;
 		top: 65%; */
+		border: 1px solid ${({ theme }) => theme.color.primary} !important;
 		width: 100%;
 		font-family: "Avenir Next";
 
