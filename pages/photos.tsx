@@ -107,7 +107,7 @@ const PhotosPage: NextPage = () => {
 		limit: 9,
 		skip: 0,
 	})
-	const [selectedDayIdx, setSelectedDayIdx] = useState<number>(2)
+	const [selectedDayIdx, setSelectedDayIdx] = useState<number>(1)
 	const [selectedImageIdx, setSelectedImageIdx] = useState<null | number>(null)
 	const [selectedImageArrlength, setSelectedImageArrlength] = useState<
 		null | number

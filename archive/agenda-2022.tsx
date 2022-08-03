@@ -11,7 +11,8 @@ import Image from "next/image"
 import Header from "../components/header/header.component"
 import AgendaHeroSection from "../components/agenda-hero-section/agenda-hero-section.component"
 import EventSection from "../components/event-section/event-section.component"
-// import FooterSection from "../components/footer-section/footer-section.component"
+import AboutSection from "../components/about-section/about-section.component"
+import FooterSection from "../components/footer-section/footer-section.component"
 import Accordion from "../components/accordion/accordion.component"
 import WorkshopSection from "../components/workshop-section/workshop-section.component"
 import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
@@ -218,6 +219,7 @@ const AgendaPage: NextPage = () => {
 			</WatermarkContainer>
 
 			<AgendaHeroSection />
+			<AboutSection />
 			<AftermovieSection />
 			<PhotosSection />
 			<EventSection />
@@ -253,12 +255,12 @@ const AgendaPage: NextPage = () => {
 				))}
 			</SectionContainer>
 
-			{/* <FooterSection
+			<FooterSection
 				transformSEERange={[0.85, 1]}
 				transformYOURange={[0.85, 1]}
 				transformTHERERange={[0.85, 1]}
 				transformYEARRange={[0.85, 1]}
-			/> */}
+			/>
 			<Footer>
 				<a
 					href="https://github.com/AdVision-Group/amsterdot-client"
