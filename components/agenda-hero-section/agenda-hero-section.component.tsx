@@ -219,14 +219,14 @@ const HeroSection = () => {
 					<ButtonsContainer>
 						<Link href={"/#conference"} passHref>
 							<a>
-								<Button>CONFERENCE</Button>
+								<Button>CONFERENCE 2022</Button>
 							</a>
 						</Link>
 						<Link href={"/hackathon-2022"} passHref>
 							<a>
 								<Button outline={"true"}>
 									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
-									<span>HACKATHON</span>
+									<span>HACKATHON 2022</span>
 								</Button>
 							</a>
 						</Link>

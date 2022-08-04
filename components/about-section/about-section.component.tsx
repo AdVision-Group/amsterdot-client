@@ -172,11 +172,11 @@ const AboutSection = () => {
 							Targeting the wider crypto community.
 						</p>
 						<ButtonsContainer>
-							<Link href={"/agenda-2022"} passHref>
+							<Link href={"/#conference"} passHref>
 								<a>
 									<Button>
 										{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
-										<span>AGENDA 2022</span>
+										<span>CONFERENCE 2022</span>
 									</Button>
 								</a>
 							</Link>
