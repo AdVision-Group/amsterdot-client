@@ -241,7 +241,7 @@ const BountyWinnersSection = () => {
 			},
 			submissions: [
 				{
-					link: "",
+					link: "https://dorahacks.io/buidl/3060",
 					label: "Submission",
 					price: "$20,000",
 					currency: "IN HDX + BSX",
@@ -287,7 +287,7 @@ const BountyWinnersSection = () => {
 			},
 			submissions: [
 				{
-					link: "",
+					link: "https://dorahacks.io/buidl/3055",
 					label: "Submission",
 					price: "$20,000",
 					currency: "IN BSX",
@@ -333,7 +333,7 @@ const BountyWinnersSection = () => {
 			},
 			submissions: [
 				{
-					link: "",
+					link: "https://dorahacks.io/buidl/3073",
 					label: "Submission",
 					price: "$10,000",
 					currency: "IN aUSD",
@@ -379,7 +379,7 @@ const BountyWinnersSection = () => {
 			},
 			submissions: [
 				{
-					link: "",
+					link: "https://dorahacks.io/buidl/3059",
 					label: "Submission",
 					price: "$5,000",
 					currency: "IN aUSD",
@@ -425,7 +425,7 @@ const BountyWinnersSection = () => {
 			},
 			submissions: [
 				{
-					link: "",
+					link: "https://dorahacks.io/buidl/3065",
 					label: "Submission",
 					price: "$5,000",
 					currency: "IN aUSD",
@@ -464,13 +464,13 @@ const BountyWinnersSection = () => {
 			},
 			submissions: [
 				{
-					link: "",
+					link: "https://dorahacks.io/buidl/2991",
 					label: "Submission 1",
 					price: "$6,125",
 					currency: "IN KINT/INTR",
 				},
 				{
-					link: "",
+					link: "https://dorahacks.io/buidl/3056",
 					label: "Submission 2",
 					price: "$1,125",
 					currency: "IN KINT/INTR",
@@ -522,7 +522,7 @@ const BountyWinnersSection = () => {
 			},
 			submissions: [
 				{
-					link: "",
+					link: "https://dorahacks.io/buidl/3049",
 					label: "Submission",
 					price: "$4,375",
 					currency: "IN KINT/INTR",
@@ -561,7 +561,7 @@ const BountyWinnersSection = () => {
 			},
 			submissions: [
 				{
-					link: "",
+					link: "https://dorahacks.io/buidl/3064",
 					label: "Submission",
 					price: "$6,125",
 					currency: "IN KINT/INTR",
