@@ -36,6 +36,7 @@ interface IDayButtonProps {
 interface IState {
 	limit: number
 	skip: number
+	page: number
 }
 
 const PhotosPage: NextPage = () => {
@@ -106,6 +107,7 @@ const PhotosPage: NextPage = () => {
 	const [state, setState] = useState<IState>({
 		limit: 9,
 		skip: 0,
+		page: 1,
 	})
 	const [selectedDayIdx, setSelectedDayIdx] = useState<number>(1)
 	const [selectedImageIdx, setSelectedImageIdx] = useState<null | number>(null)
@@ -113,8 +115,9 @@ const PhotosPage: NextPage = () => {
 		null | number
 	>(null)
 
-	const onImageSelect = (idx: number, dayLength: number) => {
-		setSelectedImageIdx(idx)
+	const onImageSelect = (idx: number, dayLength: number, state: IState) => {
+		const calIdnx = state.page * 9
+		setSelectedImageIdx(calIdnx + idx - 9)
 		toggleModal(true)
 		setSelectedImageArrlength(dayLength)
 	}
@@ -169,6 +172,7 @@ const PhotosPage: NextPage = () => {
 		setState({
 			limit: 9,
 			skip: 0,
+			page: 1,
 		})
 	}
 
@@ -361,7 +365,9 @@ const PhotosPage: NextPage = () => {
 								.slice(state.skip, state.skip + state.limit)
 								.map((image, index) => (
 									<figure
-										onClick={() => onImageSelect(index, day1Images.length)}
+										onClick={() =>
+											onImageSelect(index, day1Images.length, state)
+										}
 										key={index}
 									>
 										<Image
@@ -379,10 +385,11 @@ const PhotosPage: NextPage = () => {
 								))}
 						</FlexContainer>
 						<Pagination
-							onClick={(skip) => {
+							onClick={(skip, currentPage) => {
 								setState((prevValue) => ({
 									...prevValue,
 									skip: skip,
+									page: currentPage,
 								}))
 							}}
 							count={day1Images.length}
@@ -399,7 +406,9 @@ const PhotosPage: NextPage = () => {
 								.slice(state.skip, state.skip + state.limit)
 								.map((image, index) => (
 									<figure
-										onClick={() => onImageSelect(index, day2Images.length)}
+										onClick={() =>
+											onImageSelect(index, day2Images.length, state)
+										}
 										key={index}
 									>
 										<Image
@@ -437,7 +446,9 @@ const PhotosPage: NextPage = () => {
 								.slice(state.skip, state.skip + state.limit)
 								.map((image, index) => (
 									<figure
-										onClick={() => onImageSelect(index, day3Images.length)}
+										onClick={() =>
+											onImageSelect(index, day3Images.length, state)
+										}
 										key={index}
 									>
 										<Image
@@ -475,7 +486,9 @@ const PhotosPage: NextPage = () => {
 								.slice(state.skip, state.skip + state.limit)
 								.map((image, index) => (
 									<figure
-										onClick={() => onImageSelect(index, day4Images.length)}
+										onClick={() =>
+											onImageSelect(index, day4Images.length, state)
+										}
 										key={index}
 									>
 										<Image

@@ -9,7 +9,7 @@ export interface IProps {
 	count: number
 	limit: number
 	skip: number
-	onClick?: (skip: number) => void
+	onClick?: (skip: number, currentPage: number) => void
 }
 
 interface IContainerProps {
@@ -50,7 +50,7 @@ const Pagination: React.FC<IProps> = ({ count, limit, skip, onClick }) => {
 						if (newSkip < 0) {
 							return
 						}
-						if (onClick) onClick(+newSkip)
+						if (onClick) onClick(+newSkip, currentPage - 1)
 					}}
 				>
 					<FaAngleLeft />
@@ -60,7 +60,7 @@ const Pagination: React.FC<IProps> = ({ count, limit, skip, onClick }) => {
 						isArrov={false}
 						key={i}
 						onClick={() => {
-							if (onClick) onClick(+((page || 0) - 1) * limit)
+							if (onClick) onClick(+((page || 0) - 1) * limit, page)
 						}}
 						active={currentPage === page}
 					>
@@ -79,7 +79,7 @@ const Pagination: React.FC<IProps> = ({ count, limit, skip, onClick }) => {
 						if (newSkip >= count) {
 							return
 						}
-						if (onClick) onClick(+newSkip)
+						if (onClick) onClick(+newSkip, currentPage + 1)
 					}}
 				>
 					<FaAngleRight />
