@@ -297,13 +297,16 @@ const PhotosSection = () => {
 						controller={{ control: controlledSwiper }}
 					>
 						<figure onClick={handleClickNext}>
-							<Image
+							<CustomImage
 								src="/assets/photos-section/right-arrow.svg"
 								alt="left arrow"
-								objectFit="contain"
-								layout="fixed"
-								width={50}
-								height={50}
+								effect="blur"
+								style={{
+									objectFit: "contain",
+									// maxHeight: "80vh",
+								}}
+								width={"100%"}
+								// height={"100%"}
 							/>
 						</figure>
 					</Swiper>
