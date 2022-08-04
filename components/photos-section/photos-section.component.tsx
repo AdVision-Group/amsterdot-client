@@ -276,15 +276,18 @@ const PhotosSection = () => {
 						{images.map((item, idx) => (
 							<SwiperSlide key={idx}>
 								<ImageContainer onClick={() => onImageSelect(idx)}>
-									<Image
-										placeholder="blur"
-										blurDataURL={item.thumbnail_url}
+									<CustomImage
+										// placeholder="blur"
+										// blurDataURL={item.thumbnail_url}
 										src={item.src}
 										alt={item.alt}
-										width={item.width}
-										height={item.height}
-										layout="responsive"
-										objectFit="contain"
+										effect="blur"
+										style={{
+											objectFit: "contain",
+											// maxHeight: "80vh",
+										}}
+										width={"100%"}
+										// height={"100%"}
 									/>
 								</ImageContainer>
 							</SwiperSlide>
@@ -297,7 +300,7 @@ const PhotosSection = () => {
 						controller={{ control: controlledSwiper }}
 					>
 						<figure onClick={handleClickNext}>
-							<CustomImage
+							{/* <CustomImage
 								src="/assets/photos-section/right-arrow.svg"
 								alt="left arrow"
 								effect="blur"
@@ -307,6 +310,14 @@ const PhotosSection = () => {
 								}}
 								width={"100%"}
 								// height={"100%"}
+							/> */}
+							<Image
+								src="/assets/photos-section/right-arrow.svg"
+								alt="left arrow"
+								objectFit="contain"
+								layout="fixed"
+								width={50}
+								height={50}
 							/>
 						</figure>
 					</Swiper>

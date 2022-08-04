@@ -70,7 +70,7 @@ const BountyWinnerOverview: React.FC<IProps> = ({
 					{submissions.map((submission, index) => (
 						<Submission key={index}>
 							<Link href={submission.link} passHref>
-								<SubmissionContainer>
+								<SubmissionContainer rel="noopener noreferrer" target="_blank">
 									<SIcon>
 										<Image
 											src={submissionIcon.src}
@@ -106,7 +106,7 @@ const BountyWinnerOverview: React.FC<IProps> = ({
 									<Image
 										src={member.avatar.src}
 										alt={member.avatar.alt}
-										effect="blur"
+										// effect="blur"
 										style={{
 											objectFit: "contain",
 										}}
@@ -204,6 +204,9 @@ const Currency = styled.p`
 const WinnerContainer = styled.div`
 	border: 1px solid ${({ theme }) => theme.color.primary};
 	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 `
 
 const Winner = styled.div``
