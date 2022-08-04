@@ -156,44 +156,48 @@ const PhotosSection = () => {
 		<PhotosSectionContainer>
 			{showModal && selectedImageIdx !== null && (
 				<Modal onClick={onModalClose}>
-					<ModalArrowButton className="left" onClick={onClickPrev}>
-						<figure>
-							<Image
-								src="/assets/photos-section/left-arrow.svg"
-								alt="left arrow"
-								objectFit="contain"
-								layout="fixed"
-								width={50}
-								height={50}
+					<GridContainer>
+						<ModalArrowButton className="left" onClick={onClickPrev}>
+							<figure>
+								<Image
+									src="/assets/photos-section/left-arrow.svg"
+									alt="left arrow"
+									objectFit="contain"
+									layout="fixed"
+									width={50}
+									height={50}
+								/>
+							</figure>
+						</ModalArrowButton>
+						<figure className="image">
+							<CustomImage
+								src={images[selectedImageIdx].src}
+								alt={images[selectedImageIdx].alt}
+								effect="blur"
+								style={{
+									objectFit: "contain",
+									maxHeight: "80vh",
+								}}
+								width={"100%"}
+								height={"100%"}
+								// height={15}
 							/>
+							<LeftOverlay onClick={onClickPrev} />
+							<RightOverlay onClick={onClickNext} />
 						</figure>
-					</ModalArrowButton>
-					<figure>
-						<CustomImage
-							src={images[selectedImageIdx].src}
-							alt={images[selectedImageIdx].alt}
-							effect="blur"
-							style={{
-								objectFit: "contain",
-							}}
-							width={"100%"}
-							// height={15}
-						/>
-						<LeftOverlay onClick={onClickPrev} />
-						<RightOverlay onClick={onClickNext} />
-					</figure>
-					<ModalArrowButton className="right" onClick={onClickNext}>
-						<figure>
-							<Image
-								src="/assets/photos-section/right-arrow.svg"
-								alt="left arrow"
-								objectFit="contain"
-								layout="fixed"
-								width={50}
-								height={50}
-							/>
-						</figure>
-					</ModalArrowButton>
+						<ModalArrowButton className="right" onClick={onClickNext}>
+							<figure>
+								<Image
+									src="/assets/photos-section/right-arrow.svg"
+									alt="left arrow"
+									objectFit="contain"
+									layout="fixed"
+									width={50}
+									height={50}
+								/>
+							</figure>
+						</ModalArrowButton>
+					</GridContainer>
 				</Modal>
 			)}
 
@@ -330,9 +334,6 @@ const Modal = styled.div`
 	background: rgba(0, 0, 0, 0.5);
 	z-index: 999999;
 	display: flex;
-	justify-content: space-between;
-	gap: 1rem;
-	padding: 1.5rem;
 	align-items: center;
 
 	figure {
@@ -502,5 +503,26 @@ const ModalArrowButton = styled.button`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+`
+
+const GridContainer = styled.div`
+	width: 100%;
+	max-width: 130rem;
+	margin: 0 auto;
+	padding: 1.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+
+	.image {
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 `

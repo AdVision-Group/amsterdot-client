@@ -3,6 +3,7 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
+import Link from "next/link"
 import Image from "../image/image.component"
 
 interface IProps {
@@ -68,21 +69,23 @@ const BountyWinnerOverview: React.FC<IProps> = ({
 				<SubmissionsContainer>
 					{submissions.map((submission, index) => (
 						<Submission key={index}>
-							<SubmissionContainer>
-								<SIcon>
-									<Image
-										src={submissionIcon.src}
-										alt={submissionIcon.alt}
-										effect="blur"
-										style={{
-											objectFit: "contain",
-										}}
-										width={35}
-										height={35}
-									/>
-								</SIcon>
-								<p>{submission.label}</p>
-							</SubmissionContainer>
+							<Link href={submission.link} passHref>
+								<SubmissionContainer>
+									<SIcon>
+										<Image
+											src={submissionIcon.src}
+											alt={submissionIcon.alt}
+											effect="blur"
+											style={{
+												objectFit: "contain",
+											}}
+											width={35}
+											height={35}
+										/>
+									</SIcon>
+									<p>{submission.label}</p>
+								</SubmissionContainer>
+							</Link>
 							<PriceContainer>
 								<Price>{submission.price}</Price>
 								<Currency>{submission.currency}</Currency>
@@ -166,10 +169,11 @@ const Submission = styled.div`
 	justify-content: space-between;
 `
 
-const SubmissionContainer = styled.div`
+const SubmissionContainer = styled.a`
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	color: ${({ theme }) => theme.fonts.primary};
 
 	p {
 		font-size: 1.5rem;
