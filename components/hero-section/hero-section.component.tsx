@@ -221,7 +221,7 @@ const HeroSection = () => {
 							<a>
 								<Button>
 									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
-									<span>SCOREBOARD</span>
+									SCOREBOARD
 								</Button>
 							</a>
 						</Link>
@@ -628,10 +628,9 @@ const ButtonsContainer = styled.div`
 
 		font-size: 2rem;
 		font-weight: 700;
-		padding: 1rem 1rem 1rem;
+		padding: 1.2rem 1rem 1rem;
 
 		span {
-			display: block;
 			text-transform: uppercase;
 
 			&:nth-of-type(2) {
@@ -678,10 +677,10 @@ const ButtonsContainer = styled.div`
 				top: unset;
 				font-weight: 400;
 				/* font-size: 3rem; */
-				padding: 1.2rem 2rem;
+				padding: 1.4rem 2rem 1.2rem;
 
 				span {
-					display: block;
+					/* display: block; */
 					text-transform: uppercase;
 
 					&:nth-of-type(2) {
