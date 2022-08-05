@@ -623,7 +623,7 @@ const ButtonsContainer = styled.div`
 
 		font-size: 2rem;
 		font-weight: 700;
-		padding: 1rem 1rem 1rem;
+		padding: 1.4rem 1rem 1rem;
 
 		span {
 			display: block;
@@ -666,7 +666,7 @@ const ButtonsContainer = styled.div`
 				top: unset;
 				font-weight: 400;
 				/* font-size: 3rem; */
-				padding: 1.2rem 2rem;
+				padding: 1.6rem 2rem 1.2rem;
 				/* padding: 1.8rem; */
 
 				span {
