@@ -10,9 +10,12 @@ import Head from "next/head"
 import Header from "../components/header/header.component"
 import Image from "../components/image/image.component"
 import Pagination from "../components/pagination/pagination.component"
+import Spinner from "../components/spinner/spinner.component"
+import PhotoOverview from "../components/photo-overview/photo-overview.component"
 
 // Hooks
 import { useRouter } from "next/router"
+import { useToggle } from "react-use"
 // import { motion, useViewportScroll } from "framer-motion"
 import { useMap, useBoolean, useTimeout } from "react-use"
 
@@ -109,15 +112,21 @@ const PhotosPage: NextPage = () => {
 		skip: 0,
 		page: 1,
 	})
-	const [selectedDayIdx, setSelectedDayIdx] = useState<number>(1)
+	const [selectedDayIdx, setSelectedDayIdx] = useState<number | null>(1)
 	const [selectedImageIdx, setSelectedImageIdx] = useState<null | number>(null)
 	const [selectedImageArrlength, setSelectedImageArrlength] = useState<
 		null | number
 	>(null)
 
-	const onImageSelect = (idx: number, dayLength: number, state: IState) => {
+	const onImageSelect = (
+		idx: number,
+		dayLength: number,
+		state: IState,
+		dayIdx: number
+	) => {
 		const calIdnx = state.page * 9
 		setSelectedImageIdx(calIdnx + idx - 9)
+		setSelectedDayIdx(dayIdx)
 		toggleModal(true)
 		setSelectedImageArrlength(dayLength)
 	}
@@ -266,8 +275,8 @@ const PhotosPage: NextPage = () => {
 						</ModalArrowButton>
 						<figure className="image">
 							<Image
-								src={getDayImages(selectedDayIdx)[selectedImageIdx].src}
-								alt={getDayImages(selectedDayIdx)[selectedImageIdx].alt}
+								src={getDayImages(selectedDayIdx || 0)[selectedImageIdx].src}
+								alt={getDayImages(selectedDayIdx || 0)[selectedImageIdx].alt}
 								effect="blur"
 								style={{
 									objectFit: "contain",
@@ -367,24 +376,16 @@ const PhotosPage: NextPage = () => {
 							{day1Images
 								.slice(state.skip, state.skip + state.limit)
 								.map((image, index) => (
-									<figure
-										onClick={() =>
-											onImageSelect(index, day1Images.length, state)
-										}
+									<PhotoOverview
 										key={index}
-									>
-										<Image
-											src={image.src}
-											alt={image.alt}
-											effect="blur"
-											style={{
-												objectFit: "contain",
-											}}
-											width={"100%"}
-											// width={image.width}
-											// height={image.height}
-										/>
-									</figure>
+										src={image.src}
+										alt={image.alt}
+										index={index}
+										dayImagesLength={day1Images.length}
+										state={state}
+										dayNumber={1}
+										onImageSelect={onImageSelect}
+									/>
 								))}
 						</FlexContainer>
 						<Pagination
@@ -394,6 +395,12 @@ const PhotosPage: NextPage = () => {
 									skip: skip,
 									page: currentPage,
 								}))
+
+								setSelectedDayIdx(null)
+
+								setTimeout(() => {
+									setSelectedDayIdx(1)
+								}, 100)
 							}}
 							count={day1Images.length}
 							limit={state.limit}
@@ -408,32 +415,31 @@ const PhotosPage: NextPage = () => {
 							{day2Images
 								.slice(state.skip, state.skip + state.limit)
 								.map((image, index) => (
-									<figure
-										onClick={() =>
-											onImageSelect(index, day2Images.length, state)
-										}
+									<PhotoOverview
 										key={index}
-									>
-										<Image
-											src={image.src}
-											alt={image.alt}
-											effect="blur"
-											style={{
-												objectFit: "contain",
-											}}
-											width={"100%"}
-											// width={image.width}
-											// height={image.height}
-										/>
-									</figure>
+										src={image.src}
+										alt={image.alt}
+										index={index}
+										dayImagesLength={day2Images.length}
+										state={state}
+										dayNumber={2}
+										onImageSelect={onImageSelect}
+									/>
 								))}
 						</FlexContainer>
 						<Pagination
-							onClick={(skip) => {
+							onClick={(skip, currentPage) => {
 								setState((prevValue) => ({
 									...prevValue,
 									skip: skip,
+									page: currentPage,
 								}))
+
+								setSelectedDayIdx(null)
+
+								setTimeout(() => {
+									setSelectedDayIdx(2)
+								}, 100)
 							}}
 							count={day2Images.length}
 							limit={state.limit}
@@ -448,32 +454,31 @@ const PhotosPage: NextPage = () => {
 							{day3Images
 								.slice(state.skip, state.skip + state.limit)
 								.map((image, index) => (
-									<figure
-										onClick={() =>
-											onImageSelect(index, day3Images.length, state)
-										}
+									<PhotoOverview
 										key={index}
-									>
-										<Image
-											src={image.src}
-											alt={image.alt}
-											effect="blur"
-											style={{
-												objectFit: "contain",
-											}}
-											width={"100%"}
-
-											// width={image.width}
-										/>
-									</figure>
+										src={image.src}
+										alt={image.alt}
+										index={index}
+										dayImagesLength={day3Images.length}
+										state={state}
+										dayNumber={3}
+										onImageSelect={onImageSelect}
+									/>
 								))}
 						</FlexContainer>
 						<Pagination
-							onClick={(skip) => {
+							onClick={(skip, currentPage) => {
 								setState((prevValue) => ({
 									...prevValue,
 									skip: skip,
+									page: currentPage,
 								}))
+
+								setSelectedDayIdx(null)
+
+								setTimeout(() => {
+									setSelectedDayIdx(3)
+								}, 100)
 							}}
 							count={day3Images.length}
 							limit={state.limit}
@@ -488,32 +493,31 @@ const PhotosPage: NextPage = () => {
 							{day4Images
 								.slice(state.skip, state.skip + state.limit)
 								.map((image, index) => (
-									<figure
-										onClick={() =>
-											onImageSelect(index, day4Images.length, state)
-										}
+									<PhotoOverview
 										key={index}
-									>
-										<Image
-											src={image.src}
-											alt={image.alt}
-											effect="blur"
-											style={{
-												objectFit: "contain",
-											}}
-											width={"100%"}
-											// width={image.width}
-											// height={image.height}
-										/>
-									</figure>
+										src={image.src}
+										alt={image.alt}
+										index={index}
+										dayImagesLength={day4Images.length}
+										state={state}
+										dayNumber={4}
+										onImageSelect={onImageSelect}
+									/>
 								))}
 						</FlexContainer>
 						<Pagination
-							onClick={(skip) => {
+							onClick={(skip, currentPage) => {
 								setState((prevValue) => ({
 									...prevValue,
 									skip: skip,
+									page: currentPage,
 								}))
+
+								setSelectedDayIdx(null)
+
+								setTimeout(() => {
+									setSelectedDayIdx(4)
+								}, 100)
 							}}
 							count={day4Images.length}
 							limit={state.limit}

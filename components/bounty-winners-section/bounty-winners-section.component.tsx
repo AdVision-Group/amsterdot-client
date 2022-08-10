@@ -478,7 +478,7 @@ const BountyWinnersSection = () => {
 			],
 			winners: [
 				{
-					label: "Winner 1st place",
+					label: "Winner",
 					name: "Kintsugi Vault Runner cli",
 					members: [
 						{
@@ -491,7 +491,7 @@ const BountyWinnersSection = () => {
 					],
 				},
 				{
-					label: "Winner 2nd place",
+					label: "2nd place",
 					name: "Interbtc vault cli",
 					members: [
 						{

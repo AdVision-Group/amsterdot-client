@@ -217,17 +217,17 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
+						<Link href={"/#conference"} passHref>
+							<a>
+								<Button>CONFERENCE 2022</Button>
+							</a>
+						</Link>
 						<Link href={"/hackathon-2022/#scoreboard"} passHref>
 							<a>
-								<Button>
+								<Button outline>
 									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
 									SCOREBOARD
 								</Button>
-							</a>
-						</Link>
-						<Link href={"/hackathon-2022/#bounty-directory"} passHref>
-							<a>
-								<Button outline={"true"}>WINNERS OF BOUNTIES</Button>
 							</a>
 						</Link>
 					</ButtonsContainer>
@@ -622,15 +622,16 @@ const ButtonsContainer = styled.div`
 		display: flex;
 		flex-direction: column;
 		top: 65%; */
-		border: 1px solid ${({ theme }) => theme.color.primary} !important;
-		width: 100%;
+		/* width: calc(100% - 3rem); */
 		font-family: "Avenir Next";
+		width: 100%;
 
 		font-size: 2rem;
 		font-weight: 700;
 		padding: 1.4rem 1rem 1rem;
 
 		span {
+			display: block;
 			text-transform: uppercase;
 
 			&:nth-of-type(2) {
@@ -639,19 +640,12 @@ const ButtonsContainer = styled.div`
 			}
 		}
 	}
-	button:nth-of-type(1) {
-		border: 1px solid #707070;
-		/* font-size: 2rem; */
-		/* margin-right: 1rem; */
-	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		/* flex-gap: 1rem; */
 		/* align-items: end; */
 		justify-content: flex-start;
-		flex-wrap: wrap;
-		flex-direction: column;
-		align-items: start;
+		flex-wrap: unset;
 		gap: 2rem;
 
 		button {
@@ -678,9 +672,10 @@ const ButtonsContainer = styled.div`
 				font-weight: 400;
 				/* font-size: 3rem; */
 				padding: 1.6rem 2rem 1.2rem;
+				/* padding: 1.8rem; */
 
 				span {
-					/* display: block; */
+					display: block;
 					text-transform: uppercase;
 
 					&:nth-of-type(2) {
