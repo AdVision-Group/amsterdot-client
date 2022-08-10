@@ -378,9 +378,9 @@ const RightOverlay = styled.div`
 `
 
 const TitleContainer = styled(motion.div)`
-	margin-bottom: -10rem;
 	max-width: 86rem;
 	margin: 0 auto;
+	margin-bottom: 2rem;
 `
 
 const PhotosSectionContainer = styled.section`

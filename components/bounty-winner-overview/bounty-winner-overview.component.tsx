@@ -20,14 +20,14 @@ interface IProps {
 		src: string
 		alt: string
 	}
-	submissions: {
+	submissions?: {
 		link: string
 		label: string
 		price: string
 		currency: string
 	}[]
 
-	winners: {
+	winners?: {
 		label: string
 		name: string
 		members: {
@@ -49,7 +49,7 @@ const BountyWinnerOverview: React.FC<IProps> = ({
 	winners,
 }) => {
 	return (
-		<BountyOverview>
+		<BountyOverview hasWinner={!!winners}>
 			<div>
 				<LogoFigure>
 					<Image
@@ -66,57 +66,64 @@ const BountyWinnerOverview: React.FC<IProps> = ({
 				</LogoFigure>
 				<Title>{title}</Title>
 				<Description>{description}</Description>
-				<SubmissionsContainer>
-					{submissions.map((submission, index) => (
-						<Submission key={index}>
-							<Link href={submission.link} passHref>
-								<SubmissionContainer rel="noopener noreferrer" target="_blank">
-									<SIcon>
+				{submissions && (
+					<SubmissionsContainer>
+						{submissions.map((submission, index) => (
+							<Submission key={index}>
+								<Link href={submission.link} passHref>
+									<SubmissionContainer
+										rel="noopener noreferrer"
+										target="_blank"
+									>
+										<SIcon>
+											<Image
+												src={submissionIcon.src}
+												alt={submissionIcon.alt}
+												effect="blur"
+												style={{
+													objectFit: "contain",
+												}}
+												width={35}
+												height={35}
+											/>
+										</SIcon>
+										<p>{submission.label}</p>
+									</SubmissionContainer>
+								</Link>
+								<PriceContainer>
+									<Price>{submission.price}</Price>
+									<Currency>{submission.currency}</Currency>
+								</PriceContainer>
+							</Submission>
+						))}
+					</SubmissionsContainer>
+				)}
+			</div>
+			<WinnerContainer>
+				{winners &&
+					winners.map((winner, index) => (
+						<Winner key={index}>
+							<WinnerHeading>{winner.label}</WinnerHeading>
+							<WinnerName>{winner.name}</WinnerName>
+
+							{winner.members.map((member, index) => (
+								<WinnerMember key={index}>
+									<WinnerMemberAvatar>
 										<Image
-											src={submissionIcon.src}
-											alt={submissionIcon.alt}
-											effect="blur"
+											src={member.avatar.src}
+											alt={member.avatar.alt}
+											// effect="blur"
 											style={{
 												objectFit: "contain",
 											}}
-											width={35}
-											height={35}
 										/>
-									</SIcon>
-									<p>{submission.label}</p>
-								</SubmissionContainer>
-							</Link>
-							<PriceContainer>
-								<Price>{submission.price}</Price>
-								<Currency>{submission.currency}</Currency>
-							</PriceContainer>
-						</Submission>
+									</WinnerMemberAvatar>
+									<WinnerMemberName>{member.name}</WinnerMemberName>
+								</WinnerMember>
+							))}
+						</Winner>
 					))}
-				</SubmissionsContainer>
-			</div>
-			<WinnerContainer>
-				{winners.map((winner, index) => (
-					<Winner key={index}>
-						<WinnerHeading>{winner.label}</WinnerHeading>
-						<WinnerName>{winner.name}</WinnerName>
-
-						{winner.members.map((member, index) => (
-							<WinnerMember key={index}>
-								<WinnerMemberAvatar>
-									<Image
-										src={member.avatar.src}
-										alt={member.avatar.alt}
-										// effect="blur"
-										style={{
-											objectFit: "contain",
-										}}
-									/>
-								</WinnerMemberAvatar>
-								<WinnerMemberName>{member.name}</WinnerMemberName>
-							</WinnerMember>
-						))}
-					</Winner>
-				))}
+				{!winners && <EmptyWinnerContainer>N/A</EmptyWinnerContainer>}
 			</WinnerContainer>
 		</BountyOverview>
 	)
@@ -124,7 +131,16 @@ const BountyWinnerOverview: React.FC<IProps> = ({
 
 export default BountyWinnerOverview
 
-const BountyOverview = styled.div`
+const EmptyWinnerContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 6.3rem;
+	font-weight: 400;
+	color: ${({ theme }) => theme.color.primary};
+`
+
+const BountyOverview = styled.div<{ hasWinner: boolean }>`
 	background-color: ${({ theme }) => theme.background.container};
 	padding: 1.5rem;
 	display: grid;
@@ -146,7 +162,8 @@ const BountyOverview = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		/* width: 45%; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: ${({ hasWinner }) =>
+				hasWinner ? "1fr 1fr" : "1fr"};
 		}
 	}
 `

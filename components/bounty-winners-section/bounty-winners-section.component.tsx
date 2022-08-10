@@ -590,6 +590,97 @@ const BountyWinnersSection = () => {
 				},
 			],
 		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Subsquid.png",
+				alt: "Subsquid logo",
+				width: 0,
+				height: 0,
+			},
+			title: "KARURA DEFI DASHBOARD",
+			description:
+				"The winning team has to use Subsquid’s SDK to extract and process on-chain data, and then build a lightweight Web UI to access and display it.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/3076",
+					label: "Submission",
+					price: "$2,000",
+					currency: "IN USDT",
+				},
+				{
+					link: "https://dorahacks.io/buidl/3065",
+					label: "Submission",
+					price: "$1,000",
+					currency: "IN USDT",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Karura DeFi Dashboard",
+					members: [
+						{
+							name: "Fc",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/fc.png",
+								alt: "Fc",
+							},
+						},
+					],
+				},
+				{
+					label: "2nd place",
+					name: "SquidGain",
+					members: [
+						{
+							name: "timbotro",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/timbotro.png",
+								alt: "timbotro",
+							},
+						},
+					],
+				},
+			],
+		},
+	]
+
+	const bountiesV3 = [
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Subsquid.png",
+				alt: "Subsquid logo",
+				width: 0,
+				height: 0,
+			},
+			title: "KARURA DEFI DASHBOARD",
+			description:
+				"The winning team has to use Subsquid’s SDK to extract and process on-chain data, and then build a lightweight Web UI to access and display it.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			// submissions: [
+			// 	{
+			// 		link: "https://dorahacks.io/buidl/3076",
+			// 		label: "Submission",
+			// 		price: "$2,000",
+			// 		currency: "IN USDT",
+			// 	},
+			// 	{
+			// 		link: "https://dorahacks.io/buidl/3065",
+			// 		label: "Submission",
+			// 		price: "$1,000",
+			// 		currency: "IN USDT",
+			// 	},
+			// ],
+		},
 	]
 
 	return (
@@ -655,11 +746,26 @@ const BountyWinnersSection = () => {
 					<BountyWinnerOverview key={idx} {...bounty} />
 				))}
 			</BountiesDirectory>
+
+			<Border />
+
+			<BountiesDirectory2>
+				{bountiesV3.map((bounty, idx) => (
+					<BountyWinnerOverview key={idx} {...bounty} />
+				))}
+			</BountiesDirectory2>
 		</BountyWinnersSectionContainer>
 	)
 }
 
 export default BountyWinnersSection
+
+const Border = styled.div`
+	width: 100%;
+	height: 1px;
+	background-color: #707070;
+	margin: 6rem 0;
+`
 
 const BountiesDirectory = styled.div`
 	width: 100%;
@@ -678,6 +784,27 @@ const BountiesDirectory = styled.div`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-top: -5rem;
 			/* grid-template-columns: 1fr 1fr 1fr; */
+		}
+	}
+`
+
+const BountiesDirectory2 = styled.div`
+	width: 100%;
+	/* max-width: 130rem; */
+	scroll-margin-top: 20rem;
+
+	margin: 0 auto;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 4rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin-top: 0rem;
+		grid-template-columns: 1fr 1fr;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* margin-top: -5rem; */
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
 `
