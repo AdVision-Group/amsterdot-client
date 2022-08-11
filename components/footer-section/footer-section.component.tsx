@@ -99,9 +99,8 @@ const FooterSection: React.FC<IProps> = ({
 					<ImageContainer className="first">
 						<figure>
 							<ImageComponent
-								src={"/assets/photos/day-1/P1099978.jpg"}
-								alt="place"
-								// height={100}
+								src={"/assets/footer/2.png"}
+								alt="place 4"
 								width={"100%"}
 								effect="blur"
 								style={{
@@ -113,7 +112,7 @@ const FooterSection: React.FC<IProps> = ({
 					<ImageContainer className="second">
 						<figure>
 							<ImageComponent
-								src={"/assets/photos/day-3/P1111237.jpg"}
+								src={"/assets/footer/3.png"}
 								alt="place 4"
 								width={"100%"}
 								effect="blur"
@@ -126,8 +125,8 @@ const FooterSection: React.FC<IProps> = ({
 					<ImageContainer className="third">
 						<figure>
 							<ImageComponent
-								src={"/assets/photos/day-4/P1111904.jpg"}
-								alt="place 4"
+								src={"/assets/footer/4.png"}
+								alt="place 3"
 								width={"100%"}
 								effect="blur"
 								style={{
@@ -139,8 +138,9 @@ const FooterSection: React.FC<IProps> = ({
 					<ImageContainer className="fourth">
 						<figure>
 							<ImageComponent
-								src={"/assets/photos/day-2/P1100414.jpg"}
-								alt="place 3"
+								src={"/assets/footer/1.png"}
+								alt="place"
+								// height={100}
 								width={"100%"}
 								effect="blur"
 								style={{

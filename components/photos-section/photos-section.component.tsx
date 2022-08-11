@@ -85,32 +85,32 @@ const PhotosSection = () => {
 		},
 	]
 
-	const handleClickNext = () => {
-		if (!controlledSwiper?.slides) return
-		console.log("click")
-		// if (activeIndex === posts.length - 2) return
-		controlledSwiper?.slideNext()
-		// inc()
-	}
-	const handleClickButton = (idx: number) => {
-		controlledSwiper?.slideTo(idx)
-		// set(idx)
-	}
-	const handleClickPrev = () => {
-		// if (activeIndex === 0) return
-		controlledSwiper?.slidePrev()
-		// dec()
-	}
+	// const handleClickNext = () => {
+	// 	if (!controlledSwiper?.slides) return
+	// 	console.log("click")
+	// 	// if (activeIndex === posts.length - 2) return
+	// 	controlledSwiper?.slideNext()
+	// 	// inc()
+	// }
+	// const handleClickButton = (idx: number) => {
+	// 	controlledSwiper?.slideTo(idx)
+	// 	// set(idx)
+	// }
+	// const handleClickPrev = () => {
+	// 	// if (activeIndex === 0) return
+	// 	controlledSwiper?.slidePrev()
+	// 	// dec()
+	// }
 
 	const [showModal, toggleModal] = useBoolean(false)
 
 	const [selectedImageIdx, setSelectedImageIdx] = useState<null | number>(null)
 
-	const onImageSelect = (idx: number) => {
-		console.log(idx)
-		setSelectedImageIdx(idx)
-		toggleModal(true)
-	}
+	// const onImageSelect = (idx: number) => {
+	// 	console.log(idx)
+	// 	setSelectedImageIdx(idx)
+	// 	toggleModal(true)
+	// }
 
 	const onModalClose = () => {
 		setSelectedImageIdx(null)
@@ -226,7 +226,7 @@ const PhotosSection = () => {
 						modules={[Controller, Grid]}
 						controller={{ control: controlledSwiper }}
 					>
-						<figure onClick={handleClickPrev}>
+						<figure onClick={() => controlledSwiper?.slidePrev()}>
 							<Image
 								src="/assets/photos-section/left-arrow.svg"
 								alt="left arrow"
@@ -242,6 +242,7 @@ const PhotosSection = () => {
 					<Swiper
 						className="main-swipe"
 						modules={[Controller, Grid]}
+						loop={true}
 						onSwiper={setControlledSwiper}
 						spaceBetween={70}
 						slidesPerView={3}
@@ -301,7 +302,7 @@ const PhotosSection = () => {
 						modules={[Controller]}
 						controller={{ control: controlledSwiper }}
 					>
-						<figure onClick={handleClickNext}>
+						<figure onClick={() => controlledSwiper?.slideNext()}>
 							{/* <CustomImage
 								src="/assets/photos-section/right-arrow.svg"
 								alt="left arrow"
