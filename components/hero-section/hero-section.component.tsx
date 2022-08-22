@@ -175,8 +175,8 @@ const HeroSection = () => {
 					</PlayButtonContainer> */}
 					<HeadContainer>
 						<h1>
-							<span>CONF</span>
 							<span>HACK</span>
+							<span>2022</span>
 						</h1>
 						{/* <p>
 							Selected winners will present at{" "}
@@ -190,17 +190,15 @@ const HeroSection = () => {
 						</p> */}
 					</HeadContainer>
 					<DateContainer>
-						{/* <p>
+						<p>
 							<span>04/20</span>
 							<span />
 						</p>
 						<p>
 							<span />
 							<span>06/20</span>
-						</p> */}
-						{/* <p>XXXX</p> */}
-						{/* <p>&nbsp;</p> */}
-						{/* <p>2022</p> */}
+						</p>
+						<p>2022</p>
 					</DateContainer>
 					<ImageContainer>
 						<figure>
@@ -232,7 +230,7 @@ const HeroSection = () => {
 						</Link>
 					</ButtonsContainer>
 					<PlaceContainer>
-						<p>IN AMSTERDAM / NETHERLANDS</p>
+						<p>ONLINE</p>
 					</PlaceContainer>
 				</ContentContainer>
 				<PartnersContainer>
@@ -541,7 +539,7 @@ const DateContainer = styled.div`
 		font-family: "Avenir Next";
 		font-weight: 900;
 	}
-	/* 
+
 	p:nth-of-type(1) {
 		display: flex;
 		align-items: center;
@@ -572,11 +570,11 @@ const DateContainer = styled.div`
 				margin-right: 1.5rem;
 			}
 		}
-	} */
+	}
 	/* p:nth-of-type(1) {
 		font-size: 3rem;
 	} */
-	p:nth-of-type(1) {
+	p:nth-of-type(3) {
 		font-size: 3.5rem;
 	}
 

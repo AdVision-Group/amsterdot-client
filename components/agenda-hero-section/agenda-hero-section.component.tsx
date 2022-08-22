@@ -175,7 +175,7 @@ const HeroSection = () => {
 					</PlayButtonContainer> */}
 					<HeadContainer>
 						<h1>
-							<span>AGENDA</span>
+							<span>CONF</span>
 							<span>2022</span>
 						</h1>
 						{/* <p>
@@ -196,12 +196,23 @@ const HeroSection = () => {
 						</p>
 						<p>
 							<span />
-							<span>06/20</span>
+							<span>04/23</span>
 						</p>
 						{/* <p>XXXX</p> */}
 						{/* <p>&nbsp;</p> */}
 						<p>2022</p>
 					</DateContainer>
+					{/* <DateContainer>
+						<p>
+							<span>04/20</span>
+							<span />
+						</p>
+						<p>
+							<span />
+							<span>06/20</span>
+						</p>
+						<p>2022</p>
+					</DateContainer> */}
 					<ImageContainer>
 						<figure>
 							<Image

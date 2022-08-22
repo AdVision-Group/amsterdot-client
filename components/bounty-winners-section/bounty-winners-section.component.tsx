@@ -747,13 +747,13 @@ const BountyWinnersSection = () => {
 				))}
 			</BountiesDirectory>
 
-			<Border />
+			{/* <Border />
 
 			<BountiesDirectory2>
 				{bountiesV3.map((bounty, idx) => (
 					<BountyWinnerOverview key={idx} {...bounty} />
 				))}
-			</BountiesDirectory2>
+			</BountiesDirectory2> */}
 		</BountyWinnersSectionContainer>
 	)
 }
