@@ -17,13 +17,14 @@ import { FaTwitter, FaDiscord } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
 
 // Data
-import { events, hackatons } from "../../utils/data"
+// import { events, hackatons } from "../../utils/data"
 
 interface IProps {
 	ctas: {
 		slug: string
 		label: string
 		outline: boolean
+		disabledHover?: boolean
 	}[]
 	openEventDayProgram: (
 		showContent: boolean,
@@ -39,8 +40,8 @@ interface IProps {
 
 const Header: React.FC<IProps> = ({
 	ctas,
-	openEventDayProgram,
-	openHackathonDayProgram,
+	// openEventDayProgram,
+	// openHackathonDayProgram,
 }) => {
 	const [showMobileNav, toggleMobileNav] = useToggle(false)
 	const [isOnTop, toggleIsOnTop] = useToggle(true)
@@ -116,7 +117,12 @@ const Header: React.FC<IProps> = ({
 								{ctas.map((cta, idx) => (
 									<Link key={idx} href={cta.slug} passHref>
 										<a>
-											<Button outline={cta.outline}>{cta.label}</Button>
+											<Button
+												outline={cta.outline}
+												disabledHover={cta.disabledHover}
+											>
+												{cta.label}
+											</Button>
 										</a>
 									</Link>
 								))}

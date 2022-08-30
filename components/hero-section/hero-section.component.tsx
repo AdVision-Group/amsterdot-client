@@ -215,12 +215,12 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<Link href={"/hackathon-2022/#scoreboard"} passHref>
+						<Link href={"#"} passHref>
 							<a>
-								<Button>HACKATHON 2022</Button>
+								<Button disabledHover>HACKATHON 2022</Button>
 							</a>
 						</Link>
-						<Link href={"/#conference"} passHref>
+						<Link href={"/"} passHref>
 							<a>
 								<Button outline>
 									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}

@@ -135,6 +135,7 @@ const HackathonPage: NextPage = () => {
 						label: "HACKATHON 2022",
 						slug: "/hackathon-2022",
 						outline: false,
+						disabledHover: true,
 					},
 					{
 						label: "CONFERENCE 2022",

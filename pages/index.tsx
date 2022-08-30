@@ -139,8 +139,9 @@ const AgendaPage: NextPage = () => {
 				ctas={[
 					{
 						label: "CONFERENCE 2022",
-						slug: "/#conference",
+						slug: "#",
 						outline: false,
+						disabledHover: true,
 					},
 					{
 						label: "HACKATHON 2022",

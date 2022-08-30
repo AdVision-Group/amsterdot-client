@@ -7,6 +7,7 @@ export interface IButtonProps {
 	bottom?: string
 	type?: "button" | "submit" | "reset" | undefined
 	disabled?: boolean
+	disabledHover?: boolean
 	width?: string
 	rounded?: boolean
 	onClick?: (e: any) => void
@@ -20,6 +21,7 @@ const Button: React.FC<IButtonProps> = ({
 	loading,
 	onClick,
 	disabled,
+	disabledHover,
 	...rest
 }) => {
 	return (
@@ -28,10 +30,10 @@ const Button: React.FC<IButtonProps> = ({
 			type={type}
 			onClick={onClick}
 			whileHover={{
-				scale: disabled ? 1 : 1.05,
+				scale: disabledHover || disabled ? 1 : 1.05,
 			}}
 			whileTap={{
-				scale: disabled ? 1 : 0.97,
+				scale: disabledHover || disabled ? 1 : 0.97,
 			}}
 			disabled={disabled}
 		>
