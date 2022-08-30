@@ -215,16 +215,16 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<Link href={"/#conference"} passHref>
+						<Link href={"/hackathon-2022/#scoreboard"} passHref>
 							<a>
-								<Button>CONFERENCE 2022</Button>
+								<Button>HACKATHON 2022</Button>
 							</a>
 						</Link>
-						<Link href={"/hackathon-2022/#scoreboard"} passHref>
+						<Link href={"/#conference"} passHref>
 							<a>
 								<Button outline>
 									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
-									SCOREBOARD
+									CONFERENCE 2022
 								</Button>
 							</a>
 						</Link>
@@ -708,8 +708,8 @@ const PlaceContainer = styled.div`
 
 	position: absolute;
 	transform: rotate(-90deg);
-	right: -10rem;
-	bottom: 37rem;
+	right: -0.5rem;
+	bottom: 20rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: relative;

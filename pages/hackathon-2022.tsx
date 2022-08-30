@@ -132,13 +132,13 @@ const HackathonPage: NextPage = () => {
 				openHackathonDayProgram={openHackathonDayProgram}
 				ctas={[
 					{
-						label: "CONFERENCE 2022",
-						slug: "/#conference",
+						label: "HACKATHON 2022",
+						slug: "/hackathon-2022",
 						outline: false,
 					},
 					{
-						label: "SCOREBOARD",
-						slug: "/hackathon-2022/#scoreboard",
+						label: "CONFERENCE 2022",
+						slug: "/#conference",
 						outline: true,
 					},
 				]}
