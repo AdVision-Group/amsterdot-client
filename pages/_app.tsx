@@ -20,13 +20,14 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 	// Use the layout defined at the page level, if available
-	const getLayout = Component.getLayout ?? ((page) => page)
+	// const getLayout = Component.getLayout ?? ((page) => page)
 
 	return (
 		<>
 			<GlobalStyle />
 			<ThemeProvider theme={theme}>
-				{getLayout(<Component {...pageProps} />)}
+				{/* {getLayout(<Component {...pageProps} />)} */}
+				<Component {...pageProps} />
 			</ThemeProvider>
 		</>
 	)
