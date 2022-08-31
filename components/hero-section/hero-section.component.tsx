@@ -179,7 +179,7 @@ const HeroSection = () => {
 							<span>2022</span>
 						</h1>
 						<p>
-							Selected winners will present at{" "}
+							Selected winners will be invited to present at{" "}
 							<a
 								href="https://decoded.polkadot.network/"
 								rel="noopener noreferrer"
