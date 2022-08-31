@@ -10,12 +10,12 @@ import Image from "next/image"
 const EventSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformCON = useTransform(scrollYProgress, [0.7, 0.9], [-50, 50])
-	const transformFERE = useTransform(scrollYProgress, [0.7, 0.9], [50, -50])
-	const transformNCE = useTransform(scrollYProgress, [0.7, 0.9], [-50, 0])
+	const transformCON = useTransform(scrollYProgress, [0.31, 0.55], [-50, 50])
+	const transformFERE = useTransform(scrollYProgress, [0.31, 0.55], [50, -50])
+	const transformNCE = useTransform(scrollYProgress, [0.31, 0.55], [-50, 0])
 
 	return (
-		<EventSectionContainer>
+		<EventSectionContainer id="conference">
 			<WatermarkContainer>
 				{/* <Circle1
 					className="first"
@@ -121,7 +121,7 @@ const EventSection = () => {
 						<span>WESTERUNIE Klönneplein 4-6, 1014 DD</span>
 					</div>
 				</PlaceContainer>
-				<Link href={"/#day-1"} passHref>
+				<Link href={"/agenda-2022/#speakers"} passHref>
 					<a>
 						<ArrowContainer
 							animate={

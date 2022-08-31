@@ -3,125 +3,149 @@ import React from "react"
 import styled from "styled-components"
 
 // Components
-import Image from "next/image"
+import Link from "next/link"
+import Image from "../image/image.component"
 
 interface IProps {
 	logo: {
+		href: string
 		src: string
 		alt: string
 		width: number
 		height: number
-		url?: string
 	}
 	title: string
 	description: string
-	issue: {
-		url?: string
-		label: string
-	}
-	issueIcon: {
+	submissionIcon: {
 		src: string
 		alt: string
 	}
-	prize: string
-	prize2: string
-	winner?: {
+	submissions?: {
+		link: string
+		label: string
+		price: string
+		currency: string
+	}[]
+
+	winners?: {
+		label: string
 		name: string
-		logo: {
-			src: string
-			alt: string
-			width: number
-			height: number
-			url?: string
-		}
-	}
+		members: {
+			name: string
+			avatar: {
+				src: string
+				alt: string
+			}
+		}[]
+	}[]
 }
 
 const BountyWinnerOverview: React.FC<IProps> = ({
 	logo,
 	title,
 	description,
-	issue,
-	issueIcon,
-	prize,
-	prize2,
-	winner,
+	submissionIcon,
+	submissions,
+	winners,
 }) => {
 	return (
-		<BountyOverview>
-			<a href={logo.url} rel="noopener noreferrer" target="_blank">
+		<BountyOverview hasWinner={!!winners}>
+			<div>
 				<LogoFigure>
 					<Image
 						src={logo.src}
 						alt={logo.alt}
-						layout="responsive"
-						width={50}
-						height={20}
-						objectFit="contain"
-						objectPosition={"left"}
+						effect="blur"
+						style={{
+							objectFit: "contain",
+							objectPosition: "left",
+						}}
+						width={100}
+						height={50}
 					/>
 				</LogoFigure>
-			</a>
-			<h3>{title}</h3>
-			<p>{description}</p>
-			<BountyBottomContainer>
-				<BountyBottomFlexContainer>
-					<a href={issue.url} rel="noopener noreferrer" target="_blank">
-						<IssueFigure>
-							<Image
-								src={issueIcon.src}
-								alt={issueIcon.alt}
-								layout="responsive"
-								width={50}
-								height={50}
-								objectFit="contain"
-							/>
-						</IssueFigure>
-					</a>
-					<a href={issue.url} rel="noopener noreferrer" target="_blank">
-						{issue.label}
-					</a>
-				</BountyBottomFlexContainer>
-				<BountyBottomFlexContainer>
-					<BountyParagraph>{prize}</BountyParagraph>
-					<EuroPrice>
-						<span />
-						<p>{prize2}</p>
-						<span />
-					</EuroPrice>
-				</BountyBottomFlexContainer>
-			</BountyBottomContainer>
+				<Title>{title}</Title>
+				<Description>{description}</Description>
+				{submissions && (
+					<SubmissionsContainer>
+						{submissions.map((submission, index) => (
+							<Submission key={index}>
+								<Link href={submission.link} passHref>
+									<SubmissionContainer
+										rel="noopener noreferrer"
+										target="_blank"
+									>
+										<SIcon>
+											<Image
+												src={submissionIcon.src}
+												alt={submissionIcon.alt}
+												effect="blur"
+												style={{
+													objectFit: "contain",
+												}}
+												width={35}
+												height={35}
+											/>
+										</SIcon>
+										<p>{submission.label}</p>
+									</SubmissionContainer>
+								</Link>
+								<PriceContainer>
+									<Price>{submission.price}</Price>
+									<Currency>{submission.currency}</Currency>
+								</PriceContainer>
+							</Submission>
+						))}
+					</SubmissionsContainer>
+				)}
+			</div>
+			<WinnerContainer>
+				{winners &&
+					winners.map((winner, index) => (
+						<Winner key={index}>
+							<WinnerHeading>{winner.label}</WinnerHeading>
+							<WinnerName>{winner.name}</WinnerName>
 
-			{winner && (
-				<WinnerContainer>
-					<p>WINNER</p>
-					<WinnerLogoContainer>
-						<figure>
-							<Image
-								src={winner.logo.src}
-								alt={winner.logo.alt}
-								layout="responsive"
-								width={50}
-								height={20}
-								objectFit="contain"
-								objectPosition={"left"}
-							/>
-						</figure>
-						<p>{winner.name}</p>
-					</WinnerLogoContainer>
-				</WinnerContainer>
-			)}
+							{winner.members.map((member, index) => (
+								<WinnerMember key={index}>
+									<WinnerMemberAvatar>
+										<Image
+											src={member.avatar.src}
+											alt={member.avatar.alt}
+											// effect="blur"
+											style={{
+												objectFit: "contain",
+											}}
+										/>
+									</WinnerMemberAvatar>
+									<WinnerMemberName>{member.name}</WinnerMemberName>
+								</WinnerMember>
+							))}
+						</Winner>
+					))}
+				{!winners && <EmptyWinnerContainer>N/A</EmptyWinnerContainer>}
+			</WinnerContainer>
 		</BountyOverview>
 	)
 }
 
 export default BountyWinnerOverview
 
-const BountyOverview = styled.div`
+const EmptyWinnerContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 6.3rem;
+	font-weight: 400;
+	color: ${({ theme }) => theme.color.primary};
+`
+
+const BountyOverview = styled.div<{ hasWinner: boolean }>`
 	background-color: ${({ theme }) => theme.background.container};
 	padding: 1.5rem;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
 
 	h3 {
 		font-weight: 900;
@@ -136,107 +160,93 @@ const BountyOverview = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		padding: 1.5rem 3rem;
-	}
-`
-
-const BountyBottomContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
-	margin-top: 2rem;
-`
-
-const BountyBottomFlexContainer = styled.div`
-	display: grid;
-	align-items: center;
-	grid-template-columns: 3rem auto;
-	grid-template-rows: auto auto;
-	gap: 1rem;
-	padding-right: 3rem;
-
-	&:nth-of-type(2) {
-		grid-template-columns: auto 3rem;
-		text-align: end;
-		justify-self: end;
-	}
-
-	a {
-		color: #fff;
-		font-size: 2.5rem;
-		text-decoration: underline;
-	}
-`
-
-const BountyParagraph = styled.p`
-	grid-column: 1/3;
-
-	color: ${({ theme }) => theme.color.primary};
-	font-weight: 900;
-	font-size: 2.5rem;
-	text-align: center;
-`
-
-const LogoFigure = styled.figure`
-	position: relative;
-	max-width: 10rem;
-	margin-bottom: 1rem;
-`
-
-const IssueFigure = styled.figure`
-	position: relative;
-	/* max-width: 10rem; */
-`
-
-const EuroPrice = styled.div`
-	grid-column: 1/3;
-	/* justify-self: end; */
-	/* margin-left: 4rem; */
-	text-align: center;
-	display: flex;
-	align-items: center;
-
-	position: relative;
-
-	p {
-		color: #ddd;
-		text-align: center;
-		padding: 0 0.8rem;
-	}
-
-	span {
-		display: block;
-		width: 2rem;
-		height: 0.2rem;
-		background-color: #ddd;
-	}
-`
-
-const WinnerContainer = styled.div`
-	margin-top: 2rem;
-	border: 1px solid ${({ theme }) => theme.color.primary};
-	display: grid;
-	grid-template-columns: 2fr 3fr;
-
-	p {
-		align-self: center;
-		/* justify-self: center; */
-		font-weight: 900;
-
-		&:nth-child(1) {
-			padding: 2rem 1.5rem;
-			text-align: center;
-			font-size: 2.2rem;
-			color: ${({ theme }) => theme.color.primary};
-			border-right: 1px solid ${({ theme }) => theme.color.primary};
+		/* width: 45%; */
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			grid-template-columns: ${({ hasWinner }) =>
+				hasWinner ? "1fr 1fr" : "1fr"};
 		}
 	}
 `
 
-const WinnerLogoContainer = styled.div`
-	justify-self: center;
-	padding: 1rem 2rem;
-	font-size: 2rem;
-	figure {
-		max-width: 7rem;
+const LogoFigure = styled.figure``
+
+const Title = styled.h3``
+
+const Description = styled.p``
+
+const SubmissionsContainer = styled.div`
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+`
+
+const Submission = styled.div`
+	display: flex;
+	justify-content: space-between;
+`
+
+const SubmissionContainer = styled.a`
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	color: ${({ theme }) => theme.fonts.primary};
+
+	p {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		text-decoration: underline;
+		font-weight: 900;
 	}
 `
+
+const SIcon = styled.div``
+
+const PriceContainer = styled.div`
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+`
+
+const Price = styled.p`
+	font-size: 2.5rem;
+	font-weight: 900;
+`
+
+const Currency = styled.p`
+	font-size: 1.5rem;
+`
+
+const WinnerContainer = styled.div`
+	border: 1px solid ${({ theme }) => theme.color.primary};
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+`
+
+const Winner = styled.div``
+
+const WinnerHeading = styled.h3`
+	font-size: 1.8rem;
+	border-bottom: 1px solid ${({ theme }) => theme.color.primary};
+	padding-bottom: 1.5rem;
+`
+
+const WinnerName = styled.p`
+	font-size: 1.5rem;
+	font-weight: 900;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+`
+
+const WinnerMember = styled.div`
+	display: flex;
+	gap: 1.5rem;
+	align-items: center;
+`
+
+const WinnerMemberAvatar = styled.div``
+
+const WinnerMemberName = styled.p``

@@ -17,9 +17,15 @@ import { FaTwitter, FaDiscord } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
 
 // Data
-import { events, hackatons } from "../../utils/data"
+// import { events, hackatons } from "../../utils/data"
 
 interface IProps {
+	ctas: {
+		slug: string
+		label: string
+		outline: boolean
+		disabledHover?: boolean
+	}[]
 	openEventDayProgram: (
 		showContent: boolean,
 		idx: number,
@@ -33,8 +39,9 @@ interface IProps {
 }
 
 const Header: React.FC<IProps> = ({
-	openEventDayProgram,
-	openHackathonDayProgram,
+	ctas,
+	// openEventDayProgram,
+	// openHackathonDayProgram,
 }) => {
 	const [showMobileNav, toggleMobileNav] = useToggle(false)
 	const [isOnTop, toggleIsOnTop] = useToggle(true)
@@ -107,18 +114,25 @@ const Header: React.FC<IProps> = ({
 							// }}
 							// justifyContent="center"
 							>
-								<Link href={"/#scoreboard"} passHref>
-									<a>
-										<Button>HACK WINNERS</Button>
-									</a>
-								</Link>
-								<a
+								{ctas.map((cta, idx) => (
+									<Link key={idx} href={cta.slug} passHref>
+										<a>
+											<Button
+												outline={cta.outline}
+												disabledHover={cta.disabledHover}
+											>
+												{cta.label}
+											</Button>
+										</a>
+									</Link>
+								))}
+								{/* <a
 									rel="noopener noreferrer"
 									target="_blank"
 									href="https://youtube.com/playlist?list=PLpyT58HowFcU-pM-Q9Ms9eq0mRSP950ky"
 								>
 									<Button outline={"true"}>CONF VIDS</Button>
-								</a>
+								</a> */}
 							</ButtonsContainer>
 						)}
 					</AnimatePresence>
@@ -241,39 +255,108 @@ const Header: React.FC<IProps> = ({
 							</ToggleMobileButton> */}
 
 							<Ul>
-								<li className="first">
-									<Link href={"/#scoreboard"}>
-										<a onClick={toggleMobileNav}>HACK SCOREBOARD</a>
+								{/* <li className="first">
+									<Link href={"/"}>
+										<a onClick={toggleMobileNav}>AmsterDOT</a>
 									</Link>
-								</li>
-								<li>
+								</li> */}
+								{/* <li>
 									<Link href={"/#hackaton-content"}>
 										<a onClick={toggleMobileNav}>HACKATON</a>
 									</Link>
-								</li>
-								<li>
+								</li> */}
+								{/* <li>
 									<Link href={"/#bounties-h"}>
 										<a onClick={toggleMobileNav}>BOUNTIES</a>
 									</Link>
-								</li>
-								<li>
-									<Link href={"/#about"}>
-										<a onClick={toggleMobileNav}>WHAT IS amsterDOT</a>
+								</li> */}
+								<li className="first">
+									<Link href={"/"}>
+										<a onClick={toggleMobileNav}>Agenda 2022</a>
 									</Link>
+									<NestedUl>
+										<li>
+											<Link href={`/photos`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Photos
+												</a>
+											</Link>
+										</li>
+										<li>
+											<Link href={`/#after-movie`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Aftermovie
+												</a>
+											</Link>
+										</li>
+										<li>
+											<Link href={`/#day-1`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Conference 2022
+												</a>
+											</Link>
+										</li>
+										<li>
+											<Link href={`/#hack-2`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Workshops 2022
+												</a>
+											</Link>
+										</li>
+									</NestedUl>
 								</li>
 								<li>
-									<Link href={"/#after-movie"}>
-										<a onClick={toggleMobileNav}>AFTERMOVIE</a>
+									<Link href={"/hackathon-2022"}>
+										<a onClick={toggleMobileNav}>Hackathon 2022</a>
 									</Link>
+									<NestedUl>
+										<li>
+											<Link href={`/hackathon-2022/#scoreboard`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Hackathon scoreboard
+												</a>
+											</Link>
+										</li>
+										<li>
+											<Link href={`/hackathon-2022/#bounty-directory`} passHref>
+												<a
+													onClick={() => {
+														toggleMobileNav()
+													}}
+												>
+													Winners of bounties
+												</a>
+											</Link>
+										</li>
+									</NestedUl>
 								</li>
-								<li>
-									<Link href={"/#day-1"}>
+								{/* <li>
+									<Link href={"/agenda-2022/#day-1"}>
 										<a onClick={toggleMobileNav}>CONFERENCE PROGRAM</a>
 									</Link>
 									<NestedUl>
 										{events.map((e, idx) => (
 											<li key={idx}>
-												{/* <Link href={`/#${e.id}`} passHref> */}
 												<a
 													onClick={() => {
 														openEventDayProgram(true, idx, e.id)
@@ -282,20 +365,17 @@ const Header: React.FC<IProps> = ({
 												>
 													#{idx + 1} DAY
 												</a>
-												{/* </Link> */}
 											</li>
 										))}
 									</NestedUl>
-								</li>
-								<li>
-									<Link href={"/#hack-2"}>
+								</li> */}
+								{/* <li>
+									<Link href={"/agenda-2022/#hack-2"}>
 										<a onClick={toggleMobileNav}>WOKSHOP PROGRAM</a>
 									</Link>
 									<NestedUl>
 										{hackatons.map((e, idx) => (
 											<li key={idx}>
-												{/* <Link href={`/#${e.id}`} passHref> */}
-
 												<a
 													onClick={() => {
 														openHackathonDayProgram(true, idx, e.id)
@@ -304,11 +384,10 @@ const Header: React.FC<IProps> = ({
 												>
 													#{idx + 2} DAY
 												</a>
-												{/* </Link> */}
 											</li>
 										))}
 									</NestedUl>
-								</li>
+								</li> */}
 
 								<li style={{ opacity: 0 }}>x</li>
 								<EmailLi>

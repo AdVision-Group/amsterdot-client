@@ -10,8 +10,8 @@ import BountyWinnerOverview from "../bounty-winner-overview/bounty-winner-overvi
 
 const BountyWinnersSection = () => {
 	const { scrollYProgress } = useViewportScroll()
-	const transformWINNERS = useTransform(scrollYProgress, [0.57, 0.7], [0, 60])
-	const transformBOUNTIES = useTransform(scrollYProgress, [0.57, 0.7], [0, -40])
+	const transformWINNERS = useTransform(scrollYProgress, [0.54, 0.9], [0, 60])
+	const transformBOUNTIES = useTransform(scrollYProgress, [0.54, 0.9], [0, -40])
 
 	const bounties = [
 		{
@@ -35,10 +35,10 @@ const BountyWinnersSection = () => {
 				width: 0,
 				height: 0,
 			},
-			prize: "< $25,000",
-			prize2: "in HDX / BSX",
+			prize: "$20,000",
+			prize2: "IN HDX + BSX",
 			winner: {
-				name: "TEAM ALFA",
+				name: "Morph - For Basilisk",
 				logo: {
 					href: "#",
 					src: "/assets/partners-v2/logos/basilisk-v2.png",
@@ -46,6 +46,29 @@ const BountyWinnersSection = () => {
 					width: 0,
 					height: 0,
 				},
+				members: [
+					{
+						name: "ANG",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					{
+						name: "Entity54",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					// {
+					// 	name: "",
+					// 	avatar: {
+					// 		src: "",
+					// 		alt: ""
+					// 	}
+					// },
+				],
 			},
 		},
 		{
@@ -69,10 +92,10 @@ const BountyWinnersSection = () => {
 				width: 0,
 				height: 0,
 			},
-			prize: "< $25,000",
+			prize: "$20,000",
 			prize2: "in BSX",
 			winner: {
-				name: "TEAM ALFA",
+				name: "KodaDot x BSX Marketplace",
 				logo: {
 					href: "#",
 					src: "/assets/partners-v2/logos/basilisk-v2.png",
@@ -80,6 +103,22 @@ const BountyWinnersSection = () => {
 					width: 0,
 					height: 0,
 				},
+				members: [
+					{
+						name: "vikiival",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					{
+						name: "yangwao",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+				],
 			},
 		},
 		{
@@ -114,6 +153,22 @@ const BountyWinnersSection = () => {
 					width: 0,
 					height: 0,
 				},
+				members: [
+					{
+						name: "",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					{
+						name: "",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+				],
 			},
 		},
 		{
@@ -148,7 +203,483 @@ const BountyWinnersSection = () => {
 					width: 0,
 					height: 0,
 				},
+				members: [
+					{
+						name: "",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+					{
+						name: "",
+						avatar: {
+							src: "",
+							alt: "",
+						},
+					},
+				],
 			},
+		},
+	]
+
+	const bountiesV2 = [
+		{
+			logo: {
+				href: "#",
+				src: "/assets/bounty-section/hydra-logo.svg",
+				alt: "hydra logo",
+				width: 0,
+				height: 0,
+			},
+			title: "Cross chain transfer SDK",
+			description:
+				"Create SDK for sending XCM transactions for polkadot parachains.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/3060",
+					label: "Submission",
+					price: "$20,000",
+					currency: "IN HDX + BSX",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Morph - For Basilisk",
+					members: [
+						{
+							name: "ANG",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/ang.png",
+								alt: "ang",
+							},
+						},
+						{
+							name: "Entity54",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/entity54.png",
+								alt: "Entity54",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/basilisk-v2.png",
+				alt: "basilisk logo",
+				width: 0,
+				height: 0,
+			},
+			title: "UI for an NFT marketplace in Basilisk",
+			description:
+				"The objective is to use a middleware to index and process historical node data and to build a user interface for the NFT infrastructure and its trading functionality we have built as set of Substrate pallets.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/3055",
+					label: "Submission",
+					price: "$20,000",
+					currency: "IN BSX",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "KodaDot x BSX Marketplace",
+					members: [
+						{
+							name: "vikiival",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/vikiival.png",
+								alt: "vikiival",
+							},
+						},
+						{
+							name: "yangwao",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/yangwao.png",
+								alt: "yangwao",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/bounty-section/acala-v2.png",
+				alt: "acala logo",
+				width: 0,
+				height: 0,
+			},
+			title: "EVM+ DAPP FOR AUSD YIELD",
+			description:
+				"Build a DApp in the Acala EVM+ enabling users to earn yield with aUSD (money market, DEX, etc.)",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/3073",
+					label: "Submission",
+					price: "$10,000",
+					currency: "IN aUSD",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "aUSD Yield Manager",
+					members: [
+						{
+							name: "ANG",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/ang.png",
+								alt: "ang",
+							},
+						},
+						{
+							name: "Entity54",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/entity54.png",
+								alt: "Entity54",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/bounty-section/acala-v2.png",
+				alt: "acala logo",
+				width: 0,
+				height: 0,
+			},
+			title: "CROSS-PARACHAIN DAPP",
+			description:
+				"Build a cross-parachain DApp that interacts with multiple parachains on Polkadot or Kusama.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/3059",
+					label: "Submission",
+					price: "$5,000",
+					currency: "IN aUSD",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Morph for Acala",
+					members: [
+						{
+							name: "ANG",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/ang.png",
+								alt: "ang",
+							},
+						},
+						{
+							name: "Entity54",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/entity54.png",
+								alt: "Entity54",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/bounty-section/acala-v2.png",
+				alt: "acala logo",
+				width: 0,
+				height: 0,
+			},
+			title: "FRONT-END, TOOLS, OR UTILITY SERVICE",
+			description:
+				"Build a DApp in the Acala EVM+ enabling users to earn yield with aUSD (money market, DEX, etc.)",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/3065",
+					label: "Submission",
+					price: "$5,000",
+					currency: "IN aUSD",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Karura Dash with Subsquid",
+					members: [
+						{
+							name: "timbotro",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/timbotro.png",
+								alt: "timbotro",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Interplay.png",
+				alt: "interlay logo",
+				width: 0,
+				height: 0,
+			},
+			title: "VAULT INTERFACE",
+			description:
+				"We have an interface for Vaults running on: https://kintsugi.interlay.io/. However, Vault operators might want to be able to have custom interfaces and see more information like current prices of Bitcoin, incoming oracle price changes, or see how they compare to other Vaults in terms of BTC locked. The idea for this challenge is to build a standalone dashboard for Vaults that operators can extend with their own information. You could do this as a browser-based interface, mobile interface, or terminal interface.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/2991",
+					label: "Submission 1",
+					price: "$6,125",
+					currency: "IN KINT/INTR",
+				},
+				{
+					link: "https://dorahacks.io/buidl/3056",
+					label: "Submission 2",
+					price: "$1,125",
+					currency: "IN KINT/INTR",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Kintsugi Vault Runner cli",
+					members: [
+						{
+							name: "timbotro",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/timbotro.png",
+								alt: "timbotro",
+							},
+						},
+					],
+				},
+				{
+					label: "2nd place",
+					name: "Interbtc vault cli",
+					members: [
+						{
+							name: "Kint0Sens",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/kint0sens.png",
+								alt: "Kint0Sens",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Interplay.png",
+				alt: "interlay logo",
+				width: 0,
+				height: 0,
+			},
+			title: "TRADING/ARBITRAGE BOTS",
+			description:
+				"As with most DeFi systems, it's possible to make a profit by interacting with the Interlay/Kintsugi bridge. It’s possible to automate capturing these profits by using bots. The challenge here is to develop a bot that can capture profits by observing on and off-chain data and execute actions.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/3049",
+					label: "Submission",
+					price: "$4,375",
+					currency: "IN KINT/INTR",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Interlay PremiumBOT",
+					members: [
+						{
+							name: "Kint0Sens",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/kint0sens.png",
+								alt: "Kint0Sens",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Interplay.png",
+				alt: "interlay logo",
+				width: 0,
+				height: 0,
+			},
+			title: "DASHBOARD AND SYSTEM INFORMATION",
+			description:
+				"It's better to know what's going on. Bridges are complex and displaying all the information of the system health, how much asset are currently bridged, and if the system is secure is vital to understand for the community. We are looking for builders that can take our squid-powered dashboard to a new level.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/3064",
+					label: "Submission",
+					price: "$6,125",
+					currency: "IN KINT/INTR",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Kintsugi-X Blockchain Analysis",
+					members: [
+						{
+							name: "mafux777",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/mafux777.png",
+								alt: "mafux777",
+							},
+						},
+						{
+							name: "caron",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/caron.png",
+								alt: "caron",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Subsquid.png",
+				alt: "Subsquid logo",
+				width: 0,
+				height: 0,
+			},
+			title: "KARURA DEFI DASHBOARD",
+			description:
+				"The winning team has to use Subsquid’s SDK to extract and process on-chain data, and then build a lightweight Web UI to access and display it.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			submissions: [
+				{
+					link: "https://dorahacks.io/buidl/3076",
+					label: "Submission",
+					price: "$2,000",
+					currency: "IN USDT",
+				},
+				{
+					link: "https://dorahacks.io/buidl/3065",
+					label: "Submission",
+					price: "$1,000",
+					currency: "IN USDT",
+				},
+			],
+			winners: [
+				{
+					label: "Winner",
+					name: "Karura DeFi Dashboard",
+					members: [
+						{
+							name: "Fc",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/fc.png",
+								alt: "Fc",
+							},
+						},
+					],
+				},
+				{
+					label: "2nd place",
+					name: "SquidGain",
+					members: [
+						{
+							name: "timbotro",
+							avatar: {
+								src: "/assets/scoreboard-section/avatars/timbotro.png",
+								alt: "timbotro",
+							},
+						},
+					],
+				},
+			],
+		},
+	]
+
+	const bountiesV3 = [
+		{
+			logo: {
+				href: "#",
+				src: "/assets/partners-v2/logos/Subsquid.png",
+				alt: "Subsquid logo",
+				width: 0,
+				height: 0,
+			},
+			title: "KARURA DEFI DASHBOARD",
+			description:
+				"The winning team has to use Subsquid’s SDK to extract and process on-chain data, and then build a lightweight Web UI to access and display it.",
+			submissionIcon: {
+				src: "/assets/scoreboard-section/submission_icon.svg",
+				alt: "submission icon",
+			},
+			// submissions: [
+			// 	{
+			// 		link: "https://dorahacks.io/buidl/3076",
+			// 		label: "Submission",
+			// 		price: "$2,000",
+			// 		currency: "IN USDT",
+			// 	},
+			// 	{
+			// 		link: "https://dorahacks.io/buidl/3065",
+			// 		label: "Submission",
+			// 		price: "$1,000",
+			// 		currency: "IN USDT",
+			// 	},
+			// ],
 		},
 	]
 
@@ -171,7 +702,7 @@ const BountyWinnersSection = () => {
 					/>
 				</motion.figure>
 				{/* <h2 className="winners">Winners</h2> */}
-				<Link href={"/#day-1"} passHref>
+				<Link href={"/hackathon-2022/#bounty-directory"} passHref>
 					<a className="arrow">
 						<ArrowContainer
 							animate={
@@ -210,20 +741,36 @@ const BountyWinnersSection = () => {
 				</motion.figure>
 			</TitleContainer>
 
-			<BountiesDirectory>
-				{bounties.map((bounty, idx) => (
+			<BountiesDirectory id="bounty-directory">
+				{bountiesV2.map((bounty, idx) => (
 					<BountyWinnerOverview key={idx} {...bounty} />
 				))}
 			</BountiesDirectory>
+
+			{/* <Border />
+
+			<BountiesDirectory2>
+				{bountiesV3.map((bounty, idx) => (
+					<BountyWinnerOverview key={idx} {...bounty} />
+				))}
+			</BountiesDirectory2> */}
 		</BountyWinnersSectionContainer>
 	)
 }
 
 export default BountyWinnersSection
 
+const Border = styled.div`
+	width: 100%;
+	height: 1px;
+	background-color: #707070;
+	margin: 6rem 0;
+`
+
 const BountiesDirectory = styled.div`
 	width: 100%;
 	/* max-width: 130rem; */
+	scroll-margin-top: 20rem;
 
 	margin: 0 auto;
 
@@ -236,6 +783,27 @@ const BountiesDirectory = styled.div`
 		grid-template-columns: 1fr 1fr;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin-top: -5rem;
+			/* grid-template-columns: 1fr 1fr 1fr; */
+		}
+	}
+`
+
+const BountiesDirectory2 = styled.div`
+	width: 100%;
+	/* max-width: 130rem; */
+	scroll-margin-top: 20rem;
+
+	margin: 0 auto;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 4rem;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		margin-top: 0rem;
+		grid-template-columns: 1fr 1fr;
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* margin-top: -5rem; */
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}

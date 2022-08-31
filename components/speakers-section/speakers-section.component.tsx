@@ -4,44 +4,16 @@ import styled from "styled-components"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 
 // Components
-import Image from "next/image"
-import Link from "next/link"
+// import Image from "next/image"
+// import Link from "next/link"
 import SpeakerOverview from "../speaker-overview/speaker-overview.component"
 
 const SpeakersSection: React.FC = () => {
 	const { scrollYProgress } = useViewportScroll()
-	const transformSPEA = useTransform(scrollYProgress, [0.68, 0.82], [0, 60])
-	const transformKERS = useTransform(scrollYProgress, [0.68, 0.82], [0, -40])
+	// const transformSPEA = useTransform(scrollYProgress, [0.68, 0.82], [0, 60])
+	// const transformKERS = useTransform(scrollYProgress, [0.68, 0.82], [0, -40])
 
 	const speakers = [
-		{
-			image: {
-				src: "/assets/speakers-section/speaker-placeholder.png",
-				alt: "speaker placeholder",
-			},
-			name: "John doe",
-			logo: {
-				src: "/assets/speakers-section/logo-placeholder.png",
-				alt: "logo placeholder",
-				// width: 0,
-				// height: 0,
-			},
-			url: "https://www.google.com/",
-		},
-		{
-			image: {
-				src: "/assets/speakers-section/speaker-placeholder.png",
-				alt: "speaker placeholder",
-			},
-			name: "John doe",
-			logo: {
-				src: "/assets/speakers-section/logo-placeholder.png",
-				alt: "logo placeholder",
-				// width: 0,
-				// height: 0,
-			},
-			url: "https://www.google.com/",
-		},
 		{
 			image: {
 				src: "/assets/speakers-section/speaker-placeholder.png",
@@ -101,9 +73,10 @@ const SpeakersSection: React.FC = () => {
 	]
 
 	return (
-		<SpeakersSectionContainer>
+		<SpeakersSectionContainer id="speakers">
 			<TitleContainer>
-				<motion.figure
+				<h3>Speakers</h3>
+				{/* <motion.figure
 					style={{
 						x: transformSPEA,
 					}}
@@ -153,7 +126,7 @@ const SpeakersSection: React.FC = () => {
 						width={50}
 						height={25}
 					/>
-				</motion.figure>
+				</motion.figure> */}
 			</TitleContainer>
 			<SpeakersDirectory>
 				{speakers.map(({ ...props }, idx) => (
@@ -170,16 +143,71 @@ const SpeakersDirectory = styled.div`
 	display: grid;
 	/* flex-wrap: wrap; */
 	grid-template-columns: repeat(1, 1fr);
-	justify-items: center;
-	gap: 1.5rem;
+	/* justify-items: center; */
+	/* gap: 1.5rem; */
+	.speaker {
+		border-bottom: 1px solid #707070;
+	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		grid-template-columns: repeat(2, 1fr);
 
+		.speaker {
+			border-bottom: unset;
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				/* border-right: 0.5px solid #707070; */
+				border-bottom: 1px solid #707070;
+			}
+			&:nth-child(2n) {
+				border-left: 1px solid #707070;
+				/* border-right: 1px solid #707070; */
+				/* border-bottom: 1px solid #707070; */
+			}
+		}
+
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			grid-template-columns: repeat(3, 1fr);
+			.speaker {
+				&:nth-child(2n) {
+					border-left: unset;
+					/* border-right: 1px solid #707070; */
+					/* border-bottom: 1px solid #707070; */
+				}
+
+				&:nth-child(2) {
+					border-left: 1px solid #707070;
+					border-right: 1px solid #707070;
+				}
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					/* border-left: 0.5px solid #707070; */
+					/* border-right: 1px solid #707070; */
+					border-bottom: 1px solid #707070;
+				}
+			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 				grid-template-columns: repeat(4, 1fr);
+				.speaker {
+					&:nth-child(2) {
+						border-left: 1px solid #707070;
+						border-right: 0.5px solid #707070;
+					}
+					&:nth-child(3) {
+						border-left: 0.5px solid #707070;
+						border-right: 1px solid #707070;
+					}
+
+					&:nth-child(1),
+					&:nth-child(2),
+					&:nth-child(3) {
+						/* border-left: 0.5px solid #707070; */
+						/* border-right: 1px solid #707070; */
+						border-bottom: unset;
+					}
+				}
 			}
 		}
 	}
@@ -189,23 +217,30 @@ const SpeakersSectionContainer = styled.section`
 	padding: 0rem 1.5rem 2rem;
 	scroll-margin-top: 10rem;
 	max-width: 135rem;
-	margin: 0 auto 10rem;
+	margin: 0 auto 0rem;
 
 	position: relative;
 	color: ${({ theme }) => theme.fonts.primary};
 `
 
 const TitleContainer = styled.div`
-	margin-bottom: -10rem;
+	/* margin-bottom: -10rem; */
 	max-width: 86rem;
-	margin: 0 auto;
+	margin: 4rem auto 2rem;
 
-	display: grid;
-	grid-template-columns: 14rem 1fr;
+	/* display: grid;
+	grid-template-columns: 14rem 1fr; */
+
+	h3 {
+		font-size: 6rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		text-align: center;
+	}
 
 	.spea {
 		grid-column: 1/3;
-		margin-bottom: -5rem;
+		/* margin-bottom: -5rem; */
 	}
 
 	.arrow {
@@ -214,11 +249,14 @@ const TitleContainer = styled.div`
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		grid-template-columns: 23rem 1fr;
+		/* grid-template-columns: 23rem 1fr; */
+		h3 {
+			font-size: 8rem;
+		}
 
 		.spea {
 			grid-column: 1/3;
-			margin-bottom: -10rem;
+			/* margin-bottom: -10rem; */
 		}
 	}
 `

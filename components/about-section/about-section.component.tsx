@@ -14,9 +14,9 @@ const AboutSection = () => {
 	// const tr
 	// ansformOpacity = useTransform(scrollYProgress, [0.13, 0.2], [1, 0])
 
-	const transformYDO = useTransform(scrollYProgress, [0.27, 0.42], [0, 60])
+	const transformYDO = useTransform(scrollYProgress, [0.01, 0.2], [0, 60])
 
-	const transformYT = useTransform(scrollYProgress, [0.27, 0.42], [0, -40])
+	const transformYT = useTransform(scrollYProgress, [0.01, 0.2], [0, -40])
 
 	const partners = [
 		{
@@ -147,8 +147,8 @@ const AboutSection = () => {
 					<ContentContainer>
 						<h2>WHAT IS amsterDOT?</h2>
 						<p>
-							4 days of conf & hack sessions organized by some of the leading
-							projects of the Polkadot and Kusama ecosystems.
+							Conf & hack sessions organized by some of the leading projects of
+							the Polkadot and Kusama ecosystems.
 						</p>
 						<PartnersContainer>
 							{partners.map((i, idx) => (
@@ -172,14 +172,17 @@ const AboutSection = () => {
 							Targeting the wider crypto community.
 						</p>
 						<ButtonsContainer>
-							<Link href={"/#day-1"}>
+							<Link href={"/#conference"} passHref>
 								<a>
-									<Button>CONF PROGRAM</Button>
+									<Button>
+										{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
+										<span>CONFERENCE 2022</span>
+									</Button>
 								</a>
 							</Link>
-							<Link href={"/#hack-2"}>
+							<Link href={"/hackathon-2022"} passHref>
 								<a>
-									<Button outline={"true"}>HACK PROGRAM</Button>
+									<Button outline={"true"}>HACKATHON 2022</Button>
 								</a>
 							</Link>
 						</ButtonsContainer>
@@ -200,7 +203,7 @@ const AboutSection = () => {
 							// }}
 						>
 							<Image
-								src={"/assets/anim-v2.gif"}
+								src={"/assets/placeholder.png"}
 								alt="red circle"
 								layout="responsive"
 								width={100}
@@ -339,9 +342,9 @@ const SectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin: 20rem 0 10rem;
+		margin: 20rem 0 15rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin: 12rem 0 10rem;
+			margin: 12rem 0 20rem;
 
 			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				align-items: center;

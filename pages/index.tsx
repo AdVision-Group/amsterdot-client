@@ -7,39 +7,22 @@ import styled from "styled-components"
 
 // Components
 import Head from "next/head"
-// import Link from "next/link"
 import Image from "next/image"
 import Header from "../components/header/header.component"
-// import EventOverview from "../components/event-overview/event-overview.component"
-import HeroSection from "../components/hero-section/hero-section.component"
-import AboutSection from "../components/about-section/about-section.component"
+import AgendaHeroSection from "../components/agenda-hero-section/agenda-hero-section.component"
 import EventSection from "../components/event-section/event-section.component"
+import AboutSection from "../components/about-section/about-section.component"
 import FooterSection from "../components/footer-section/footer-section.component"
 import Accordion from "../components/accordion/accordion.component"
 import WorkshopSection from "../components/workshop-section/workshop-section.component"
-import HackathonSection from "../components/hackathon-section/hackathon-section.component"
-import HackatonContentSection from "../components/hackaton-content-section/hackaton-content-section.component"
-import BountySection from "../components/bounties-section/bounties-section.component"
 import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
-// import PhotosSection from "../components/photos-section/photos-section.component"
-// import SpeakersSection from "../components/speakers-section/speakers-section.component"
-// import BountyWinnersSection from "../components/bounty-winners-section/bounty-winners-section.component"
-import ScoreboardSection from "../components/scoreboard-section/scoreboard-section.component"
-// import PricepoolSection from "../components/pricepool-section/pricepool-section.component"
+import PhotosSection from "../components/photos-section/photos-section.component"
+import SpeakersSection from "../components/speakers-section/speakers-section.component"
 
 // Hooks
 import { useRouter } from "next/router"
-import {
-	motion,
-	useViewportScroll,
-	useTransform,
-	// useSpring,
-} from "framer-motion"
-import {
-	// useNumber,
-	useMap,
-	//  useWindowSize
-} from "react-use"
+import { motion, useViewportScroll, useTransform } from "framer-motion"
+import { useMap } from "react-use"
 
 // Data
 import { events, hackatons } from "../utils/data"
@@ -47,18 +30,9 @@ import { events, hackatons } from "../utils/data"
 // Icons
 import { AiFillGithub } from "react-icons/ai"
 
-const Home: NextPage = () => {
+const AgendaPage: NextPage = () => {
 	const { push } = useRouter()
-	// const { width } = useWindowSize()
-	// const physics = { damping: 5, mass: 0.17, stiffness: 55 }
 
-	// CONFERENCE refs
-	// const containerRef = useRef<HTMLDivElement>(null)
-	// const sectionRef = useRef<HTMLDivElement>(null)
-
-	// const [num, { set }] = useNumber(0)
-
-	// Scroll position
 	const { scrollYProgress } = useViewportScroll()
 
 	const [event, { setAll }] = useMap({
@@ -74,65 +48,11 @@ const Home: NextPage = () => {
 		})),
 	})
 
-	// CONFERENCE horizontal scroll
-	// const transform = useTransform(scrollYProgress, [0.25, 0.55], [0, -num])
-	// const spring = useSpring(transform, physics)
-
-	// CONFERENCE scroll to view
-	// const transformY = useTransform(scrollYProgress, [0.55, 0.75], [0, -1100])
-
-	// const transformOpacityCONF = useTransform(
-	// 	scrollYProgress,
-	// 	[0.19, 0.25, 1, 1],
-	// 	[0, 1, 1, 1]
-	// )
-
-	// const springY = useSpring(transformY, physics)
-	// HACKATHON refs
-	// const containerRefH = useRef<HTMLDivElement>(null)
-	// const sectionRefH = useRef<HTMLDivElement>(null)
-
-	// const [numH, { set: setH }] = useNumber(0)
-
-	// HACKATHON horizontal scroll
-	// const transformH = useTransform(scrollYProgress, [0.7, 1], [0, -numH])
-	// const springH = useSpring(transformH, physics)
-
-	// HACKATHON scroll to view
-	// const transformYH = useTransform(
-	// 	scrollYProgress,
-	// 	[0.5, 0.7, 1, 1],
-	// 	[1100, 0, 0, 0]
-	// )
-
-	// const transformOpacityHACK = useTransform(
-	// 	scrollYProgress,
-	// 	[0.65, 0.7, 1, 1],
-	// 	[0, 1, 1, 1]
-	// )
-
-	scrollYProgress.onChange((e) => console.log(e))
-
-	// Set horizontal container width on change
-	// useEffect(() => {
-	// 	if (sectionRef.current) {
-	// 		const finalNum = sectionRef.current.scrollWidth
-	// 		set(finalNum * events.length)
-	// 	}
-	// }, [width, sectionRef, set])
-
-	// useEffect(() => {
-	// 	if (sectionRefH.current) {
-	// 		const finalNum = sectionRefH.current.scrollWidth
-	// 		setH(finalNum * (hackatons.length + 1))
-	// 	}
-	// }, [width, sectionRefH, setH])
+	// scrollYProgress.onChange((e) => console.log(e))
 
 	const transformYAM = useTransform(scrollYProgress, [0, 0.14], [0, 150])
 	const transformYST = useTransform(scrollYProgress, [0, 0.14], [20, -100])
 	const transformYER = useTransform(scrollYProgress, [0, 0.14], [0, -100])
-
-	// console.log(event)
 
 	const openEventDayProgram = (
 		showContent: boolean,
@@ -216,6 +136,19 @@ const Home: NextPage = () => {
 			<Header
 				openEventDayProgram={openEventDayProgram}
 				openHackathonDayProgram={openHackathonDayProgram}
+				ctas={[
+					{
+						label: "CONFERENCE 2022",
+						slug: "#",
+						outline: false,
+						disabledHover: true,
+					},
+					{
+						label: "HACKATHON 2022",
+						slug: "/hackathon-2022",
+						outline: true,
+					},
+				]}
 			/>
 
 			<WatermarkContainer>
@@ -286,19 +219,12 @@ const Home: NextPage = () => {
 				</WatermarkLetters>
 			</WatermarkContainer>
 
-			<HeroSection />
-			<ScoreboardSection />
-			<HackathonSection />
-			<HackatonContentSection />
+			<AgendaHeroSection />
 			<AboutSection />
-			{/* <PricepoolSection /> */}
-			<BountySection />
 			<AftermovieSection />
-			{/* <PhotosSection /> */}
-			{/* <BountyWinnersSection /> */}
-			{/* <SpeakersSection /> */}
+			<PhotosSection />
 			<EventSection />
-
+			{/* <SpeakersSection /> */}
 			<SectionContainer>
 				{events.map((e, idx) => (
 					<Accordion
@@ -312,8 +238,6 @@ const Home: NextPage = () => {
 					/>
 				))}
 			</SectionContainer>
-
-			{/* <HackathonSection /> */}
 
 			<WorkshopSection />
 
@@ -332,7 +256,12 @@ const Home: NextPage = () => {
 				))}
 			</SectionContainer>
 
-			<FooterSection />
+			<FooterSection
+				transformSEERange={[0.85, 1]}
+				transformYOURange={[0.85, 1]}
+				transformTHERERange={[0.85, 1]}
+				transformYEARRange={[0.85, 1]}
+			/>
 			<Footer>
 				<a
 					href="https://github.com/AdVision-Group/amsterdot-client"
@@ -348,7 +277,7 @@ const Home: NextPage = () => {
 	)
 }
 
-export default Home
+export default AgendaPage
 
 const Footer = styled.footer`
 	display: flex;
@@ -357,88 +286,6 @@ const Footer = styled.footer`
 	figure {
 		color: ${({ theme }) => theme.color.primary};
 		font-size: 3rem;
-	}
-`
-
-// const Circle1 = styled(motion.figure)`
-// 	position: absolute;
-// 	z-index: -3;
-
-// 	width: 5rem;
-// 	heigth: 5rem;
-// 	left: 50%;
-// 	top: 10%;
-
-// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-// 		width: 10rem;
-// 		heigth: 10rem;
-// 	}
-// `
-const Circle2 = styled(motion.figure)`
-	position: absolute;
-	z-index: -3;
-
-	width: 6rem;
-	heigth: 6rem;
-	top: 5rem;
-	right: 6rem;
-	border-radius: 50%;
-	overflow: hidden;
-
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		width: 12rem;
-		heigth: 12rem;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-			top: 5rem;
-			right: 5rem;
-		}
-	}
-`
-
-// const Circle3 = styled(motion.figure)`
-// 	display: none;
-// 	position: absolute;
-// 	z-index: -3;
-
-// 	width: 6rem;
-// 	heigth: 6rem;
-// 	bottom: 3rem;
-// 	left: 3rem;
-
-// 	border-radius: 50%;
-// 	overflow: hidden;
-
-// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-// 		display: block;
-// 		width: 12rem;
-// 		heigth: 12rem;
-// 	}
-// `
-const ArrowContainer = styled(motion.figure)`
-	position: absolute;
-	z-index: 111;
-
-	width: 6rem;
-	heigth: 6rem;
-	bottom: 22rem;
-	right: 3rem;
-	/* display: none; */
-
-	@media all and (max-height: 650px) {
-		display: none;
-	}
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		right: unset;
-		left: 3rem;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			display: block;
-			width: 8rem;
-			heigth: 8rem;
-			bottom: 6rem;
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-				bottom: 25rem;
-			}
-		}
 	}
 `
 

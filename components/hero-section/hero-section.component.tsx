@@ -9,7 +9,7 @@ import Link from "next/link"
 import Button from "../button/button.component"
 
 // Hooks
-import { useToggle } from "react-use"
+// import { useToggle } from "react-use"
 
 const HeroSection = () => {
 	const partners = [
@@ -95,7 +95,7 @@ const HeroSection = () => {
 
 	return (
 		<SectionContainer>
-			<Link href={"/#hackaton-content"} passHref>
+			<Link href={"/hackathon-2022/#scoreboard"} passHref>
 				<a>
 					<ArrowContainer
 					// animate={{
@@ -175,11 +175,11 @@ const HeroSection = () => {
 					</PlayButtonContainer> */}
 					<HeadContainer>
 						<h1>
-							<span>ONLINE</span>
 							<span>HACK</span>
+							<span>2022</span>
 						</h1>
 						<p>
-							Selected winners will be invited to present at{" "}
+							Selected winners will present at{" "}
 							<a
 								href="https://decoded.polkadot.network/"
 								rel="noopener noreferrer"
@@ -198,7 +198,6 @@ const HeroSection = () => {
 							<span />
 							<span>06/20</span>
 						</p>
-						{/* <p>&nbsp;</p> */}
 						<p>2022</p>
 					</DateContainer>
 					<ImageContainer>
@@ -216,23 +215,23 @@ const HeroSection = () => {
 						</figure>
 					</ImageContainer>
 					<ButtonsContainer>
-						<Link href={"/#scoreboard"} passHref>
+						<Link href={"/"} passHref>
 							<a>
-								<Button>
+								<Button outline>
 									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
-									<span>HACK SCOREBOARD</span>
+									CONFERENCE 2022
 								</Button>
 							</a>
 						</Link>
-						{/* <Link href={"/#bounties"} passHref>
+						<Link href={"#"} passHref>
 							<a>
-								<Button outline={"true"}>BOUNTIES</Button>
+								<Button disabledHover>HACKATHON 2022</Button>
 							</a>
-						</Link> */}
+						</Link>
 					</ButtonsContainer>
-					{/* <PlaceContainer>
-						<p>IN AMSTERDAM / NETHERLANDS</p>
-					</PlaceContainer> */}
+					<PlaceContainer>
+						<p>ONLINE</p>
+					</PlaceContainer>
 				</ContentContainer>
 				<PartnersContainer>
 					{partners.map((partner, idx) => (
@@ -263,6 +262,11 @@ const HeroSection = () => {
 							</motion.figure>
 						</a>
 					))}
+					{/* <PartnersOverlay>
+						<a href="#" rel="noopener noreferrer" target="_blank">
+							APPLY TO SPONSOR
+						</a>
+					</PartnersOverlay> */}
 				</PartnersContainer>
 			</Container>
 		</SectionContainer>
@@ -409,11 +413,12 @@ const ContentContainer = styled.div`
 	/* "p p"; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		grid-template-columns: auto 1fr 10rem;
+		grid-template-columns: auto 1fr auto 10rem;
 		grid-template-rows: auto auto;
 		grid-template-areas:
-			"h h i d d"
-			"b b i p p";
+			"h i i d"
+			"h i i d"
+			"b b p p";
 		min-height: 45rem;
 		padding: 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -448,7 +453,7 @@ const HeadContainer = styled.div`
 
 	p {
 		/* margin-top: 2rem; */
-		border-top: 1px solid #fff;
+		/* border-top: 1px solid #fff; */
 		padding-top: 2rem;
 		margin-bottom: 2rem;
 
@@ -468,7 +473,7 @@ const HeadContainer = styled.div`
 				font-size: 8rem;
 				line-height: 1.1;
 			}
-			border-bottom: 1px solid #fff;
+			/* border-bottom: 1px solid #fff; */
 		}
 		p {
 			border-top: unset;
@@ -536,7 +541,6 @@ const DateContainer = styled.div`
 	}
 
 	p:nth-of-type(1) {
-		/* border: 1px solid green; */
 		display: flex;
 		align-items: center;
 
@@ -553,7 +557,6 @@ const DateContainer = styled.div`
 	}
 
 	p:nth-of-type(2) {
-		/* border: 1px solid green; */
 		display: flex;
 		align-items: center;
 
@@ -568,8 +571,10 @@ const DateContainer = styled.div`
 			}
 		}
 	}
+	/* p:nth-of-type(1) {
+		font-size: 3rem;
+	} */
 	p:nth-of-type(3) {
-		/* border: 1px solid green; */
 		font-size: 3.5rem;
 	}
 
@@ -602,21 +607,26 @@ const ButtonsContainer = styled.div`
 	gap: 1rem;
 	align-self: end;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	width: 100%;
 	/* margin: 2rem 0; */
 
+	a {
+		width: 100%;
+	}
+
 	button {
-		position: absolute;
+		/* position: absolute;
 		display: flex;
 		flex-direction: column;
-		top: 65%;
-		width: calc(100% - 3rem);
+		top: 65%; */
+		/* width: calc(100% - 3rem); */
 		font-family: "Avenir Next";
+		width: 100%;
 
 		font-size: 2rem;
 		font-weight: 700;
-		padding: 1rem 1rem 1rem;
+		padding: 1.4rem 1rem 1rem;
 
 		span {
 			display: block;
@@ -637,7 +647,7 @@ const ButtonsContainer = styled.div`
 		gap: 2rem;
 
 		button {
-			font-size: 2.5rem;
+			font-size: 2rem;
 			line-height: 1;
 			/* margin-bottom: 1rem; */
 		}
@@ -647,6 +657,10 @@ const ButtonsContainer = styled.div`
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			a {
+				width: unset;
+			}
+
 			button {
 				width: unset;
 				position: relative;
@@ -655,7 +669,8 @@ const ButtonsContainer = styled.div`
 				top: unset;
 				font-weight: 400;
 				/* font-size: 3rem; */
-				padding: 1.8rem;
+				padding: 1.6rem 2rem 1.2rem;
+				/* padding: 1.8rem; */
 
 				span {
 					display: block;
@@ -678,7 +693,7 @@ const ButtonsContainer = styled.div`
 `
 
 const PlaceContainer = styled.div`
-	/* grid-area: p; */
+	grid-area: p;
 	align-self: end;
 	justify-self: end;
 	text-align: right;
@@ -693,8 +708,8 @@ const PlaceContainer = styled.div`
 
 	position: absolute;
 	transform: rotate(-90deg);
-	right: -10rem;
-	bottom: 21rem;
+	right: -0.5rem;
+	bottom: 20rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: relative;
@@ -736,7 +751,7 @@ const PartnersContainer = styled.div`
 	gap: 1rem;
 	margin-top: 2rem;
 	padding-top: 0.5rem;
-	border-top: 1px solid #fff;
+	/* border-top: 1px solid #fff; */
 
 	figure {
 		/* border: 1px solid green; */
@@ -744,6 +759,7 @@ const PartnersContainer = styled.div`
 		max-width: 10rem;
 		/* height: 3rem; */
 		position: relative;
+		/* filter: blur(2rem); */
 	}
 	/* max-width: 30rem;
 	width: 100%;
@@ -754,4 +770,23 @@ const PartnersContainer = styled.div`
 			max-width: 50rem;
 		}
 	} */
+`
+
+const PartnersOverlay = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+		font-size: 1.5rem;
+	}
 `

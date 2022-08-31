@@ -192,8 +192,8 @@ const ScoreboardSection: React.FC = () => {
 	]
 
 	return (
-		<React.Fragment>
-			<ScoreboardSectionContainer id="scoreboard">
+		<Container id="scoreboard">
+			<ScoreboardSectionContainer>
 				<TitleContainer>
 					<figure>
 						<Image
@@ -285,17 +285,20 @@ const ScoreboardSection: React.FC = () => {
 					))}
 				</PartnersContainer>
 			</JuryCompositionContainer>
-		</React.Fragment>
+		</Container>
 	)
 }
 
 export default ScoreboardSection
 
+const Container = styled.div`
+	scroll-margin-top: 10rem;
+`
+
 const ScoreboardSectionContainer = styled.div`
 	padding: 0rem 1.5rem 2rem;
-	scroll-margin-top: 10rem;
 	max-width: 135rem;
-	margin: 0 auto 5rem;
+	margin: 10rem auto 5rem;
 	overflow: hidden;
 
 	position: relative;

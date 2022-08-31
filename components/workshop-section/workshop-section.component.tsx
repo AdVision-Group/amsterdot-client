@@ -10,8 +10,8 @@ import Image from "next/image"
 const WorkshopSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformWORK = useTransform(scrollYProgress, [0.87, 1.01], [10, 70])
-	const transformSHOP = useTransform(scrollYProgress, [0.87, 1.01], [20, -50])
+	const transformWORK = useTransform(scrollYProgress, [0.6, 0.95], [10, 50])
+	const transformSHOP = useTransform(scrollYProgress, [0.6, 0.95], [40, 0])
 
 	return (
 		<EventSectionContainer>
@@ -62,7 +62,7 @@ const WorkshopSection = () => {
 							height={70}
 						/>
 					</SHOPContainer>
-					<Link href={"/#hack-2"} passHref>
+					<Link href={"/agenda-2022/#hack-2"} passHref>
 						<a>
 							<ArrowContainer
 							// animate={{
