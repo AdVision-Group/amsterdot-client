@@ -183,15 +183,15 @@ const AboutSection = ({transformYDORange, transformYTRange}: IProps) => {
 								<a>
 									<Button>
 										{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
-										<span>APPLY TO SPEAK</span>
+										<span>CONFERENCE 2022</span>
 									</Button>
 								</a>
 							</Link>
-							{/* <Link href={"/hackathon-2022"} passHref>
+							<Link href={"/hackathon-2022"} passHref>
 								<a>
 									<Button outline={"true"}>HACKATHON 2022</Button>
 								</a>
-							</Link> */}
+							</Link>
 						</ButtonsContainer>
 						{/* <ButtonsContainer>
 							<Button>CONF PROGRAMME</Button>

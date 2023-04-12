@@ -176,7 +176,7 @@ const HeroSection = () => {
 					<HeadContainer>
 						<h1>
 							<span>CONF</span>
-							<span>2023</span>
+							<span>2022</span>
 						</h1>
 						{/* <p>
 							Selected winners will present at{" "}
@@ -191,16 +191,16 @@ const HeroSection = () => {
 					</HeadContainer>
 					<DateContainer>
 						<p>
-							<span>05/29</span>
+							<span>04/20</span>
 							<span />
 						</p>
 						<p>
 							<span />
-							<span>05/31</span>
+							<span>04/23</span>
 						</p>
 						{/* <p>XXXX</p> */}
 						{/* <p>&nbsp;</p> */}
-						<p>2023</p>
+						<p>2022</p>
 					</DateContainer>
 					{/* <DateContainer>
 						<p>
@@ -230,16 +230,17 @@ const HeroSection = () => {
 					<ButtonsContainer>
 						<Link href={"#"} passHref>
 							<a>
-								<Button disabledHover>APPLY TO SPEAK</Button>
+								<Button disabledHover>CONFERENCE 2022</Button>
 							</a>
 						</Link>
-						{/* <Link href={"/hackathon-2022"} passHref>
+						<Link href={"/hackathon-2022"} passHref>
 							<a>
 								<Button outline={"true"}>
+									{/* <span>$330k + COMBINED</span> <span>prize pool</span> */}
 									<span>HACKATHON 2022</span>
 								</Button>
 							</a>
-						</Link> */}
+						</Link>
 					</ButtonsContainer>
 					<PlaceContainer>
 						<p>IN AMSTERDAM / NETHERLANDS</p>
