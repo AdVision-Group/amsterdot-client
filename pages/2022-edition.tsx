@@ -9,14 +9,14 @@ import styled from "styled-components"
 import Head from "next/head"
 import Image from "next/image"
 import Header from "../components/header/header.component"
-import AgendaHeroSection from "../components/agenda-hero-section/agenda-hero-section.component"
-// import EventSection from "../components/event-section/event-section.component"
-import AboutSection from "../components/about-section/about-section.component"
-// import FooterSection from "../components/footer-section/footer-section.component"
-// import Accordion from "../components/accordion/accordion.component"
-// import WorkshopSection from "../components/workshop-section/workshop-section.component"
-// import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
-// import PhotosSection from "../components/photos-section/photos-section.component"
+import AgendaHeroSection from "../components/agenda-hero-section-2022/agenda-hero-section-2022.component"
+import EventSection from "../components/event-section/event-section.component"
+import AboutSection from "../components/about-section-2022/about-section-2022.component"
+import FooterSection from "../components/footer-section/footer-section.component"
+import Accordion from "../components/accordion/accordion.component"
+import WorkshopSection from "../components/workshop-section/workshop-section.component"
+import AftermovieSection from "../components/aftermovie-section/aftermovie-section.component"
+import PhotosSection from "../components/photos-section/photos-section.component"
 // import SpeakersSection from "../components/speakers-section/speakers-section.component"
 
 // Hooks
@@ -28,7 +28,7 @@ import { useMap } from "react-use"
 import { events, hackatons } from "../utils/data"
 
 // Icons
-// import { AiFillGithub } from "react-icons/ai"
+import { AiFillGithub } from "react-icons/ai"
 
 const AgendaPage: NextPage = () => {
 	const { push } = useRouter()
@@ -50,9 +50,9 @@ const AgendaPage: NextPage = () => {
 
 	// scrollYProgress.onChange((e) => console.log(e))
 
-	const transformYAM = useTransform(scrollYProgress, [0, 0.94], [0, 150])
-	const transformYST = useTransform(scrollYProgress, [0, 0.94], [20, -100])
-	const transformYER = useTransform(scrollYProgress, [0, 0.94], [0, -100])
+	const transformYAM = useTransform(scrollYProgress, [0, 0.14], [0, 150])
+	const transformYST = useTransform(scrollYProgress, [0, 0.14], [20, -100])
+	const transformYER = useTransform(scrollYProgress, [0, 0.14], [0, -100])
 
 	const openEventDayProgram = (
 		showContent: boolean,
@@ -138,16 +138,16 @@ const AgendaPage: NextPage = () => {
 				openHackathonDayProgram={openHackathonDayProgram}
 				ctas={[
 					{
-						label: "APPLY TO SPEAK",
+						label: "CONFERENCE 2022",
 						slug: "#",
 						outline: false,
-						// disabledHover: true,
+						disabledHover: true,
 					},
-					// {
-					// 	label: "HACKATHON 2022",
-					// 	slug: "/hackathon-2022",
-					// 	outline: true,
-					// },
+					{
+						label: "HACKATHON 2022",
+						slug: "/hackathon-2022",
+						outline: true,
+					},
 				]}
 			/>
 
@@ -221,14 +221,14 @@ const AgendaPage: NextPage = () => {
 
 			<AgendaHeroSection />
 			<AboutSection
-			        transformYDORange={[0.01, 1]}
-							transformYTRange={[0.01, 1]}
-			/>
-			{/* <AftermovieSection /> */}
-			{/* <PhotosSection /> */}
-			{/* <EventSection /> */}
+        transformYDORange={[0.01, 0.2]}
+        transformYTRange={[0.01, 0.2]}
+      />
+			<AftermovieSection />
+			<PhotosSection />
+			<EventSection />
 			{/* <SpeakersSection /> */}
-			{/* <SectionContainer>
+			<SectionContainer>
 				{events.map((e, idx) => (
 					<Accordion
 						showContent={event.events[idx].showContent}
@@ -240,8 +240,8 @@ const AgendaPage: NextPage = () => {
 						dayID={e.id}
 					/>
 				))}
-			</SectionContainer> */}
-{/* 
+			</SectionContainer>
+
 			<WorkshopSection />
 
 			<SectionContainer>
@@ -257,8 +257,8 @@ const AgendaPage: NextPage = () => {
 						isWorkshop={true}
 					/>
 				))}
-			</SectionContainer> */}
-{/* 
+			</SectionContainer>
+
 			<FooterSection
 				transformSEERange={[0.85, 1]}
 				transformYOURange={[0.85, 1]}
@@ -275,7 +275,7 @@ const AgendaPage: NextPage = () => {
 						<AiFillGithub />
 					</figure>
 				</a>
-			</Footer> */}
+			</Footer>
 		</React.Fragment>
 	)
 }
