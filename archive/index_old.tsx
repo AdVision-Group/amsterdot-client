@@ -236,7 +236,10 @@ const Home: NextPage = () => {
 			</WatermarkContainer>
 
 			<HeroSection />
-			<AboutSection />
+			<AboutSection
+			
+			transformYDORange={[0.01, 0.2]}
+			transformYTRange={[0.01, 0.2]}/>
 
 			<FooterSection
 				transformSEERange={[0.4, 1]}

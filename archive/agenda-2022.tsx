@@ -219,7 +219,10 @@ const AgendaPage: NextPage = () => {
 			</WatermarkContainer>
 
 			<AgendaHeroSection />
-			<AboutSection />
+			<AboutSection 
+			        transformYDORange={[0.01, 0.2]}
+							transformYTRange={[0.01, 0.2]}
+			/>
 			<AftermovieSection />
 			<PhotosSection />
 			<EventSection />
