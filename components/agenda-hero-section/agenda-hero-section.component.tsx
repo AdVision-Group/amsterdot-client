@@ -12,6 +12,19 @@ import Button from "../button/button.component"
 // import { useToggle } from "react-use"
 
 const HeroSection = () => {
+	const activePartners = [
+		{
+			src: "/assets/partners-v3/hydradx.png",
+			alt: "hydra logo",
+			href: "https://hydradx.io/",
+		},
+		{
+			src: "/assets/partners-v3/parity.png",
+			alt: "parity logo",
+			href: "https://www.parity.io/",
+		},
+	]
+
 	const partners = [
 		{
 			src: "/assets/partners-v2/logos/hdx.png",
@@ -245,6 +258,36 @@ const HeroSection = () => {
 						<p>IN AMSTERDAM / NETHERLANDS</p>
 					</PlaceContainer>
 				</ContentContainer>
+				<ActivePartnersContainer>
+					{activePartners.map((partner, idx) => (
+						<a
+							key={idx}
+							href={partner.href}
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<motion.figure
+								whileHover={{
+									scale: 1.05,
+								}}
+								whileTap={{
+									scale: 0.97,
+								}}
+							>
+								<Image
+									src={partner.src}
+									placeholder="blur"
+									blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
+									alt={partner.alt}
+									width={140}
+									height={50}
+									objectFit="contain"
+									layout="fixed"
+								/>
+							</motion.figure>
+						</a>
+					))}
+				</ActivePartnersContainer>
 				<PartnersContainer>
 					{partners.map((partner, idx) => (
 						<a
@@ -287,7 +330,7 @@ const ArrowContainer = styled(motion.figure)`
 	z-index: 111;
 
 	width: 6rem;
-	heigth: 6rem;
+	height: 6rem;
 	bottom: -8rem;
 	right: 3rem;
 	/* display: none; */
@@ -354,7 +397,7 @@ const PlayButtonContainer = styled.div`
 const AnimationContainer = styled(motion.figure)`
 	position: absolute;
 	display: flex;
-	justify-conter: center;
+	justify-content: center;
 	align-items: center;
 
 	z-index: -1;
@@ -761,6 +804,45 @@ const PartnersContainer = styled.div`
 	/* border-top: 1px solid #fff; */
 
 	figure {
+		max-width: 10rem;
+		position: relative;
+		filter: blur(0.7rem);
+	}
+
+	&:after {
+		content: "TBA";
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-weight: 700;
+		font-size: 2rem;
+	}
+
+`
+
+const ActivePartnersContainer = styled.div`
+	position: relative;
+	/* display: grid; */
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: center; */
+	/* justify-content: space-around;
+	justify-content: center; */
+	/* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
+	width: 100%;
+	max-width: 36rem;
+	margin-left: auto;
+	gap: 1rem;
+	margin-top: 2rem;
+	padding-top: 0.5rem;
+	/* border-top: 1px solid #fff; */
+
+	figure {
 		/* border: 1px solid green; */
 		/* width: 7rem; */
 		max-width: 10rem;
@@ -768,13 +850,5 @@ const PartnersContainer = styled.div`
 		position: relative;
 		/* filter: blur(0.7rem); */
 	}
-	/* max-width: 30rem;
-	width: 100%;
-	margin: 0 auto;
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin: 0 0 0 auto;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-			max-width: 50rem;
-		}
-	} */
+
 `
