@@ -14,14 +14,24 @@ import Button from "../button/button.component"
 const HeroSection = () => {
 	const activePartners = [
 		{
-			src: "/assets/partners-v3/hydradx.png",
+			src: "/assets/partners-v3/hydra.png",
 			alt: "hydra logo",
 			href: "https://hydradx.io/",
 		},
 		{
-			src: "/assets/partners-v3/parity.png",
+			src: "/assets/partners-v3/parity_v2.png",
 			alt: "parity logo",
 			href: "https://www.parity.io/",
+		},
+		{
+			src: "/assets/partners-v3/polkadot.png",
+			alt: "polkadot logo",
+			href: "https://polkadot.network/",
+		},
+		{
+			src: "/assets/partners-v3/webzero.png",
+			alt: "webzero logo",
+			href: "https://www.joinwebzero.com/",
 		},
 	]
 
@@ -46,64 +56,64 @@ const HeroSection = () => {
 			alt: "acala network logo",
 			href: "https://acala.network/",
 		},
-		{
-			src: "/assets/partners-v2/logos/Interplay.png",
-			alt: "interplay logo",
-			href: "https://interplay.iterate.ai/",
-			width: 30,
-		},
-		{
-			src: "/assets/partners-v2/logos/Subsquid.png",
-			alt: "subsquid logo",
-			href: "https://www.subsquid.io/",
-		},
-		{
-			src: "/assets/partners-v2/logos/Parity.png",
-			alt: "parity logo",
-			href: "https://www.parity.io/",
-		},
-		{
-			src: "/assets/partners-v2/ORIGIN-TRAIL.png",
-			alt: "origin trail logo",
-			href: "https://origintrail.io/",
-			width: 50,
-		},
-		{
-			src: "/assets/partners-v2/logos/talisman-logo.png",
-			alt: "talisman logo",
-			href: "https://talisman.xyz/",
-			width: 60,
-		},
-		{
-			src: "/assets/partners-v2/logos/DFG.png",
-			alt: "dfg logo",
-			href: "https://www.dfg.group/",
-			width: 60,
-		},
-		{
-			src: "/assets/partners-v2/logos/Centrifuge.png",
-			alt: "centrifuge logo",
-			href: "https://centrifuge.io/",
-			width: 60,
-		},
-		{
-			src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
-			alt: "moonbeam logo",
-			href: "https://moonbeam.network/",
-		},
-		{
-			src: "/assets/partners-v2/logos/astar.png",
-			alt: "astar logo",
-			href: "https://astar.network/",
-			width: 30,
-			height: 40,
-		},
-		{
-			src: "/assets/partners-v2/logos/phala-network-logo-white.png",
-			alt: "phala network logo",
-			href: "https://www.phala.network/en/",
-			width: 70,
-		},
+		// {
+		// 	src: "/assets/partners-v2/logos/Interplay.png",
+		// 	alt: "interplay logo",
+		// 	href: "https://interplay.iterate.ai/",
+		// 	width: 30,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/Subsquid.png",
+		// 	alt: "subsquid logo",
+		// 	href: "https://www.subsquid.io/",
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/Parity.png",
+		// 	alt: "parity logo",
+		// 	href: "https://www.parity.io/",
+		// },
+		// {
+		// 	src: "/assets/partners-v2/ORIGIN-TRAIL.png",
+		// 	alt: "origin trail logo",
+		// 	href: "https://origintrail.io/",
+		// 	width: 50,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/talisman-logo.png",
+		// 	alt: "talisman logo",
+		// 	href: "https://talisman.xyz/",
+		// 	width: 60,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/DFG.png",
+		// 	alt: "dfg logo",
+		// 	href: "https://www.dfg.group/",
+		// 	width: 60,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/Centrifuge.png",
+		// 	alt: "centrifuge logo",
+		// 	href: "https://centrifuge.io/",
+		// 	width: 60,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
+		// 	alt: "moonbeam logo",
+		// 	href: "https://moonbeam.network/",
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/astar.png",
+		// 	alt: "astar logo",
+		// 	href: "https://astar.network/",
+		// 	width: 30,
+		// 	height: 40,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/phala-network-logo-white.png",
+		// 	alt: "phala network logo",
+		// 	href: "https://www.phala.network/en/",
+		// 	width: 70,
+		// },
 	]
 
 	return (
@@ -279,8 +289,8 @@ const HeroSection = () => {
 									placeholder="blur"
 									blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
 									alt={partner.alt}
-									width={140}
-									height={50}
+									width={80}
+									height={40}
 									objectFit="contain"
 									layout="fixed"
 								/>
@@ -309,8 +319,10 @@ const HeroSection = () => {
 									placeholder="blur"
 									blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
 									alt={partner.alt}
-									width={partner.width || 80}
-									height={partner.height || 40}
+									// width={partner.width || 80}
+									// height={partner.height || 40}
+									width={80}
+									height={40}
 									objectFit="contain"
 									layout="fixed"
 								/>

@@ -271,7 +271,7 @@ const Header: React.FC<IProps> = ({
 									</Link>
 								</li> */}
 								<li className="first">
-									<Link href={"/"}>
+									<Link href={"/2022-edition"}>
 										<a onClick={toggleMobileNav}>Agenda 2022</a>
 									</Link>
 									<NestedUl>
@@ -287,7 +287,7 @@ const Header: React.FC<IProps> = ({
 											</Link>
 										</li>
 										<li>
-											<Link href={`/#after-movie`} passHref>
+											<Link href={`/2022-edition/#after-movie`} passHref>
 												<a
 													onClick={() => {
 														toggleMobileNav()
@@ -298,7 +298,7 @@ const Header: React.FC<IProps> = ({
 											</Link>
 										</li>
 										<li>
-											<Link href={`/#day-1`} passHref>
+											<Link href={`/2022-edition/#day-1`} passHref>
 												<a
 													onClick={() => {
 														toggleMobileNav()
@@ -309,7 +309,7 @@ const Header: React.FC<IProps> = ({
 											</Link>
 										</li>
 										<li>
-											<Link href={`/#hack-2`} passHref>
+											<Link href={`/2022-edition/#hack-2`} passHref>
 												<a
 													onClick={() => {
 														toggleMobileNav()
